@@ -342,6 +342,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 265546992}
+  - component: {fileID: 265546993}
   m_Layer: 0
   m_Name: Launcher
   m_TagString: Untagged
@@ -364,6 +365,20 @@ Transform:
   m_Father: {fileID: 1456706266}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &265546993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265546991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4cf81ee5519de048b8a38881ede0bf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: {x: 1, y: 0, z: 0}
+  nose: 0
 --- !u!1 &337407896
 GameObject:
   m_ObjectHideFlags: 0
