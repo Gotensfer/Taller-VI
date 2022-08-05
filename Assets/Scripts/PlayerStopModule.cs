@@ -29,6 +29,7 @@ public class PlayerStopModule : MonoBehaviour
     
     void StopPlayer()
     {
-        
+        rb.velocity = Vector2.zero;
+        rb.angularVelocity = 0;
     }
 }
