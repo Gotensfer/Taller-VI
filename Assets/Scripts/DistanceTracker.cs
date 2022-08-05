@@ -6,22 +6,21 @@ using UnityEngine;
 public class DistanceTracker : MonoBehaviour
 {
     private float _distance = 0f;
-    private Vector2 origin, currentPos;
+    private Vector2 origin;
     [SerializeField] private Transform player; //despues se cambia por la funcion get player
 
     void Start()
     {
-        origin = player.position;
+        origin = player.position;//getplayer()
     }
 
     void Update()
     {
-        Debug.Log(TrackPlayerDistance());
+        Debug.Log(TrackPlayerDistance(player.position));//getPlayer()
     }
 
-    string TrackPlayerDistance()
+    string TrackPlayerDistance(Vector2 currentPos)
     {
-        currentPos = player.position;
         _distance = Vector2.Distance(origin, currentPos);
         return _distance.ToString("0.##") + "m";
     }
