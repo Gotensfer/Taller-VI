@@ -24,8 +24,6 @@ public class Aim_Kick : MonoBehaviour
     {
         strenght = slider.value * 50;
         angle = slider2.value * (90 * Mathf.PI / 180);
-        Debug.DrawLine(new Vector2(0, 0), direction, Color.blue);
-        Debug.Log(angle);
         Aim();
 
     }
