@@ -6,6 +6,6 @@ public class UIInterface : MonoBehaviour
 {
     public void Reset()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 }

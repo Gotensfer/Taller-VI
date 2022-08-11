@@ -7,28 +7,27 @@ using UnityEngine.UI;
 public class Aim_Kick : MonoBehaviour
 {
     [SerializeField] Rigidbody2D player;
-    [SerializeField] Slider launchforce;
+    [SerializeField] Slider slider;
+    [SerializeField] Slider slider2;
     float strenght;
+    float angle;
+    private Vector2 direction;
 
     float timesBounce = 0;
 
     public void Launch()
     {
-        player.AddForce(new Vector2(1, 2f) * strenght, ForceMode2D.Impulse);
+        player.AddForce(direction * strenght, ForceMode2D.Impulse);
     }
 
     private void Update()
     {
-        Vector2 playerPosition = player.position;
-        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 direction = mousePosition - playerPosition;
+        strenght = slider.value * 50;
+        angle = slider2.value * (90 * Mathf.PI / 180);
+        Debug.DrawLine(new Vector2(0, 0), direction, Color.blue);
+        Debug.Log(angle);
+        Aim();
 
-        if (Input.GetMouseButton(0))
-        {
-            Launch();
-            
-        }
-        strenght = launchforce.value * 50;
     }
 
     public void Reset()
@@ -43,5 +42,9 @@ public class Aim_Kick : MonoBehaviour
         {
             player.drag += 0.2f;
         }
+    }
+    private void Aim()
+    {
+        direction = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)).normalized;
     }
 }
