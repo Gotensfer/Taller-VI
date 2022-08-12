@@ -4,35 +4,28 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Aim_Kick : MonoBehaviour
+public class Aim_Kick_Touch : MonoBehaviour
 {
     [SerializeField] Rigidbody2D player;
     [SerializeField] Slider slider;
-    [SerializeField] Slider slider2;
     float strenght;
-    float angle;
     private Vector2 direction;
 
-    
-
     float timesBounce = 0;
+    private bool flag = false;
 
     public void Launch()
     {
         player.AddForce(direction * strenght, ForceMode2D.Impulse);
+        flag = true;
     }
 
     private void Update()
     {
         strenght = slider.value * 50;
-        angle = slider2.value * (90 * Mathf.PI / 180);
-        Aim();
-        Debug.DrawLine(new Vector3(0, 0, 0), direction, Color.blue);
+        Aim_Touch();
+        Debug.DrawLine(new Vector2(0, 0), direction, Color.blue);
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            Launch();
-        }
     }
 
     public void Reset()
@@ -48,9 +41,14 @@ public class Aim_Kick : MonoBehaviour
             player.drag += 0.2f;
         }
     }
-    private void Aim()
+    private void Aim_Touch()
     {
-        direction = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)).normalized;
+        foreach (Touch touch in Input.touches)
+        {
+            direction = (touch.position - player.position).normalized;
+            transform.right = direction;
+
+        }
     }
 
 }
