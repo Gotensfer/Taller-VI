@@ -12,6 +12,7 @@ public class DistanceTracker_Module : MonoBehaviour
     void Start()
     {
         origin = player.position;//getplayer()
+        origin.y = 0;
         travelledDistance = 0;
     }
 
@@ -22,12 +23,14 @@ public class DistanceTracker_Module : MonoBehaviour
 
     public string CalculateTravelledDistance(Vector2 currentPos)
     {
+        currentPos.y = 0;
         travelledDistance = Vector2.Distance(origin, currentPos);
         return travelledDistance.ToString("0.##") + "m";
     }
 
     public string CalculateTravelledDistance(Vector2 offset, Vector2 currentPos)
     {
+        offset.y = 0;
         origin = origin + offset;
         return CalculateTravelledDistance(currentPos);
     }
