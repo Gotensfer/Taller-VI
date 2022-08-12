@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Aim_Kick_Mouse : MonoBehaviour
+public class Aim_Kick_Touch1 : MonoBehaviour
 {
     [SerializeField] Rigidbody2D player;
     [SerializeField] Slider slider;

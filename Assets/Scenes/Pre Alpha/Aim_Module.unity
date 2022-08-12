@@ -1689,7 +1689,7 @@ RectTransform:
   m_GameObject: {fileID: 1573237884}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 573633495}
@@ -1700,7 +1700,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000061035, y: -572.9}
+  m_AnchoredPosition: {x: 0.00016880035, y: -572.89996}
   m_SizeDelta: {x: 1713.167, y: 114.21}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1573237886
@@ -1923,7 +1923,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1728376848}
-        m_TargetAssemblyTypeName: Aim_Kick_Mouse, Assembly-CSharp
+        m_TargetAssemblyTypeName: Aim_Kick_Touch, Assembly-CSharp
         m_MethodName: Launch
         m_Mode: 1
         m_Arguments:
@@ -2118,11 +2118,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1728376841}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dd701612c4983543a6a2dfbec346650, type: 3}
+  m_Script: {fileID: 11500000, guid: abc1ab56e745de948a11e4eece491776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1728376842}
   slider: {fileID: 1573237886}
+  m_xButtonRect: {fileID: 1640255986}
+  m_xSliderRect: {fileID: 1573237885}
+  m_xMenuManager: {fileID: 1824287671}
 --- !u!1 &1824287668
 GameObject:
   m_ObjectHideFlags: 0

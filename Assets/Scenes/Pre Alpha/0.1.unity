@@ -1907,7 +1907,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1728376848}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Aim_Kick, Assembly-CSharp
         m_MethodName: Launch
         m_Mode: 1
@@ -2103,12 +2103,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1728376841}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fb5fc816e9465348bfd68373fc9b191, type: 3}
+  m_Script: {fileID: 11500000, guid: 2dd701612c4983543a6a2dfbec346650, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1728376842}
   slider: {fileID: 1573237886}
-  slider2: {fileID: 0}
 --- !u!1 &1824287668
 GameObject:
   m_ObjectHideFlags: 0
@@ -2391,6 +2390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b41e126de1606704c9f83bf993d14876, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
 --- !u!1 &1945389755
 GameObject:
   m_ObjectHideFlags: 0
