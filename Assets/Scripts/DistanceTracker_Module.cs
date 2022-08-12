@@ -17,7 +17,7 @@ public class DistanceTracker_Module : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(TrackPlayerDistance(Vector2.zero, player.position));//getPlayer()
+        Debug.Log(CalculateTravelledDistance(Vector2.zero, player.position));//getPlayer()
     }
 
     public string CalculateTravelledDistance(Vector2 currentPos)
