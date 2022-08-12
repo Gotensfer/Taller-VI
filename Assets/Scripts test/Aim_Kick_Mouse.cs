@@ -24,7 +24,7 @@ public class Aim_Kick_Mouse : MonoBehaviour
     {
         strenght = slider.value * 50;
         Aim_Mouse();
-        Debug.DrawLine(new Vector2(0, 0), direction, Color.blue);
+        Debug.DrawLine(new Vector3(0, 0, 0), direction, Color.blue);
 
 
         if (Input.GetMouseButtonDown(1) && !flag)
