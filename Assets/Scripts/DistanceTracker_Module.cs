@@ -20,15 +20,15 @@ public class DistanceTracker_Module : MonoBehaviour
         Debug.Log(TrackPlayerDistance(Vector2.zero, player.position));//getPlayer()
     }
 
-    string TrackPlayerDistance(Vector2 currentPos)
+    public string CalculateTravelledDistance(Vector2 currentPos)
     {
         travelledDistance = Vector2.Distance(origin, currentPos);
         return travelledDistance.ToString("0.##") + "m";
     }
 
-    string TrackPlayerDistance(Vector2 offset, Vector2 currentPos)
+    public string CalculateTravelledDistance(Vector2 offset, Vector2 currentPos)
     {
         origin = origin + offset;
-        return TrackPlayerDistance(currentPos);
+        return CalculateTravelledDistance(currentPos);
     }
 }
