@@ -3,18 +3,22 @@ using UnityEngine;
 [System.Serializable]
 public class LaunchModule : MonoBehaviour
 {
-    [SerializeField] private Rigidbody2D _rb;
+    private Rigidbody2D _rb;
     private Vector3 dir;
-    [HideInInspector] public float angle = 0f;
-    [HideInInspector] public float force = 1f;
+    [HideInInspector] public float angle { get; set; }
+    [HideInInspector] public float force { get; set; }
+
+    //Temporal
+    Vector3[] points = new Vector3[2];
 
     //VARIABLES UTILIDAD
     private float angleRad;
+    public float length = 2;
 
     void Start()
     {
-        //deberia de solicitar a un script con la info del player su componente RigidBody
-        //_rb = PlayerInfo.instance.rb;
+        _rb = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
+        points[0] = _rb.transform.position;
     }
     
     void Update()
@@ -41,8 +45,12 @@ public class LaunchModule : MonoBehaviour
     {
         angleRad = Mathf.Deg2Rad * angle;
 
-        dir.x = Mathf.Cos(angleRad);
-        dir.y = Mathf.Sin(angleRad);
+        dir.x = length * Mathf.Cos(angleRad);
+        dir.y = length * Mathf.Sin(angleRad);
+
+        points[1] = new Vector3(dir.x + points[0].x, dir.y + points[0].y, dir.z);
+
+        FindObjectOfType<LineController>().SetUp(points);
     }
 
     void Stop()

@@ -12,18 +12,13 @@ public class TrackerBase_Module : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
-    void Update()
-    {
-        Debug.Log(GetPlayer().name);
-    }
-
     public GameObject GetPlayer()
     {
         return player;
     }
 
     //Agregue esta funcion simplemente para hacer mas facil el hecho de sacar el vector2, pero si es innecesario se borra
-    public Vector2 TrackPlayer()
+    public Vector3 TrackPlayer()
     {
         return player.transform.position;
     }

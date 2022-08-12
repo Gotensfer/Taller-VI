@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Pre Alpha/Aim_Module.unity
     guid: 3ecb1e161d26e0e4fb19fbc3a30c344c
+  - enabled: 1
+    path: Assets/Scenes/Pre Alpha/PowerUp_Basic1.unity
+    guid: 2db093e7ce14d194b8f64d6effd32488
   m_configObjects: {}
