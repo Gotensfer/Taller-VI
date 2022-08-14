@@ -17,6 +17,11 @@ public class DistanceTracker_Module : MonoBehaviour
         travelledDistance = 0;
     }
 
+    private void Update()
+    {
+        CalculateTravelledDistance(player.position);
+    }
+
     public string CalculateTravelledDistance(Vector2 currentPos)
     {
         currentPos.y = 0;
