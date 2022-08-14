@@ -18,13 +18,11 @@ public class Aim_Kick_Touch : MonoBehaviour
     private Vector2 direction;
 
     float timesBounce = 0;
-    private bool flag = false;
 
     public void Launch()
     {
         Text.SetActive(false);
         player.AddForce(direction * strenght, ForceMode2D.Impulse);
-        flag = true;
     }
 
     private void Update()
