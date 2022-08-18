@@ -4,9 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class UIInterface : MonoBehaviour
 {
-    [SerializeField] int index;
+    [SerializeField] int Reset_To;
     public void Reset()
     {
-        SceneManager.LoadScene(index);
+        SceneManager.LoadScene(Reset_To);
     }
+    
+    
 }
