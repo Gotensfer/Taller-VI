@@ -121,19 +121,30 @@ public class PowerUp_PidgeonTest : MonoBehaviour
 	public float duration;
 	public float sensibility;
 	public float speed;
-	Vector2 rawDirection;
-	Vector2 direction;
+	[SerializeField] Vector2 rawDirection;
+	[SerializeField] Vector2 direction;
 
-    private void Awake()
+	[SerializeField] float count;
+
+    private void FixedUpdate()
     {
+		rb.velocity = direction * speed;
+	}
+
+    public void Initialize()
+    {
+		rawDirection = Vector2.right;
 		direction = Vector2.right;
 
+		rb = GetComponent<Rigidbody2D>();
 		rb.velocity = Vector3.zero;
 		rb.angularVelocity = 0;
-		rb.velocity = direction * speed;
+		rb.AddForce(direction * speed, ForceMode2D.Impulse);
 
 		Invoke(nameof(StopPowerUp), duration);
-    }
+
+		print("Woke?");
+	}
 
     void GoUp()
     {
@@ -141,7 +152,7 @@ public class PowerUp_PidgeonTest : MonoBehaviour
 		rawDirection.y += sensibility;
 		direction = rawDirection.normalized;
 
-		rb.velocity = direction * speed;
+		count += sensibility;
 	}
 
 	void GoDown()
@@ -150,7 +161,7 @@ public class PowerUp_PidgeonTest : MonoBehaviour
 		rawDirection.y -= sensibility;
 		direction = rawDirection.normalized;
 
-		rb.velocity = direction * speed;
+		count -= sensibility;
 	}
 
 	// Llame a este método para parar el PowerUp
