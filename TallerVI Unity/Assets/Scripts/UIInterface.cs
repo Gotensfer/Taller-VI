@@ -14,12 +14,15 @@ public class UIInterface : MonoBehaviour
     {
         mainMenu.DOAnchorPos(Vector2.zero, 2);
     }
-
     public void Reset()
     {
         SceneManager.LoadScene(ResetTo);
     }
-    
+    private void OnDisable()
+    {
+        DOTween.KillAll(gameObject);
+    }
+
     //Slide for UI buttons and animations (DOTween)
     public void playUIButton()
     {
