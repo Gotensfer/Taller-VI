@@ -5164,7 +5164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenu: {fileID: 526866559}
   gameUI: {fileID: 1809170951}
-  ResetTo: 1
+  ResetTo: 2
 --- !u!1 &1945389755
 GameObject:
   m_ObjectHideFlags: 0

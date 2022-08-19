@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Pre Alpha/0.3.unity
     guid: 1ee19b8210c77ce4db338f6ab0594652
+  - enabled: 1
+    path: Assets/Scenes/Pre Alpha/0.3 PowerUps.unity
+    guid: b22d129c2c2ef2e42b21eb1d71196ffa
   m_configObjects: {}
