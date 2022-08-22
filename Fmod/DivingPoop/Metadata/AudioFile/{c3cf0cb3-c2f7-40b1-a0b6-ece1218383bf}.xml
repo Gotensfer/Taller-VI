@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{c3cf0cb3-c2f7-40b1-a0b6-ece1218383bf}">
+		<property name="assetPath">
+			<value>tmp/OpenInventory.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.42827664399092968</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{5e16193e-f6c0-49a8-be24-3be3c4e11116}</destination>
+		</relationship>
+	</object>
+</objects>
