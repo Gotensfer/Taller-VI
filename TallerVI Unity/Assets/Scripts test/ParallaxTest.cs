@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class ParallaxTest : MonoBehaviour
 {
-    [Range(0, 1), SerializeField] float rateOfParallax;
+    [SerializeField] float rateOfParallax;
+    [SerializeField] Transform target;
     Vector3 initialOffset;
 
     private void Start()
     {
-        initialOffset = transform.position;
+        initialOffset = target.position - transform.position; 
     }
 
-    private void LateUpdate()
+    private void Update()
     {
-        transform.position = (new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, 0) * rateOfParallax);
+        transform.position = (target.position * rateOfParallax) - initialOffset;
     }
 }
