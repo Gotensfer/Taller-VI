@@ -44,15 +44,15 @@ public class AnimChangeStates : MonoBehaviour
 
     void ChangingHeight()
     {
-        if (rb.velocity.y > 2 && count == 1)
+        if (rb.velocity.y > 1 && count == 1)
         {
             animator.SetTrigger("FlyUp");
         }
-        else if (rb.velocity.y <= 2 && rb.velocity.y >= 2 && count == 1)
+        else if (rb.velocity.y <= 1 && rb.velocity.y >= 1 && count == 1)
         {
             animator.SetTrigger("Gliding");
         }
-        else if (rb.velocity.y < -2 && count == 1)
+        else if (rb.velocity.y < -1 && count == 1)
         {
             animator.SetTrigger("FlyDown");
         }
