@@ -28,7 +28,11 @@ public class PidgeonPickUp : MonoBehaviour
 
             print("Picked");
 
-            Destroy(gameObject);
+            #region"VFX"
+
+            #endregion
+
+            Destroy(gameObject /*time*/); // Esto destruira a la paloma juntos con sus hijos apenas se coja, ojo
         }
 
         
