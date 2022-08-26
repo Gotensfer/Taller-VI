@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,7 +5,6 @@ using UnityEngine;
 public class PowerUp_Base : MonoBehaviour
 {
     private TrackerBase_Module track;
-    [SerializeField] SpriteRenderer sp;
     private Rigidbody2D rb;
     private bool active = false;
     [SerializeField] private float time = 3.0f, force = 10f, angle = 45f;
@@ -48,18 +46,12 @@ public class PowerUp_Base : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.CompareTag("Player"))
+        if (col.GetComponent<Collider2D>().CompareTag("Player"))
         {
             active = true;
-            sp.enabled = false;
+            GetComponent<SpriteRenderer>().enabled = false;
             GetComponent<Collider2D>().enabled = false;
-
-            #region"VFX"
-
-            #endregion
-
-            Destroy(gameObject, time); // Esto destruira al chilli/cohete juntos con sus hijos apenas se coja, ojo
-            // Nota, este Script es el mismo tanto para Chilli como para el cohete
+            transform.position = Vector2.zero;
         }    
     }
 }
