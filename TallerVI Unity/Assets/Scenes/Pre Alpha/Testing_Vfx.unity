@@ -5188,15 +5188,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1841445059846579106, guid: f297fe3e7e662c4429cade650a503df0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.96
       objectReference: {fileID: 0}
     - target: {fileID: 1841445059846579106, guid: f297fe3e7e662c4429cade650a503df0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.88
       objectReference: {fileID: 0}
     - target: {fileID: 1841445059846579106, guid: f297fe3e7e662c4429cade650a503df0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1841445059846579106, guid: f297fe3e7e662c4429cade650a503df0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5226,9 +5226,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1841445059846579107, guid: f297fe3e7e662c4429cade650a503df0, type: 3}
+      propertyPath: looping
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1841445059846579117, guid: f297fe3e7e662c4429cade650a503df0, type: 3}
       propertyPath: m_Name
       value: Trail_Base
+      objectReference: {fileID: 0}
+    - target: {fileID: 1841445060424849690, guid: f297fe3e7e662c4429cade650a503df0, type: 3}
+      propertyPath: m_Autodestruct
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1841445060847769282, guid: f297fe3e7e662c4429cade650a503df0, type: 3}
+      propertyPath: m_Autodestruct
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1841445061329084034, guid: f297fe3e7e662c4429cade650a503df0, type: 3}
+      propertyPath: playOnAwake
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f297fe3e7e662c4429cade650a503df0, type: 3}
