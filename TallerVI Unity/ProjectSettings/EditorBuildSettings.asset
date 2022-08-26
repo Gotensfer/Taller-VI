@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Pre Alpha/0.3 PowerUps.unity
     guid: b22d129c2c2ef2e42b21eb1d71196ffa
+  - enabled: 1
+    path: Assets/Scenes/Pre Alpha/0.3 Magnetism.unity
+    guid: 3f8a44a7d1e5a5040bb59c50f1571221
   m_configObjects: {}
