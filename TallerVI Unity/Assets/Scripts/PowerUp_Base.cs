@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -52,7 +51,7 @@ public class PowerUp_Base : MonoBehaviour
             active = true;
             GetComponent<SpriteRenderer>().enabled = false;
             GetComponent<Collider2D>().enabled = false;
-            Destroy(gameObject, time);
+            transform.position = Vector2.zero;
         }    
     }
 }
