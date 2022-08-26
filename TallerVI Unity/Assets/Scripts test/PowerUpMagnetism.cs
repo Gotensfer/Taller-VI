@@ -26,6 +26,8 @@ public class PowerUpMagnetism : MonoBehaviour
             magnetized = true;
             target = collision.transform;
             speed = collision.transform.GetComponent<Rigidbody2D>().velocity.magnitude * speedModifier;
+
+            transform.parent.transform.parent = collision.transform;
         }
     }
 }

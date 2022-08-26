@@ -22,6 +22,9 @@ public class ReUse : MonoBehaviour
         Visible();
     }
 
+
+    [SerializeField] SpriteRenderer sp;
+
     void Visible()
     {
         var cam = Camera.main;
@@ -46,10 +49,10 @@ public class ReUse : MonoBehaviour
             }
         }
 
-        if (GetComponent<SpriteRenderer>().enabled == false)
+        if (sp.enabled == false)
         {
-            GetComponent<SpriteRenderer>().enabled = true;
-            GetComponent<Collider2D>().enabled = true;
+            sp.enabled = true;
+            sp.enabled = true;
         }
     }
 }

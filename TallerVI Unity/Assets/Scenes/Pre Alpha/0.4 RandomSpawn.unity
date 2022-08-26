@@ -524,9 +524,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heights:
-  - {x: 0, y: 5}
-  - {x: 6, y: 10}
-  - {x: 11, y: 20}
+  - {x: 0, y: 50}
+  - {x: 55, y: 100}
+  - {x: 105, y: 200}
   prefab1: {fileID: 69687176620298395, guid: 40ccc3a73358db34bb6c1752812e8e1d, type: 3}
   prefab2: {fileID: 423223054331848064, guid: 11b01d38288d1ad44b6cd051383daf7b, type: 3}
   prefab3: {fileID: 7819924271294555339, guid: 118c6ec2f70c30048943ae98927d3836, type: 3}
