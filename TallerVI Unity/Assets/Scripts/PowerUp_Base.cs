@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -45,14 +44,16 @@ public class PowerUp_Base : MonoBehaviour
         }
     }
 
+    [SerializeField] SpriteRenderer sp;
+
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.GetComponent<Collider2D>().CompareTag("Player"))
         {
             active = true;
-            GetComponent<SpriteRenderer>().enabled = false;
+            sp.enabled = false;
             GetComponent<Collider2D>().enabled = false;
-            Destroy(gameObject, time);
+            transform.position = Vector2.zero;
         }    
     }
 }
