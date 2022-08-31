@@ -8,6 +8,8 @@ public class LaunchModule : MonoBehaviour
     [HideInInspector] public float angle { get; set; }
     [HideInInspector] public float force { get; set; }
 
+    [SerializeField] PlayerEvents_Interface playerEvents;
+
     //Temporal
     Vector3[] points = new Vector3[2];
 
@@ -39,6 +41,7 @@ public class LaunchModule : MonoBehaviour
     public void Launch()
     {
         _rb.AddForce(dir * force, ForceMode2D.Impulse);
+        playerEvents.LaunchEvent.Invoke();
     }
 
     void CalculateDirection()
