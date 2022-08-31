@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Pre Alpha/0.3 Magnetism.unity
     guid: 3f8a44a7d1e5a5040bb59c50f1571221
+  - enabled: 1
+    path: Assets/Scenes/Pre Alpha/0.4 Animations.unity
+    guid: 0cc5882f8ee0545448bdef99f71d63cf
   m_configObjects: {}
