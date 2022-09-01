@@ -11,14 +11,14 @@ public class FlyRestraint_Module : MonoBehaviour
     const float airDensity = 1.225f;
 
     // Variables con relación a la caida
-    [SerializeField] float fallVelocityLimit;
+    public float fallVelocityLimit;
     Vector2 airResistanceForce_Fall;
     Vector2 fallVelocityVector;  
     float airDragCoefficient_Fall = 0;
 
     // Variables con relación al avance horizontal
-    [SerializeField] float forwardVelocityLimit;
-    [SerializeField] Vector2 standardForwardForce;
+    public float forwardVelocityLimit;
+    public Vector2 standardForwardForce;
     Vector2 forwardVelocityVector;
     Vector2 airResistanceForce_Forward;
     float airDragCoefficient_Forward = 0;
