@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PowerUpMagnetism : MonoBehaviour
 {
-    bool magnetized;
+    public bool magnetized;
     Transform target;
     Vector3 direction;
     [SerializeField] float speedModifier;
@@ -26,8 +26,6 @@ public class PowerUpMagnetism : MonoBehaviour
             magnetized = true;
             target = collision.transform;
             speed = collision.transform.GetComponent<Rigidbody2D>().velocity.magnitude * speedModifier;
-
-            transform.parent.transform.parent = collision.transform;
         }
     }
 }
