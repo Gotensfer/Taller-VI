@@ -13,6 +13,7 @@ public enum PlayerStates
 
 public enum FlyingStates
 {
+    launching,
     ascending,
     gliding,
     falling,
@@ -36,6 +37,7 @@ public class FlyingStates_Module : MonoBehaviour
     private void Start()
     {
         PlayerState = PlayerStates.launch;
+        FlyingState = FlyingStates.launching;
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -56,7 +58,7 @@ public class FlyingStates_Module : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (playerState == PlayerStates.launch || playerState == PlayerStates.poweredUpFlying || playerState == PlayerStates.crashed)
+        if (playerState == PlayerStates.poweredUpFlying || playerState == PlayerStates.crashed)
         {
             flyingState = FlyingStates.none;
             return;
@@ -74,6 +76,7 @@ public class FlyingStates_Module : MonoBehaviour
         }
         else if (rb.velocity.y > glidingMinYVelocityThreshold && rb.velocity.y < glidingMaxYVelocityThreshold && flyingState != FlyingStates.gliding)
         {
+            if (rb.velocity.y > -0.01f && rb.velocity.y < 0.01f) return; // Evitar un glide accidental al inicio del juego
             flyingState = FlyingStates.gliding;
             playerEvents.GlidingEvent.Invoke();
         }

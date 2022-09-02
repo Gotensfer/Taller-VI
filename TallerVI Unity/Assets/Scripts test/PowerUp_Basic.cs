@@ -13,6 +13,8 @@ public class PowerUp_Basic : MonoBehaviour
 
     [SerializeField] GameObject button;
 
+    [SerializeField] PlayerEvents_Interface playerEvents;
+
     public void Activate_BasicPowerUp()
     {
         direction.Normalize();
@@ -20,6 +22,8 @@ public class PowerUp_Basic : MonoBehaviour
         player.AddForce(direction * strenght, ForceMode2D.Impulse);
 
         uses--;
+
+        playerEvents.MitosisEvent.Invoke();
 
         if (uses <= 0)
         {
