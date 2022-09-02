@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 7819924271294555343}
   - component: {fileID: 7819924271294555336}
   - component: {fileID: 7819924271294555337}
-  - component: {fileID: 6561822644584557693}
   m_Layer: 6
   m_Name: Rocket
   m_TagString: PowerUp
@@ -138,22 +137,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5417a784c3dad1245bd0f2237e60a007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 1
   time: 2
-  force: 5
+  force: 20
   angle: 0
-  sp: {fileID: 8847389240785400637}
---- !u!114 &6561822644584557693
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7819924271294555339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab0dc6950bfd45a44ba99efa27078b0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   sp: {fileID: 8847389240785400637}
 --- !u!1001 &7819924269537827200
 PrefabInstance:

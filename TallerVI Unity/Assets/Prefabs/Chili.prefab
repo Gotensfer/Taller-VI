@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 69687176620298391}
   - component: {fileID: 69687176620298390}
   - component: {fileID: 69687176620298393}
-  - component: {fileID: -5335194935578066295}
   m_Layer: 6
   m_Name: Chili
   m_TagString: PowerUp
@@ -138,22 +137,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5417a784c3dad1245bd0f2237e60a007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
   time: 2
-  force: 10
+  force: 20
   angle: 45
-  sp: {fileID: 1425140416265478358}
---- !u!114 &-5335194935578066295
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 69687176620298395}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab0dc6950bfd45a44ba99efa27078b0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   sp: {fileID: 1425140416265478358}
 --- !u!1001 &69687176121899948
 PrefabInstance:
