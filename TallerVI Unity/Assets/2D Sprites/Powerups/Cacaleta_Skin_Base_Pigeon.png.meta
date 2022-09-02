@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 34e9309ec92187648b294d8787b73bc1
+guid: d9d2d0677dde7f8429867660337eb347
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 270
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -128,7 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cacaleta_Skin_Base_Rocket_0
+      name: Cacaleta_Skin_Base_Pigeon_0
       rect:
         serializedVersion: 2
         x: 0
@@ -142,14 +142,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 857e7d3fc43cca343b24243f0d501b36
-      internalID: 1070205051
+      spriteID: 580807192da516c44a97308cc705cfbc
+      internalID: 434624203
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_Skin_Base_Rocket_1
+      name: Cacaleta_Skin_Base_Pigeon_1
       rect:
         serializedVersion: 2
         x: 512
@@ -163,14 +163,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51ca7dbaab23dc14b9e2b4cbb6aec177
-      internalID: 525182159
+      spriteID: 48cbfd8be3c0bab42b24150d1bb53648
+      internalID: 1401738049
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_Skin_Base_Rocket_2
+      name: Cacaleta_Skin_Base_Pigeon_2
       rect:
         serializedVersion: 2
         x: 1024
@@ -184,14 +184,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7938c6a1627eb2d4b978a573b5ff22f7
-      internalID: 1371888209
+      spriteID: 90e34c306be61d14580b201bdc970580
+      internalID: 134225463
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_Skin_Base_Rocket_3
+      name: Cacaleta_Skin_Base_Pigeon_3
       rect:
         serializedVersion: 2
         x: 1536
@@ -205,14 +205,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c2c2b6c5b76f58489161af10d5a84e2
-      internalID: -1110451352
+      spriteID: 0c9516f0028fa954ea227935c0f4b02a
+      internalID: -2102374022
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_Skin_Base_Rocket_4
+      name: Cacaleta_Skin_Base_Pigeon_4
       rect:
         serializedVersion: 2
         x: 2048
@@ -226,14 +226,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a550d2b420eb1a04c95246481e508b2b
-      internalID: 844619197
+      spriteID: 7f0c89b10076f1647a7d1e6702def7ad
+      internalID: 2101094312
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_Skin_Base_Rocket_5
+      name: Cacaleta_Skin_Base_Pigeon_5
       rect:
         serializedVersion: 2
         x: 2560
@@ -247,8 +247,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91d969be894385a47b575e5e1ae12b1e
-      internalID: -924122985
+      spriteID: c0c8154fd2442a24ca2c8ed42cee1873
+      internalID: -1431737121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacaleta_Skin_Base_Pigeon_6
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 944226ad4f9178c42bdc383e87978981
+      internalID: 436773899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacaleta_Skin_Base_Pigeon_7
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a402f2878bd0c30449157e32a065e41d
+      internalID: 1775065188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacaleta_Skin_Base_Pigeon_8
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f051bd9facb0594ba32d567fc069472
+      internalID: 162614018
       vertices: []
       indices: 
       edges: []
@@ -264,12 +327,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Cacaleta_Skin_Base_Rocket_5: -924122985
-      Cacaleta_Skin_Base_Rocket_3: -1110451352
-      Cacaleta_Skin_Base_Rocket_4: 844619197
-      Cacaleta_Skin_Base_Rocket_0: 1070205051
-      Cacaleta_Skin_Base_Rocket_2: 1371888209
-      Cacaleta_Skin_Base_Rocket_1: 525182159
+      Cacaleta_Skin_Base_Pigeon_6: 436773899
+      Cacaleta_Skin_Base_Pigeon_4: 2101094312
+      Cacaleta_Skin_Base_Pigeon_1: 1401738049
+      Cacaleta_Skin_Base_Pigeon_7: 1775065188
+      Cacaleta_Skin_Base_Pigeon_2: 134225463
+      Cacaleta_Skin_Base_Pigeon_3: -2102374022
+      Cacaleta_Skin_Base_Pigeon_8: 162614018
+      Cacaleta_Skin_Base_Pigeon_0: 434624203
+      Cacaleta_Skin_Base_Pigeon_5: -1431737121
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
