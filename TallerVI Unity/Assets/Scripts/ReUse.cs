@@ -52,7 +52,6 @@ public class ReUse : MonoBehaviour
         if (sp.enabled == false)
         {
             sp.enabled = true;
-            sp.enabled = true;
         }
     }
 }

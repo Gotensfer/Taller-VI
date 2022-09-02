@@ -2,8 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum PowerUpType
+{
+    chili,
+    rocket
+}
+
 public class PowerUp_Base : MonoBehaviour, IPowerUp
 {
+    [SerializeField] private PowerUpType type;
     private TrackerBase_Module track;
     private Rigidbody2D rb;
     private bool active = false;
@@ -42,10 +49,10 @@ public class PowerUp_Base : MonoBehaviour, IPowerUp
             {
                 active = false;
 
-                // OJO, debido al funcionamiento actual, el powerUp se acumula, esto potencialmente generará errores.
-                // IMPORTANTE: El evento de PoweredDownEvent SOLO se debería llamar al acabarse el powerUp y
-                // como el powerUp se acumula, si se obtiene 2 veces en rápida sucesión, se llamará el evento aunque siga potenciado
-                // lo cual es incorrecto y generará otros errores.
+                // OJO, debido al funcionamiento actual, el powerUp se acumula, esto potencialmente generarï¿½ errores.
+                // IMPORTANTE: El evento de PoweredDownEvent SOLO se deberï¿½a llamar al acabarse el powerUp y
+                // como el powerUp se acumula, si se obtiene 2 veces en rï¿½pida sucesiï¿½n, se llamarï¿½ el evento aunque siga potenciado
+                // lo cual es incorrecto y generarï¿½ otros errores.
                 // Se DEBE de controlar ello.
 
                 // VITAL: Referente a eventos
@@ -55,7 +62,7 @@ public class PowerUp_Base : MonoBehaviour, IPowerUp
         }
     }
 
-    [SerializeField] SpriteRenderer sp;
+    public SpriteRenderer sp;
 
     private void OnTriggerEnter2D(Collider2D col)
     {
@@ -63,12 +70,12 @@ public class PowerUp_Base : MonoBehaviour, IPowerUp
         {
             active = true;
             sp.enabled = false;
-            // GetComponent<Collider2D>().enabled = false;
-            gameObject.SetActive(false); // Es mejor desactivarlo, por otro lado esto lo suelta del area magnética del Player
+            GetComponent<Collider2D>().enabled = false;
+            //gameObject.SetActive(false); // Es mejor desactivarlo, por otro lado esto lo suelta del area magnï¿½tica del Player
             transform.position = Vector2.zero;
 
             // VITAL: Referente a los eventos
-            // Invocación al evento
+            // Invocaciï¿½n al evento
             if (col.GetComponent<FlyingStates_Module>().PlayerState != PlayerStates.poweredUpFlying)
             {
                 transform.parent.GetComponent<EventReferenceHandler>().playerEvents.PoweredUpEvent.Invoke();
@@ -76,7 +83,14 @@ public class PowerUp_Base : MonoBehaviour, IPowerUp
 
             // OJO: Falta una forma de distinguir que PowerUp es, por defecto todos los powerUps que usen esta clase son Chilli !!
             // !! Los powerups deben invocar su evento correspondiente !!
-            transform.parent.GetComponent<EventReferenceHandler>().playerEvents.ChilliEvent.Invoke();
+            if (type == PowerUpType.rocket)
+            {
+                transform.parent.GetComponent<EventReferenceHandler>().playerEvents.RocketEvent.Invoke();
+            }
+            else if (type == PowerUpType.chili)
+            {
+                transform.parent.GetComponent<EventReferenceHandler>().playerEvents.ChilliEvent.Invoke();
+            }
         }    
     }
 }

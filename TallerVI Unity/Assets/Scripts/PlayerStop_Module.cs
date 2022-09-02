@@ -44,5 +44,6 @@ public class PlayerStop_Module : MonoBehaviour
     {
         rb.velocity = Vector2.zero;
         rb.angularVelocity = 0;
+        rb.constraints = RigidbodyConstraints2D.FreezePositionY;
     }
 }

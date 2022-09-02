@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 423223054331848060}
   - component: {fileID: 423223054331848061}
   - component: {fileID: 423223054331848066}
-  - component: {fileID: -56260271272887560}
   m_Layer: 6
   m_Name: PowerUp Pidgeon
   m_TagString: PowerUp
@@ -142,19 +141,6 @@ MonoBehaviour:
   speed: 20
   sensibility: 0.03
   player: {fileID: 0}
---- !u!114 &-56260271272887560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 423223054331848064}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab0dc6950bfd45a44ba99efa27078b0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sp: {fileID: 423223054331848063}
 --- !u!1001 &241458858
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -173,6 +159,10 @@ PrefabInstance:
     - target: {fileID: 5157120865063531865, guid: 3afbfb7e6d49aa547828c0429b3c8bfd, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5847929102538986567, guid: 3afbfb7e6d49aa547828c0429b3c8bfd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7064660736654831140, guid: 3afbfb7e6d49aa547828c0429b3c8bfd, type: 3}
       propertyPath: m_Name
