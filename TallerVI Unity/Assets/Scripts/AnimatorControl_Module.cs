@@ -49,11 +49,17 @@ public class AnimatorControl_Module : MonoBehaviour
     {
         animator.SetTrigger("Chili");
     }
-    
-    
+    public void SetOnPidgeonTrigger()
+    {
+        animator.SetTrigger("OnPidgeon");
+    }
     public void SetRocketTrigger()
     {
         animator.SetTrigger("Rocket");
+    }
+    public void SetMitosisTrigger()
+    {
+        animator.SetTrigger("Mitosis");
     }
     #endregion
     
