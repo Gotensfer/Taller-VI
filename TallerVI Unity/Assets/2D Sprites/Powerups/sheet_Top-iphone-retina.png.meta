@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d9d2d0677dde7f8429867660337eb347
+guid: 11998b4b1696d804aa5f04dfee729dc9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -128,7 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cacaleta_Skin_Base_Pigeon_0
+      name: sheet_Top-iphone-retina_0
       rect:
         serializedVersion: 2
         x: 0
@@ -142,14 +142,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 580807192da516c44a97308cc705cfbc
-      internalID: 434624203
+      spriteID: fb0e1b140de0fc74d8ec89db60710611
+      internalID: -930668284
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_Skin_Base_Pigeon_1
+      name: sheet_Top-iphone-retina_1
       rect:
         serializedVersion: 2
         x: 512
@@ -163,14 +163,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48cbfd8be3c0bab42b24150d1bb53648
-      internalID: 1401738049
+      spriteID: c2c3d200913c7e645868e52320526131
+      internalID: 539540118
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_Skin_Base_Pigeon_2
+      name: sheet_Top-iphone-retina_2
       rect:
         serializedVersion: 2
         x: 1024
@@ -184,14 +184,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90e34c306be61d14580b201bdc970580
-      internalID: 134225463
+      spriteID: b345d89d084cfb540a8058d5a0af3f86
+      internalID: 1439988541
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_Skin_Base_Pigeon_3
+      name: sheet_Top-iphone-retina_3
       rect:
         serializedVersion: 2
         x: 1536
@@ -205,14 +205,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c9516f0028fa954ea227935c0f4b02a
-      internalID: -2102374022
+      spriteID: 096f65335a95aba4b91b6196a172dcb6
+      internalID: 2109410680
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_Skin_Base_Pigeon_4
+      name: sheet_Top-iphone-retina_4
       rect:
         serializedVersion: 2
         x: 2048
@@ -226,92 +226,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f0c89b10076f1647a7d1e6702def7ad
-      internalID: 2101094312
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cacaleta_Skin_Base_Pigeon_5
-      rect:
-        serializedVersion: 2
-        x: 2560
-        y: 0
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c0c8154fd2442a24ca2c8ed42cee1873
-      internalID: -1431737121
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cacaleta_Skin_Base_Pigeon_6
-      rect:
-        serializedVersion: 2
-        x: 3072
-        y: 0
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 944226ad4f9178c42bdc383e87978981
-      internalID: 436773899
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cacaleta_Skin_Base_Pigeon_7
-      rect:
-        serializedVersion: 2
-        x: 3584
-        y: 0
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a402f2878bd0c30449157e32a065e41d
-      internalID: 1775065188
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cacaleta_Skin_Base_Pigeon_8
-      rect:
-        serializedVersion: 2
-        x: 4096
-        y: 0
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1f051bd9facb0594ba32d567fc069472
-      internalID: 162614018
+      spriteID: f3225a090eb696c42b0da752fd58769f
+      internalID: -1583488482
       vertices: []
       indices: 
       edges: []
@@ -327,15 +243,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Cacaleta_Skin_Base_Pigeon_6: 436773899
-      Cacaleta_Skin_Base_Pigeon_4: 2101094312
-      Cacaleta_Skin_Base_Pigeon_1: 1401738049
-      Cacaleta_Skin_Base_Pigeon_7: 1775065188
-      Cacaleta_Skin_Base_Pigeon_2: 134225463
-      Cacaleta_Skin_Base_Pigeon_3: -2102374022
-      Cacaleta_Skin_Base_Pigeon_8: 162614018
-      Cacaleta_Skin_Base_Pigeon_0: 434624203
-      Cacaleta_Skin_Base_Pigeon_5: -1431737121
+      sheet_Top-iphone-retina_0: -930668284
+      sheet_Top-iphone-retina_4: -1583488482
+      sheet_Top-iphone-retina_2: 1439988541
+      sheet_Top-iphone-retina_1: 539540118
+      sheet_Top-iphone-retina_3: 2109410680
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

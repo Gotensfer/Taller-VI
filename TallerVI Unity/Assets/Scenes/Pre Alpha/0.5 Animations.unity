@@ -1795,16 +1795,64 @@ MonoBehaviour:
         m_CallState: 2
   ChilliEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1728376857}
+        m_TargetAssemblyTypeName: AnimatorControl_Module, Assembly-CSharp
+        m_MethodName: SetChiliTrigger
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   PidgeonEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1728376857}
+        m_TargetAssemblyTypeName: AnimatorControl_Module, Assembly-CSharp
+        m_MethodName: SetOnPidgeonTrigger
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   RocketEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1728376857}
+        m_TargetAssemblyTypeName: AnimatorControl_Module, Assembly-CSharp
+        m_MethodName: SetRocketTrigger
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   MitosisEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1728376857}
+        m_TargetAssemblyTypeName: AnimatorControl_Module, Assembly-CSharp
+        m_MethodName: SetMitosisTrigger
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &652994169
 GameObject:
   m_ObjectHideFlags: 0
@@ -4547,6 +4595,7 @@ MonoBehaviour:
   uses: 3
   player: {fileID: 1728376842}
   button: {fileID: 2093513029}
+  playerEvents: {fileID: 0}
 --- !u!1 &1856665179
 GameObject:
   m_ObjectHideFlags: 0
@@ -4947,8 +4996,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainMenu: {fileID: 0}
-  gameUI: {fileID: 1809170951}
-  ResetTo: 1
+  preGame: {fileID: 0}
+  store: {fileID: 0}
+  configuration: {fileID: 0}
+  upgrades: {fileID: 0}
 --- !u!1 &1945389755
 GameObject:
   m_ObjectHideFlags: 0
