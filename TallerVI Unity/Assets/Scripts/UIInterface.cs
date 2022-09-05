@@ -14,9 +14,10 @@ public class UIInterface : MonoBehaviour
         mainMenu.DOAnchorPos(Vector2.zero, 2);
     }
 
-    public void Reset()
+    public void Reset(int sceneIndex)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        if (sceneIndex < 0) SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(sceneIndex);
     }
 
 
