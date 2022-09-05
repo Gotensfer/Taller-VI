@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PowerUp_PidgeonTest : MonoBehaviour
+public class PowerUp_PidgeonTest : MonoBehaviour, IPowerUp
 {
 	// Fuentes: https://gist.github.com/alialacan/1eddcd107f4a48a46dea17695ca151f2
 	// Dev note: Cuando haya más tiempo organizo esto es un script dedicado, mientras, esto hace el pare
@@ -142,8 +142,6 @@ public class PowerUp_PidgeonTest : MonoBehaviour
 		rb.AddForce(direction * speed, ForceMode2D.Impulse);
 
 		Invoke(nameof(StopPowerUp), duration);
-
-		print("Woke?");
 	}
 
     void GoUp()
@@ -167,8 +165,18 @@ public class PowerUp_PidgeonTest : MonoBehaviour
 	// Llame a este método para parar el PowerUp
 	public void StopPowerUp()
     {
+		transform.parent.GetComponent<EventReferenceHandler>().playerEvents.PoweredDownEvent.Invoke();
 		Destroy(this);
     }
+
+	/// <summary>
+	/// Interrumpe y para el PowerUp actual, usado cuando otro PowerUp va a sobrescribir el que está activo actualmente
+	/// </summary>
+	public void InterruptAndStop()
+    {
+		CancelInvoke();
+		Destroy(this);
+	}
 
     #endregion
 }

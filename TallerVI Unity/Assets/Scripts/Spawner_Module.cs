@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Spawner_Module : MonoBehaviour
@@ -9,12 +10,25 @@ public class Spawner_Module : MonoBehaviour
     [SerializeField] GameObject prefab1, prefab2, prefab3, father;
 
     //variables utilidad
-    float prevPos = 12;
+    float prevPos = 18;
+    private Rigidbody2D rb;
+    private TrackerBase_Module track;
+    Camera cam;
+    private Plane[] planes;
 
     // Start is called before the first frame update
     void Start()
     {
+        cam = Camera.main;
+        track = FindObjectOfType<TrackerBase_Module>();
+        rb = track.GetPlayer().GetComponent<Rigidbody2D>();
         Spawn();
+    }
+
+    void Update()
+    {
+        planes = GeometryUtility.CalculateFrustumPlanes(cam);
+        ReUse();
     }
 
     void Instance()
@@ -23,7 +37,7 @@ public class Spawner_Module : MonoBehaviour
         {
             pickUps_list.Add(new List<GameObject>());
             
-            for(int j = 0; j<3; j++)
+            for(int j = 0; j<20; j++)
             {
                 if(i==0)
                 {
@@ -51,7 +65,7 @@ public class Spawner_Module : MonoBehaviour
         {
             if(pickUps_list[count] != null)
             {
-                prevPos = 12;
+                prevPos = 18;
 
                 foreach (GameObject objElement in pickUps_list[count])
                 {
@@ -65,6 +79,41 @@ public class Spawner_Module : MonoBehaviour
         }
     }
 
+    public void DisablePowerUps()
+    {
+        foreach (List<GameObject> element in pickUps_list)
+        {
+            foreach (GameObject obj in element)
+            {
+                obj.GetComponent<Collider2D>().enabled = false;
+                if (obj.GetComponent<PowerUp_Base>() != null)
+                {
+                    obj.GetComponent<PowerUp_Base>().sp.enabled = false;
+                }
+                else
+                {
+                    obj.GetComponentInChildren<ParticleSystem>().Stop();
+                }
+            }
+        }
+    }
+    
+    public void EnablePowerUps()
+    {
+        foreach (List<GameObject> element in pickUps_list)
+        {
+            foreach (GameObject obj in element)
+            {
+                obj.GetComponent<Collider2D>().enabled = true;
+                if (obj.GetComponent<PowerUp_Base>() != null)
+                {
+                    obj.GetComponent<PowerUp_Base>().sp.enabled = true;
+                }
+                obj.GetComponentInChildren<ParticleSystem>().Play();
+            }
+        }
+    }
+
     public List<Vector2> GetVectors()
     {
         return heights;
@@ -74,5 +123,37 @@ public class Spawner_Module : MonoBehaviour
     {
         prevPos += 10;
         return prevPos - 10;
+    }
+
+    void ReUse()
+    {
+        foreach (List<GameObject> element in pickUps_list)
+        {
+            foreach (GameObject obj in element)
+            {
+                Visible(obj.GetComponent<Collider2D>());
+            }
+        }
+    }
+    
+    void Visible(Collider2D col)
+    {
+        if (GeometryUtility.TestPlanesAABB(planes, col.bounds))
+        {
+            return;
+        }
+        else if (rb.transform.position.x < col.transform.position.x+10)
+        {
+            return;
+        }
+
+        foreach (Vector2 element in GetVectors())
+        {
+            if (col.transform.position.y <= element.y && col.transform.position.y >= element.x)
+            {
+                col.transform.position = new Vector3(GetPrevPos(), Random.Range(element.x, element.y), 0);
+                break;
+            }
+        }
     }
 }
