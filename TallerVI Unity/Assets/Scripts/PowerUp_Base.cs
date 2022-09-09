@@ -93,4 +93,9 @@ public class PowerUp_Base : MonoBehaviour, IPowerUp
             }
         }    
     }
+
+    public PowerUpType GetType()
+    {
+        return type;
+    }
 }
