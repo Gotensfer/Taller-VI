@@ -24,6 +24,13 @@ public class DistanceTracker_Module : MonoBehaviour
     private void Update()
     {
         CalculateTravelledDistance(player.position);
+
+#if UNITY_EDITOR
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            ResetRecord();
+        }
+#endif
     }
 
     public string CalculateTravelledDistance(Vector2 currentPos)
@@ -49,5 +56,12 @@ public class DistanceTracker_Module : MonoBehaviour
             
             Debug.Log("New Record: " + PlayerPrefs.GetFloat("Distance"));
         }
+    }
+
+    // Para usos de debug
+    void ResetRecord()
+    {
+        PlayerPrefs.SetFloat("Distance", 0);
+        PlayerPrefs.Save();
     }
 }
