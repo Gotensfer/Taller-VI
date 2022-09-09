@@ -6,12 +6,16 @@ using UnityEngine.SceneManagement;
 using DG.Tweening;
 public class UIInterface : MonoBehaviour
 {
-    public RectTransform mainMenu, preGame,store,configuration,upgrades; //References for UI position
+    public RectTransform mainMenu, preGame,store, upgrades, album,configuration, mainTitle, background; //References for UI position
 
     //Initialiazing UI with fadeup animation
     private void Start()
-    {
+    {        
         mainMenu.DOAnchorPos(Vector2.zero, 2);
+        background.DOAnchorPos(new Vector2(-1460, -820), 2);
+        mainTitle.DOScale(new Vector3(1,1,1),1.5f)
+            .SetEase(Ease.InOutSine)
+            .SetLoops(-1, LoopType.Yoyo);
     }
 
     public void Reset(int sceneIndex)
@@ -37,7 +41,7 @@ public class UIInterface : MonoBehaviour
     public void PlayFromUpgradeUIButton()
     {
         preGame.DOAnchorPos(new Vector2(0, 0), 1);
-        upgrades.DOAnchorPos(new Vector2(-3000, 0), 1);
+        upgrades.DOAnchorPos(new Vector2(0, -1700), 1);
     }
     
     //Store Button
@@ -49,7 +53,7 @@ public class UIInterface : MonoBehaviour
     public void BackFromStoreUIButton()
     {
         mainMenu.DOAnchorPos(new Vector2(0, 0), 1);
-        store.DOAnchorPos(new Vector2(0, -1600), 1);
+        store.DOAnchorPos(new Vector2(0, -1700), 1);
     }
     //Upgrade Button
     public void UpgradesUIButton()
@@ -60,13 +64,26 @@ public class UIInterface : MonoBehaviour
     public void BackFromUpgradesUIButton()
     {
         mainMenu.DOAnchorPos(new Vector2(0, 0), 1);
-        upgrades.DOAnchorPos(new Vector2(0, -1600), 1);
+        upgrades.DOAnchorPos(new Vector2(0, -1700), 1);
     }
     public void UpgradeFromPlayUIButton()
     {
-        preGame.DOAnchorPos(new Vector2(0, 1600), 1);
+        preGame.DOAnchorPos(new Vector2(0, 1700), 1);
         upgrades.DOAnchorPos(new Vector2(0, 0), 1);
     }
+
+    //Album Button
+    public void AlbumUIButton()
+    {
+        mainMenu.DOAnchorPos(new Vector2(-3000, 0), 1);
+        album.DOAnchorPos(new Vector2(0, 0), 1);
+    }
+    public void BackFromAlbumUIButton()
+    {
+        mainMenu.DOAnchorPos(new Vector2(0, 0), 1);
+        album.DOAnchorPos(new Vector2(0, -1700), 1);
+    }
+
     //Config Button
     public void ConfigUIButton()
     {
