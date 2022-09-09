@@ -61,6 +61,14 @@ public class AnimatorControl_Module : MonoBehaviour
     {
         animator.SetTrigger("Mitosis");
     }
+    public void SetPoweredUpTrigger()
+    {
+        animator.SetTrigger("PoweredUp");
+    }
+    public void SetPoweredDownTrigger()
+    {
+        animator.SetTrigger("PoweredDown");
+    }
     #endregion
-    
+
 }
