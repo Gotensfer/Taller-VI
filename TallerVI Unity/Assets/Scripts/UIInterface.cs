@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 using DG.Tweening;
 public class UIInterface : MonoBehaviour
 {
-    public RectTransform mainMenu, preGame,store,configuration,upgrades; //References for UI position
+    public RectTransform mainMenu, preGame,store, upgrades, album,configuration; //References for UI position
 
     //Initialiazing UI with fadeup animation
     private void Start()
@@ -37,7 +37,7 @@ public class UIInterface : MonoBehaviour
     public void PlayFromUpgradeUIButton()
     {
         preGame.DOAnchorPos(new Vector2(0, 0), 1);
-        upgrades.DOAnchorPos(new Vector2(-3000, 0), 1);
+        upgrades.DOAnchorPos(new Vector2(0, -1600), 1);
     }
     
     //Store Button
@@ -67,6 +67,19 @@ public class UIInterface : MonoBehaviour
         preGame.DOAnchorPos(new Vector2(0, 1600), 1);
         upgrades.DOAnchorPos(new Vector2(0, 0), 1);
     }
+
+    //Album Button
+    public void AlbumUIButton()
+    {
+        mainMenu.DOAnchorPos(new Vector2(-3000, 0), 1);
+        album.DOAnchorPos(new Vector2(0, 0), 1);
+    }
+    public void BackFromAlbumUIButton()
+    {
+        mainMenu.DOAnchorPos(new Vector2(0, 0), 1);
+        album.DOAnchorPos(new Vector2(0, -1600), 1);
+    }
+
     //Config Button
     public void ConfigUIButton()
     {
