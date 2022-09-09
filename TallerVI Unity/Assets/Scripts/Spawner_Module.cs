@@ -37,7 +37,7 @@ public class Spawner_Module : MonoBehaviour
 
     void Debugger(int index, int count)
     {
-        Debug.Log("count" + index + ": " + count);
+        //Debug.Log("count" + index + ": " + count);
     }
     
     void Instance()
@@ -169,7 +169,7 @@ public class Spawner_Module : MonoBehaviour
             
             if (prevPos - 50 < distance2)
             {
-                Debug.Log("Called");
+                // Debug.Log("Called");
                 
                 if(pickUps_listInUse.Count>0) RemoveItem();
                 
