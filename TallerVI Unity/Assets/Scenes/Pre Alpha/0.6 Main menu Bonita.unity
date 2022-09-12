@@ -1634,7 +1634,7 @@ GameObject:
   - component: {fileID: 290338882}
   - component: {fileID: 290338884}
   m_Layer: 5
-  m_Name: MainCourse (3)
+  m_Name: Bocachico
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1743,26 +1743,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1079185513}
-        m_TargetAssemblyTypeName: Test_FoodSystem, Assembly-CSharp
+      - m_Target: {fileID: 657737041}
+        m_TargetAssemblyTypeName: FoodSystem, Assembly-CSharp
         m_MethodName: AddFood
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 10
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 290338880}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1855,7 +1843,7 @@ GameObject:
   - component: {fileID: 341542044}
   - component: {fileID: 341542046}
   m_Layer: 5
-  m_Name: Dessert (3)
+  m_Name: Flan (Cambiar img)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1964,26 +1952,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1079185513}
-        m_TargetAssemblyTypeName: Test_FoodSystem, Assembly-CSharp
+      - m_Target: {fileID: 657737041}
+        m_TargetAssemblyTypeName: FoodSystem, Assembly-CSharp
         m_MethodName: AddFood
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 15
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 341542042}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 7
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3996,7 +3972,7 @@ GameObject:
   - component: {fileID: 541040666}
   - component: {fileID: 541040668}
   m_Layer: 5
-  m_Name: Drink (3)
+  m_Name: Soda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4105,22 +4081,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1079185513}
-        m_TargetAssemblyTypeName: Test_FoodSystem, Assembly-CSharp
+      - m_Target: {fileID: 657737041}
+        m_TargetAssemblyTypeName: FoodSystem, Assembly-CSharp
         m_MethodName: AddFood
         m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 541040664}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5279,8 +5243,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 657737040}
+  - component: {fileID: 657737041}
   m_Layer: 5
-  m_Name: Pre-Game
+  m_Name: Pre-Game (Food)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5311,6 +5276,29 @@ RectTransform:
   m_AnchoredPosition: {x: 2920, y: 0}
   m_SizeDelta: {x: 2920, y: 1398}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &657737041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657737039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5cb8a017f8d09340be064c433fa5eb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foods:
+  - {fileID: 11400000, guid: 868ef798c0f095d488a6792be8994553, type: 2}
+  - {fileID: 11400000, guid: 2a3e29d41be08b54ea3364826302e631, type: 2}
+  - {fileID: 11400000, guid: e477c9ca513a868428f43d13dbfc252a, type: 2}
+  - {fileID: 11400000, guid: 3f841712dcd22df4abd218e09b8845c4, type: 2}
+  - {fileID: 11400000, guid: 18b982d420cd7fd46810a6ea8ebab60c, type: 2}
+  - {fileID: 11400000, guid: f408a047613b20a4fba513c095b9ae0a, type: 2}
+  - {fileID: 11400000, guid: 3ff31767e483e0e4db7a8fa60069f13f, type: 2}
+  - {fileID: 11400000, guid: 32df269934739de408f09954fe5c05a2, type: 2}
+  - {fileID: 11400000, guid: 585d6d04012b4734a871416959a2b93d, type: 2}
+  addedFoods: []
 --- !u!1 &671485243
 GameObject:
   m_ObjectHideFlags: 0
@@ -8000,7 +7988,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1079185512}
-  - component: {fileID: 1079185513}
   m_Layer: 5
   m_Name: Objects
   m_TagString: Untagged
@@ -8038,18 +8025,6 @@ RectTransform:
   m_AnchoredPosition: {x: -16.692, y: 61.01921}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1079185513
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1079185511}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cd7d7a9e46443f4d94f5c0f9ec72e01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1079824496
 GameObject:
   m_ObjectHideFlags: 0
@@ -8848,7 +8823,7 @@ GameObject:
   - component: {fileID: 1208136854}
   - component: {fileID: 1208136856}
   m_Layer: 5
-  m_Name: MainCourse (1)
+  m_Name: Bandeja paisa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8957,26 +8932,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1079185513}
-        m_TargetAssemblyTypeName: Test_FoodSystem, Assembly-CSharp
+      - m_Target: {fileID: 657737041}
+        m_TargetAssemblyTypeName: FoodSystem, Assembly-CSharp
         m_MethodName: AddFood
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 15
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1208136852}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -9510,7 +9473,7 @@ GameObject:
   - component: {fileID: 1302970056}
   - component: {fileID: 1302970058}
   m_Layer: 5
-  m_Name: Drink (2)
+  m_Name: Beer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9619,26 +9582,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1079185513}
-        m_TargetAssemblyTypeName: Test_FoodSystem, Assembly-CSharp
+      - m_Target: {fileID: 657737041}
+        m_TargetAssemblyTypeName: FoodSystem, Assembly-CSharp
         m_MethodName: AddFood
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1302970054}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -10544,7 +10495,7 @@ GameObject:
   - component: {fileID: 1394047062}
   - component: {fileID: 1394047064}
   m_Layer: 5
-  m_Name: Dessert (1)
+  m_Name: Brevas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10653,26 +10604,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1079185513}
-        m_TargetAssemblyTypeName: Test_FoodSystem, Assembly-CSharp
+      - m_Target: {fileID: 657737041}
+        m_TargetAssemblyTypeName: FoodSystem, Assembly-CSharp
         m_MethodName: AddFood
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 8
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1394047060}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 6
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -11740,7 +11679,7 @@ GameObject:
   - component: {fileID: 1501102505}
   - component: {fileID: 1501102507}
   m_Layer: 5
-  m_Name: MainCourse (2)
+  m_Name: Ajiaco
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11849,26 +11788,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1079185513}
-        m_TargetAssemblyTypeName: Test_FoodSystem, Assembly-CSharp
+      - m_Target: {fileID: 657737041}
+        m_TargetAssemblyTypeName: FoodSystem, Assembly-CSharp
         m_MethodName: AddFood
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 12
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1501102503}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -12621,7 +12548,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1079185513}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Test_FoodSystem, Assembly-CSharp
         m_MethodName: GoToLaunchScene
         m_Mode: 3
@@ -13935,7 +13862,7 @@ GameObject:
   - component: {fileID: 1900807386}
   - component: {fileID: 1900807388}
   m_Layer: 5
-  m_Name: Dessert (2)
+  m_Name: Bocadillo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14044,26 +13971,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1079185513}
-        m_TargetAssemblyTypeName: Test_FoodSystem, Assembly-CSharp
+      - m_Target: {fileID: 657737041}
+        m_TargetAssemblyTypeName: FoodSystem, Assembly-CSharp
         m_MethodName: AddFood
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 10
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1900807384}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 8
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -14208,7 +14123,7 @@ GameObject:
   - component: {fileID: 1931087087}
   - component: {fileID: 1931087089}
   m_Layer: 5
-  m_Name: Drink (1)
+  m_Name: Guaro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14317,26 +14232,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1079185513}
-        m_TargetAssemblyTypeName: Test_FoodSystem, Assembly-CSharp
+      - m_Target: {fileID: 657737041}
+        m_TargetAssemblyTypeName: FoodSystem, Assembly-CSharp
         m_MethodName: AddFood
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1931087085}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

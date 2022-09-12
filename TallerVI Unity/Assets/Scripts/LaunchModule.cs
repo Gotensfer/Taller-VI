@@ -28,6 +28,9 @@ public class LaunchModule : MonoBehaviour
         angle = 0;
         _rb = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
         points[0] = _rb.transform.position;
+
+        force = LaunchData.impulse;
+        angleMovementVelocity = LaunchData.anglePerSecond;
     }
     
     void Update()
@@ -47,8 +50,7 @@ public class LaunchModule : MonoBehaviour
 
     public void Launch()
     {
-        force = Test_LaunchData.strenght;
-        if (Test_LaunchData.strenght < 5) force = 30;
+        if (Test_LaunchData.strenght < 5) force = 5;
         Test_LaunchData.ResetLaunchData();
         _rb.AddForce(dir * force, ForceMode2D.Impulse);
         playerEvents.LaunchEvent.Invoke();
