@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Bocachico
   m_EditorClassIdentifier: 
   maxVelocity: 0
-  anglePerSecond: 0
+  anglePerSecond: 15
   impulse: 15
   bounces: 0
-  type: 0
+  type: 1

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ajiaco
   m_EditorClassIdentifier: 
   maxVelocity: 0
-  anglePerSecond: 0
+  anglePerSecond: 25
   impulse: 30
   bounces: 0
-  type: 0
+  type: 1

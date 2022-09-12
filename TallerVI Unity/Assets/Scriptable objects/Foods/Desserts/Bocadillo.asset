@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Bocadillo
   m_EditorClassIdentifier: 
   maxVelocity: 0
-  anglePerSecond: 0
+  anglePerSecond: 35
   impulse: 0
-  bounces: 4
-  type: 0
+  bounces: 3
+  type: 2

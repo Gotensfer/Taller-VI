@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Bandeja paisa
   m_EditorClassIdentifier: 
   maxVelocity: 0
-  anglePerSecond: 0
+  anglePerSecond: 35
   impulse: 45
   bounces: 0
-  type: 0
+  type: 1

@@ -8,19 +8,30 @@ public class UIInterface : MonoBehaviour
 {
     public RectTransform mainMenu, preGame,store, upgrades, album,configuration, mainTitle; //References for UI position
 
+    public static bool alreadyInitialized = false;
+
     //Initialiazing UI with fadeup animation
     private void Start()
     {        
-        mainMenu.DOAnchorPos(Vector2.zero, 2);
-        mainTitle.DOScale(new Vector3(0.8f,0.8f,0.8f),1.5f)
-            .SetEase(Ease.InOutSine)
-            .SetLoops(-1, LoopType.Yoyo);
+        // Inicialización distinta si no es la primera vez que se inicializa
+        if (alreadyInitialized)
+        {
+            PlayUIButton();
+        }
+        else
+        {
+            mainMenu.DOAnchorPos(Vector2.zero, 2);
+            mainTitle.DOScale(new Vector3(0.8f, 0.8f, 0.8f), 1.5f)
+                .SetEase(Ease.InOutSine)
+                .SetLoops(-1, LoopType.Yoyo);
+        }
     }
 
     public void Reset(int sceneIndex)
     {
         if (sceneIndex < 0) SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         SceneManager.LoadScene(sceneIndex);
+        alreadyInitialized = true;
     }
 
 
