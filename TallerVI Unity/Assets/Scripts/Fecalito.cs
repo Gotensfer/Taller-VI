@@ -4,15 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class Mitosis : MonoBehaviour
+public class Fecalito : MonoBehaviour
 {
     [SerializeField] float strenght;
     [SerializeField] Vector2 direction;
 
+    public int level;
+
     [SerializeField] float cdTime;
     float remainingCD;
-
-    public int level;
 
     [SerializeField] int maxCharges;
     [SerializeField] int charges;
@@ -35,6 +35,9 @@ public class Mitosis : MonoBehaviour
         switch (level)
         {
             // Cambiar esto de hardcoded a un GameData manager o similares
+            case 0:
+                maxCharges = 0;
+                break;
             case 1:
                 maxCharges = 1;
                 break;
@@ -63,10 +66,9 @@ public class Mitosis : MonoBehaviour
         }
     }
 
-    public void Activate_Mitosis()
+    public void Activate_Fecalito()
     {
         direction.Normalize();
-        player.velocity = new Vector2(player.velocity.x, 0);
         player.AddForce(direction * strenght, ForceMode2D.Impulse);
 
         charges--;

@@ -25,6 +25,7 @@ public class PlayerEvents_Interface : MonoBehaviour
     public UnityEvent RocketEvent;
     public UnityEvent MitosisEvent;
     public UnityEvent MitosisPickUpEvent;
+    public UnityEvent FecalitoEvent;
 
     private void Start()
     {
