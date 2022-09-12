@@ -7032,7 +7032,8 @@ MonoBehaviour:
   strenght: 20
   direction: {x: 0, y: 1}
   cdTime: 2
-  maxCharges: 3
+  level: 1
+  maxCharges: 0
   charges: 0
   player: {fileID: 1728376842}
   button: {fileID: 2093513029}

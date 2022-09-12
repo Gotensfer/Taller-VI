@@ -12,7 +12,9 @@ public class Mitosis : MonoBehaviour
     [SerializeField] float cdTime;
     float remainingCD;
 
-    public int maxCharges;
+    public int level;
+
+    [SerializeField] int maxCharges;
     [SerializeField] int charges;
 
     [SerializeField] Rigidbody2D player;
@@ -26,6 +28,20 @@ public class Mitosis : MonoBehaviour
     {
         button.SetActive(false);
         playerEvents.LaunchEvent.AddListener(EnableMitosisButton); // Para evitar ruido en el EventManager
+
+        switch (level)
+        {
+            // Cambiar esto de hardcoded a un GameData manager o similares
+            case 1:
+                maxCharges = 1;
+                break;
+            case 2:
+                maxCharges = 2;
+                break;
+            case 3:
+                maxCharges = 3;
+                break;
+        }
 
         charges = maxCharges;
         UpdateUIChargeIndicator();
