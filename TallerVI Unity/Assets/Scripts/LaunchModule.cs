@@ -12,6 +12,8 @@ public class LaunchModule : MonoBehaviour
     [SerializeField] PlayerEvents_Interface playerEvents;
     [SerializeField] private int angleMovementVelocity;
 
+    [SerializeField] GameObject launchZoneButton;
+
     //Temporal
     Vector3[] points = new Vector3[2];
 
@@ -50,6 +52,7 @@ public class LaunchModule : MonoBehaviour
         Test_LaunchData.ResetLaunchData();
         _rb.AddForce(dir * force, ForceMode2D.Impulse);
         playerEvents.LaunchEvent.Invoke();
+        launchZoneButton.SetActive(false);
     }
 
     void CalculateDirection()

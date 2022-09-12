@@ -36,6 +36,7 @@ public class Fecalito : MonoBehaviour
         {
             // Cambiar esto de hardcoded a un GameData manager o similares
             case 0:
+                playerEvents.LaunchEvent.RemoveListener(EnableFecalitoButton); // No activar fecalito si no se posee
                 maxCharges = 0;
                 break;
             case 1:
@@ -69,6 +70,7 @@ public class Fecalito : MonoBehaviour
     public void Activate_Fecalito()
     {
         direction.Normalize();
+        player.velocity = new Vector2(player.velocity.x, 0); // Más que todo para lograr un mejor efecto visual
         player.AddForce(direction * strenght, ForceMode2D.Impulse);
 
         charges--;
@@ -77,7 +79,7 @@ public class Fecalito : MonoBehaviour
         button.GetComponent<Image>().sprite = onCDSprite;
         UpdateUIChargeIndicator();
 
-        playerEvents.MitosisEvent.Invoke();
+        playerEvents.FecalitoEvent.Invoke();
     }
 
     void EnableFecalitoButton()
