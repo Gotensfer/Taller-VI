@@ -46,7 +46,7 @@ public class LaunchModule : MonoBehaviour
     public void Launch()
     {
         force = Test_LaunchData.strenght;
-        if (Test_LaunchData.strenght < 5) force = 10;
+        if (Test_LaunchData.strenght < 5) force = 30;
         Test_LaunchData.ResetLaunchData();
         _rb.AddForce(dir * force, ForceMode2D.Impulse);
         playerEvents.LaunchEvent.Invoke();
