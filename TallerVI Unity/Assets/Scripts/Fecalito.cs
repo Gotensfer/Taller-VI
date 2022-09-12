@@ -30,7 +30,7 @@ public class Fecalito : MonoBehaviour
     private void Start()
     {
         button.SetActive(false);
-        playerEvents.LaunchEvent.AddListener(EnableMitosisButton); // Para evitar ruido en el EventManager
+        playerEvents.LaunchEvent.AddListener(EnableFecalitoButton); // Para evitar ruido en el EventManager
 
         switch (level)
         {
@@ -80,7 +80,7 @@ public class Fecalito : MonoBehaviour
         playerEvents.MitosisEvent.Invoke();
     }
 
-    void EnableMitosisButton()
+    void EnableFecalitoButton()
     {
         button.SetActive(true);
     }
