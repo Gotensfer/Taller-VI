@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class Spawner_Module : MonoBehaviour
 {
-    private List<List<GameObject>> pickUps_list = new List<List<GameObject>>(3);
+    private List<List<GameObject>> pickUps_list = new List<List<GameObject>>(4);
     private List<GameObject> pickUps_listInUse =  new List<GameObject>();
-    [SerializeField] private GameObject prefab1, prefab2, prefab3, father;
+    [SerializeField] private GameObject prefab1, prefab2, prefab3, prefab4, father;
 
     //variables utilidad
-    private float prevPos = 18, chance1 = 100, chance2 = 100, chance3 = 100;
+    private float prevPos = 18, chance1 = 100, chance2 = 100, chance3 = 100, chance4 = 100;
     int distance, distance2, temp = 0, temp2 = 0, selected;
     private Rigidbody2D rb;
     private TrackerBase_Module track;
-    private bool enabledReUse = false;
+    private bool enabledReUse = false, gliding = false, falling = false;
 
     // Start is called before the first frame update
     void Start()
@@ -27,22 +27,41 @@ public class Spawner_Module : MonoBehaviour
     {
         distance = (int)rb.position.y;
         distance2 = (int)rb.position.x;
+
+        #region Debuggers
+        
+        /*
         Debugger(1, pickUps_list[0].Count);
         Debugger(2, pickUps_list[1].Count);
         Debugger(3, pickUps_list[2].Count);
-        Debugger(4, pickUps_listInUse.Count);
+        Debugger(4, pickUps_list[3].Count);
+        Debugger(5, pickUps_listInUse.Count);
+        */
+        
+        #endregion
+        
         DecreaseChance();
         ReUse();
     }
 
     void Debugger(int index, int count)
     {
-        //Debug.Log("count" + index + ": " + count);
+        Debug.Log("count" + index + ": " + count);
+    }
+
+    public void Gliding(bool change)
+    {
+        gliding = change;
+    }
+    
+    public void Falling(bool change)
+    {
+        falling = change;
     }
     
     void Instance()
     {
-        for(int i = 0; i<3; i++)
+        for(int i = 0; i<4; i++)
         {
             pickUps_list.Add(new List<GameObject>());
 
@@ -56,9 +75,13 @@ public class Spawner_Module : MonoBehaviour
                 {
                     pickUps_list[i].Add(Instantiate(prefab2,father.transform));
                 }
-                else
+                else if(i==2)
                 {
                     pickUps_list[i].Add(Instantiate(prefab3,father.transform));
+                }
+                else
+                {
+                    pickUps_list[i].Add(Instantiate(prefab4,father.transform));
                 }
             }
         }
@@ -70,7 +93,7 @@ public class Spawner_Module : MonoBehaviour
 
         for (int i = 0; i < 10; i++)
         {
-            AddItem(0,50);
+            AddItem(3,50);
         }
     }
 
@@ -91,12 +114,19 @@ public class Spawner_Module : MonoBehaviour
     
     public void EnablePowerUps()
     {
-        enabledReUse = true;
+        Invoke("TrueState", 0.5f);
     }
 
+    void TrueState()
+    {
+        enabledReUse = true;
+        prevPos = rb.position.x;
+        GetPrevPos();
+    }
+    
     GameObject GetRandomObject()
     {
-        selected = Random.Range(0, 2);
+        selected = Random.Range(0, 4);
 
         if (selected == 0)
         {
@@ -146,6 +176,22 @@ public class Spawner_Module : MonoBehaviour
                 }
             }
         }
+        else if (selected == 3)
+        {
+            float rnd = Random.Range(0, 100);
+        
+            if (rnd < chance4 || rnd == 100)
+            {
+                if (pickUps_list[selected].Count > 0)
+                {
+                    return pickUps_list[selected].ElementAt(0);   
+                }
+                else
+                {
+                    return GetRandomObject();
+                }
+            }
+        }
 
         return GetRandomObject();
     }
@@ -167,13 +213,18 @@ public class Spawner_Module : MonoBehaviour
             
             temp2 = distance2;
             
-            if (prevPos - 50 < distance2)
+            if (prevPos - 40 < distance2)
             {
                 // Debug.Log("Called");
                 
                 if(pickUps_listInUse.Count>0) RemoveItem();
                 
-                AddItem(rb.position.y + Random.Range(-8.0f,0), rb.position.y + Random.Range(0,8.0f));
+                if(gliding) AddItem(rb.position.y - 8, rb.position.y + 1);
+                else if (falling && rb.transform.position.y >= 10)
+                {
+                    prevPos = rb.position.x;
+                    AddItem(rb.position.y - 30 , rb.position.y - 4);
+                }
             }
         }
     }
@@ -187,7 +238,11 @@ public class Spawner_Module : MonoBehaviour
     void AddItem(float x, float y)
     {
         GameObject obj = GetRandomObject();
-        obj.transform.position = new Vector3(GetPrevPos() + Random.Range(-8.0f,8.0f), Random.Range(x, y), 0);
+        obj.transform.position = new Vector3(GetPrevPos() + Random.Range(-15.0f,15.0f), Random.Range(x, y), 0);
+        if (obj.transform.position.y < 3)
+        {
+            obj.transform.position =  new Vector3(obj.transform.position.x, 3, 0);
+        }
         pickUps_list[selected].Remove(obj);
         pickUps_listInUse.Add(obj);
     }
@@ -205,9 +260,13 @@ public class Spawner_Module : MonoBehaviour
                 return 2;
             }
         }
-        else
+        else if (element.GetComponent<PidgeonPickUp>() != null)
         {
             return 1;
+        }
+        else
+        {
+            return 3;
         }
     }
     
