@@ -24,9 +24,11 @@ public class PlayerEvents_Interface : MonoBehaviour
     public UnityEvent PidgeonEvent;
     public UnityEvent RocketEvent;
     public UnityEvent MitosisEvent;
+    public UnityEvent MitosisPickUpEvent;
 
     private void Start()
     {
+#if UNITY_EDITOR
         if (debuggingActivated)
         {
             LaunchEvent.AddListener(DebugLaunchEvent);
@@ -41,9 +43,12 @@ public class PlayerEvents_Interface : MonoBehaviour
             PidgeonEvent.AddListener(DebugPidgeonEvent);
             RocketEvent.AddListener(DebugRocketEvent);
             MitosisEvent.AddListener(DebugMitosisEvent);
+            MitosisPickUpEvent.AddListener(DebugMitosisPickUpEvent);
+#endif
         }
     }
 
+#if UNITY_EDITOR
     #region"Debug methods"
     public void DebugLaunchEvent()
     {
@@ -104,5 +109,11 @@ public class PlayerEvents_Interface : MonoBehaviour
     {
         print("Mitosis event fired");
     }
+
+    public void DebugMitosisPickUpEvent()
+    {
+        print("Mitosis pick up event fired");
+    }
     #endregion
+#endif
 }
