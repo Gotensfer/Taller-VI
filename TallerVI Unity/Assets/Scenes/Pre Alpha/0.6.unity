@@ -450,6 +450,7 @@ MonoBehaviour:
   prefab1: {fileID: 69687176620298395, guid: 40ccc3a73358db34bb6c1752812e8e1d, type: 3}
   prefab2: {fileID: 423223054331848064, guid: 11b01d38288d1ad44b6cd051383daf7b, type: 3}
   prefab3: {fileID: 7819924271294555339, guid: 118c6ec2f70c30048943ae98927d3836, type: 3}
+  prefab4: {fileID: 8497296553107868462, guid: 976e809bef8e63b49867a05ba1e13155, type: 3}
   father: {fileID: 524557124}
 --- !u!1 &79221870
 GameObject:
@@ -1058,6 +1059,14 @@ MonoBehaviour:
   angleMovementVelocity: 65
   launchZoneButton: {fileID: 590881351}
   length: 2
+  timeToReEnableCollisions: 5
+  player: {fileID: 1728376841}
+  originalLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  phantomLayer:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!1 &294536538
 GameObject:
   m_ObjectHideFlags: 0
@@ -3389,6 +3398,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 63276234}
+        m_TargetAssemblyTypeName: Spawner_Module, Assembly-CSharp
+        m_MethodName: Gliding
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 63276234}
+        m_TargetAssemblyTypeName: Spawner_Module, Assembly-CSharp
+        m_MethodName: Falling
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   FallingEvent:
     m_PersistentCalls:
       m_Calls:
@@ -3396,6 +3429,30 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: AnimatorControl_Module, Assembly-CSharp
         m_MethodName: SetFallTrigger
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 63276234}
+        m_TargetAssemblyTypeName: Spawner_Module, Assembly-CSharp
+        m_MethodName: Falling
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 63276234}
+        m_TargetAssemblyTypeName: Spawner_Module, Assembly-CSharp
+        m_MethodName: Gliding
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3431,12 +3488,36 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 63276234}
+        m_TargetAssemblyTypeName: Spawner_Module, Assembly-CSharp
+        m_MethodName: DisablePowerUps
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   PidgeonEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1728376857}
         m_TargetAssemblyTypeName: AnimatorControl_Module, Assembly-CSharp
         m_MethodName: SetOnPidgeonTrigger
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 63276234}
+        m_TargetAssemblyTypeName: Spawner_Module, Assembly-CSharp
+        m_MethodName: DisablePowerUps
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3464,6 +3545,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1424772947}
         m_TargetAssemblyTypeName: FmodEventManager, Assembly-CSharp
         m_MethodName: RocketSfx
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 63276234}
+        m_TargetAssemblyTypeName: Spawner_Module, Assembly-CSharp
+        m_MethodName: DisablePowerUps
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4677,7 +4770,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c5ec4ad6b25b4884ea2a16c3498936a6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6e2b6c1ea5acdd44382aee9765fd67ba, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6554,7 +6647,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3400993727b2d1040ac8cf772a004599, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounces: 3
+  bounces: 2
   bouncesUsed: 0
   playerEvents: {fileID: 645198002}
 --- !u!95 &1728376851
@@ -7671,7 +7764,6 @@ MonoBehaviour:
   album: {fileID: 0}
   configuration: {fileID: 0}
   mainTitle: {fileID: 0}
-  background: {fileID: 0}
 --- !u!1 &1945389755
 GameObject:
   m_ObjectHideFlags: 0
@@ -8051,8 +8143,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
