@@ -49,12 +49,6 @@ public class FmodEventManager : MonoBehaviour
     {
         mitosisEmitter.Play();
     }
-
-    public void Pidgeon()
-    {
-
-    }
-
     public void PlayMusic()
     {
         bgMusicEmitter.Play();

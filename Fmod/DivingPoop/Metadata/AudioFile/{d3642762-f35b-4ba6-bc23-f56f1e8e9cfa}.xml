@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{d3642762-f35b-4ba6-bc23-f56f1e8e9cfa}">
 		<property name="assetPath">
-			<value>Ala 3.wav</value>
+			<value>SFX Cacaleta/Paloma/Ala 3.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>
