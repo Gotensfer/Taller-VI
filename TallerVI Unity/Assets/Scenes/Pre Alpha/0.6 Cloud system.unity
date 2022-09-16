@@ -8958,12 +8958,12 @@ MonoBehaviour:
   - {fileID: 1940962350}
   - {fileID: 1285068481}
   - {fileID: 671331872}
-  timeBetweenCloudSpawnAttempts: 0.1
-  minimumTravelledDistanceForCloudSpawn: 10
+  timeBetweenCloudSpawnAttempts: 0.25
+  minimumTravelledDistanceForCloudSpawn: 15
   CloudSpawnChanceInAttempt: 0.5
   mininumAltitudeForClouds: 50
   maximumAltitudeForClouds: 500
-  x_distanceFromPlayerWhenSpawned: 10
+  x_distanceFromPlayerWhenSpawned: 14
   y_distanceRangeFromPlayerWhenSpawned: 7
   player: {fileID: 1728376845}
 --- !u!1 &2070663514
