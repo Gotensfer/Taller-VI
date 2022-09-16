@@ -8,7 +8,7 @@ using System.Linq;
 
 public class UIInterface : MonoBehaviour
 {
-    public RectTransform mainMenu, preGame,store, upgrades, album,configuration, mainTitle; //References for UI position
+    public RectTransform mainMenu, preGame, store, upgrades, album, configuration, mainTitle, newRecord; //References for UI position
     public List<RectTransform> polaroids = new List<RectTransform>(); //List of polaroids
     public CanvasGroup fadePanel;
 
@@ -18,11 +18,11 @@ public class UIInterface : MonoBehaviour
 
     //Initialiazing UI with fadeup animation
     private void Start()
-    {        
+    {
         album.transform.localScale = Vector2.zero;
         configuration.transform.localScale = Vector2.zero;
-        
-        foreach(RectTransform transform in polaroids)
+
+        foreach (RectTransform transform in polaroids)
         {
             transform.transform.localScale = Vector2.zero;
         }
@@ -52,7 +52,7 @@ public class UIInterface : MonoBehaviour
 
 
     //Slide for UI buttons and animations (DOTween)
-    
+
     //Play Button
     public void PlayUIButton()
     {
@@ -69,7 +69,7 @@ public class UIInterface : MonoBehaviour
         preGame.DOAnchorPos(new Vector2(0, 0), 1);
         upgrades.DOAnchorPos(new Vector2(0, -1700), 1);
     }
-    
+
     //Store Button
     public void StoreUIButton()
     {
