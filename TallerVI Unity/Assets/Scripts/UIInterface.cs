@@ -13,6 +13,7 @@ public class UIInterface : MonoBehaviour
     //Initialiazing UI with fadeup animation
     private void Start()
     {        
+        album.transform.localScale = Vector2.zero;
         // Inicialización distinta si no es la primera vez que se inicializa
         if (alreadyInitialized)
         {
@@ -20,7 +21,6 @@ public class UIInterface : MonoBehaviour
         }
         else
         {
-            mainMenu.DOAnchorPos(Vector2.zero, 2);
             mainTitle.DOScale(new Vector3(0.8f, 0.8f, 0.8f), 1.5f)
                 .SetEase(Ease.InOutSine)
                 .SetLoops(-1, LoopType.Yoyo);
@@ -85,13 +85,11 @@ public class UIInterface : MonoBehaviour
     //Album Button
     public void AlbumUIButton()
     {
-        mainMenu.DOAnchorPos(new Vector2(-2920, 0), 1);
-        album.DOAnchorPos(new Vector2(0, 0), 1);
+        album.DOScale(Vector3.one, 0.8f);
     }
     public void BackFromAlbumUIButton()
     {
-        mainMenu.DOAnchorPos(new Vector2(0, 0), 1);
-        album.DOAnchorPos(new Vector2(0, -1700), 1);
+        album.DOScale(Vector3.zero, 1).SetEase(Ease.InBack);
     }
 
     //Config Button
@@ -109,7 +107,7 @@ public class UIInterface : MonoBehaviour
     public void PlayFromAlbumUIButton()
     {
         preGame.DOAnchorPos(new Vector2(0, 0), 1);
-        album.DOAnchorPos(new Vector2(0, -1700), 1);
+        album.DOScale(Vector3.zero, 1).SetEase(Ease.InBack);
     }
     private void OnDisable()
     {
