@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Spawner_Module : MonoBehaviour
@@ -9,24 +10,35 @@ public class Spawner_Module : MonoBehaviour
     [SerializeField] private GameObject prefab1, prefab2, prefab3, prefab4, father;
 
     //variables utilidad
-    private float prevPos = 18, chance1 = 100, chance2 = 100, chance3 = 100, chance4 = 100;
+    private float prevPos = 0, chance1 = 100, chance2 = 100, chance3 = 100, chance4 = 100;
     int distance, distance2, temp = 0, temp2 = 0, selected;
     private Rigidbody2D rb;
     private TrackerBase_Module track;
-    private bool enabledReUse = false, gliding = false, falling = false;
+    private bool enabledReUse = false, gliding = false, falling = false, spawnedLast = false, enableChange = false;
 
     // Start is called before the first frame update
     void Start()
     {
         track = FindObjectOfType<TrackerBase_Module>();
         rb = track.GetPlayer().GetComponent<Rigidbody2D>();
-        Spawn();
+        Instance();
     }
 
     void Update()
     {
         distance = (int)rb.position.y;
         distance2 = (int)rb.position.x;
+        
+        if (gliding && enableChange)
+        {
+            enableChange = false;
+            prevPos = rb.transform.position.x + 10;
+        }
+        else if(falling && enableChange)
+        {
+            enableChange = false;
+            prevPos = rb.transform.position.y - 5;
+        }
 
         #region Debuggers
         
@@ -52,11 +64,13 @@ public class Spawner_Module : MonoBehaviour
     public void Gliding(bool change)
     {
         gliding = change;
+        enableChange = true;
     }
     
     public void Falling(bool change)
     {
         falling = change;
+        enableChange = true;
     }
     
     void Instance()
@@ -87,41 +101,31 @@ public class Spawner_Module : MonoBehaviour
         }
     }
 
-    void Spawn()
-    {
-        Instance();
-
-        for (int i = 0; i < 10; i++)
-        {
-            AddItem(3,50);
-        }
-    }
-
     public void DisablePowerUps()
     {
+        Debug.Log("Disable");
+        
         enabledReUse = false;
         
-        foreach (GameObject element in pickUps_listInUse)
+        foreach (Transform element in father.transform)
         {
-            pickUps_list[GetListIndex(element)].Add(element);
-
             element.transform.position = Vector3.zero;
         }
         
-        pickUps_listInUse.Clear();
+        ClearInUse();
     }
     
     
     public void EnablePowerUps()
     {
+        Debug.Log("Enable");
         Invoke("TrueState", 0.5f);
     }
 
     void TrueState()
     {
         enabledReUse = true;
-        prevPos = rb.position.x;
-        GetPrevPos();
+        enableChange = true;
     }
     
     GameObject GetRandomObject()
@@ -201,6 +205,12 @@ public class Spawner_Module : MonoBehaviour
         prevPos += 10;
         return prevPos - 10;
     }
+    
+    float NegGetPrevPos()
+    {
+        prevPos -= 5;
+        return prevPos + 5;
+    }
 
     void ReUse()
     {
@@ -212,19 +222,20 @@ public class Spawner_Module : MonoBehaviour
             }
             
             temp2 = distance2;
-            
-            if (prevPos - 40 < distance2)
+
+            if (prevPos - 40 < distance2 && gliding)
             {
                 // Debug.Log("Called");
                 
                 if(pickUps_listInUse.Count>0) RemoveItem();
                 
-                if(gliding) AddItem(rb.position.y - 8, rb.position.y + 1);
-                else if (falling && rb.transform.position.y >= 10)
-                {
-                    prevPos = rb.position.x;
-                    AddItem(rb.position.y - 30 , rb.position.y - 4);
-                }
+                AddItem();
+            }
+            else if(prevPos + 10 > distance && falling)
+            {
+                if(pickUps_listInUse.Count>0) RemoveItem();
+                
+                AddItem();
             }
         }
     }
@@ -235,16 +246,51 @@ public class Spawner_Module : MonoBehaviour
         pickUps_listInUse.RemoveAt(0);
     }
 
-    void AddItem(float x, float y)
+    void AddItem()
     {
         GameObject obj = GetRandomObject();
-        obj.transform.position = new Vector3(GetPrevPos() + Random.Range(-15.0f,15.0f), Random.Range(x, y), 0);
+
+        if (gliding)
+        {
+            obj.transform.position = new Vector3(GetPrevPos() + Random.Range(-1.0f, 1.0f), rb.transform.position.y + Random.Range(-5.0f, 1.0f), 0);
+        }
+
+        if (falling)
+        {
+            obj.transform.position = new Vector3(Random.Range(2.0f, 4.0f) + (FuturePosition(0.5f)), NegGetPrevPos() + Random.Range(-1.0f, 1.0f), 0);
+        }
+        
         if (obj.transform.position.y < 3)
         {
-            obj.transform.position =  new Vector3(obj.transform.position.x, 3, 0);
+            if (!spawnedLast)
+            {
+                spawnedLast = true;
+                obj.transform.position =  new Vector3(obj.transform.position.x, 3, 0);
+            }
+            else
+            {
+                obj.transform.position =  Vector3.zero;
+            }
         }
         pickUps_list[selected].Remove(obj);
         pickUps_listInUse.Add(obj);
+    }
+    
+    float FuturePosition(float time)
+    {
+        Vector2 pPos = rb.position;
+        
+        float rDrag = Mathf.Clamp01(1.0f - (rb.drag * Time.fixedDeltaTime));
+        
+        Vector2 velocityPerFrame = rb.velocity;
+        
+        for(int i = 0; i < time/Time.fixedDeltaTime; i++)
+        {
+            velocityPerFrame *= rDrag;
+            pPos += (velocityPerFrame * Time.fixedDeltaTime);
+        }
+ 
+        return pPos.x;
     }
     
     int GetListIndex(GameObject element)
@@ -268,6 +314,34 @@ public class Spawner_Module : MonoBehaviour
         {
             return 3;
         }
+    }
+
+    void ClearInUse()
+    {
+        foreach (GameObject element in pickUps_listInUse)
+        {
+            if (element.GetComponent<PowerUp_Base>() != null)
+            {
+                if (element.GetComponent<PowerUp_Base>().GetType() == PowerUpType.chili)
+                {
+                    pickUps_list[0].Add(element);
+                }
+                else
+                {
+                    pickUps_list[2].Add(element);
+                }
+            }
+            else if (element.GetComponent<PidgeonPickUp>() != null)
+            {
+                pickUps_list[1].Add(element);
+            }
+            else
+            {
+                pickUps_list[3].Add(element);
+            }
+        }
+        
+        pickUps_listInUse.Clear();
     }
     
     void DecreaseChance()

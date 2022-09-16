@@ -60,15 +60,12 @@ public class PowerUp_Base : MonoBehaviour, IPowerUp
         {
             active = true;
             calleable = true;
-            GetComponent<Collider2D>().enabled = false;
-            transform.position = Vector2.zero;
+            transform.position = Vector3.zero;
 
             // VITAL: Referente a los eventos
             // Invocaci�n al evento
-            if (col.GetComponent<FlyingStates_Module>().PlayerState != PlayerStates.poweredUpFlying)
-            {
-                transform.parent.GetComponent<EventReferenceHandler>().playerEvents.PoweredUpEvent.Invoke();
-            }
+            
+            transform.parent.GetComponent<EventReferenceHandler>().playerEvents.PoweredUpEvent.Invoke();
 
             // OJO: Falta una forma de distinguir que PowerUp es, por defecto todos los powerUps que usen esta clase son Chilli !!
             // !! Los powerups deben invocar su evento correspondiente !!
