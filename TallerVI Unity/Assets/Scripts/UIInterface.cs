@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
 using System.Linq;
+using System.Net.Sockets;
 
 public class UIInterface : MonoBehaviour
 {
@@ -143,6 +144,8 @@ public class UIInterface : MonoBehaviour
     {
         foreach (RectTransform transform in polaroids)
         {
+            transform.DOComplete();
+            transform.DOKill();
             transform.transform.localScale = Vector2.zero;
         }
     }
