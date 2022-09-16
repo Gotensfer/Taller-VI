@@ -10,8 +10,11 @@ public class UIInterface : MonoBehaviour
 {
     public RectTransform mainMenu, preGame,store, upgrades, album,configuration, mainTitle; //References for UI position
     public List<RectTransform> polaroids = new List<RectTransform>(); //List of polaroids
+    public CanvasGroup fadePanel;
 
     public static bool alreadyInitialized = false;
+
+    private bool isFaded = true;
 
     //Initialiazing UI with fadeup animation
     private void Start()
@@ -23,6 +26,10 @@ public class UIInterface : MonoBehaviour
         {
             transform.transform.localScale = Vector2.zero;
         }
+
+        Fader();
+
+
         // Inicialización distinta si no es la primera vez que se inicializa
         if (alreadyInitialized)
         {
@@ -138,5 +145,15 @@ public class UIInterface : MonoBehaviour
         {
             transform.transform.localScale = Vector2.zero;
         }
+    }
+
+    //Add-on FADER
+    public void Fader()
+    {
+        isFaded = !isFaded;
+        if (isFaded)
+            fadePanel.DOFade(1, 3.5f);
+        else
+            fadePanel.DOFade(0, 2);
     }
 }
