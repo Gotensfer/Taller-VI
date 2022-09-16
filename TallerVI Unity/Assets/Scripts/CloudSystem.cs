@@ -63,7 +63,7 @@ public class CloudSystem : MonoBehaviour
     {
         if (travelledDistanceSinceLastCloud > minimumTravelledDistanceForCloudSpawn)
         {
-            if (Random.Range(0, 1) > CloudSpawnChanceInAttempt)
+            if (Random.Range(0, 1f) > CloudSpawnChanceInAttempt)
             {
                 clouds[targetCloudIndex].transform.position = player.position + SpawnCloudPositionOffset();
                 targetCloudIndex++;
