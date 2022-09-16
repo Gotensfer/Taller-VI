@@ -12,7 +12,9 @@ public class Mitosis : MonoBehaviour
     [SerializeField] float cdTime;
     float remainingCD;
 
-    public int maxCharges;
+    public int level;
+
+    [SerializeField] int maxCharges;
     [SerializeField] int charges;
 
     [SerializeField] Rigidbody2D player;
@@ -20,12 +22,29 @@ public class Mitosis : MonoBehaviour
     [SerializeField] GameObject button;
     [SerializeField] TextMeshProUGUI chargeIndicator;
 
+    [SerializeField] Sprite availableSprite;
+    [SerializeField] Sprite onCDSprite;
+
     [SerializeField] PlayerEvents_Interface playerEvents;
 
     private void Start()
     {
         button.SetActive(false);
         playerEvents.LaunchEvent.AddListener(EnableMitosisButton); // Para evitar ruido en el EventManager
+
+        switch (level)
+        {
+            // Cambiar esto de hardcoded a un GameData manager o similares
+            case 1:
+                maxCharges = 1;
+                break;
+            case 2:
+                maxCharges = 2;
+                break;
+            case 3:
+                maxCharges = 3;
+                break;
+        }
 
         charges = maxCharges;
         UpdateUIChargeIndicator();
@@ -39,11 +58,12 @@ public class Mitosis : MonoBehaviour
             if (remainingCD <= 0)
             {
                 button.GetComponent<Button>().interactable = true;
+                button.GetComponent<Image>().sprite = availableSprite;
             }
         }
     }
 
-    public void Activate_BasicPowerUp()
+    public void Activate_Mitosis()
     {
         direction.Normalize();
         player.velocity = new Vector2(player.velocity.x, 0);
@@ -52,6 +72,7 @@ public class Mitosis : MonoBehaviour
         charges--;
         remainingCD = cdTime;
         button.GetComponent<Button>().interactable = false;
+        button.GetComponent<Image>().sprite = onCDSprite;
         UpdateUIChargeIndicator();
 
         playerEvents.MitosisEvent.Invoke();

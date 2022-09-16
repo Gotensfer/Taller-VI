@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerStop_Module : MonoBehaviour
 {
-    [SerializeField] private int bounces = 3, bouncesUsed = 0;
+    [SerializeField] private int bounces = 2, bouncesUsed = 0;
     private Rigidbody2D rb;
     private bool playerStopped = false;
 
@@ -14,6 +14,7 @@ public class PlayerStop_Module : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        bounces += LaunchData.bounces; // El sistema exige esta forma de aplicar la cantidad de rebotes
     }
 
     void OnCollisionEnter2D(Collision2D col)

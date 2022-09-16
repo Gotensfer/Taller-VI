@@ -25,6 +25,7 @@ public class PlayerEvents_Interface : MonoBehaviour
     public UnityEvent RocketEvent;
     public UnityEvent MitosisEvent;
     public UnityEvent MitosisPickUpEvent;
+    public UnityEvent FecalitoEvent;
 
     private void Start()
     {
@@ -44,8 +45,9 @@ public class PlayerEvents_Interface : MonoBehaviour
             RocketEvent.AddListener(DebugRocketEvent);
             MitosisEvent.AddListener(DebugMitosisEvent);
             MitosisPickUpEvent.AddListener(DebugMitosisPickUpEvent);
-#endif
+
         }
+#endif
     }
 
 #if UNITY_EDITOR
