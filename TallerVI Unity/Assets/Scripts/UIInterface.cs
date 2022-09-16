@@ -4,9 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
+using System.Linq;
+
 public class UIInterface : MonoBehaviour
 {
     public RectTransform mainMenu, preGame,store, upgrades, album,configuration, mainTitle; //References for UI position
+    public List<RectTransform> polaroids = new List<RectTransform>(); //List of polaroids
 
     public static bool alreadyInitialized = false;
 
@@ -14,6 +17,12 @@ public class UIInterface : MonoBehaviour
     private void Start()
     {        
         album.transform.localScale = Vector2.zero;
+        configuration.transform.localScale = Vector2.zero;
+        
+        foreach(RectTransform transform in polaroids)
+        {
+            transform.transform.localScale = Vector2.zero;
+        }
         // Inicialización distinta si no es la primera vez que se inicializa
         if (alreadyInitialized)
         {
@@ -95,13 +104,11 @@ public class UIInterface : MonoBehaviour
     //Config Button
     public void ConfigUIButton()
     {
-        mainMenu.DOAnchorPos(new Vector2(2920, 0), 1);
-        configuration.DOAnchorPos(new Vector2(0, 0), 1);
+        configuration.DOScale(Vector3.one, 0.8f);
     }
     public void BackFromConfigUIButton()
     {
-        mainMenu.DOAnchorPos(new Vector2(0, 0), 1);
-        configuration.DOAnchorPos(new Vector2(-2920, 0), 1);
+        configuration.DOScale(Vector3.zero, 1).SetEase(Ease.InBack);
     }
 
     public void PlayFromAlbumUIButton()
@@ -112,5 +119,24 @@ public class UIInterface : MonoBehaviour
     private void OnDisable()
     {
         DOTween.KillAll(gameObject);
+    }
+
+    //Polaroids activate
+    public void Polaroid1On()
+    {
+        polaroids.ElementAt(0).DOScale(Vector3.one, 1).SetEase(Ease.OutSine);
+    }
+    public void Polaroid2On()
+    {
+        polaroids.ElementAt(1).DOScale(Vector3.one, 1).SetEase(Ease.OutSine);
+    }
+
+    //Polaroids deactivate
+    public void PolaroidClosed()
+    {
+        foreach (RectTransform transform in polaroids)
+        {
+            transform.transform.localScale = Vector2.zero;
+        }
     }
 }
