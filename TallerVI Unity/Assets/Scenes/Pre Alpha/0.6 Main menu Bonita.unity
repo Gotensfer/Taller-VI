@@ -17228,7 +17228,6 @@ MonoBehaviour:
   album: {fileID: 1883162893}
   configuration: {fileID: 949190699}
   mainTitle: {fileID: 47180340}
-  newRecord: {fileID: 0}
   polaroids:
   - {fileID: 1258087708}
   - {fileID: 1455901931}

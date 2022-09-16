@@ -7,9 +7,9 @@ using DG.Tweening;
 using System.Linq;
 using System.Net.Sockets;
 
-public class UIInterface : MonoBehaviour
+public class UIInterfaceMainMenu : MonoBehaviour
 {
-    public RectTransform mainMenu, preGame, store, upgrades, album, configuration, mainTitle, newRecord; //References for UI position
+    public RectTransform mainMenu, preGame, store, upgrades, album, configuration, mainTitle; //References for UI position
     public List<RectTransform> polaroids = new List<RectTransform>(); //List of polaroids
     public CanvasGroup fadePanel;
 
@@ -113,6 +113,7 @@ public class UIInterface : MonoBehaviour
     public void ConfigUIButton()
     {
         configuration.DOScale(Vector3.one, 0.8f);
+
     }
     public void BackFromConfigUIButton()
     {
