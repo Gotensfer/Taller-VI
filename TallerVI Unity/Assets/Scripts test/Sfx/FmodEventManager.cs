@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class FmodEventManager : MonoBehaviour
 {
-    [SerializeField] GameObject bounce, crash, launch, rocket, chili, mitosis;
+    [SerializeField] GameObject bounce, crash, launch, rocket, chili, mitosis, bgMusic;
     
-    FMODUnity.StudioEventEmitter bounceEmitter, crashEmitter, launchEmitter, rocketEmitter, chiliEmitter, mitosisEmitter;
+    FMODUnity.StudioEventEmitter bounceEmitter, crashEmitter, launchEmitter, rocketEmitter, chiliEmitter, mitosisEmitter,bgMusicEmitter;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +16,7 @@ public class FmodEventManager : MonoBehaviour
         rocketEmitter = rocket.GetComponent<FMODUnity.StudioEventEmitter>();
         chiliEmitter = chili.GetComponent<FMODUnity.StudioEventEmitter>();
         mitosisEmitter = mitosis.GetComponent<FMODUnity.StudioEventEmitter>();
+        bgMusicEmitter = bgMusic.GetComponent<FMODUnity.StudioEventEmitter>();        
     }
 
     #region Eventos
@@ -48,6 +49,13 @@ public class FmodEventManager : MonoBehaviour
     {
         mitosisEmitter.Play();
     }
-
+    public void PlayMusic()
+    {
+        bgMusicEmitter.Play();
+    }
+    public void StopMusic()
+    {
+        bgMusicEmitter.Stop();
+    }
     #endregion
 }

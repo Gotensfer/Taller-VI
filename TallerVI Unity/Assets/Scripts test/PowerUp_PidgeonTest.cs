@@ -51,7 +51,7 @@ public class PowerUp_PidgeonTest : MonoBehaviour, IPowerUp
 
 		if (VerticalMoveValue() > SWIPE_THRESHOLD && VerticalMoveValue() > HorizontalMoveValue())
 		{
-			Debug.Log("Vertical Swipe Detected!");
+			// Debug.Log("Vertical Swipe Detected!");
 			if (fingerDownPos.y - fingerUpPos.y > 0)
 			{
 				OnSwipeUp();
@@ -65,7 +65,7 @@ public class PowerUp_PidgeonTest : MonoBehaviour, IPowerUp
 		}
 		else if (HorizontalMoveValue() > SWIPE_THRESHOLD && HorizontalMoveValue() > VerticalMoveValue())
 		{
-			Debug.Log("Horizontal Swipe Detected!");
+			// Debug.Log("Horizontal Swipe Detected!");
 			if (fingerDownPos.x - fingerUpPos.x > 0)
 			{
 				OnSwipeRight();
@@ -79,7 +79,7 @@ public class PowerUp_PidgeonTest : MonoBehaviour, IPowerUp
 		}
 		else
 		{
-			Debug.Log("No Swipe Detected!");
+			// Debug.Log("No Swipe Detected!");
 		}
 	}
 

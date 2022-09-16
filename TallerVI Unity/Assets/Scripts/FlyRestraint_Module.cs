@@ -27,6 +27,8 @@ public class FlyRestraint_Module : MonoBehaviour
 
     private void Start()
     {
+        forwardVelocityLimit = LaunchData.maxVelocity;
+
         rb = GetComponent<Rigidbody2D>();
         flyingStates_Module = GetComponent<FlyingStates_Module>();
 

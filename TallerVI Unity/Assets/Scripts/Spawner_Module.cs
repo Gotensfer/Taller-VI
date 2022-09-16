@@ -1,25 +1,23 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
 public class Spawner_Module : MonoBehaviour
 {
-    [SerializeField] List<List<GameObject>> pickUps_list =  new List<List<GameObject>>();
-    [SerializeField] List<Vector2> heights = new List<Vector2>();
-    [SerializeField] GameObject prefab1, prefab2, prefab3, father;
+    private List<List<GameObject>> pickUps_list = new List<List<GameObject>>(4);
+    private List<GameObject> pickUps_listInUse =  new List<GameObject>();
+    [SerializeField] private GameObject prefab1, prefab2, prefab3, prefab4, father;
 
     //variables utilidad
-    float prevPos = 18;
+    private float prevPos = 18, chance1 = 100, chance2 = 100, chance3 = 100, chance4 = 100;
+    int distance, distance2, temp = 0, temp2 = 0, selected;
     private Rigidbody2D rb;
     private TrackerBase_Module track;
-    Camera cam;
-    private Plane[] planes;
+    private bool enabledReUse = false, gliding = false, falling = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        cam = Camera.main;
         track = FindObjectOfType<TrackerBase_Module>();
         rb = track.GetPlayer().GetComponent<Rigidbody2D>();
         Spawn();
@@ -27,16 +25,46 @@ public class Spawner_Module : MonoBehaviour
 
     void Update()
     {
-        planes = GeometryUtility.CalculateFrustumPlanes(cam);
+        distance = (int)rb.position.y;
+        distance2 = (int)rb.position.x;
+
+        #region Debuggers
+        
+        /*
+        Debugger(1, pickUps_list[0].Count);
+        Debugger(2, pickUps_list[1].Count);
+        Debugger(3, pickUps_list[2].Count);
+        Debugger(4, pickUps_list[3].Count);
+        Debugger(5, pickUps_listInUse.Count);
+        */
+        
+        #endregion
+        
+        DecreaseChance();
         ReUse();
     }
 
+    void Debugger(int index, int count)
+    {
+        Debug.Log("count" + index + ": " + count);
+    }
+
+    public void Gliding(bool change)
+    {
+        gliding = change;
+    }
+    
+    public void Falling(bool change)
+    {
+        falling = change;
+    }
+    
     void Instance()
     {
-        for(int i = 0; i<3; i++)
+        for(int i = 0; i<4; i++)
         {
             pickUps_list.Add(new List<GameObject>());
-            
+
             for(int j = 0; j<20; j++)
             {
                 if(i==0)
@@ -47,9 +75,13 @@ public class Spawner_Module : MonoBehaviour
                 {
                     pickUps_list[i].Add(Instantiate(prefab2,father.transform));
                 }
-                else
+                else if(i==2)
                 {
                     pickUps_list[i].Add(Instantiate(prefab3,father.transform));
+                }
+                else
+                {
+                    pickUps_list[i].Add(Instantiate(prefab4,father.transform));
                 }
             }
         }
@@ -59,67 +91,112 @@ public class Spawner_Module : MonoBehaviour
     {
         Instance();
 
-        byte count = 0;
-
-        foreach(Vector2 vectorElement in heights)
+        for (int i = 0; i < 10; i++)
         {
-            if(pickUps_list[count] != null)
-            {
-                prevPos = 18;
-
-                foreach (GameObject objElement in pickUps_list[count])
-                {
-                    objElement.transform.position = new Vector3(prevPos + Random.Range(-4.0f,4.0f), Random.Range(vectorElement.x, vectorElement.y), 0);
-
-                    prevPos += 10;
-                }
-            }
-
-            count++;
+            AddItem(3,50);
         }
     }
 
     public void DisablePowerUps()
     {
-        foreach (List<GameObject> element in pickUps_list)
+        enabledReUse = false;
+        
+        foreach (GameObject element in pickUps_listInUse)
         {
-            foreach (GameObject obj in element)
-            {
-                obj.GetComponent<Collider2D>().enabled = false;
-                if (obj.GetComponent<PowerUp_Base>() != null)
-                {
-                    obj.GetComponent<PowerUp_Base>().sp.enabled = false;
-                }
-                else
-                {
-                    obj.GetComponentInChildren<ParticleSystem>().Stop();
-                }
-            }
+            pickUps_list[GetListIndex(element)].Add(element);
+
+            element.transform.position = Vector3.zero;
         }
+        
+        pickUps_listInUse.Clear();
     }
+    
     
     public void EnablePowerUps()
     {
-        foreach (List<GameObject> element in pickUps_list)
+        Invoke("TrueState", 0.5f);
+    }
+
+    void TrueState()
+    {
+        enabledReUse = true;
+        prevPos = rb.position.x;
+        GetPrevPos();
+    }
+    
+    GameObject GetRandomObject()
+    {
+        selected = Random.Range(0, 4);
+
+        if (selected == 0)
         {
-            foreach (GameObject obj in element)
+            float rnd = Random.Range(0, 100);
+
+            if (rnd < chance1 || rnd == 100)
             {
-                obj.GetComponent<Collider2D>().enabled = true;
-                if (obj.GetComponent<PowerUp_Base>() != null)
+                if (pickUps_list[selected].Count > 0)
                 {
-                    obj.GetComponent<PowerUp_Base>().sp.enabled = true;
+                    return pickUps_list[selected].ElementAt(0);   
                 }
-                obj.GetComponentInChildren<ParticleSystem>().Play();
+                else
+                {
+                    return GetRandomObject();
+                }
             }
         }
+        else if (selected == 1)
+        {
+            float rnd = Random.Range(0, 100);
+
+            if (rnd < chance2 || rnd == 100)
+            {
+                if (pickUps_list[selected].Count > 0)
+                {
+                    return pickUps_list[selected].ElementAt(0);   
+                }
+                else
+                {
+                    return GetRandomObject();
+                }
+            }
+        }
+        else if (selected == 2)
+        {
+            float rnd = Random.Range(0, 100);
+
+            if (rnd < chance3 || rnd == 100)
+            {
+                if (pickUps_list[selected].Count > 0)
+                {
+                    return pickUps_list[selected].ElementAt(0);   
+                }
+                else
+                {
+                    return GetRandomObject();
+                }
+            }
+        }
+        else if (selected == 3)
+        {
+            float rnd = Random.Range(0, 100);
+        
+            if (rnd < chance4 || rnd == 100)
+            {
+                if (pickUps_list[selected].Count > 0)
+                {
+                    return pickUps_list[selected].ElementAt(0);   
+                }
+                else
+                {
+                    return GetRandomObject();
+                }
+            }
+        }
+
+        return GetRandomObject();
     }
 
-    public List<Vector2> GetVectors()
-    {
-        return heights;
-    }
-
-    public float GetPrevPos()
+    float GetPrevPos()
     {
         prevPos += 10;
         return prevPos - 10;
@@ -127,33 +204,118 @@ public class Spawner_Module : MonoBehaviour
 
     void ReUse()
     {
-        foreach (List<GameObject> element in pickUps_list)
+        if (enabledReUse)
         {
-            foreach (GameObject obj in element)
+            if (distance2 == temp2)
             {
-                Visible(obj.GetComponent<Collider2D>());
+                return;
+            }
+            
+            temp2 = distance2;
+            
+            if (prevPos - 40 < distance2)
+            {
+                // Debug.Log("Called");
+                
+                if(pickUps_listInUse.Count>0) RemoveItem();
+                
+                if(gliding) AddItem(rb.position.y - 8, rb.position.y + 1);
+                else if (falling && rb.transform.position.y >= 10)
+                {
+                    prevPos = rb.position.x;
+                    AddItem(rb.position.y - 30 , rb.position.y - 4);
+                }
             }
         }
     }
-    
-    void Visible(Collider2D col)
-    {
-        if (GeometryUtility.TestPlanesAABB(planes, col.bounds))
-        {
-            return;
-        }
-        else if (rb.transform.position.x < col.transform.position.x+10)
-        {
-            return;
-        }
 
-        foreach (Vector2 element in GetVectors())
+    void RemoveItem()
+    {
+        pickUps_list[GetListIndex(pickUps_listInUse.ElementAt(0))].Add(pickUps_listInUse.ElementAt(0));
+        pickUps_listInUse.RemoveAt(0);
+    }
+
+    void AddItem(float x, float y)
+    {
+        GameObject obj = GetRandomObject();
+        obj.transform.position = new Vector3(GetPrevPos() + Random.Range(-15.0f,15.0f), Random.Range(x, y), 0);
+        if (obj.transform.position.y < 3)
         {
-            if (col.transform.position.y <= element.y && col.transform.position.y >= element.x)
+            obj.transform.position =  new Vector3(obj.transform.position.x, 3, 0);
+        }
+        pickUps_list[selected].Remove(obj);
+        pickUps_listInUse.Add(obj);
+    }
+    
+    int GetListIndex(GameObject element)
+    {
+        if (element.GetComponent<PowerUp_Base>() != null)
+        {
+            if (element.GetComponent<PowerUp_Base>().GetType() == PowerUpType.chili)
             {
-                col.transform.position = new Vector3(GetPrevPos(), Random.Range(element.x, element.y), 0);
-                break;
+                return 0;
             }
+            else
+            {
+                return 2;
+            }
+        }
+        else if (element.GetComponent<PidgeonPickUp>() != null)
+        {
+            return 1;
+        }
+        else
+        {
+            return 3;
+        }
+    }
+    
+    void DecreaseChance()
+    {
+        if (distance == temp)
+        {
+            return;
+        }
+        
+        temp = distance;
+        
+        if (distance % 50 == 0)
+        {
+            if (distance > temp) chance1--;
+            else if (distance < temp) chance1++;
+        }
+        else if (distance % 30 == 0)
+        {
+            if (distance > temp)
+            {
+                chance3 -= 3f;
+                chance2 -= 2f;
+            }
+            else if (distance < temp)
+            {
+                chance3 += 3f;
+                chance2 += 2f;
+            }
+            
+            chance1 = FixChance(chance1);
+            chance2 = FixChance(chance2);
+            chance3 = FixChance(chance3);
+        }
+    }
+
+    float FixChance(float chance)
+    {
+        if (chance > 100)
+        {
+            return 100;
+        }
+        else if (chance < 0)
+        {
+            return 0;
+        }
+        else
+        {
+            return chance;
         }
     }
 }

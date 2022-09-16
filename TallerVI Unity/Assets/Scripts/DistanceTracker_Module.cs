@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DistanceTracker_Module : MonoBehaviour
@@ -8,6 +6,12 @@ public class DistanceTracker_Module : MonoBehaviour
     public float travelledDistance { private set; get; }
     private Vector2 origin;
     private Transform player; //despues se cambia por la funcion get player
+    public float localRecord { get; private set; }
+
+    private void Awake()
+    {
+        localRecord = PlayerPrefs.GetFloat("Distance", 0);
+    }
 
     void Start()
     {
@@ -20,6 +24,13 @@ public class DistanceTracker_Module : MonoBehaviour
     private void Update()
     {
         CalculateTravelledDistance(player.position);
+
+#if UNITY_EDITOR
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            ResetRecord();
+        }
+#endif
     }
 
     public string CalculateTravelledDistance(Vector2 currentPos)
@@ -34,5 +45,23 @@ public class DistanceTracker_Module : MonoBehaviour
         offset.y = 0;
         origin = origin + offset;
         return CalculateTravelledDistance(currentPos);
+    }
+
+    public void SetRecord()
+    {
+        if (travelledDistance > localRecord)
+        {
+            PlayerPrefs.SetFloat("Distance", travelledDistance);
+            PlayerPrefs.Save();
+            
+            Debug.Log("New Record: " + PlayerPrefs.GetFloat("Distance"));
+        }
+    }
+
+    // Para usos de debug
+    void ResetRecord()
+    {
+        PlayerPrefs.SetFloat("Distance", 0);
+        PlayerPrefs.Save();
     }
 }

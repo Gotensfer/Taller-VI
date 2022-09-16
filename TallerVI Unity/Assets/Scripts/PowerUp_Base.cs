@@ -13,7 +13,7 @@ public class PowerUp_Base : MonoBehaviour, IPowerUp
     [SerializeField] private PowerUpType type;
     private TrackerBase_Module track;
     private Rigidbody2D rb;
-    private bool active = false;
+    private bool active = false, calleable = true;
     [SerializeField] private float time = 3.0f, force = 10f, angle = 45f;
     private float conversion;
     
@@ -36,6 +36,11 @@ public class PowerUp_Base : MonoBehaviour, IPowerUp
     {
         if (active)
         {
+            if (count >= time)
+            {
+                active = false;
+                CallEvent();
+            }
             count += Time.deltaTime;
             
             rb.AddForce(new Vector2(Mathf.Cos(conversion), Mathf.Sin(conversion)) * (force * Time.deltaTime), ForceMode2D.Impulse);
@@ -43,21 +48,6 @@ public class PowerUp_Base : MonoBehaviour, IPowerUp
             if (angle == 0)
             {
                 rb.velocity = new Vector2(rb.velocity.x, 0);
-            }
-            
-            if (count >= time)
-            {
-                active = false;
-
-                // OJO, debido al funcionamiento actual, el powerUp se acumula, esto potencialmente generar� errores.
-                // IMPORTANTE: El evento de PoweredDownEvent SOLO se deber�a llamar al acabarse el powerUp y
-                // como el powerUp se acumula, si se obtiene 2 veces en r�pida sucesi�n, se llamar� el evento aunque siga potenciado
-                // lo cual es incorrecto y generar� otros errores.
-                // Se DEBE de controlar ello.
-
-                // VITAL: Referente a eventos
-                // !! Siempre al acabar el "estar en un powerup", se debe llamar el evento de PoweredDownEvent !!
-                transform.parent.GetComponent<EventReferenceHandler>().playerEvents.PoweredDownEvent.Invoke();
             }
         }
     }
@@ -69,9 +59,8 @@ public class PowerUp_Base : MonoBehaviour, IPowerUp
         if (col.GetComponent<Collider2D>().CompareTag("Player"))
         {
             active = true;
-            sp.enabled = false;
+            calleable = true;
             GetComponent<Collider2D>().enabled = false;
-            //gameObject.SetActive(false); // Es mejor desactivarlo, por otro lado esto lo suelta del area magn�tica del Player
             transform.position = Vector2.zero;
 
             // VITAL: Referente a los eventos
@@ -92,5 +81,20 @@ public class PowerUp_Base : MonoBehaviour, IPowerUp
                 transform.parent.GetComponent<EventReferenceHandler>().playerEvents.ChilliEvent.Invoke();
             }
         }    
+    }
+
+    public PowerUpType GetType()
+    {
+        return type;
+    }
+
+    void CallEvent()
+    {
+        if (calleable)
+        {
+            calleable = false;
+            transform.parent.GetComponent<EventReferenceHandler>().playerEvents.PoweredDownEvent.Invoke();
+            gameObject.SetActive(false); 
+        }
     }
 }
