@@ -278,19 +278,12 @@ public class Spawner_Module : MonoBehaviour
     
     float FuturePosition(float time)
     {
-        // Programming Game AI by Example - Mat Buckland
-        // https://answers.unity.com/questions/1087568/3d-trajectory-prediction.html
- 
-        // Starting position of the ball
         Vector2 pPos = rb.position;
- 
-        // Drag multiplier (friction)
+        
         float rDrag = Mathf.Clamp01(1.0f - (rb.drag * Time.fixedDeltaTime));
- 
-        // How much velocity is added per frame
+        
         Vector2 velocityPerFrame = rb.velocity;
-         
-        // How many frames are going to pass in the given time
+        
         for(int i = 0; i < time/Time.fixedDeltaTime; i++)
         {
             velocityPerFrame *= rDrag;
