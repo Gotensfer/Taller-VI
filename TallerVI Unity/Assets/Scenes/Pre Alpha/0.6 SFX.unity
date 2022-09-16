@@ -450,6 +450,7 @@ MonoBehaviour:
   prefab1: {fileID: 69687176620298395, guid: 40ccc3a73358db34bb6c1752812e8e1d, type: 3}
   prefab2: {fileID: 423223054331848064, guid: 11b01d38288d1ad44b6cd051383daf7b, type: 3}
   prefab3: {fileID: 7819924271294555339, guid: 118c6ec2f70c30048943ae98927d3836, type: 3}
+  prefab4: {fileID: 0}
   father: {fileID: 524557124}
 --- !u!1 &79221870
 GameObject:
@@ -921,7 +922,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerEvents: {fileID: 645198002}
   angleMovementVelocity: 65
+  launchZoneButton: {fileID: 0}
   length: 2
+  timeToReEnableCollisions: 0
+  player: {fileID: 0}
+  originalLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  phantomLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &294536538
 GameObject:
   m_ObjectHideFlags: 0
@@ -3217,6 +3227,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  MitosisPickUpEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  FecalitoEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &679312829
 GameObject:
   m_ObjectHideFlags: 0
@@ -7016,8 +7032,14 @@ MonoBehaviour:
   strenght: 20
   direction: {x: 0, y: 1}
   cdTime: 3
+  level: 0
+  maxCharges: 0
+  charges: 0
   player: {fileID: 1728376842}
   button: {fileID: 2093513029}
+  chargeIndicator: {fileID: 0}
+  availableSprite: {fileID: 0}
+  onCDSprite: {fileID: 0}
   playerEvents: {fileID: 645198002}
 --- !u!1 &1856665179
 GameObject:
@@ -7486,7 +7508,6 @@ MonoBehaviour:
   album: {fileID: 0}
   configuration: {fileID: 0}
   mainTitle: {fileID: 0}
-  background: {fileID: 0}
 --- !u!1 &1945389755
 GameObject:
   m_ObjectHideFlags: 0
