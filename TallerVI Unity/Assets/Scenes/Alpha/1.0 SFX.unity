@@ -10151,6 +10151,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2129805765}
   - component: {fileID: 2129805766}
+  - component: {fileID: 2129805768}
+  - component: {fileID: 2129805767}
   m_Layer: 0
   m_Name: Music
   m_TagString: Untagged
@@ -10194,15 +10196,50 @@ MonoBehaviour:
       Data4: -1496097264
     Path: event:/Music-Ambience/BG_Music
   Event: 
-  PlayEvent: 0
-  StopEvent: 0
+  PlayEvent: 12
+  StopEvent: 12
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
-  Params: []
+  Params:
+  - Name: Altura
+    Value: 0
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!114 &2129805767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129805764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84e0f6b7d8922fd4187968d798ef2649, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  auto: {fileID: 2129805768}
+  altura: 0
+  altitude: {fileID: 1945389758}
+  altitudeMin: 300
+  altitudeMax: 500
+--- !u!114 &2129805768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129805764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Parameter: Altura
+  TriggerEvent: 0
+  Value: 0
 --- !u!1 &2142901720
 GameObject:
   m_ObjectHideFlags: 0

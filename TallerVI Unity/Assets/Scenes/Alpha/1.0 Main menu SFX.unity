@@ -13267,7 +13267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 1339927879}
-  busPath: bus:/Music
+  busPath: bus:/LowPass/Music
 --- !u!114 &1339927879
 MonoBehaviour:
   m_ObjectHideFlags: 0
