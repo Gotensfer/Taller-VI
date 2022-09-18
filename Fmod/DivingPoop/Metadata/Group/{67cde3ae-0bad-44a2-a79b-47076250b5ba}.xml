@@ -17,7 +17,7 @@
 			<destination>{b87fc8d7-f354-413f-ac88-850f1bb137be}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{fcf24844-021e-4875-b87b-0dc4188da60f}</destination>
+			<destination>{7913b4bf-005a-4937-8b41-67b5afae274c}</destination>
 		</relationship>
 	</object>
 	<object class="Automator" id="{90155613-f90b-4aaf-a0f4-618c3cdc63b1}">
