@@ -26,10 +26,9 @@ public class PlayerStop_Module : MonoBehaviour
     {
         if (!playerStopped)
         {
-            if (bouncesUsed == 1) playerEvents.BounceEvent.Invoke();
-
             bouncesUsed++;
-            
+
+            if (bouncesUsed < bounces && bouncesUsed != 1) playerEvents.BounceEvent.Invoke();
 
             if (bouncesUsed >= bounces)
             {
