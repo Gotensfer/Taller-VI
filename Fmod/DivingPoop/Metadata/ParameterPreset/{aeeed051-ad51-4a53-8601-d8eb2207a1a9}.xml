@@ -12,14 +12,17 @@
 		</relationship>
 	</object>
 	<object class="GameParameter" id="{5bc3f618-fe87-4e73-bebf-d0ece93f390a}">
-		<property name="parameterType">
-			<value>1</value>
-		</property>
 		<property name="maximum">
 			<value>6</value>
 		</property>
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
 		<property name="initialValue">
 			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
 		</property>
 	</object>
 </objects>
