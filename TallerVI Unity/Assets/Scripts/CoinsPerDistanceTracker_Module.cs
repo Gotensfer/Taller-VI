@@ -13,6 +13,32 @@ public class CoinsPerDistanceTracker_Module : MonoBehaviour
     float currentDistance;
     float travelledDistance;
 
+    /* // Debug para monedas
+    private void Update()
+    {
+        
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            EconomyData.AddCoins(50);
+        }
+
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            EconomyData.SpendCoins(50);
+        }
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            print(EconomyData.coins);
+        }
+
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            EconomyData.LoadCoins();
+        }
+    }
+    */
+
     private void FixedUpdate()
     {
         currentDistance = distanceTracker_Module.travelledDistance;
