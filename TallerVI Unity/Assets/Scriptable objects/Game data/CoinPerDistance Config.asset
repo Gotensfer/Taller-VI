@@ -9,12 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ab26b13798f18f449ad6c2e3da632ad, type: 3}
-  m_Name: Brevas
+  m_Script: {fileID: 11500000, guid: 4c9d76b10857f814496cb906f7880970, type: 3}
+  m_Name: CoinPerDistance Config
   m_EditorClassIdentifier: 
-  maxVelocity: 0
-  anglePerSecond: 15
-  impulse: 0
-  bounces: 1
-  type: 2
-  coinPrice: 10
+  awardedCoinsPer_N_Distance: 10
+  distanceNeededForCoinAward: 100
