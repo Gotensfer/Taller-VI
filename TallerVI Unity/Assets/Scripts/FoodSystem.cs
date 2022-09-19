@@ -83,7 +83,7 @@ public class FoodSystem : MonoBehaviour
     // ESTO NO DEBERIA IR AQUI JUEPUTA JULIAN ARREGLA ESA UI
     public void ChangeToLaunchScene()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
     // ESTO TAMPOCO DEBERIA IR ASI
