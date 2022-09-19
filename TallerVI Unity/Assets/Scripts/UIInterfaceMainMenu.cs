@@ -22,6 +22,8 @@ public class UIInterfaceMainMenu : MonoBehaviour
     {
         album.transform.localScale = Vector2.zero;
         configuration.transform.localScale = Vector2.zero;
+        store.transform.localScale = Vector2.zero;
+        upgrades.transform.localScale = Vector2.zero;
 
         foreach (RectTransform transform in polaroids)
         {
@@ -63,61 +65,17 @@ public class UIInterfaceMainMenu : MonoBehaviour
     public void BackFromPlayUIButton()
     {
         mainMenu.DOAnchorPos(new Vector2(0, 0), 1);
+
+        mainTitle.DOScale(new Vector3(0.8f, 0.8f, 0.8f), 1.5f)
+            .SetEase(Ease.InOutSine)
+            .SetLoops(-1, LoopType.Yoyo);
+
         preGame.DOAnchorPos(new Vector2(2920, 0), 1);
     }
     public void PlayFromUpgradeUIButton()
     {
         preGame.DOAnchorPos(new Vector2(0, 0), 1);
-        upgrades.DOAnchorPos(new Vector2(0, -1700), 1);
-    }
-
-    //Store Button
-    public void StoreUIButton()
-    {
-        mainMenu.DOAnchorPos(new Vector2(-2920, 0), 1);
-        store.DOAnchorPos(new Vector2(0, 0), 1);
-    }
-    public void BackFromStoreUIButton()
-    {
-        mainMenu.DOAnchorPos(new Vector2(0, 0), 1);
-        store.DOAnchorPos(new Vector2(0, -1700), 1);
-    }
-    //Upgrade Button
-    public void UpgradesUIButton()
-    {
-        mainMenu.DOAnchorPos(new Vector2(-2920, 0), 1);
-        upgrades.DOAnchorPos(new Vector2(0, 0), 1);
-    }
-    public void BackFromUpgradesUIButton()
-    {
-        mainMenu.DOAnchorPos(new Vector2(0, 0), 1);
-        upgrades.DOAnchorPos(new Vector2(0, -1700), 1);
-    }
-    public void UpgradeFromPlayUIButton()
-    {
-        preGame.DOAnchorPos(new Vector2(0, 1700), 1);
-        upgrades.DOAnchorPos(new Vector2(0, 0), 1);
-    }
-
-    //Album Button
-    public void AlbumUIButton()
-    {
-        album.DOScale(Vector3.one, 0.8f);
-    }
-    public void BackFromAlbumUIButton()
-    {
-        album.DOScale(Vector3.zero, 1).SetEase(Ease.InBack);
-    }
-
-    //Config Button
-    public void ConfigUIButton()
-    {
-        configuration.DOScale(Vector3.one, 0.8f);
-
-    }
-    public void BackFromConfigUIButton()
-    {
-        configuration.DOScale(Vector3.zero, 1).SetEase(Ease.InBack);
+        upgrades.DOScale(Vector3.zero, 1).SetEase(Ease.InBack);
     }
 
     public void PlayFromAlbumUIButton()
@@ -125,6 +83,61 @@ public class UIInterfaceMainMenu : MonoBehaviour
         preGame.DOAnchorPos(new Vector2(0, 0), 1);
         album.DOScale(Vector3.zero, 1).SetEase(Ease.InBack);
     }
+
+    //Store Button
+    public void StoreUIButton()
+    {
+        store.DOAnchorPos(new Vector2(0, 0), 0.8f).SetEase(Ease.OutExpo);
+        store.DOScale(Vector3.one, 0.8f).SetEase(Ease.OutExpo);
+    }
+    public void BackFromStoreUIButton()
+    {
+        store.DOAnchorPos(new Vector2(1132, 144), 1).SetEase(Ease.InExpo);
+        store.DOScale(Vector3.zero, 1).SetEase(Ease.InBack);
+    }
+    //Upgrade Button
+    public void UpgradesUIButton()
+    {
+        upgrades.DOAnchorPos(new Vector2(0, 0), 0.8f).SetEase(Ease.OutExpo);
+        upgrades.DOScale(Vector3.one, 0.8f).SetEase(Ease.OutExpo);
+    }
+    public void BackFromUpgradesUIButton()
+    {
+        upgrades.DOAnchorPos(new Vector2(1090, 0), 1).SetEase(Ease.InExpo);
+        upgrades.DOScale(Vector3.zero, 1).SetEase(Ease.InBack);
+    }
+    public void UpgradeFromPlayUIButton()
+    {
+        upgrades.DOAnchorPos(new Vector2(0, 0), 0.8f).SetEase(Ease.OutExpo);
+        upgrades.DOScale(Vector3.one, 0.8f).SetEase(Ease.OutExpo);
+    }
+
+    //Album Button
+    public void AlbumUIButton()
+    {
+        album.DOAnchorPos(new Vector2(0, 0), 0.8f).SetEase(Ease.OutExpo);
+        album.DOScale(Vector3.one, 0.8f).SetEase(Ease.OutExpo);
+    }
+    public void BackFromAlbumUIButton()
+    {
+        album.DOAnchorPos(new Vector2(1132, -167), 1).SetEase(Ease.InExpo);
+        album.DOScale(Vector3.zero, 1).SetEase(Ease.InBack);
+    }
+
+    //Config Button
+    public void ConfigUIButton()
+    {
+        configuration.DOAnchorPos(new Vector2(0, 0), 0.8f).SetEase(Ease.OutExpo);
+        configuration.DOScale(Vector3.one, 0.8f).SetEase(Ease.OutExpo);
+
+    }
+    public void BackFromConfigUIButton()
+    {
+        configuration.DOAnchorPos(new Vector2(927, -315), 1).SetEase(Ease.InExpo);
+        configuration.DOScale(Vector3.zero, 1).SetEase(Ease.InBack);
+    }
+
+
     private void OnDisable()
     {
         DOTween.KillAll(gameObject);
