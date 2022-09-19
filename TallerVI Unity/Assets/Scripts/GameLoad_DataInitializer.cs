@@ -54,6 +54,33 @@ public class GameLoad_DataInitializer : MonoBehaviour
             PlayerPrefs.SetInt($"Fecalito Level", 0);
         }
 
+        // Configuración inicial de datos de logros
+
+        if (PlayerPrefs.GetInt($"Achievement1", -1) == -1) // 2k
+        {
+            PlayerPrefs.SetInt($"Achievement1", 0);
+        }
+
+        if (PlayerPrefs.GetInt($"Achievement2", -1) == -1) // 4k
+        {
+            PlayerPrefs.SetInt($"Achievement2", 0);
+        }
+
+        if (PlayerPrefs.GetInt($"Achievement3", -1) == -1) // 6k
+        {
+            PlayerPrefs.SetInt($"Achievement3", 0);
+        }
+
+        if (PlayerPrefs.GetInt($"Achievement4", -1) == -1) // 8k
+        {
+            PlayerPrefs.SetInt($"Achievement4", 0);
+        }
+
+        if (PlayerPrefs.GetInt($"Achievement5", -1) == -1) // 500m alt
+        {
+            PlayerPrefs.SetInt($"Achievement5", 0);
+        }
+
         // ---
         PlayerPrefs.Save();
 
