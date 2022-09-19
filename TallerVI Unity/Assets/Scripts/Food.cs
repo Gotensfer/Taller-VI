@@ -17,4 +17,5 @@ public class Food : ScriptableObject
     public float impulse;
     public int bounces;
     public FoodType type;
+    public int coinPrice;
 }

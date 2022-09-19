@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="MixerGroup" id="{7913b4bf-005a-4937-8b41-67b5afae274c}">
+		<property name="name">
+			<value>Lowpass</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{e08ff8ea-8a91-4a94-a7f1-f7c88e0d98fb}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{a58357a8-ca51-4b08-9e17-dfdbf1b7d2ce}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{fcf24844-021e-4875-b87b-0dc4188da60f}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{e08ff8ea-8a91-4a94-a7f1-f7c88e0d98fb}">
+		<relationship name="effects">
+			<destination>{3d313aff-b9c6-463c-a0f3-9cd4975b4d8c}</destination>
+			<destination>{8d3da44b-ab70-4ba6-95dc-4b711859263a}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{a58357a8-ca51-4b08-9e17-dfdbf1b7d2ce}" />
+	<object class="LowpassEffect" id="{3d313aff-b9c6-463c-a0f3-9cd4975b4d8c}">
+		<property name="cutoff">
+			<value>22000</value>
+		</property>
+		<relationship name="automators">
+			<destination>{a6a24ab1-e434-478a-b49b-c679cd219de9}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusFader" id="{8d3da44b-ab70-4ba6-95dc-4b711859263a}" />
+	<object class="Automator" id="{a6a24ab1-e434-478a-b49b-c679cd219de9}">
+		<property name="nameOfPropertyBeingAutomated">
+			<value>cutoff</value>
+		</property>
+		<relationship name="automationCurves">
+			<destination>{3f0fb36b-30e5-41d4-9d06-699560667c54}</destination>
+		</relationship>
+	</object>
+	<object class="AutomationCurve" id="{3f0fb36b-30e5-41d4-9d06-699560667c54}">
+		<relationship name="parameter">
+			<destination>{5bc3f618-fe87-4e73-bebf-d0ece93f390a}</destination>
+		</relationship>
+		<relationship name="automationPoints">
+			<destination>{c46cac54-27c8-4ef1-99d6-0bff2e444e1f}</destination>
+			<destination>{bc42e604-9fd0-419e-bc9c-8dc20e3e7d16}</destination>
+			<destination>{99202f9f-e118-4749-90f6-b1973557f9a7}</destination>
+			<destination>{5f4ee2ef-6a3e-4f0a-bbee-870919d03607}</destination>
+			<destination>{e6b94de3-a4bb-4d3b-a883-39544f70ce6e}</destination>
+			<destination>{6525ebb2-3006-482c-b28b-90690d277e2f}</destination>
+			<destination>{578276a6-fc31-47b7-bd18-d84b0c6869bd}</destination>
+		</relationship>
+	</object>
+	<object class="AutomationPoint" id="{c46cac54-27c8-4ef1-99d6-0bff2e444e1f}">
+		<property name="position">
+			<value>0</value>
+		</property>
+		<property name="value">
+			<value>22000</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{bc42e604-9fd0-419e-bc9c-8dc20e3e7d16}">
+		<property name="position">
+			<value>1.7142857142857142</value>
+		</property>
+		<property name="value">
+			<value>12000</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{99202f9f-e118-4749-90f6-b1973557f9a7}">
+		<property name="position">
+			<value>2.8000000000000003</value>
+		</property>
+		<property name="value">
+			<value>5500</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{5f4ee2ef-6a3e-4f0a-bbee-870919d03607}">
+		<property name="position">
+			<value>0.8571428571428571</value>
+		</property>
+		<property name="value">
+			<value>18000</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{e6b94de3-a4bb-4d3b-a883-39544f70ce6e}">
+		<property name="position">
+			<value>6</value>
+		</property>
+		<property name="value">
+			<value>750</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{6525ebb2-3006-482c-b28b-90690d277e2f}">
+		<property name="position">
+			<value>3.6000000000000001</value>
+		</property>
+		<property name="value">
+			<value>3000.00024</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{578276a6-fc31-47b7-bd18-d84b0c6869bd}">
+		<property name="position">
+			<value>4.8000000000000007</value>
+		</property>
+		<property name="value">
+			<value>1500.00012</value>
+		</property>
+	</object>
+</objects>
