@@ -3090,7 +3090,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.580082, y: 2.25, z: -2}
+  m_LocalPosition: {x: 8.582091, y: 2.25, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9475,7 +9475,6 @@ MonoBehaviour:
   album: {fileID: 0}
   configuration: {fileID: 0}
   mainTitle: {fileID: 0}
-  newRecord: {fileID: 0}
   polaroids: []
   fadePanel: {fileID: 0}
 --- !u!114 &1930915043
@@ -10062,6 +10061,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2129805765}
   - component: {fileID: 2129805766}
+  - component: {fileID: 2129805768}
+  - component: {fileID: 2129805767}
   m_Layer: 0
   m_Name: Music
   m_TagString: Untagged
@@ -10114,6 +10115,39 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!114 &2129805767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129805764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84e0f6b7d8922fd4187968d798ef2649, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  auto: {fileID: 2129805768}
+  altura: 0
+  altitude: {fileID: 1945389758}
+  altitudeMin: 300
+  altitudeMax: 500
+--- !u!114 &2129805768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129805764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Parameter: Altura
+  TriggerEvent: 0
+  Value: 0
 --- !u!1 &2142901720
 GameObject:
   m_ObjectHideFlags: 0

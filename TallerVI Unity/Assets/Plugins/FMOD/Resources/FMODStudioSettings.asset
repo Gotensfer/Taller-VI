@@ -446,6 +446,7 @@ MonoBehaviour:
   - Ambience
   - Music
   - SFX
+  - Shop
   - Taps
   BanksToLoad: []
   LiveUpdatePort: 9264
