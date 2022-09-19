@@ -152,6 +152,18 @@ public class UIInterfaceMainMenu : MonoBehaviour
     {
         polaroids.ElementAt(1).DOScale(Vector3.one, 1).SetEase(Ease.OutSine);
     }
+    public void Polaroid3On()
+    {
+        polaroids.ElementAt(2).DOScale(Vector3.one, 1).SetEase(Ease.OutSine);
+    }
+    public void Polaroid4On()
+    {
+        polaroids.ElementAt(3).DOScale(Vector3.one, 1).SetEase(Ease.OutSine);
+    }
+    public void Polaroid5On()
+    {
+        polaroids.ElementAt(4).DOScale(Vector3.one, 1).SetEase(Ease.OutSine);
+    }
 
     //Polaroids deactivate
     public void PolaroidClosed()
