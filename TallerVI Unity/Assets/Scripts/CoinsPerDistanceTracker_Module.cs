@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CoinsPerDistanceTracker_Module : MonoBehaviour
 {
     [SerializeField] CoinPerDistanceData coinPerDistanceData;
     [SerializeField] DistanceTracker_Module distanceTracker_Module;
+    [SerializeField] TextMeshProUGUI earnedMoneysDisplay;
 
     int coinsEarnedThisRun;
 
@@ -33,6 +35,7 @@ public class CoinsPerDistanceTracker_Module : MonoBehaviour
     // Se debe añadir al evento Crash de PlayerEvents_Interface
     public void AwardEarnedCoinsInRun()
     {
+        earnedMoneysDisplay.text = $"{coinsEarnedThisRun}";
         EconomyData.AddCoins(coinsEarnedThisRun);
     }
 }

@@ -3090,7 +3090,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.582091, y: 2.25, z: -2}
+  m_LocalPosition: {x: 8.580082, y: 2.25, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3910,6 +3910,18 @@ MonoBehaviour:
       - m_Target: {fileID: 508670777}
         m_TargetAssemblyTypeName: Summary, Assembly-CSharp
         m_MethodName: DisplaySummary
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1728376859}
+        m_TargetAssemblyTypeName: FinalExplotion_Module, Assembly-CSharp
+        m_MethodName: Explode
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8217,6 +8229,7 @@ GameObject:
   - component: {fileID: 1728376856}
   - component: {fileID: 1728376857}
   - component: {fileID: 1728376858}
+  - component: {fileID: 1728376859}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -8462,6 +8475,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pidgeon: {fileID: 879678804}
+--- !u!114 &1728376859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728376841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 075e47e463d4a2545bd30a2f6e394c52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FinalExplotionVFX: {fileID: 3887539673109996591, guid: cf73fae74cd195c41802f6248a0ca73c, type: 3}
 --- !u!1 &1730684567
 GameObject:
   m_ObjectHideFlags: 0
@@ -9516,6 +9542,7 @@ GameObject:
   - component: {fileID: 1945389756}
   - component: {fileID: 1945389757}
   - component: {fileID: 1945389758}
+  - component: {fileID: 1945389759}
   m_Layer: 0
   m_Name: StatTracker
   m_TagString: Untagged
@@ -9564,6 +9591,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1728376845}
   debugMode: 1
+--- !u!114 &1945389759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945389755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b39d13289a10c6c45b6d0897ad37be5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinPerDistanceData: {fileID: 11400000, guid: 54a3f29da3b538d4d97f54d411dfb0a1, type: 2}
+  distanceTracker_Module: {fileID: 1945389757}
+  earnedMoneysDisplay: {fileID: 817340753}
 --- !u!4 &1954418084 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8497296553107868457, guid: 976e809bef8e63b49867a05ba1e13155, type: 3}
