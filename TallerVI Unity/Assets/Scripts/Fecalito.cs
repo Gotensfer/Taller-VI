@@ -29,6 +29,8 @@ public class Fecalito : MonoBehaviour
 
     private void Start()
     {
+        level = PlayerPrefs.GetInt("Fecalito Level", -1);
+
         button.SetActive(false);
         playerEvents.LaunchEvent.AddListener(EnableFecalitoButton); // Para evitar ruido en el EventManager
 
@@ -47,6 +49,9 @@ public class Fecalito : MonoBehaviour
                 break;
             case 3:
                 maxCharges = 3;
+                break;
+            default:
+                Debug.LogError("NO SE CARGARON LOS DATOS DE NIVEL DE MITOSIS");
                 break;
         }
 
