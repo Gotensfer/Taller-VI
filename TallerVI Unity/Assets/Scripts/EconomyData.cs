@@ -16,6 +16,7 @@ public static class EconomyData
 
         coins += amount;
         PlayerPrefs.SetInt("Coins", coins);
+        PlayerPrefs.Save();
     }
 
     public static void SpendCoins(int amount)
@@ -28,6 +29,7 @@ public static class EconomyData
 
         coins -= amount;
         PlayerPrefs.SetInt("Coins", coins);
+        PlayerPrefs.Save();
     }
 
     // Usado para cargar las monedas al inicializar el juego
@@ -40,6 +42,8 @@ public static class EconomyData
             Debug.LogError($"PLAYER PREFS - COINS - NO SE PUDO OBTENER");
             return;
         }
+
+        PlayerPrefs.Save();
     }
 
     public static void SetCoins(int amount)
@@ -52,11 +56,13 @@ public static class EconomyData
 
         coins = amount;
         PlayerPrefs.SetInt("Coins", coins);
+        PlayerPrefs.Save();
     }
 
     public static void ResetCoins()
     {
         coins = 0;
         PlayerPrefs.SetInt("Coins", coins);
+        PlayerPrefs.Save();
     }
 }
