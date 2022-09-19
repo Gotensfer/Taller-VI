@@ -28,6 +28,17 @@ public class GameLoad_DataInitializer : MonoBehaviour
 
         // Configuración inicial de datos de mejoras
 
+        // NOTA: EL SISTEMA SE CAMBIARA A UNO SIMILAR USADO PARA LAS COMIDAS
+        if (PlayerPrefs.GetInt($"Mitosis Level", -1) == -1)
+        {
+            PlayerPrefs.SetInt($"Mitosis Level", 1);
+        }
+
+        if (PlayerPrefs.GetInt($"Fecalito Level", -1) == -1)
+        {
+            PlayerPrefs.SetInt($"Fecalito Level", 0);
+        }
+
         // ---
         PlayerPrefs.Save();
     }
