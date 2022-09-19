@@ -29,6 +29,8 @@ public class Mitosis : MonoBehaviour
 
     private void Start()
     {
+        level = PlayerPrefs.GetInt("Mitosis Level", -1);
+
         button.SetActive(false);
         playerEvents.LaunchEvent.AddListener(EnableMitosisButton); // Para evitar ruido en el EventManager
 
@@ -43,6 +45,9 @@ public class Mitosis : MonoBehaviour
                 break;
             case 3:
                 maxCharges = 3;
+                break;
+            default:
+                Debug.LogError("NO SE CARGARON LOS DATOS DE NIVEL DE MITOSIS");
                 break;
         }
 

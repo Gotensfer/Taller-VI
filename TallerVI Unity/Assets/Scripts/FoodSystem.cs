@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement; // JULIAN HDTPM
+using System;
 
 // Deprecado, no hace nada por ahora, pero la idea es meterlo en un custom editor más adelante (?
 public enum FoodID
@@ -21,6 +22,35 @@ public class FoodSystem : MonoBehaviour
 {
     public List<Food> foods;
     public List<Food> addedFoods;
+    public List<GameObject> foodsUnlockables;
+
+    private void Start()
+    {
+        for (int i = 0; i < foods.Count; i++)
+        {
+            if (PlayerPrefs.GetInt(Enum.GetName(typeof(FoodID), i)) == 0)
+            {
+                foodsUnlockables[i].SetActive(true);
+            }
+            else if (PlayerPrefs.GetInt(Enum.GetName(typeof(FoodID), i)) == 1)
+            {
+                foodsUnlockables[i].SetActive(false);
+            }
+        }
+    }
+
+    public void BuyFood(int foodID)
+    {
+        if (EconomyData.coins >= foods[foodID].coinPrice)
+        {
+            EconomyData.SpendCoins(foods[foodID].coinPrice);
+
+            foodsUnlockables[foodID].SetActive(false);
+
+            PlayerPrefs.SetInt($"{Enum.GetName(typeof(FoodID), foodID)}", 1);
+            PlayerPrefs.Save();
+        }
+    }
 
     public void AddFood(int foodID) // Cambiar a un enum o con autoresponsabilidad más adelante
     {
@@ -57,7 +87,7 @@ public class FoodSystem : MonoBehaviour
     // ESTO NO DEBERIA IR AQUI JUEPUTA JULIAN ARREGLA ESA UI
     public void ChangeToLaunchScene()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
     // ESTO TAMPOCO DEBERIA IR ASI
