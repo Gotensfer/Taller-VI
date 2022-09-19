@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.SceneManagement;
 
 public class GameLoad_DataInitializer : MonoBehaviour
 {
@@ -23,6 +24,20 @@ public class GameLoad_DataInitializer : MonoBehaviour
             if (PlayerPrefs.GetInt($"{Enum.GetName(typeof(FoodID), i)}", -1) == -1)
             {
                 PlayerPrefs.SetInt($"{Enum.GetName(typeof(FoodID), i)}", 0);
+
+                // HARDCODEADO, MALO MALO MALOOOO
+                if (i == (int)FoodID.Guaro)
+                {
+                    PlayerPrefs.SetInt($"{Enum.GetName(typeof(FoodID), i)}", 1);
+                }
+                if (i == (int)FoodID.BandejaPaisa)
+                {
+                    PlayerPrefs.SetInt($"{Enum.GetName(typeof(FoodID), i)}", 1);
+                }
+                if (i == (int)FoodID.Brevas)
+                {
+                    PlayerPrefs.SetInt($"{Enum.GetName(typeof(FoodID), i)}", 1);
+                }
             }            
         }
 
@@ -41,5 +56,7 @@ public class GameLoad_DataInitializer : MonoBehaviour
 
         // ---
         PlayerPrefs.Save();
+
+        SceneManager.LoadScene(1);
     }
 }

@@ -32,6 +32,10 @@ public class FoodSystem : MonoBehaviour
             {
                 foodsUnlockables[i].SetActive(true);
             }
+            else if (PlayerPrefs.GetInt(Enum.GetName(typeof(FoodID), i)) == 1)
+            {
+                foodsUnlockables[i].SetActive(false);
+            }
         }
     }
 
