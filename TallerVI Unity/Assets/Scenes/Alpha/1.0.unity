@@ -3943,6 +3943,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1945389760}
+        m_TargetAssemblyTypeName: AchievementTracker, Assembly-CSharp
+        m_MethodName: CheckAchievements
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   PoweredUpEvent:
     m_PersistentCalls:
       m_Calls:
@@ -9555,6 +9567,7 @@ GameObject:
   - component: {fileID: 1945389757}
   - component: {fileID: 1945389758}
   - component: {fileID: 1945389759}
+  - component: {fileID: 1945389760}
   m_Layer: 0
   m_Name: StatTracker
   m_TagString: Untagged
@@ -9618,6 +9631,20 @@ MonoBehaviour:
   coinPerDistanceData: {fileID: 11400000, guid: 54a3f29da3b538d4d97f54d411dfb0a1, type: 2}
   distanceTracker_Module: {fileID: 1945389757}
   earnedMoneysDisplay: {fileID: 817340753}
+--- !u!114 &1945389760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945389755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a53884f0c43d66498bdaff1cadb9835, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceTracker_Module: {fileID: 1945389757}
+  altitudeTracker_Module: {fileID: 1945389758}
 --- !u!4 &1954418084 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8497296553107868457, guid: 976e809bef8e63b49867a05ba1e13155, type: 3}
