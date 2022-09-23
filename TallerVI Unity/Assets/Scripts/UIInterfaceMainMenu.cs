@@ -9,6 +9,8 @@ using System.Net.Sockets;
 
 public class UIInterfaceMainMenu : MonoBehaviour
 {
+    [SerializeField] private bool firstTimePreGame, firstTimeStore, firstTimeUpgrades, firstTimeAlbum; //Flag for enter the tutorial for each window
+
     public RectTransform mainMenu, preGame, store, upgrades, album, configuration, mainTitle; //References for UI position
     public List<RectTransform> polaroids = new List<RectTransform>(); //List of polaroids
     public CanvasGroup fadePanel;
@@ -185,4 +187,13 @@ public class UIInterfaceMainMenu : MonoBehaviour
         else
             fadePanel.DOFade(0, 2);
     }
+
+    public void FirstTimeInPreGame()
+    {
+        if (firstTimePreGame == true)
+        {
+            fadePanel.DOFade(0.6f, 1);
+        }
+    }
+
 }
