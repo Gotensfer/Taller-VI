@@ -165,6 +165,7 @@ public class PowerUp_PidgeonTest : MonoBehaviour, IPowerUp
 	// Llame a este método para parar el PowerUp
 	public void StopPowerUp()
     {
+		transform.parent.GetComponent<EventReferenceHandler>().playerEvents.pidgeonDownEvent.Invoke();
 		transform.parent.GetComponent<EventReferenceHandler>().playerEvents.PoweredDownEvent.Invoke();
 		Destroy(this);
     }
