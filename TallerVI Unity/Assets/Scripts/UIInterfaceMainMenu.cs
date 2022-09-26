@@ -6,14 +6,35 @@ using UnityEngine.SceneManagement;
 using DG.Tweening;
 using System.Linq;
 using System.Net.Sockets;
+using UnityEngine.UI;
 
 public class UIInterfaceMainMenu : MonoBehaviour
 {
-    [SerializeField] private bool firstTimePreGame, firstTimeStore, firstTimeUpgrades, firstTimeAlbum; //Flag for enter the tutorial for each window
+    [Header("UI references")] //Referencias de UIs
+    [SerializeField] RectTransform mainMenu; 
+    [SerializeField] RectTransform preGame;
+    [SerializeField] RectTransform store;
+    [SerializeField] RectTransform upgrades;
+    [SerializeField] RectTransform album;
+    [SerializeField] RectTransform configuration;
+    [SerializeField] RectTransform mainTitle;
+    [SerializeField] RectTransform selector;
 
-    public RectTransform mainMenu, preGame, store, upgrades, album, configuration, mainTitle; //References for UI position
-    public List<RectTransform> polaroids = new List<RectTransform>(); //List of polaroids
-    public CanvasGroup fadePanel;
+    [Header("Polaroid list")]
+    public List<RectTransform> polaroids = new List<RectTransform>(); //Lista de polariods
+
+    [Header("Tutorial checks")]
+    [SerializeField]  bool firstTimePreGame; //Flag for enter the tutorial for each window
+    [SerializeField]  bool firstTimeStore;
+    [SerializeField]  bool firstTimeUpgrades;
+    [SerializeField]  bool firstTimeAlbum;
+
+    [SerializeField] CanvasGroup fadePanel;
+    [SerializeField] Button screenButton;
+    [SerializeField] Button screenTransparentButton;
+
+    [Header("Tutorial Texts")]
+    [SerializeField] RectTransform greetings;
 
     public static bool alreadyInitialized = false;
 
@@ -26,13 +47,16 @@ public class UIInterfaceMainMenu : MonoBehaviour
         configuration.transform.localScale = Vector2.zero;
         store.transform.localScale = Vector2.zero;
         upgrades.transform.localScale = Vector2.zero;
+        selector.transform.localScale = Vector2.zero;
+        greetings.transform.localScale = Vector2.zero;
+        screenButton.gameObject.SetActive(true);
+        screenTransparentButton.gameObject.SetActive(true);
 
         foreach (RectTransform transform in polaroids)
         {
             transform.transform.localScale = Vector2.zero;
         }
 
-        Fader();
 
 
         // Inicialización distinta si no es la primera vez que se inicializa
@@ -46,17 +70,46 @@ public class UIInterfaceMainMenu : MonoBehaviour
                 .SetEase(Ease.InOutSine)
                 .SetLoops(-1, LoopType.Yoyo);
         }
+
+        //Se obtienen y se inicializan la variables para tutoriales
+        if (PlayerPrefs.GetInt($"firstTimePreGame") == 1) firstTimePreGame = true;
+        else firstTimePreGame = false;
+        if (PlayerPrefs.GetInt($"firstTimeStore") == 1) firstTimeStore = true;
+        else firstTimeStore = false;
+        if (PlayerPrefs.GetInt($"firstTimeUpgrades") == 1) firstTimeUpgrades = true;
+        else firstTimeUpgrades = false;
+        if (PlayerPrefs.GetInt($"firstTimeAlbum") == 1) firstTimeAlbum = true;
+        else firstTimeAlbum = false;
+
+        if (firstTimePreGame == true)
+        {
+            screenButton.gameObject.SetActive(true);
+            screenTransparentButton.gameObject.SetActive(true);
+            firstTimePreGame = false;
+            screenButton.onClick.AddListener(PregameSections);
+
+        }
+        else
+        {
+            screenButton.gameObject.SetActive(false);
+            screenTransparentButton.gameObject.SetActive(false);
+
+        }
+
+
+
+
+
     }
 
-    public void Reset(int sceneIndex)
+
+
+    private void OnDisable()
     {
-        if (sceneIndex < 0) SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        SceneManager.LoadScene(sceneIndex);
-        alreadyInitialized = true;
+        DOTween.KillAll(gameObject);
     }
 
-
-    //Slide for UI buttons and animations (DOTween)
+    #region"UI buttons animations"
 
     //Play Button
     public void PlayUIButton()
@@ -138,13 +191,9 @@ public class UIInterfaceMainMenu : MonoBehaviour
         configuration.DOAnchorPos(new Vector2(927, -315), 1).SetEase(Ease.InExpo);
         configuration.DOScale(Vector3.zero, 1).SetEase(Ease.InBack);
     }
+    #endregion
 
-
-    private void OnDisable()
-    {
-        DOTween.KillAll(gameObject);
-    }
-
+    #region"Polaroids"
     //Polaroids activate
     public void Polaroid1On()
     {
@@ -177,6 +226,8 @@ public class UIInterfaceMainMenu : MonoBehaviour
             transform.transform.localScale = Vector2.zero;
         }
     }
+    #endregion
+
 
     //Add-on FADER
     public void Fader()
@@ -188,13 +239,32 @@ public class UIInterfaceMainMenu : MonoBehaviour
             fadePanel.DOFade(0, 2);
     }
 
-    public void FirstTimeInPreGame()
-    {
-        if (firstTimePreGame == true)
-        {
-            fadePanel.DOFade(0.6f, 1);
 
-        }
+
+    private void PregameSections()
+    {
+        print("Empieza tuto Pregame");
+        screenButton.onClick.AddListener(StoreSections);
+        screenButton.onClick.RemoveListener(PregameSections);
     }
+    private void StoreSections()
+    {
+        print("Empieza tuto Store");
+        screenButton.onClick.AddListener(UpdateSections);
+        screenButton.onClick.RemoveListener(StoreSections);
+    }
+    private void UpdateSections()
+    {
+        print("Empieza tuto Update");
+        screenButton.onClick.AddListener(AlbumSections);
+        screenButton.onClick.RemoveListener(UpdateSections);
+    }
+    private void AlbumSections()
+    {
+        print("Empieza tuto Album");
+        screenButton.gameObject.SetActive(false);
+
+    }
+
 
 }
