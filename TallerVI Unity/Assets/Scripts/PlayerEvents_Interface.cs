@@ -27,6 +27,11 @@ public class PlayerEvents_Interface : MonoBehaviour
     public UnityEvent MitosisPickUpEvent;
     public UnityEvent FecalitoEvent;
 
+    [Header("Specific power down Events")]
+    public UnityEvent chilliDownEvent;
+    public UnityEvent pidgeonDownEvent;
+    public UnityEvent rocketDownEvent;
+
     private void Start()
     {
 #if UNITY_EDITOR
