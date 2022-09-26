@@ -193,6 +193,7 @@ public class UIInterfaceMainMenu : MonoBehaviour
         if (firstTimePreGame == true)
         {
             fadePanel.DOFade(0.6f, 1);
+
         }
     }
 
