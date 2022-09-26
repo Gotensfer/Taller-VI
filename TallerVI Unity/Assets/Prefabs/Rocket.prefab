@@ -139,7 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   time: 2
-  force: 20
+  force: 10
   angle: 0
   sp: {fileID: 8847389240785400637}
 --- !u!1001 &7819924269537827200
