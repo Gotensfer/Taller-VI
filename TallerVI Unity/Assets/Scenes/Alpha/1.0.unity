@@ -10479,7 +10479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1728376845}
-  debugMode: 1
+  debugMode: 0
 --- !u!114 &1945389759
 MonoBehaviour:
   m_ObjectHideFlags: 0
