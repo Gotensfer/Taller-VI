@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ab26b13798f18f449ad6c2e3da632ad, type: 3}
   m_Name: Beer
   m_EditorClassIdentifier: 
-  maxVelocity: 45
+  maxVelocity: 10
   anglePerSecond: 25
   impulse: 0
   bounces: 0

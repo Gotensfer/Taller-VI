@@ -50,9 +50,21 @@ public class FlyRestraint_Module : MonoBehaviour
         if (flyingStates_Module.PlayerState != PlayerStates.standardFlying) return;
 
         //Calculo de la fuerza de resistencia al movimiento
-        rb.AddForce(standardForwardForce);
+        
         forwardVelocityVector.x = rb.velocity.x <= 0 ? 0 : rb.velocity.x;
         airResistanceForce_Forward = 0.5f * airDensity * airDragCoefficient_Forward * forwardVelocityVector * forwardVelocityVector;
+        
+        // Cambiar a un valor cuadrático al pasarse de la velocidad máxima para desacelerar rápido
+        // if (rb.velocity.x < forwardVelocityLimit) rb.AddForce(standardForwardForce);
+        if (rb.velocity.x < forwardVelocityLimit)
+        {           
+            rb.AddForce(standardForwardForce);
+        }
+        if (rb.velocity.x > forwardVelocityLimit)
+        {
+            airResistanceForce_Forward *= 2;
+        }
+        
         rb.AddForce(airResistanceForce_Forward);
     }
 }
