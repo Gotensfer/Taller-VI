@@ -11,7 +11,7 @@ using UnityEngine.UI;
 public class UIInterfaceMainMenu : MonoBehaviour
 {
     [Header("UI references")] //Referencias de UIs
-    [SerializeField] RectTransform mainMenu; 
+    [SerializeField] RectTransform mainMenu;
     [SerializeField] RectTransform preGame;
     [SerializeField] RectTransform store;
     [SerializeField] RectTransform upgrades;
@@ -24,17 +24,19 @@ public class UIInterfaceMainMenu : MonoBehaviour
     public List<RectTransform> polaroids = new List<RectTransform>(); //Lista de polariods
 
     [Header("Tutorial checks")]
-    [SerializeField]  bool firstTimePreGame; //Flag for enter the tutorial for each window
-    [SerializeField]  bool firstTimeStore;
-    [SerializeField]  bool firstTimeUpgrades;
-    [SerializeField]  bool firstTimeAlbum;
+    [SerializeField] bool firstTimePreGame; //Flag for enter the tutorial for each window
+    [SerializeField] bool firstTimeStore;
+    [SerializeField] bool firstTimeUpgrades;
+    [SerializeField] bool firstTimeAlbum;
 
     [SerializeField] CanvasGroup fadePanel;
     [SerializeField] Button screenButton;
-    [SerializeField] Button screenTransparentButton;
+    [SerializeField] RectTransform screenTransparentButton;
 
     [Header("Tutorial Texts")]
     [SerializeField] RectTransform greetings;
+    [SerializeField] RectTransform text1;
+    [SerializeField] RectTransform text2;
 
     public static bool alreadyInitialized = false;
 
@@ -49,8 +51,12 @@ public class UIInterfaceMainMenu : MonoBehaviour
         upgrades.transform.localScale = Vector2.zero;
         selector.transform.localScale = Vector2.zero;
         greetings.transform.localScale = Vector2.zero;
-        screenButton.gameObject.SetActive(true);
-        screenTransparentButton.gameObject.SetActive(true);
+        text1.transform.localScale = Vector2.zero;
+        text2.transform.localScale = Vector2.zero;
+
+
+        screenButton.gameObject.SetActive(false);
+        screenTransparentButton.gameObject.SetActive(false);
 
         foreach (RectTransform transform in polaroids)
         {
@@ -71,6 +77,9 @@ public class UIInterfaceMainMenu : MonoBehaviour
                 .SetLoops(-1, LoopType.Yoyo);
         }
 
+        Fader();
+
+        
         //Se obtienen y se inicializan la variables para tutoriales
         if (PlayerPrefs.GetInt($"firstTimePreGame") == 1) firstTimePreGame = true;
         else firstTimePreGame = false;
@@ -83,10 +92,8 @@ public class UIInterfaceMainMenu : MonoBehaviour
 
         if (firstTimePreGame == true)
         {
-            screenButton.gameObject.SetActive(true);
-            screenTransparentButton.gameObject.SetActive(true);
             firstTimePreGame = false;
-            screenButton.onClick.AddListener(PregameSections);
+            screenButton.onClick.AddListener(MainMenuSection1);
 
         }
         else
@@ -109,7 +116,7 @@ public class UIInterfaceMainMenu : MonoBehaviour
         DOTween.KillAll(gameObject);
     }
 
-    #region"UI buttons animations"
+    #region"Animaciones de botones en UI"
 
     //Play Button
     public void PlayUIButton()
@@ -194,7 +201,7 @@ public class UIInterfaceMainMenu : MonoBehaviour
     #endregion
 
     #region"Polaroids"
-    //Polaroids activate
+    //Activar Polaroids
     public void Polaroid1On()
     {
         polaroids.ElementAt(0).DOScale(Vector3.one, 1).SetEase(Ease.OutSine);
@@ -240,31 +247,47 @@ public class UIInterfaceMainMenu : MonoBehaviour
     }
 
 
+    #region"Secciones del tutorial pregame"
+    private void MainMenuSection1()
+    {
+        screenButton.gameObject.SetActive(true);
+        screenTransparentButton.gameObject.SetActive(true);
 
-    private void PregameSections()
-    {
-        print("Empieza tuto Pregame");
-        screenButton.onClick.AddListener(StoreSections);
-        screenButton.onClick.RemoveListener(PregameSections);
+        fadePanel.DOFade(0.6f, 1);
+        greetings.DOScale(Vector3.one, 1).SetEase(Ease.OutSine);
+        text1.DOScale(Vector3.one, 1).SetEase(Ease.OutSine);
+
+        screenButton.onClick.AddListener(MainMenuSection2);
+        screenButton.onClick.RemoveListener(MainMenuSection1);
     }
-    private void StoreSections()
+    private void MainMenuSection2()
     {
-        print("Empieza tuto Store");
-        screenButton.onClick.AddListener(UpdateSections);
-        screenButton.onClick.RemoveListener(StoreSections);
+
+        greetings.DOScale(Vector3.zero, 1).SetEase(Ease.InBack);
+        text1.DOScale(Vector3.zero, 1).SetEase(Ease.InBack);
+
+
+        text2.DOScale(Vector3.one, 1).SetEase(Ease.OutSine);
+        selector.DOScale(Vector3.one, 1).SetEase(Ease.OutSine);
+        screenTransparentButton.DOAnchorPos(new Vector2(900, -190), 1);
+
+        screenButton.onClick.AddListener(MainMenuSection3);
+        screenButton.onClick.RemoveListener(MainMenuSection2);
     }
-    private void UpdateSections()
+    private void MainMenuSection3()
     {
-        print("Empieza tuto Update");
-        screenButton.onClick.AddListener(AlbumSections);
-        screenButton.onClick.RemoveListener(UpdateSections);
+        text2.DOScale(Vector3.zero, 1).SetEase(Ease.InBack);
+        selector.DOScale(Vector3.zero, 1).SetEase(Ease.InBack);
+
+        screenButton.onClick.AddListener(MainMenuSection4);
+        screenButton.onClick.RemoveListener(MainMenuSection3);
     }
-    private void AlbumSections()
+    private void MainMenuSection4()
     {
         print("Empieza tuto Album");
         screenButton.gameObject.SetActive(false);
 
     }
-
+    #endregion
 
 }
