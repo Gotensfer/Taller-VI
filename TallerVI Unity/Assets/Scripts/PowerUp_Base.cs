@@ -91,7 +91,16 @@ public class PowerUp_Base : MonoBehaviour, IPowerUp
         {
             calleable = false;
             transform.parent.GetComponent<EventReferenceHandler>().playerEvents.PoweredDownEvent.Invoke();
-            gameObject.SetActive(false); 
+            gameObject.SetActive(false);
+
+            if (type == PowerUpType.rocket)
+            {
+                transform.parent.GetComponent<EventReferenceHandler>().playerEvents.rocketDownEvent.Invoke();
+            }
+            else if (type == PowerUpType.chili)
+            {
+                transform.parent.GetComponent<EventReferenceHandler>().playerEvents.chilliDownEvent.Invoke();
+            }
         }
     }
 }

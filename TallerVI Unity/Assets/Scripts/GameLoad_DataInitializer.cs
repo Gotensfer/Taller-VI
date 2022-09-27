@@ -8,7 +8,7 @@ public class GameLoad_DataInitializer : MonoBehaviour
 {
     void Start()
     {
-        // Configuración inicial de datos de economia
+        #region"Configuración inicial de datos de economia"
         if (PlayerPrefs.GetInt($"Coins", -1) == -1 )
         {
             PlayerPrefs.SetInt($"Coins", 0);
@@ -17,8 +17,9 @@ public class GameLoad_DataInitializer : MonoBehaviour
         {
             EconomyData.LoadCoins();
         }
+        #endregion
 
-        // Configuración inicial de datos de comidas
+        #region"Configuración inicial de datos de comidas"
         for (int i = 0; i < Enum.GetValues(typeof(FoodID)).Length; i++)
         {
             if (PlayerPrefs.GetInt($"{Enum.GetName(typeof(FoodID), i)}", -1) == -1)
@@ -40,8 +41,9 @@ public class GameLoad_DataInitializer : MonoBehaviour
                 }
             }            
         }
+        #endregion
 
-        // Configuración inicial de datos de mejoras
+        #region"Configuracion inicial de datos de mejoras
 
         // NOTA: EL SISTEMA SE CAMBIARA A UNO SIMILAR USADO PARA LAS COMIDAS
         if (PlayerPrefs.GetInt($"Mitosis Level", -1) == -1)
@@ -80,8 +82,36 @@ public class GameLoad_DataInitializer : MonoBehaviour
         {
             PlayerPrefs.SetInt($"Achievement5", 0);
         }
+        #endregion
 
-        // ---
+        #region"Configuración inicial de datos de tutorial
+        if (PlayerPrefs.GetInt($"t1", -1) == -1) 
+        {
+            PlayerPrefs.SetInt($"t1", 0);
+        }
+
+        if (PlayerPrefs.GetInt($"t1", -1) == -1)
+        {
+            PlayerPrefs.SetInt($"t1", 0);
+        }
+
+        if (PlayerPrefs.GetInt($"t1", -1) == -1)
+        {
+            PlayerPrefs.SetInt($"t1", 0);
+        }
+
+        if (PlayerPrefs.GetInt($"t1", -1) == -1)
+        {
+            PlayerPrefs.SetInt($"t1", 0);
+        }
+
+        if (PlayerPrefs.GetInt($"t1", -1) == -1)
+        {
+            PlayerPrefs.SetInt($"t1", 0);
+        }
+
+        #endregion
+
         PlayerPrefs.Save();
 
         SceneManager.LoadScene(1);

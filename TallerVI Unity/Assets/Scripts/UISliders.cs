@@ -10,7 +10,7 @@ public class UISliders : MonoBehaviour
 
     private FoodSystem fdSys;
 
-    private float velo, angulo, impulso, rebotes = 1;
+    private float velo, angulo, impulso, rebotes;
 
     private void Awake()
     {
@@ -34,10 +34,10 @@ public class UISliders : MonoBehaviour
 
     void Calculate()
     {
-        velo = 0;
-        angulo = 0;
-        impulso = 0;
-        rebotes = 1;
+        velo = LaunchData.min_MaxVelocity;
+        angulo = LaunchData.min_AnglePerSecond;
+        impulso = LaunchData.min_Impulse;
+        rebotes = LaunchData.min_bounces;
         
         foreach (Food food in fdSys.addedFoods)
         {
