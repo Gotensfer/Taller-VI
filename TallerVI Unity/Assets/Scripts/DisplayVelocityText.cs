@@ -29,13 +29,13 @@ public class DisplayVelocityText : MonoBehaviour
         switch (displayVelocityMode)
         {
             case DisplayVelocityMode.absolute:
-                display.text = $"{rb.velocity.magnitude}";
+                display.text = $"{rb.velocity.magnitude}m/s";
                 break;
             case DisplayVelocityMode.horizontal:
-                display.text = $"{Math.Round(rb.velocity.x, 2)}  / {flyRestraint_Module.forwardVelocityLimit}";
+                display.text = $"{Math.Round(rb.velocity.x)}m/s";
                 break;
             case DisplayVelocityMode.vertical:
-                display.text = $"{Math.Round(rb.velocity.y, 2)}  / {flyRestraint_Module.fallVelocityLimit}";
+                display.text = $"{Math.Round(rb.velocity.y)}m/s";
                 break;
         }
     }
