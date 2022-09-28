@@ -24,7 +24,7 @@ public class UIInterfaceMainMenu : MonoBehaviour
     public List<RectTransform> polaroids = new List<RectTransform>(); //Lista de polariods
 
     [Header("Tutorial checks")]
-    [SerializeField] bool firstTimePreGame; //Flag for enter the tutorial for each window
+    [SerializeField] bool firstTimePreGame; //Flag para entrada al tutorial de cada UI
     [SerializeField] bool firstTimeStore;
     [SerializeField] bool firstTimeUpgrades;
     [SerializeField] bool firstTimeAlbum;
@@ -93,6 +93,9 @@ public class UIInterfaceMainMenu : MonoBehaviour
         if (firstTimePreGame == true)
         {
             firstTimePreGame = false;
+
+            screenButton.gameObject.SetActive(true);
+            screenTransparentButton.gameObject.SetActive(true);
             screenButton.onClick.AddListener(MainMenuSection1);
 
         }
@@ -250,15 +253,14 @@ public class UIInterfaceMainMenu : MonoBehaviour
     #region"Secciones del tutorial pregame"
     private void MainMenuSection1()
     {
-        screenButton.gameObject.SetActive(true);
-        screenTransparentButton.gameObject.SetActive(true);
 
-        fadePanel.DOFade(0.6f, 1);
+        fadePanel.DOFade(0.8f, 1);
         greetings.DOScale(Vector3.one, 1).SetEase(Ease.OutSine);
         text1.DOScale(Vector3.one, 1).SetEase(Ease.OutSine);
 
         screenButton.onClick.AddListener(MainMenuSection2);
         screenButton.onClick.RemoveListener(MainMenuSection1);
+
     }
     private void MainMenuSection2()
     {
@@ -269,6 +271,7 @@ public class UIInterfaceMainMenu : MonoBehaviour
 
         text2.DOScale(Vector3.one, 1).SetEase(Ease.OutSine);
         selector.DOScale(Vector3.one, 1).SetEase(Ease.OutSine);
+
         screenTransparentButton.DOAnchorPos(new Vector2(900, -190), 1);
 
         screenButton.onClick.AddListener(MainMenuSection3);
@@ -278,16 +281,16 @@ public class UIInterfaceMainMenu : MonoBehaviour
     {
         text2.DOScale(Vector3.zero, 1).SetEase(Ease.InBack);
         selector.DOScale(Vector3.zero, 1).SetEase(Ease.InBack);
+        screenButton.gameObject.SetActive(false);
+        screenTransparentButton.gameObject.SetActive(false);
 
-        screenButton.onClick.AddListener(MainMenuSection4);
+        fadePanel.DOFade(0, 1).SetEase(Ease.InOutBack);
+
         screenButton.onClick.RemoveListener(MainMenuSection3);
     }
-    private void MainMenuSection4()
-    {
-        print("Empieza tuto Album");
-        screenButton.gameObject.SetActive(false);
 
-    }
+
+
     #endregion
 
 }
