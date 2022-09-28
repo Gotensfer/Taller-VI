@@ -24,7 +24,8 @@ public class UIInterfaceMainMenu : MonoBehaviour
     public List<RectTransform> polaroids = new List<RectTransform>(); //Lista de polariods
 
     [Header("Tutorial checks")]
-    [SerializeField] bool firstTimePreGame; //Flag para entrada al tutorial de cada UI
+    [SerializeField] bool firstTimeMainMenu; //Flag para entrada al tutorial de cada UI
+    [SerializeField] bool firstTimePreGame;
     [SerializeField] bool firstTimeStore;
     [SerializeField] bool firstTimeUpgrades;
     [SerializeField] bool firstTimeAlbum;
@@ -81,6 +82,8 @@ public class UIInterfaceMainMenu : MonoBehaviour
 
         
         //Se obtienen y se inicializan la variables para tutoriales
+        if (PlayerPrefs.GetInt($"firstTimeMainMenu") == 1) firstTimeMainMenu = true;
+        else firstTimeMainMenu = false;        
         if (PlayerPrefs.GetInt($"firstTimePreGame") == 1) firstTimePreGame = true;
         else firstTimePreGame = false;
         if (PlayerPrefs.GetInt($"firstTimeStore") == 1) firstTimeStore = true;
@@ -90,9 +93,9 @@ public class UIInterfaceMainMenu : MonoBehaviour
         if (PlayerPrefs.GetInt($"firstTimeAlbum") == 1) firstTimeAlbum = true;
         else firstTimeAlbum = false;
 
-        if (firstTimePreGame == true)
+        if (firstTimeMainMenu == true)
         {
-            firstTimePreGame = false;
+            firstTimeMainMenu = false;
 
             screenButton.gameObject.SetActive(true);
             screenTransparentButton.gameObject.SetActive(true);

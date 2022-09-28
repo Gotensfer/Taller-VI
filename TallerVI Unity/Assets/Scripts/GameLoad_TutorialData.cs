@@ -7,6 +7,11 @@ public class GameLoad_TutorialData : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (PlayerPrefs.GetInt($"firstTimeMainMenu", -1) == -1)
+        {
+            PlayerPrefs.SetInt($"firstTimeMainMenu", 1);
+        }        
+
         if (PlayerPrefs.GetInt($"firstTimePreGame", -1) == -1)
         {
             PlayerPrefs.SetInt($"firstTimePreGame", 1);
