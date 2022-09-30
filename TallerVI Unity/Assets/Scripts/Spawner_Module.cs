@@ -1,13 +1,21 @@
 using System.Collections.Generic;
 using System.Linq;
+using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Spawner_Module : MonoBehaviour
 {
     private List<List<GameObject>> pickUps_list = new List<List<GameObject>>(4);
     private List<GameObject> pickUps_listInUse =  new List<GameObject>();
-    [SerializeField] private GameObject prefab1, prefab2, prefab3, prefab4, father;
+    [SerializeField] private GameObject chiliPrefab, pidegeonPrefab, rocketPrefab, mitosisPrefab, father;
+
+    [SerializeField] private Vector2 rangoChili, rangoPidgeon, rangoRocket, rangoMitosis;
+    [SerializeField] [Range(1, 1000)] private uint cadaCuantoRestaChili = 50, cadaCuantoRestaPidgeon = 30, cadaCuantoRestaRocket = 30, cadaCuantoRestaMitosis = 50;
+    [SerializeField] [Range(0, 10)] private uint cuantoRestaChili = 1, cuantoRestaPidgeon = 2, cuantoRestaRocket = 3, cuantoRestaMitosis = 1;
+
+    [SerializeField] private float xOffset = 0;
 
     //variables utilidad
     private float prevPos = 0, chance1 = 100, chance2 = 100, chance3 = 100, chance4 = 100;
@@ -83,19 +91,19 @@ public class Spawner_Module : MonoBehaviour
             {
                 if(i==0)
                 {
-                    pickUps_list[i].Add(Instantiate(prefab1,father.transform));
+                    pickUps_list[i].Add(Instantiate(chiliPrefab,new Vector3(xOffset, 0, 0), quaternion.identity,father.transform));
                 }
                 else if(i==1)
                 {
-                    pickUps_list[i].Add(Instantiate(prefab2,father.transform));
+                    pickUps_list[i].Add(Instantiate(pidegeonPrefab,new Vector3(xOffset, 0, 0), quaternion.identity,father.transform));
                 }
                 else if(i==2)
                 {
-                    pickUps_list[i].Add(Instantiate(prefab3,father.transform));
+                    pickUps_list[i].Add(Instantiate(rocketPrefab,new Vector3(xOffset, 0, 0), quaternion.identity,father.transform));
                 }
                 else
                 {
-                    pickUps_list[i].Add(Instantiate(prefab4,father.transform));
+                    pickUps_list[i].Add(Instantiate(mitosisPrefab,new Vector3(xOffset, 0, 0), quaternion.identity,father.transform));
                 }
             }
         }
@@ -109,7 +117,7 @@ public class Spawner_Module : MonoBehaviour
         
         foreach (Transform element in father.transform)
         {
-            element.transform.position = Vector3.zero;
+            element.transform.position = new Vector3(xOffset, 0, 0);
         }
         
         ClearInUse();
@@ -136,65 +144,85 @@ public class Spawner_Module : MonoBehaviour
         {
             float rnd = Random.Range(0, 100);
 
-            if (rnd < chance1 || rnd == 100)
+            if (rb.position.y >= rangoChili.x && rb.position.y <= rangoChili.y)
             {
-                if (pickUps_list[selected].Count > 0)
+                if (rnd < chance1 || rnd == 100)
                 {
-                    return pickUps_list[selected].ElementAt(0);   
-                }
-                else
-                {
-                    return GetRandomObject();
+                    if (pickUps_list[selected].Count > 0)
+                    {
+                        return pickUps_list[selected].ElementAt(0);   
+                    }
+                    else
+                    {
+                        return GetRandomObject();
+                    }
                 }
             }
+
+            return null;
         }
         else if (selected == 1)
         {
             float rnd = Random.Range(0, 100);
 
-            if (rnd < chance2 || rnd == 100)
+            if (rb.position.y >= rangoPidgeon.x && rb.position.y <= rangoPidgeon.y)
             {
-                if (pickUps_list[selected].Count > 0)
+                if (rnd < chance2 || rnd == 100)
                 {
-                    return pickUps_list[selected].ElementAt(0);   
-                }
-                else
-                {
-                    return GetRandomObject();
+                    if (pickUps_list[selected].Count > 0)
+                    {
+                        return pickUps_list[selected].ElementAt(0);   
+                    }
+                    else
+                    {
+                        return GetRandomObject();
+                    }
                 }
             }
+
+            return null;
         }
         else if (selected == 2)
         {
             float rnd = Random.Range(0, 100);
 
-            if (rnd < chance3 || rnd == 100)
+            if (rb.position.y >= rangoRocket.x && rb.position.y <= rangoRocket.y)
             {
-                if (pickUps_list[selected].Count > 0)
+                if (rnd < chance3 || rnd == 100)
                 {
-                    return pickUps_list[selected].ElementAt(0);   
-                }
-                else
-                {
-                    return GetRandomObject();
+                    if (pickUps_list[selected].Count > 0)
+                    {
+                        return pickUps_list[selected].ElementAt(0);   
+                    }
+                    else
+                    {
+                        return GetRandomObject();
+                    }
                 }
             }
+
+            return null;
         }
         else if (selected == 3)
         {
             float rnd = Random.Range(0, 100);
-        
-            if (rnd < chance4 || rnd == 100)
+
+            if (rb.position.y >= rangoMitosis.x && rb.position.y <= rangoMitosis.y)
             {
-                if (pickUps_list[selected].Count > 0)
+                if (rnd < chance4 || rnd == 100)
                 {
-                    return pickUps_list[selected].ElementAt(0);   
-                }
-                else
-                {
-                    return GetRandomObject();
+                    if (pickUps_list[selected].Count > 0)
+                    {
+                        return pickUps_list[selected].ElementAt(0);   
+                    }
+                    else
+                    {
+                        return GetRandomObject();
+                    }
                 }
             }
+
+            return null;
         }
 
         return GetRandomObject();
@@ -250,30 +278,45 @@ public class Spawner_Module : MonoBehaviour
     {
         GameObject obj = GetRandomObject();
 
-        if (gliding)
+        if (gameObject != null)
         {
-            obj.transform.position = new Vector3(GetPrevPos() + Random.Range(-1.0f, 1.0f), rb.transform.position.y + Random.Range(-5.0f, 1.0f), 0);
-        }
+            if (gliding)
+            {
+                obj.transform.position = new Vector3(GetPrevPos() + Random.Range(-1.0f, 1.0f), rb.transform.position.y + Random.Range(-5.0f, 1.0f), 0);
+            }
 
-        if (falling)
-        {
-            obj.transform.position = new Vector3(Random.Range(2.0f, 4.0f) + (FuturePosition(0.5f)), NegGetPrevPos() + Random.Range(-1.0f, 1.0f), 0);
-        }
+            if (falling)
+            {
+                obj.transform.position = new Vector3(Random.Range(2.0f, 4.0f) + (FuturePosition(0.5f)), NegGetPrevPos() + Random.Range(-1.0f, 1.0f), 0);
+            }
         
-        if (obj.transform.position.y < 3)
-        {
-            if (!spawnedLast)
+            if (obj.transform.position.y < 3)
             {
-                spawnedLast = true;
-                obj.transform.position =  new Vector3(obj.transform.position.x, 3, 0);
+                if (!spawnedLast)
+                {
+                    spawnedLast = true;
+                    obj.transform.position =  new Vector3(obj.transform.position.x, 3, 0);
+                }
+                else
+                {
+                    obj.transform.position =  new Vector3(xOffset, 0, 0);
+                }
             }
-            else
+            pickUps_list[selected].Remove(obj);
+            pickUps_listInUse.Add(obj);
+        }
+        else
+        {
+            if (gliding)
             {
-                obj.transform.position =  Vector3.zero;
+                GetPrevPos();
+            }
+
+            if (falling)
+            {
+                NegGetPrevPos();
             }
         }
-        pickUps_list[selected].Remove(obj);
-        pickUps_listInUse.Add(obj);
     }
     
     float FuturePosition(float time)
@@ -295,16 +338,13 @@ public class Spawner_Module : MonoBehaviour
     
     int GetListIndex(GameObject element)
     {
-        if (element.GetComponent<PowerUp_Base>() != null)
+        if (element.GetComponent<PowerUp_Chili>() != null)
         {
-            if (element.GetComponent<PowerUp_Base>().GetType() == PowerUpType.chili)
-            {
-                return 0;
-            }
-            else
-            {
-                return 2;
-            }
+            return 0;
+        }
+        else if(element.GetComponent<PowerUp_Rocket>() != null)
+        {
+            return 2;
         }
         else if (element.GetComponent<PidgeonPickUp>() != null)
         {
@@ -320,16 +360,13 @@ public class Spawner_Module : MonoBehaviour
     {
         foreach (GameObject element in pickUps_listInUse)
         {
-            if (element.GetComponent<PowerUp_Base>() != null)
+            if (element.GetComponent<PowerUp_Chili>() != null)
             {
-                if (element.GetComponent<PowerUp_Base>().GetType() == PowerUpType.chili)
-                {
-                    pickUps_list[0].Add(element);
-                }
-                else
-                {
-                    pickUps_list[2].Add(element);
-                }
+                pickUps_list[0].Add(element);
+            }
+            else if(element.GetComponent<PowerUp_Rocket>() != null)
+            {
+                pickUps_list[2].Add(element);
             }
             else if (element.GetComponent<PidgeonPickUp>() != null)
             {
@@ -353,28 +390,34 @@ public class Spawner_Module : MonoBehaviour
         
         temp = distance;
         
-        if (distance % 50 == 0)
+        if (distance % cadaCuantoRestaChili == 0)
         {
-            if (distance > temp) chance1--;
-            else if (distance < temp) chance1++;
+            if (distance > temp) chance1-=cuantoRestaChili;
+            else if (distance < temp) chance1+=cuantoRestaChili;
         }
-        else if (distance % 30 == 0)
+        
+        if (distance % cadaCuantoRestaPidgeon == 0)
         {
-            if (distance > temp)
-            {
-                chance3 -= 3f;
-                chance2 -= 2f;
-            }
-            else if (distance < temp)
-            {
-                chance3 += 3f;
-                chance2 += 2f;
-            }
-            
-            chance1 = FixChance(chance1);
-            chance2 = FixChance(chance2);
-            chance3 = FixChance(chance3);
+            if (distance > temp) chance1-=cuantoRestaPidgeon;
+            else if (distance < temp) chance1+=cuantoRestaPidgeon;
         }
+        
+        if (distance % cadaCuantoRestaRocket == 0)
+        {
+            if (distance > temp) chance1-=cuantoRestaRocket;
+            else if (distance < temp) chance1+=cuantoRestaRocket;
+        }
+        
+        if (distance % cadaCuantoRestaMitosis == 0)
+        {
+            if (distance > temp) chance1-=cuantoRestaMitosis;
+            else if (distance < temp) chance1+=cuantoRestaMitosis;
+        }
+        
+        chance1 = FixChance(chance1);
+        chance2 = FixChance(chance2);
+        chance3 = FixChance(chance3);
+        chance4 = FixChance(chance4);
     }
 
     float FixChance(float chance)

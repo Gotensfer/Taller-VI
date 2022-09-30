@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7819924271294555342}
   - component: {fileID: 7819924271294555343}
   - component: {fileID: 7819924271294555336}
-  - component: {fileID: 7819924271294555337}
+  - component: {fileID: -8581169660736164144}
   m_Layer: 6
   m_Name: Rocket
   m_TagString: PowerUp
@@ -125,7 +125,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.5
---- !u!114 &7819924271294555337
+--- !u!114 &-8581169660736164144
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -134,14 +134,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 7819924271294555339}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5417a784c3dad1245bd0f2237e60a007, type: 3}
+  m_Script: {fileID: 11500000, guid: a804030e7f3b569438fae335d4d408ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 1
   time: 2
   force: 10
   angle: 0
-  sp: {fileID: 8847389240785400637}
 --- !u!1001 &7819924269537827200
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -202,10 +200,5 @@ PrefabInstance:
 --- !u!4 &7917370394248577977 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 100721715879057977, guid: 28f52f0f88b1149428436912a8871a6d, type: 3}
-  m_PrefabInstance: {fileID: 7819924269537827200}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &8847389240785400637 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 1607167221277289149, guid: 28f52f0f88b1149428436912a8871a6d, type: 3}
   m_PrefabInstance: {fileID: 7819924269537827200}
   m_PrefabAsset: {fileID: 0}
