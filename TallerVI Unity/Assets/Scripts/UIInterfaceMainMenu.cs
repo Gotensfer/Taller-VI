@@ -101,7 +101,7 @@ public class UIInterfaceMainMenu : MonoBehaviour
 
         Fader();
 
-        /*
+        
         //Se obtienen y se inicializan la variables para tutoriales
         if (PlayerPrefs.GetInt($"firstTimeMainMenu") == 1) firstTimeMainMenu = true;
         else firstTimeMainMenu = false;        
@@ -113,7 +113,7 @@ public class UIInterfaceMainMenu : MonoBehaviour
         else firstTimeUpgrades = false;
         if (PlayerPrefs.GetInt($"firstTimeAlbum") == 1) firstTimeAlbum = true;
         else firstTimeAlbum = false;
-        */
+        
 
         if (firstTimeMainMenu == true)
         {
