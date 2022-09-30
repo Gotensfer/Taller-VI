@@ -18,7 +18,6 @@ public class UIInterfaceMainMenu : MonoBehaviour
     [SerializeField] RectTransform album;
     [SerializeField] RectTransform configuration;
     [SerializeField] RectTransform mainTitle;
-    [SerializeField] RectTransform selector;
 
     [Header("Polaroid list")]
     public List<RectTransform> polaroids = new List<RectTransform>(); //Lista de polariods
@@ -30,14 +29,28 @@ public class UIInterfaceMainMenu : MonoBehaviour
     [SerializeField] bool firstTimeUpgrades;
     [SerializeField] bool firstTimeAlbum;
 
+
+    [Header("Tutorial Elements")]
     [SerializeField] CanvasGroup fadePanel;
     [SerializeField] Button screenButton;
     [SerializeField] RectTransform screenTransparentButton;
+    [SerializeField] RectTransform selector;
+    [SerializeField] RectTransform selectorBig;
 
     [Header("Tutorial Texts")]
-    [SerializeField] RectTransform greetings;
-    [SerializeField] RectTransform text1;
-    [SerializeField] RectTransform text2;
+    //MainMenu Elements
+    [SerializeField] RectTransform mmGreetings;
+    [SerializeField] RectTransform mmText1;
+    [SerializeField] RectTransform mmText2;
+
+    //PreGame Elements
+    [SerializeField] RectTransform pgText1;
+    [SerializeField] RectTransform pgText2;
+    [SerializeField] RectTransform pgText3;
+    [SerializeField] RectTransform pgText4;
+    [SerializeField] RectTransform pgText5;
+    [SerializeField] RectTransform pgText6;
+    [SerializeField] RectTransform pgText7;
 
     public static bool alreadyInitialized = false;
 
@@ -51,9 +64,17 @@ public class UIInterfaceMainMenu : MonoBehaviour
         store.transform.localScale = Vector2.zero;
         upgrades.transform.localScale = Vector2.zero;
         selector.transform.localScale = Vector2.zero;
-        greetings.transform.localScale = Vector2.zero;
-        text1.transform.localScale = Vector2.zero;
-        text2.transform.localScale = Vector2.zero;
+        selectorBig.transform.localScale = Vector2.zero;
+        mmGreetings.transform.localScale = Vector2.zero;
+        mmText1.transform.localScale = Vector2.zero;
+        mmText2.transform.localScale = Vector2.zero;
+        pgText1.transform.localScale = Vector2.zero;
+        pgText2.transform.localScale = Vector2.zero;
+        pgText3.transform.localScale = Vector2.zero;
+        pgText4.transform.localScale = Vector2.zero;
+        pgText5.transform.localScale = Vector2.zero;
+        pgText6.transform.localScale = Vector2.zero;
+        pgText7.transform.localScale = Vector2.zero;
 
 
         screenButton.gameObject.SetActive(false);
@@ -64,7 +85,7 @@ public class UIInterfaceMainMenu : MonoBehaviour
             transform.transform.localScale = Vector2.zero;
         }
 
-
+        DOTween.Init();
 
         // Inicialización distinta si no es la primera vez que se inicializa
         if (alreadyInitialized)
@@ -80,7 +101,7 @@ public class UIInterfaceMainMenu : MonoBehaviour
 
         Fader();
 
-        
+        /*
         //Se obtienen y se inicializan la variables para tutoriales
         if (PlayerPrefs.GetInt($"firstTimeMainMenu") == 1) firstTimeMainMenu = true;
         else firstTimeMainMenu = false;        
@@ -92,6 +113,7 @@ public class UIInterfaceMainMenu : MonoBehaviour
         else firstTimeUpgrades = false;
         if (PlayerPrefs.GetInt($"firstTimeAlbum") == 1) firstTimeAlbum = true;
         else firstTimeAlbum = false;
+        */
 
         if (firstTimeMainMenu == true)
         {
@@ -129,6 +151,15 @@ public class UIInterfaceMainMenu : MonoBehaviour
     {
         mainMenu.DOAnchorPos(new Vector2(-2920, 0), 1f);
         preGame.DOAnchorPos(new Vector2(0, 0), 1);
+
+        if (firstTimePreGame == true)
+        {
+            firstTimePreGame= false;
+
+            screenButton.gameObject.SetActive(true);
+            screenButton.onClick.AddListener(PreGameSection1);
+
+        }
     }
     public void BackFromPlayUIButton()
     {
@@ -252,28 +283,25 @@ public class UIInterfaceMainMenu : MonoBehaviour
             fadePanel.DOFade(0, 2);
     }
 
-
-    #region"Secciones del tutorial pregame"
+    #region"Secciones del tutorial MainMenu"
     private void MainMenuSection1()
     {
-
         fadePanel.DOFade(0.8f, 1);
-        greetings.DOScale(Vector3.one, 1).SetEase(Ease.OutSine);
-        text1.DOScale(Vector3.one, 1).SetEase(Ease.OutSine);
-
+        mmGreetings.DOScale(Vector3.one, 1).SetEase(Ease.OutSine);
+        mmText1.DOScale(Vector3.one, 1).SetEase(Ease.OutSine).SetDelay(1);
+        
         screenButton.onClick.AddListener(MainMenuSection2);
         screenButton.onClick.RemoveListener(MainMenuSection1);
-
     }
     private void MainMenuSection2()
     {
 
-        greetings.DOScale(Vector3.zero, 1).SetEase(Ease.InBack);
-        text1.DOScale(Vector3.zero, 1).SetEase(Ease.InBack);
+        mmGreetings.DOScale(Vector3.zero, 1).SetEase(Ease.InBack).SetDelay(0.5f);
+        mmText1.DOScale(Vector3.zero, 1).SetEase(Ease.InBack).SetDelay(0.5f);
 
 
-        text2.DOScale(Vector3.one, 1).SetEase(Ease.OutSine);
-        selector.DOScale(Vector3.one, 1).SetEase(Ease.OutSine);
+        mmText2.DOScale(Vector3.one, 1).SetEase(Ease.OutSine).SetDelay(1);
+        selector.DOScale(Vector3.one, 1).SetEase(Ease.OutSine).SetDelay(1.7f);
 
         screenTransparentButton.DOAnchorPos(new Vector2(900, -190), 1);
 
@@ -282,18 +310,107 @@ public class UIInterfaceMainMenu : MonoBehaviour
     }
     private void MainMenuSection3()
     {
-        text2.DOScale(Vector3.zero, 1).SetEase(Ease.InBack);
+        mmText1.DOScale(Vector3.zero, 1).SetEase(Ease.InBack);
+        mmText2.DOScale(Vector3.zero, 1).SetEase(Ease.InBack);
+        selector.DOScale(Vector3.zero, 1).SetEase(Ease.InBack);
+        screenButton.gameObject.SetActive(false);
+        screenTransparentButton.gameObject.SetActive(false);
+
+        fadePanel.DOFade(0, 1).SetEase(Ease.InOutBack).WaitForCompletion();
+
+        screenButton.onClick.RemoveListener(MainMenuSection3);
+    }
+    #endregion
+
+
+    #region"Secciones del tutorial Pregame (Selección de comidas)"
+    private void PreGameSection1()
+    {
+
+        fadePanel.DOFade(0.8f, 1);
+        pgText1.DOScale(Vector3.one, 1).SetEase(Ease.OutSine);
+
+        screenButton.onClick.AddListener(PreGameSection2);
+        screenButton.onClick.RemoveListener(PreGameSection1);
+
+    }
+    private void PreGameSection2()
+    {
+        pgText1.DOScale(Vector3.zero, 1).SetEase(Ease.InBack);
+
+        pgText2.DOScale(Vector3.one, 1).SetEase(Ease.OutSine).SetDelay(1);
+
+        screenButton.onClick.AddListener(PreGameSection3);
+        screenButton.onClick.RemoveListener(PreGameSection2);
+    }
+    private void PreGameSection3()
+    {
+        pgText2.DOScale(Vector3.zero, 0.7f).SetEase(Ease.InBack);
+
+        pgText3.DOScale(Vector3.one, 1).SetEase(Ease.OutSine).SetDelay(1);
+        selectorBig.DOScale(new Vector3(4.7f, 4.1f, 1), 1).SetEase(Ease.OutSine);
+
+        screenButton.onClick.AddListener(PreGameSection4);
+        screenButton.onClick.RemoveListener(PreGameSection3);
+    }
+
+    private void PreGameSection4()
+    {
+        pgText3.DOScale(Vector3.zero, 0.7f).SetEase(Ease.InBack);
+
+        pgText4.DOScale(Vector3.one, 1).SetEase(Ease.OutSine).SetDelay(1);
+        selectorBig.DOAnchorPos(new Vector2(-81, 54), 1);
+        selectorBig.DOScaleX(6.24f, 1);
+
+        screenButton.onClick.AddListener(PreGameSection5);
+        screenButton.onClick.RemoveListener(PreGameSection4);
+    }
+
+    private void PreGameSection5()
+    {
+        pgText4.DOScale(Vector3.zero, 0.7f).SetEase(Ease.InBack);
+
+        pgText5.DOScale(Vector3.one, 1).SetEase(Ease.OutSine).SetDelay(1);
+        selectorBig.DOAnchorPos(new Vector2(547, 54), 1);
+        selectorBig.DOScaleX(3.8f, 1);
+
+        screenButton.onClick.AddListener(PreGameSection6);
+        screenButton.onClick.RemoveListener(PreGameSection5);
+    }
+    private void PreGameSection6()
+    {
+        pgText5.DOScale(Vector3.zero, 0.7f).SetEase(Ease.InBack);
+
+        pgText6.DOScale(Vector3.one, 1).SetEase(Ease.OutSine).SetDelay(1);
+        selectorBig.DOAnchorPos(new Vector2(1088, 62), 1);
+        selectorBig.DOScale(new Vector3(5.52f, 3.79f, 1), 1);
+
+        screenButton.onClick.AddListener(PreGameSection7);
+        screenButton.onClick.RemoveListener(PreGameSection6);
+    }
+    private void PreGameSection7()
+    {
+        pgText6.DOScale(Vector3.zero, 0.7f).SetEase(Ease.InBack);
+
+        pgText7.DOScale(Vector3.one, 1).SetEase(Ease.OutSine).SetDelay(1);
+        selectorBig.gameObject.SetActive(false);
+        selector.DOAnchorPos(new Vector2(1119, -528), 0);
+        selector.DOScale(new Vector3(1.44f, 0.63f, 1), 1);
+
+        screenButton.onClick.AddListener(PreGameSection8);
+        screenButton.onClick.RemoveListener(PreGameSection7);
+    }
+    private void PreGameSection8()
+    {
+        pgText7.DOScale(Vector3.zero, 1).SetEase(Ease.InExpo);
         selector.DOScale(Vector3.zero, 1).SetEase(Ease.InBack);
         screenButton.gameObject.SetActive(false);
         screenTransparentButton.gameObject.SetActive(false);
 
         fadePanel.DOFade(0, 1).SetEase(Ease.InOutBack);
 
-        screenButton.onClick.RemoveListener(MainMenuSection3);
+        screenButton.onClick.RemoveListener(PreGameSection8);
     }
 
-
-
     #endregion
-
 }
