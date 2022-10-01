@@ -22,7 +22,7 @@ public class LaunchModule : MonoBehaviour
     public float length = 2;
     private bool flag = false; //Angle animator switch
 
-    // A petición del producer: el jugador no debe poder chocar con powerups por x tiempo
+    // A peticiï¿½n del producer: el jugador no debe poder chocar con powerups por x tiempo
     [SerializeField] float timeToReEnableCollisions;
     [SerializeField] GameObject player;
     [SerializeField] LayerMask originalLayer;
