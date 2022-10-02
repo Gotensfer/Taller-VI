@@ -15,7 +15,7 @@ public class ProgressBarManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        float fillAmount = Mathf.Clamp(distanceTracker_Module.travelledDistance / 10000f, 0, 1);
+        float fillAmount = Mathf.Clamp(distanceTracker_Module.travelledDistance / 10000f, 0.035f, 1);
         progressSlider.value = fillAmount;
     }
 }
