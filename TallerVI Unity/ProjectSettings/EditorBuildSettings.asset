@@ -12,9 +12,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Alpha/1.0 Main menu.unity
     guid: baa10989913809447a6c0c29030e5db4
   - enabled: 1
+    path: Assets/Scenes/Alpha/1.1 Latest Version.unity
+    guid: 0000348173f9adb4a85fffa5f12ad5a3
+  - enabled: 0
     path: Assets/Scenes/Alpha/1.1.unity
     guid: 25f4fb1f7e425e040b738ea2acae0ae7
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Alpha/1.0.unity
     guid: 1ae1a648858e2d248b94c95da3cea794
+  - enabled: 0
+    path: Assets/Scenes/Alpha/1.1 UI Improvements.unity
+    guid: 82e8cd67c82aeb045bade77573a4a075
   m_configObjects: {}

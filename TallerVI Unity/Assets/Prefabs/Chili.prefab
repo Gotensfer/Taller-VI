@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 69687176620298388}
   - component: {fileID: 69687176620298391}
   - component: {fileID: 69687176620298390}
-  - component: {fileID: 69687176620298393}
+  - component: {fileID: -5111054205383261716}
   m_Layer: 6
   m_Name: Chili
   m_TagString: PowerUp
@@ -125,7 +125,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &69687176620298393
+--- !u!114 &-5111054205383261716
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -134,14 +134,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 69687176620298395}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5417a784c3dad1245bd0f2237e60a007, type: 3}
+  m_Script: {fileID: 11500000, guid: 71a4efc8a4041e04ab10b16d4923a6f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
   time: 2
   force: 20
   angle: 45
-  sp: {fileID: 1425140416265478358}
 --- !u!1001 &69687176121899948
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -202,10 +200,5 @@ PrefabInstance:
 --- !u!4 &1425140415498969016 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1382756501167997972, guid: 25c4ade08eda65d498f8281795da56b3, type: 3}
-  m_PrefabInstance: {fileID: 69687176121899948}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &1425140416265478358 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 1382756502404283258, guid: 25c4ade08eda65d498f8281795da56b3, type: 3}
   m_PrefabInstance: {fileID: 69687176121899948}
   m_PrefabAsset: {fileID: 0}

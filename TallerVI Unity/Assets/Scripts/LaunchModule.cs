@@ -22,7 +22,7 @@ public class LaunchModule : MonoBehaviour
     public float length = 2;
     private bool flag = false; //Angle animator switch
 
-    // A petición del producer: el jugador no debe poder chocar con powerups por x tiempo
+    // A peticiï¿½n del producer: el jugador no debe poder chocar con powerups por x tiempo
     [SerializeField] float timeToReEnableCollisions;
     [SerializeField] GameObject player;
     [SerializeField] LayerMask originalLayer;
@@ -56,7 +56,6 @@ public class LaunchModule : MonoBehaviour
     public void Launch()
     {
         if (LaunchData.impulse < 5) force = 5;
-        LaunchData.ResetLaunchData();
         _rb.AddForce(dir * force, ForceMode2D.Impulse);
         playerEvents.LaunchEvent.Invoke();
         launchZoneButton.SetActive(false);
