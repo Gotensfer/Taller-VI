@@ -454,7 +454,7 @@ public class Spawner_Module : MonoBehaviour
 
     void LoadChance()
     {
-        level1 = (sbyte)PlayerPrefs.GetInt("Chili Level", -1);
+        level1 = (sbyte)PlayerPrefs.GetInt("Chilli Level", -1);
         level2 = (sbyte)PlayerPrefs.GetInt("Pidgeon Level", -1);
         level3 = (sbyte)PlayerPrefs.GetInt("Rocket Level", -1);
         level4 = (sbyte)PlayerPrefs.GetInt("Mitosis Level", -1);
