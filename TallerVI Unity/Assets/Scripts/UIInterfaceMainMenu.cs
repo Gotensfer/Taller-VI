@@ -282,9 +282,10 @@ public class UIInterfaceMainMenu : MonoBehaviour
     #region"Secciones del tutorial MainMenu"
     private void MainMenuSection1()
     {
-        fadePanel.DOFade(0.8f, 1).OnComplete(() => {
-            mmGreetings.DOScale(Vector3.one, 1).SetEase(Ease.OutSine);
-            mmText1.DOScale(Vector3.one, 1).SetEase(Ease.OutSine).SetDelay(1).OnComplete(() => screenButton.onClick.AddListener(MainMenuSection2));
+        fadePanel.DOFade(0.8f, 1).OnComplete(() => {                                            //Se espera que se complete el tweener
+            mmGreetings.DOScale(Vector3.one, 1).SetEase(Ease.OutSine);                          //para luego agregar los siguientes
+            mmText1.DOScale(Vector3.one, 1).SetEase(Ease.OutSine).SetDelay(1).OnComplete(() => 
+            screenButton.onClick.AddListener(MainMenuSection2));
         });
 
         screenButton.onClick.RemoveListener(MainMenuSection1);
@@ -317,7 +318,7 @@ public class UIInterfaceMainMenu : MonoBehaviour
         screenButton.onClick.RemoveListener(MainMenuSection3);
 
 
-        PlayerPrefs.SetInt($"firstTimeMainMenu", 0);
+        PlayerPrefs.SetInt($"firstTimeMainMenu", 0); //Modifica el playerprefs para no volver a ingresar al tuto
     }
     #endregion
 
@@ -432,7 +433,7 @@ public class UIInterfaceMainMenu : MonoBehaviour
 
         screenButton.onClick.RemoveListener(PreGameSection8);
 
-        PlayerPrefs.SetInt($"firstTimePreGame", 0);
+        PlayerPrefs.SetInt($"firstTimePreGame", 0); //Modifica el playerprefs para no volver a ingresar al tuto
     }
 
     #endregion
