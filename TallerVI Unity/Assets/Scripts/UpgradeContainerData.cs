@@ -22,16 +22,26 @@ public class UpgradeContainerData : MonoBehaviour
 
     private void Start()
     {        
-        if (upgradeType == UpgradeType.Mitosis)
+        switch (upgradeType)
         {
-            upgradeLevel = PlayerPrefs.GetInt("Mitosis Level", -1);
-        }
-        else if (upgradeType == UpgradeType.Fecalito)
-        {
-            upgradeLevel = PlayerPrefs.GetInt("Fecalito Level", -1);
+            case UpgradeType.Mitosis:
+                upgradeLevel = PlayerPrefs.GetInt("Mitosis Level", upgradeLevel);
+                break;
+            case UpgradeType.Fecalito:
+                upgradeLevel = PlayerPrefs.GetInt("Fecalito Level", upgradeLevel);
+                break;
+            case UpgradeType.Pidgeon:
+                upgradeLevel = PlayerPrefs.GetInt("Pidgeon Level", upgradeLevel);
+                break;
+            case UpgradeType.Chilli:
+                upgradeLevel = PlayerPrefs.GetInt("Chilli Level", upgradeLevel);
+                break;
+            case UpgradeType.Rocket:
+                upgradeLevel = PlayerPrefs.GetInt("Rocket Level", upgradeLevel);
+                break;
         }
 
-        switch(upgradeLevel)
+        switch (upgradeLevel)
         {
             case 0:
                 SetZeroStar();
