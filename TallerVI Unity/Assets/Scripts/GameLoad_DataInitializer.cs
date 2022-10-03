@@ -129,6 +129,12 @@ public class GameLoad_DataInitializer : MonoBehaviour
 
         PlayerPrefs.Save();
 
+        StartCoroutine(LoadMainMenuOnNextFrame()); 
+    }
+
+    IEnumerator LoadMainMenuOnNextFrame()
+    {
+        yield return null;
         SceneManager.LoadScene(1);
     }
 }

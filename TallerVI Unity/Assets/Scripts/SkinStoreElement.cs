@@ -17,8 +17,10 @@ public class SkinStoreElement : MonoBehaviour
         button = GetComponent<Button>();
         lockButton = lockObject.GetComponent<Button>();
 
+        print(PlayerPrefs.GetInt($"{Enum.GetName(typeof(SkinID), (int)skin.skinID)}"));
         if (PlayerPrefs.GetInt($"{Enum.GetName(typeof(SkinID), (int)skin.skinID)}") == 1) // Está desbloqueada
         {
+            
             button.onClick.AddListener(SelectSkin);     
             lockObject.SetActive(false);
         }
@@ -52,7 +54,7 @@ public class SkinStoreElement : MonoBehaviour
             
             button.onClick.AddListener(SelectSkin);
 
-            PlayerPrefs.SetInt($"{Enum.GetName(typeof(SkinID), (int)skin.skinID)}", 0);
+            PlayerPrefs.SetInt($"{Enum.GetName(typeof(SkinID), (int)skin.skinID)}", 1);
             PlayerPrefs.Save();
         }
     }
