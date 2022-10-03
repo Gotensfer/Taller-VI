@@ -56,6 +56,21 @@ public class GameLoad_DataInitializer : MonoBehaviour
             PlayerPrefs.SetInt($"Fecalito Level", 0);
         }
 
+        if (PlayerPrefs.GetInt($"Chilli Level", -1) == -1)
+        {
+            PlayerPrefs.SetInt($"Chilli Level", 1);
+        }
+
+        if (PlayerPrefs.GetInt($"Pidgeon Level", -1) == -1)
+        {
+            PlayerPrefs.SetInt($"Pidgeon Level", 0);
+        }
+
+        if (PlayerPrefs.GetInt($"Rocket Level", -1) == -1)
+        {
+            PlayerPrefs.SetInt($"Rocket Level", 0);
+        }
+
         // Configuración inicial de datos de logros
 
         if (PlayerPrefs.GetInt($"Achievement1", -1) == -1) // 2k

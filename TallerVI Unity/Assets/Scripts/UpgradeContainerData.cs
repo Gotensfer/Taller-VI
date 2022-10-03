@@ -73,13 +73,23 @@ public class UpgradeContainerData : MonoBehaviour
             EconomyData.SpendCoins(cost);
             upgradeLevel++;
 
-            if (upgradeType == UpgradeType.Mitosis)
+            switch (upgradeType)
             {
-                PlayerPrefs.SetInt("Mitosis Level", upgradeLevel);
-            }
-            else if (upgradeType == UpgradeType.Fecalito)
-            {
-                PlayerPrefs.SetInt("Fecalito Level", upgradeLevel);
+                case UpgradeType.Mitosis:
+                    PlayerPrefs.SetInt("Mitosis Level", upgradeLevel);
+                    break;
+                case UpgradeType.Fecalito:
+                    PlayerPrefs.SetInt("Fecalito Level", upgradeLevel);
+                    break;
+                case UpgradeType.Pidgeon:
+                    PlayerPrefs.SetInt("Pidgeon Level", upgradeLevel);
+                    break;
+                case UpgradeType.Chilli:
+                    PlayerPrefs.SetInt("Chilli Level", upgradeLevel);
+                    break;
+                case UpgradeType.Rocket:
+                    PlayerPrefs.SetInt("Rocket Level", upgradeLevel);
+                    break;
             }
 
             PlayerPrefs.Save();
