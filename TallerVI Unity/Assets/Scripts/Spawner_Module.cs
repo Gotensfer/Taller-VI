@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using Unity.Mathematics;
-using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -11,18 +10,35 @@ public class Spawner_Module : MonoBehaviour
     private List<GameObject> pickUps_listInUse =  new List<GameObject>();
     [SerializeField] private GameObject chiliPrefab, pidegeonPrefab, rocketPrefab, mitosisPrefab, father;
 
+    [Header("level1")]
     [SerializeField] private Vector2 rangoChili, rangoPidgeon, rangoRocket, rangoMitosis;
     [SerializeField] [Range(1, 1000)] private uint cadaCuantoRestaChili = 50, cadaCuantoRestaPidgeon = 30, cadaCuantoRestaRocket = 30, cadaCuantoRestaMitosis = 50;
     [SerializeField] [Range(0, 10)] private uint cuantoRestaChili = 1, cuantoRestaPidgeon = 2, cuantoRestaRocket = 3, cuantoRestaMitosis = 1;
+    
+    [Header("level2")]
+    [SerializeField] private Vector2 rangoChili2, rangoPidgeon2, rangoRocket2, rangoMitosis2;
+    [SerializeField] [Range(1, 1000)] private uint cadaCuantoRestaChili2 = 50, cadaCuantoRestaPidgeon2 = 30, cadaCuantoRestaRocket2 = 30, cadaCuantoRestaMitosis2 = 50;
+    [SerializeField] [Range(0, 10)] private uint cuantoRestaChili2 = 1, cuantoRestaPidgeon2 = 2, cuantoRestaRocket2 = 3, cuantoRestaMitosis2 = 1;
+    
+    [Header("level3")]
+    [SerializeField] private Vector2 rangoChili3, rangoPidgeon3, rangoRocket3, rangoMitosis3;
+    [SerializeField] [Range(1, 1000)] private uint cadaCuantoRestaChili3 = 50, cadaCuantoRestaPidgeon3 = 30, cadaCuantoRestaRocket3 = 30, cadaCuantoRestaMitosis3 = 50;
+    [SerializeField] [Range(0, 10)] private uint cuantoRestaChili3 = 1, cuantoRestaPidgeon3 = 2, cuantoRestaRocket3 = 3, cuantoRestaMitosis3 = 1;
 
     [SerializeField] private float xOffset = 0;
 
     //variables utilidad
     private float prevPos = 0, chance1 = 100, chance2 = 100, chance3 = 100, chance4 = 100;
-    int distance, distance2, temp = 0, temp2 = 0, selected;
+    private sbyte level1, level2, level3, level4;
+    private int distance, distance2, temp = 0, temp2 = 0, selected;
     private Rigidbody2D rb;
     private TrackerBase_Module track;
     private bool enabledReUse = false, gliding = false, falling = false, spawnedLast = false, enableChange = false;
+
+    private void Awake()
+    {
+        LoadChance();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -433,6 +449,111 @@ public class Spawner_Module : MonoBehaviour
         else
         {
             return chance;
+        }
+    }
+
+    void LoadChance()
+    {
+        level1 = (sbyte)PlayerPrefs.GetInt("Chilli Level", -1);
+        level2 = (sbyte)PlayerPrefs.GetInt("Pidgeon Level", -1);
+        level3 = (sbyte)PlayerPrefs.GetInt("Rocket Level", -1);
+        level4 = (sbyte)PlayerPrefs.GetInt("Mitosis Level", -1);
+        
+
+        switch (level1)
+        {
+            case 0:
+                rangoChili = Vector2.zero;
+                cadaCuantoRestaChili = 1;
+                cuantoRestaChili = 1;
+                break;
+            case 1:
+                break;
+            case 2:
+                rangoChili = rangoChili2;
+                cadaCuantoRestaChili = cadaCuantoRestaChili2;
+                cuantoRestaChili = cuantoRestaChili2;
+                break;
+            case 3:
+                rangoChili = rangoChili3;
+                cadaCuantoRestaChili = cadaCuantoRestaChili3;
+                cuantoRestaChili = cuantoRestaChili3;
+                break;
+            default:
+                Debug.LogError("NO SE CARGARON LOS DATOS DE NIVEL DE Chili Power Up");
+                break;
+        }
+        
+        switch (level2)
+        {
+            case 0:
+                rangoPidgeon = Vector2.zero;
+                cadaCuantoRestaPidgeon = 1;
+                cuantoRestaPidgeon = 1;
+                break;
+            case 1:
+                break;
+            case 2:
+                rangoPidgeon = rangoPidgeon2;
+                cadaCuantoRestaPidgeon = cadaCuantoRestaPidgeon2;
+                cuantoRestaPidgeon = cuantoRestaPidgeon2;
+                break;
+            case 3:
+                rangoPidgeon = rangoPidgeon3;
+                cadaCuantoRestaPidgeon = cadaCuantoRestaPidgeon3;
+                cuantoRestaPidgeon = cuantoRestaPidgeon3;
+                break;
+            default:
+                Debug.LogError("NO SE CARGARON LOS DATOS DE NIVEL DE Pidgeon Power Up");
+                break;
+        }
+        
+        switch (level3)
+        {
+            case 0:
+                rangoRocket = Vector2.zero;
+                cadaCuantoRestaRocket = 1;
+                cuantoRestaRocket = 1;
+                break;
+            case 1:
+                break;
+            case 2:
+                rangoRocket = rangoRocket2;
+                cadaCuantoRestaRocket = cadaCuantoRestaRocket2;
+                cuantoRestaRocket = cuantoRestaRocket2;
+                break;
+            case 3:
+                rangoRocket = rangoRocket3;
+                cadaCuantoRestaRocket = cadaCuantoRestaRocket3;
+                cuantoRestaRocket = cuantoRestaRocket3;
+                break;
+            default:
+                Debug.LogError("NO SE CARGARON LOS DATOS DE NIVEL DE Rocket Power Up");
+                break;
+        }
+        
+        switch (level4)
+        {
+            case 0:
+                rangoMitosis = Vector2.zero;
+                cadaCuantoRestaMitosis = 1;
+                cuantoRestaMitosis = 1;
+                break;
+            case 1:
+                break;
+            case 2:
+                rangoMitosis = rangoMitosis2;
+                cadaCuantoRestaMitosis = cadaCuantoRestaMitosis2;
+                cuantoRestaRocket = cuantoRestaMitosis2;
+                break;
+            case 3:
+                rangoMitosis = rangoMitosis3;
+                cadaCuantoRestaMitosis = cadaCuantoRestaMitosis3;
+                cuantoRestaMitosis = cuantoRestaMitosis3;
+                break;
+            default:
+                Debug.LogError("NO SE CARGARON LOS DATOS DE NIVEL DE Mitosis Power Up");
+                break;
         }
     }
 }
