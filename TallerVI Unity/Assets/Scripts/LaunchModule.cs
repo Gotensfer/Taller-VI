@@ -28,6 +28,8 @@ public class LaunchModule : MonoBehaviour
     [SerializeField] LayerMask originalLayer;
     [SerializeField] LayerMask phantomLayer;
 
+    [SerializeField] SpriteRenderer playerRenderer;
+
     void Start()
     {
         angle = 0;
@@ -36,6 +38,9 @@ public class LaunchModule : MonoBehaviour
 
         force = LaunchData.impulse;
         angleMovementVelocity = LaunchData.anglePerSecond;
+
+        // Sprite invisible antes de lanzar
+        playerRenderer.color = new Color(1, 1, 1, 0);
     }
     
     void Update()
@@ -62,6 +67,9 @@ public class LaunchModule : MonoBehaviour
 
         DisableCollisionsWithPowerUps();
         Invoke(nameof(ReEnableCollisionsWithPowerUps), timeToReEnableCollisions);
+
+        // Sprite visible al lanzar
+        playerRenderer.color = new Color(1, 1, 1, 1);
     }
 
     void DisableCollisionsWithPowerUps()

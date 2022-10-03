@@ -826,11 +826,11 @@ MonoBehaviour:
   rocketPrefab: {fileID: 7819924271294555339, guid: 118c6ec2f70c30048943ae98927d3836, type: 3}
   mitosisPrefab: {fileID: 8497296553107868462, guid: 976e809bef8e63b49867a05ba1e13155, type: 3}
   father: {fileID: 524557124}
-  rangoChili: {x: 0, y: 10000}
-  rangoPidgeon: {x: 0, y: 10000}
-  rangoRocket: {x: 0, y: 10000}
-  rangoMitosis: {x: 0, y: 10000}
-  cadaCuantoRestaChili: 50
+  rangoChili: {x: 100, y: 10000}
+  rangoPidgeon: {x: 200, y: 10000}
+  rangoRocket: {x: 150, y: 10000}
+  rangoMitosis: {x: 5, y: 10000}
+  cadaCuantoRestaChili: 24
   cadaCuantoRestaPidgeon: 30
   cadaCuantoRestaRocket: 30
   cadaCuantoRestaMitosis: 50
@@ -838,6 +838,30 @@ MonoBehaviour:
   cuantoRestaPidgeon: 2
   cuantoRestaRocket: 3
   cuantoRestaMitosis: 1
+  rangoChili2: {x: 80, y: 10000}
+  rangoPidgeon2: {x: 150, y: 10000}
+  rangoRocket2: {x: 100, y: 10000}
+  rangoMitosis2: {x: 5, y: 10000}
+  cadaCuantoRestaChili2: 50
+  cadaCuantoRestaPidgeon2: 30
+  cadaCuantoRestaRocket2: 30
+  cadaCuantoRestaMitosis2: 50
+  cuantoRestaChili2: 1
+  cuantoRestaPidgeon2: 2
+  cuantoRestaRocket2: 3
+  cuantoRestaMitosis2: 1
+  rangoChili3: {x: 50, y: 10000}
+  rangoPidgeon3: {x: 100, y: 10000}
+  rangoRocket3: {x: 50, y: 100000}
+  rangoMitosis3: {x: 5, y: 10000}
+  cadaCuantoRestaChili3: 50
+  cadaCuantoRestaPidgeon3: 30
+  cadaCuantoRestaRocket3: 30
+  cadaCuantoRestaMitosis3: 50
+  cuantoRestaChili3: 1
+  cuantoRestaPidgeon3: 2
+  cuantoRestaRocket3: 3
+  cuantoRestaMitosis3: 1
   xOffset: -100
 --- !u!1 &79221870
 GameObject:
@@ -1767,6 +1791,7 @@ MonoBehaviour:
   phantomLayer:
     serializedVersion: 2
     m_Bits: 1
+  playerRenderer: {fileID: 1728376844}
 --- !u!1 &294536538
 GameObject:
   m_ObjectHideFlags: 0
@@ -3751,7 +3776,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.582031, y: 2.25, z: -2}
+  m_LocalPosition: {x: 8.580082, y: 2.25, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4641,6 +4666,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1728376861}
+        m_TargetAssemblyTypeName: PowerUpRestraint_TempModule, Assembly-CSharp
+        m_MethodName: DisablePowerUpButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   PoweredUpEvent:
     m_PersistentCalls:
       m_Calls:
@@ -4668,6 +4705,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1728376861}
+        m_TargetAssemblyTypeName: PowerUpRestraint_TempModule, Assembly-CSharp
+        m_MethodName: DisablePowerUpButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   PoweredDownEvent:
     m_PersistentCalls:
       m_Calls:
@@ -4686,6 +4735,18 @@ MonoBehaviour:
       - m_Target: {fileID: 63276234}
         m_TargetAssemblyTypeName: Spawner_Module, Assembly-CSharp
         m_MethodName: EnablePowerUps
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1728376861}
+        m_TargetAssemblyTypeName: PowerUpRestraint_TempModule, Assembly-CSharp
+        m_MethodName: EnablePowerUpButtons
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10699,6 +10760,7 @@ GameObject:
   - component: {fileID: 1728376858}
   - component: {fileID: 1728376859}
   - component: {fileID: 1728376860}
+  - component: {fileID: 1728376861}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -10970,6 +11032,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   kkawaiSkinOverride: {fileID: 22100000, guid: a71f4200a83aeac4b963d769c5380fae, type: 2}
+--- !u!114 &1728376861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728376841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e68c759b9fd05754eb1396311981c515, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mitosisButton: {fileID: 2093513029}
+  fecalitoButton: {fileID: 1640255985}
 --- !u!1 &1730684567
 GameObject:
   m_ObjectHideFlags: 0
