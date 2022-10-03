@@ -464,8 +464,8 @@ public class Spawner_Module : MonoBehaviour
         {
             case 0:
                 rangoChili = Vector2.zero;
-                cadaCuantoRestaChili = 0;
-                cuantoRestaChili = 0;
+                cadaCuantoRestaChili = 1;
+                cuantoRestaChili = 1;
                 break;
             case 1:
                 break;
@@ -488,8 +488,8 @@ public class Spawner_Module : MonoBehaviour
         {
             case 0:
                 rangoPidgeon = Vector2.zero;
-                cadaCuantoRestaPidgeon = 0;
-                cuantoRestaPidgeon = 0;
+                cadaCuantoRestaPidgeon = 1;
+                cuantoRestaPidgeon = 1;
                 break;
             case 1:
                 break;
@@ -512,8 +512,8 @@ public class Spawner_Module : MonoBehaviour
         {
             case 0:
                 rangoRocket = Vector2.zero;
-                cadaCuantoRestaRocket = 0;
-                cuantoRestaRocket = 0;
+                cadaCuantoRestaRocket = 1;
+                cuantoRestaRocket = 1;
                 break;
             case 1:
                 break;
@@ -536,8 +536,8 @@ public class Spawner_Module : MonoBehaviour
         {
             case 0:
                 rangoMitosis = Vector2.zero;
-                cadaCuantoRestaMitosis = 0;
-                cuantoRestaMitosis = 0;
+                cadaCuantoRestaMitosis = 1;
+                cuantoRestaMitosis = 1;
                 break;
             case 1:
                 break;
