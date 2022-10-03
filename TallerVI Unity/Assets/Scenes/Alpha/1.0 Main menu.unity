@@ -29438,7 +29438,7 @@ MonoBehaviour:
   - {fileID: 679770605}
   - {fileID: 2061025871}
   - {fileID: 415790476}
-  firstTimeMainMenu: 0
+  firstTimeMainMenu: 1
   firstTimePreGame: 1
   firstTimeStore: 1
   firstTimeUpgrades: 1
