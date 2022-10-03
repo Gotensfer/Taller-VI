@@ -8,6 +8,9 @@ public class SkinLoad_Module : MonoBehaviour
 
     private void Start()
     {
-        
+        if (SkinData.ID == SkinID.Kkawai)
+        {
+            GetComponent<Animator>().runtimeAnimatorController = kkawaiSkinOverride;
+        }
     }
 }

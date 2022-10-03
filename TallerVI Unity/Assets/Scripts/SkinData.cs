@@ -4,12 +4,11 @@ using UnityEngine;
 
 public enum SkinID
 {
-    NotSetted = -1,
     Base = 0,
     Kkawai = 1
 }
 
 public static class SkinData
 {
-    public static SkinID ID = SkinID.NotSetted;
+    public static SkinID ID = SkinID.Base;
 }
