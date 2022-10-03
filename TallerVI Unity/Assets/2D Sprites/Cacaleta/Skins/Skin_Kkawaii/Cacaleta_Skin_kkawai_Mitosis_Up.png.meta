@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 144
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -102,6 +102,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -736,7 +748,6 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Cacaleta_Skin_kkawai_Mitosis_Up_1: 1245086376
-      Cacaleta_Skin_kkawai_Mitosis_Up_26: -1986098297
       Cacaleta_Skin_kkawai_Mitosis_Up_27: 1408995436
       Cacaleta_Skin_kkawai_Mitosis_Up_14: 1539579377
       Cacaleta_Skin_kkawai_Mitosis_Up_2: -1104694363
@@ -761,6 +772,7 @@ TextureImporter:
       Cacaleta_Skin_kkawai_Mitosis_Up_12: 661231480
       Cacaleta_Skin_kkawai_Mitosis_Up_13: 523285908
       Cacaleta_Skin_kkawai_Mitosis_Up_11: -293391390
+      Cacaleta_Skin_kkawai_Mitosis_Up_26: -1986098297
       Cacaleta_Skin_kkawai_Mitosis_Up_5: 2146295307
       Cacaleta_Skin_kkawai_Mitosis_Up_22: 1633387285
       Cacaleta_Skin_kkawai_Mitosis_Up_25: 358565134
