@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Coprolito
   m_EditorClassIdentifier: 
   upgradeType: 1
-  L1_CoinCost: 0
-  L2_CoinCost: 0
-  L3_CoinCost: 0
+  L1_CoinCost: 150
+  L2_CoinCost: 400
+  L3_CoinCost: 600

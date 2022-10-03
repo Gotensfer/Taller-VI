@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Pidgeon
   m_EditorClassIdentifier: 
   upgradeType: 3
-  L1_CoinCost: 0
-  L2_CoinCost: 0
-  L3_CoinCost: 0
+  L1_CoinCost: 350
+  L2_CoinCost: 700
+  L3_CoinCost: 1000
