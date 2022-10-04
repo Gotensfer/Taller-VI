@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{88923b73-81bf-494c-8bab-d20420a451ee}">
+		<property name="name">
+			<value>SkinsIDs</value>
+		</property>
+		<relationship name="folder">
+			<destination>{4fc9539a-e4eb-416b-844b-f896e061dcbf}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{f4160e56-998b-4096-9140-efd68b55d0ad}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{f4160e56-998b-4096-9140-efd68b55d0ad}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>11</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
