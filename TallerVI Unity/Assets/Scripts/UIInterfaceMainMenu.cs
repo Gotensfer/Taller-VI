@@ -51,6 +51,10 @@ public class UIInterfaceMainMenu : MonoBehaviour
     [SerializeField] RectTransform pgText6;
     [SerializeField] RectTransform pgText7;
 
+    //Store Elements
+    [SerializeField] RectTransform sText1;
+    [SerializeField] RectTransform sText2;
+
     public static bool alreadyInitialized = false;
 
     private bool isFaded = true;
@@ -77,6 +81,8 @@ public class UIInterfaceMainMenu : MonoBehaviour
         pgText5.transform.localScale = Vector2.zero;
         pgText6.transform.localScale = Vector2.zero;
         pgText7.transform.localScale = Vector2.zero;
+        sText1.transform.localScale = Vector2.zero;
+        sText2.transform.localScale = Vector2.zero;
 
 
         foreach (RectTransform transform in polaroids)
@@ -188,6 +194,17 @@ public class UIInterfaceMainMenu : MonoBehaviour
         store.gameObject.SetActive(true);
         store.DOAnchorPos(new Vector2(0, 0), 0.8f).SetEase(Ease.OutExpo);
         store.DOScale(Vector3.one, 0.8f).SetEase(Ease.OutExpo);
+
+        //Primera Seccion tutorial store
+        if (firstTimeStore == true)
+        {
+            screenButton.gameObject.SetActive(true);
+
+            sText1.gameObject.SetActive(true);
+
+            fadePanel.DOFade(0.8f, 1).OnComplete(() =>
+            sText1.DOScale(Vector3.one, 1).SetEase(Ease.OutSine).OnComplete(() => screenButton.onClick.AddListener(StoreSection2)));
+        }
     }
     public void BackFromStoreUIButton()
     {
@@ -321,7 +338,6 @@ public class UIInterfaceMainMenu : MonoBehaviour
     }
     #endregion
 
-
     #region"Secciones del tutorial Pregame (Selección de comidas)"
 
     //Primera sección del tutorial en el botón de play
@@ -430,5 +446,30 @@ public class UIInterfaceMainMenu : MonoBehaviour
         PlayerPrefs.SetInt($"firstTimePreGame", 0); //Modifica el playerprefs para no volver a ingresar al tuto
     }
 
+    #endregion
+
+    #region"Secciones del tutorial Store"
+
+    //Primera sección del tutorial en Start()
+
+    private void StoreSection2()
+    {
+        sText1.DOScale(Vector3.zero, 1).SetEase(Ease.InBack).SetDelay(0.5f).OnComplete(() => gameObject.SetActive(false)); //Al terminar el tweener se desactivan de nuevo
+
+        sText2.gameObject.SetActive(true);
+
+        sText2.DOScale(Vector3.one, 1).SetEase(Ease.OutSine).SetDelay(1).OnComplete(()=>screenButton.onClick.AddListener(StoreSection3));
+        screenButton.onClick.RemoveListener(StoreSection2);
+    }
+    private void StoreSection3()
+    {
+        sText2.DOScale(Vector3.zero, 1).SetEase(Ease.InBack).OnComplete(() => gameObject.SetActive(false));
+        screenButton.gameObject.SetActive(false);
+
+        fadePanel.DOFade(0, 1).SetEase(Ease.InOutBack).OnComplete(() => screenButton.onClick.RemoveListener(StoreSection3));
+
+        firstTimeStore = false;
+        PlayerPrefs.SetInt($"firstTimeStore", 0); //Modifica el playerprefs para no volver a ingresar al tuto
+    }
     #endregion
 }
