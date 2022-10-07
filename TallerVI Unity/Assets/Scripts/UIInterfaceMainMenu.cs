@@ -108,7 +108,7 @@ public class UIInterfaceMainMenu : MonoBehaviour
 
         
         //Se obtienen y se inicializan las variables para tutoriales
-        if (PlayerPrefs.GetInt($"firstTimeMainMenu") == 1) firstTimeMainMenu = true;
+        if (PlayerPrefs.GetInt($"firstTimeMainMenu") == 1) firstTimeMainMenu = false; //Se elimina la bienvenida.
         else firstTimeMainMenu = false;        
         if (PlayerPrefs.GetInt($"firstTimePreGame") == 1) firstTimePreGame = true;
         else firstTimePreGame = false;
