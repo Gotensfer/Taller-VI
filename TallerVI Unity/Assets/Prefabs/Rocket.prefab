@@ -138,8 +138,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 2
-  force: 10
+  force: 6
   angle: 0
+  forceLimit: 10
 --- !u!1001 &7819924269537827200
 PrefabInstance:
   m_ObjectHideFlags: 0
