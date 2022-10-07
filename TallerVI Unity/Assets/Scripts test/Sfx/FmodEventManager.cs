@@ -63,6 +63,9 @@ public class FmodEventManager : MonoBehaviour
             case 1:     //Kkwaii
                 music = FMODUnity.RuntimeManager.CreateInstance("event:/Music-Ambience/BG_Music_Kkwaii");
                 break;
+            case 2:     //Shitsycal
+                music = FMODUnity.RuntimeManager.CreateInstance("event:/Music-Ambience/BG_Music_Shitycal");
+                break;
         }
         music.start();
     }
