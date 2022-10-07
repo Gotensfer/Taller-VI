@@ -14,7 +14,10 @@ public class FmodAutomatizationManager : MonoBehaviour
     [SerializeField] int altitudeMin;
     [SerializeField] int altitudeMax;
 
-
+    private void Start()
+    {
+        BackToZero();
+    }
 
     private void Update()
     {
@@ -57,6 +60,11 @@ public class FmodAutomatizationManager : MonoBehaviour
         }
 
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Altura", altura);
+    }
+
+    public void BackToZero()
+    {
+        altura = 0;
     }
 }
 
