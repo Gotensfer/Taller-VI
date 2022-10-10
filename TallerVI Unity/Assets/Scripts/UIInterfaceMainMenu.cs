@@ -15,7 +15,7 @@ public class UIInterfaceMainMenu : MonoBehaviour
     [SerializeField] RectTransform preGame;
     [SerializeField] RectTransform store;
     [SerializeField] RectTransform upgrades;
-    [SerializeField] RectTransform album;
+    [SerializeField] RectTransform album, content;
     [SerializeField] RectTransform configuration;
     [SerializeField] RectTransform mainTitle;
 
@@ -234,13 +234,17 @@ public class UIInterfaceMainMenu : MonoBehaviour
     public void AlbumUIButton()
     {
         album.gameObject.SetActive(true);
+        content.gameObject.SetActive(true);
         album.DOAnchorPos(new Vector2(0, 0), 0.8f).SetEase(Ease.OutExpo);
         album.DOScale(Vector3.one, 0.8f).SetEase(Ease.OutExpo);
     }
     public void BackFromAlbumUIButton()
     {
         album.DOAnchorPos(new Vector2(1132, -167), 1).SetEase(Ease.InExpo);
-        album.DOScale(Vector3.zero, 1).SetEase(Ease.InBack).OnComplete(() => gameObject.SetActive(false));
+        album.DOScale(Vector3.zero, 1).SetEase(Ease.InBack).OnComplete(() => {
+            gameObject.SetActive(false);
+            content.gameObject.SetActive(false);
+        });
     }
 
     //Config Button

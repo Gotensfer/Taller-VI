@@ -33880,6 +33880,7 @@ MonoBehaviour:
   store: {fileID: 713282930}
   upgrades: {fileID: 1980559423}
   album: {fileID: 1883162893}
+  content: {fileID: 1964388433}
   configuration: {fileID: 949190699}
   mainTitle: {fileID: 47180340}
   polaroids:
@@ -34416,7 +34417,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1964388433
 RectTransform:
   m_ObjectHideFlags: 0
