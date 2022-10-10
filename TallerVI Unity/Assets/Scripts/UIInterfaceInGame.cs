@@ -95,6 +95,7 @@ public class UIInterfaceInGame : MonoBehaviour
             rText1.gameObject.SetActive(true);
             rText2.gameObject.SetActive(true);              //Se activan los elementos necesarios.
             screenButton.gameObject.SetActive(true);
+            touchIcon.gameObject.SetActive(true);
             DOTween.To(() => Time.timeScale, x => Time.timeScale = x, 0, 1).SetEase(Ease.OutQuad).SetUpdate(true); //Se detiene el tiempo con un tweener
                                             
 
@@ -102,6 +103,7 @@ public class UIInterfaceInGame : MonoBehaviour
                 rText1.DOScale(Vector2.one, 0.5f).SetUpdate(true);
                 rText2.DOScale(Vector2.one, 0.5f).SetUpdate(true);
 
+                touchIcon.gameObject.GetComponent<RectTransform>().localPosition = new Vector2(1000,-338);
                 touchIcon.DOFade(1, 0.2f)
                     .SetEase(Ease.InQuart)
                     .SetLoops(-1, LoopType.Yoyo)
@@ -118,7 +120,12 @@ public class UIInterfaceInGame : MonoBehaviour
         rText1.DOScale(Vector2.zero, 0.5f).SetUpdate(true).OnComplete(() => gameObject.SetActive(false));
         rText2.DOScale(Vector2.zero, 0.5f).SetUpdate(true).OnComplete(() => gameObject.SetActive(false));
         touchIcon.gameObject.SetActive(false);
+
         screenButton.onClick.RemoveAllListeners();
+
+        firstTimeRocket = false;
+        PlayerPrefs.SetInt($"firstTimeRocket", 0); //Modifica el playerprefs para no volver a ingresar al tuto
+
         fadePanel.DOFade(0, 0.3f).SetEase(Ease.InOutBack).SetUpdate(true).OnComplete(() =>
         {
             DOTween.To(() => Time.timeScale, x => Time.timeScale = x, 1, 0.8f).SetEase(Ease.InQuad).SetUpdate(true);//Se reactiva el tiempo con un tweener
@@ -132,10 +139,11 @@ public class UIInterfaceInGame : MonoBehaviour
     #region"Tutorial Pidegon"
     public void PidgeonTutorial()
     {
-        if (firstTimeRocket == true)
+        if (firstTimePidgeon == true)
         {
             pText1.gameObject.SetActive(true);
             pText2.gameObject.SetActive(true);      //Se activan los elementos necesarios.
+            touchIcon.gameObject.SetActive(true);
             screenButton.gameObject.SetActive(true);
             
             DOTween.To(() => Time.timeScale, x => Time.timeScale = x, 0, 1).SetEase(Ease.OutQuad).SetUpdate(true);  //Se detiene el tiempo con un tweener
@@ -146,10 +154,11 @@ public class UIInterfaceInGame : MonoBehaviour
                 pText2.DOScale(Vector2.one, 0.5f).SetUpdate(true);
 
                 touchIcon.DOFade(1, 0.3f).SetEase(Ease.InSine).SetUpdate(true);
-                /*
-                touchIcon.DOAnchorPosY(200, 1)
+                touchIcon.gameObject.GetComponent<RectTransform>().DOAnchorPosY(150, 1)
+                    .SetEase(Ease.InOutCubic)
                     .SetLoops(-1, LoopType.Yoyo)
-                    .SetUpdate(true);*/
+                    .SetUpdate(true);
+
 
                 screenButton.onClick.AddListener(PidgeonTutorial2);
             }
@@ -163,6 +172,8 @@ public class UIInterfaceInGame : MonoBehaviour
         pText2.DOScale(Vector2.zero, 0.5f).SetUpdate(true).OnComplete(() => gameObject.SetActive(false));
         touchIcon.DOFade(0, 0.3f).SetEase(Ease.OutSine).OnComplete(() => gameObject.SetActive(false));
 
+        firstTimePidgeon = false;
+        PlayerPrefs.SetInt($"firstTimePidgeon", 0); //Modifica el playerprefs para no volver a ingresar al tuto
 
         screenButton.onClick.RemoveAllListeners();
         fadePanel.DOFade(0, 0.3f).SetEase(Ease.InOutBack).SetUpdate(true).OnComplete(() =>
