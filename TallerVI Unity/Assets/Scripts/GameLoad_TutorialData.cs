@@ -32,6 +32,26 @@ public class GameLoad_TutorialData : MonoBehaviour
             PlayerPrefs.SetInt($"firstTimeAlbum", 1);
         }
 
+        if (PlayerPrefs.GetInt($"firstTimeInGame", -1) == -1)
+        {
+            PlayerPrefs.SetInt($"firstTimeInGame", 1);
+        }
+
+        if (PlayerPrefs.GetInt($"firstTimeChili", -1) == -1)
+        {
+            PlayerPrefs.SetInt($"firstTimeChili", 1);
+        }
+
+        if (PlayerPrefs.GetInt($"firstTimeRocket", -1) == -1)
+        {
+            PlayerPrefs.SetInt($"firstTimeRocket", 1);
+        }
+
+        if (PlayerPrefs.GetInt($"firstTimePidgeon", -1) == -1)
+        {
+            PlayerPrefs.SetInt($"firstTimePidgeon", 1);
+        }
+
         PlayerPrefs.Save();
 
     }
