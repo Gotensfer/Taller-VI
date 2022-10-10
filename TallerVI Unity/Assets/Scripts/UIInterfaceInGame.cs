@@ -29,7 +29,9 @@ public class UIInterfaceInGame : MonoBehaviour
 
 
     [SerializeField] RectTransform rText1;
-    [SerializeField] RectTransform rText2;
+    [SerializeField] RectTransform rText2;    
+    [SerializeField] RectTransform pText1;
+    [SerializeField] RectTransform pText2;
 
     public static bool alreadyInitialized = false;
 
@@ -42,26 +44,23 @@ public class UIInterfaceInGame : MonoBehaviour
         selectorBig.transform.localScale = Vector2.zero;
         rText1.transform.localScale = Vector2.zero;
         rText2.transform.localScale = Vector2.zero;
+        pText1.transform.localScale = Vector2.zero;
+        pText2.transform.localScale = Vector2.zero;
 
         distance.DOAnchorPosX(-37, 1);
         altitude.DOAnchorPosX(-1240, 1);
         velocity.DOAnchorPosX(-1240, 1);
 
+
+
         launchZonePanel.DOFade(1, 0.8f)
             .SetEase(Ease.InOutSine)
             .SetLoops(-1, LoopType.Yoyo);
-
-        /*
-        if (PlayerPrefs.GetInt($"firstTimeInGame") == 1) firstTimeInGame = true;
-        else firstTimeInGame = false;
-        if (PlayerPrefs.GetInt($"firstTimeChili") == 1) firstTimeChili = true;
-        else firstTimeChili = false;
-        if (PlayerPrefs.GetInt($"firstTimeRocket") == 1) firstTimeRocket = true;
+        
+       if (PlayerPrefs.GetInt($"firstTimeRocket") == 1) firstTimeRocket = true;
         else firstTimeRocket = false;
         if (PlayerPrefs.GetInt($"firstTimePidgeon") == 1) firstTimePidgeon = true;
-        else firstTimePidgeon = false;
-        */
-
+        else firstTimePidgeon = false;        
     }
 
     public void SetPause()
@@ -87,12 +86,17 @@ public class UIInterfaceInGame : MonoBehaviour
     {
         DOTween.KillAll(gameObject);
     }
+
+    #region"Tutorial Rocket"
     public void RocketTutorial()
     {
         if (firstTimeRocket == true)
         {
-            DOTween.To(() => Time.timeScale, x => Time.timeScale = x, 0, 1).SetEase(Ease.OutQuad).SetUpdate(true);
-            screenButton.gameObject.SetActive(true);                                //Se activan los elementos necesarios.
+            rText1.gameObject.SetActive(true);
+            rText2.gameObject.SetActive(true);              //Se activan los elementos necesarios.
+            screenButton.gameObject.SetActive(true);
+            DOTween.To(() => Time.timeScale, x => Time.timeScale = x, 0, 1).SetEase(Ease.OutQuad).SetUpdate(true); //Se detiene el tiempo con un tweener
+                                            
 
             fadePanel.DOFade(0.8f, 0.3f).SetUpdate(true).OnComplete(() => {
                 rText1.DOScale(Vector2.one, 0.5f).SetUpdate(true);
@@ -111,18 +115,64 @@ public class UIInterfaceInGame : MonoBehaviour
 
     private void RocketTutorial2()
     {
-        rText1.DOScale(Vector2.zero, 0.5f).SetUpdate(true);
-        rText2.DOScale(Vector2.zero, 0.5f).SetUpdate(true);
-        screenButton.onClick.RemoveAllListeners();
+        rText1.DOScale(Vector2.zero, 0.5f).SetUpdate(true).OnComplete(() => gameObject.SetActive(false));
+        rText2.DOScale(Vector2.zero, 0.5f).SetUpdate(true).OnComplete(() => gameObject.SetActive(false));
         touchIcon.gameObject.SetActive(false);
+        screenButton.onClick.RemoveAllListeners();
         fadePanel.DOFade(0, 0.3f).SetEase(Ease.InOutBack).SetUpdate(true).OnComplete(() =>
         {
-            DOTween.To(() => Time.timeScale, x => Time.timeScale = x, 1, 0.8f).SetEase(Ease.InQuad).SetUpdate(true);
-            
-            
+            DOTween.To(() => Time.timeScale, x => Time.timeScale = x, 1, 0.8f).SetEase(Ease.InQuad).SetUpdate(true);//Se reactiva el tiempo con un tweener
             screenButton.gameObject.SetActive(false);
         }        
         );
         
     }
+    #endregion.
+
+    #region"Tutorial Pidegon"
+    public void PidgeonTutorial()
+    {
+        if (firstTimeRocket == true)
+        {
+            pText1.gameObject.SetActive(true);
+            pText2.gameObject.SetActive(true);      //Se activan los elementos necesarios.
+            screenButton.gameObject.SetActive(true);
+            
+            DOTween.To(() => Time.timeScale, x => Time.timeScale = x, 0, 1).SetEase(Ease.OutQuad).SetUpdate(true);  //Se detiene el tiempo con un tweener
+
+
+            fadePanel.DOFade(0.8f, 0.3f).SetUpdate(true).OnComplete(() => {
+                pText1.DOScale(Vector2.one, 0.5f).SetUpdate(true);
+                pText2.DOScale(Vector2.one, 0.5f).SetUpdate(true);
+
+                touchIcon.DOFade(1, 0.3f).SetEase(Ease.InSine).SetUpdate(true);
+                /*
+                touchIcon.DOAnchorPosY(200, 1)
+                    .SetLoops(-1, LoopType.Yoyo)
+                    .SetUpdate(true);*/
+
+                screenButton.onClick.AddListener(PidgeonTutorial2);
+            }
+            );
+        }
+    }
+
+    private void PidgeonTutorial2()
+    {
+        pText1.DOScale(Vector2.zero, 0.5f).SetUpdate(true).OnComplete(()=> gameObject.SetActive(false));
+        pText2.DOScale(Vector2.zero, 0.5f).SetUpdate(true).OnComplete(() => gameObject.SetActive(false));
+        touchIcon.DOFade(0, 0.3f).SetEase(Ease.OutSine).OnComplete(() => gameObject.SetActive(false));
+
+
+        screenButton.onClick.RemoveAllListeners();
+        fadePanel.DOFade(0, 0.3f).SetEase(Ease.InOutBack).SetUpdate(true).OnComplete(() =>
+        {
+            DOTween.To(() => Time.timeScale, x => Time.timeScale = x, 1, 0.8f).SetEase(Ease.InQuad).SetUpdate(true);    //Se reactiva el tiempo con un tweener
+
+            screenButton.gameObject.SetActive(false);
+        }
+        );
+
+    }
+    #endregion
 }
