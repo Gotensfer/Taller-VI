@@ -62,7 +62,9 @@ public class UIInterfaceMainMenu : MonoBehaviour
 
     private void Start()
     {
-        //Elementos de UI escala 0
+        
+        #region "Elementos de UI escala 0"
+
         album.transform.localScale = Vector2.zero;
         configuration.transform.localScale = Vector2.zero;
         store.transform.localScale = Vector2.zero;
@@ -83,7 +85,7 @@ public class UIInterfaceMainMenu : MonoBehaviour
         pgText7.transform.localScale = Vector2.zero;
         sText1.transform.localScale = Vector2.zero;
         sText2.transform.localScale = Vector2.zero;
-
+        #endregion
 
         foreach (RectTransform transform in polaroids)
         {
