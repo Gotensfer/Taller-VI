@@ -13,9 +13,9 @@ public class UIInterfaceMainMenu : MonoBehaviour
     [Header("UI references")] //Referencias de UIs
     [SerializeField] RectTransform mainMenu;
     [SerializeField] RectTransform preGame;
-    [SerializeField] RectTransform store;
+    [SerializeField] RectTransform store, storeContent;
     [SerializeField] RectTransform upgrades;
-    [SerializeField] RectTransform album, content;
+    [SerializeField] RectTransform album, albumContent;
     [SerializeField] RectTransform configuration;
     [SerializeField] RectTransform mainTitle;
 
@@ -85,6 +85,11 @@ public class UIInterfaceMainMenu : MonoBehaviour
         pgText7.transform.localScale = Vector2.zero;
         sText1.transform.localScale = Vector2.zero;
         sText2.transform.localScale = Vector2.zero;
+
+
+        albumContent.gameObject.SetActive(false);
+        storeContent.gameObject.SetActive(false);
+
         #endregion
 
         foreach (RectTransform transform in polaroids)
@@ -206,6 +211,7 @@ public class UIInterfaceMainMenu : MonoBehaviour
     public void StoreUIButton()
     {
         store.gameObject.SetActive(true);
+        storeContent.gameObject.SetActive(true);
         store.DOAnchorPos(new Vector2(0, 0), 0.8f).SetEase(Ease.OutExpo);
         store.DOScale(Vector3.one, 0.8f).SetEase(Ease.OutExpo);
 
@@ -223,7 +229,10 @@ public class UIInterfaceMainMenu : MonoBehaviour
     public void BackFromStoreUIButton()
     {
         store.DOAnchorPos(new Vector2(1132, 144), 1).SetEase(Ease.InExpo);
-        store.DOScale(Vector3.zero, 1).SetEase(Ease.InBack).OnComplete(()=>gameObject.SetActive(false));
+        store.DOScale(Vector3.zero, 1).SetEase(Ease.InBack).OnComplete(()=> {
+            gameObject.SetActive(false);
+            storeContent.gameObject.SetActive(false);
+        });
     }
     //Upgrade Button
     public void UpgradesUIButton()
@@ -248,7 +257,7 @@ public class UIInterfaceMainMenu : MonoBehaviour
     public void AlbumUIButton()
     {
         album.gameObject.SetActive(true);
-        content.gameObject.SetActive(true);
+        albumContent.gameObject.SetActive(true);
         album.DOAnchorPos(new Vector2(0, 0), 0.8f).SetEase(Ease.OutExpo);
         album.DOScale(Vector3.one, 0.8f).SetEase(Ease.OutExpo);
     }
@@ -257,7 +266,7 @@ public class UIInterfaceMainMenu : MonoBehaviour
         album.DOAnchorPos(new Vector2(1132, -167), 1).SetEase(Ease.InExpo);
         album.DOScale(Vector3.zero, 1).SetEase(Ease.InBack).OnComplete(() => {
             gameObject.SetActive(false);
-            content.gameObject.SetActive(false);
+            albumContent.gameObject.SetActive(false);
         });
     }
 
@@ -310,7 +319,6 @@ public class UIInterfaceMainMenu : MonoBehaviour
         }
     }
     #endregion
-
 
     #region"Secciones del tutorial MainMenu"
     
