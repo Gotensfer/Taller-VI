@@ -10,7 +10,7 @@ public class DisplayRecordText : MonoBehaviour
     private void Start()
     {
         recordText = GetComponent<TextMeshProUGUI>();
-        recordText.text = $"{PlayerPrefs.GetFloat("Distance", 0)}m";
+        recordText.text = $"{Mathf.Round(PlayerPrefs.GetFloat("Distance", 0))}m";
     }
 
 }
