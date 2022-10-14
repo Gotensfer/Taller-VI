@@ -60,7 +60,7 @@ public class LaunchModule : MonoBehaviour
 
     public void Launch()
     {
-        if (LaunchData.impulse < 5) force = 5;
+        if (LaunchData.impulse < 15) force = 10;
         _rb.AddForce(dir * force, ForceMode2D.Impulse);
         playerEvents.LaunchEvent.Invoke();
         launchZoneButton.SetActive(false);
