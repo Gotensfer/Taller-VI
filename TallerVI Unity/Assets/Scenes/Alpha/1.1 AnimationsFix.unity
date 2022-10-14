@@ -675,11 +675,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 217fa75292f620142a14bfb497016e9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab1: {fileID: 69687176620298395, guid: 40ccc3a73358db34bb6c1752812e8e1d, type: 3}
-  prefab2: {fileID: 423223054331848064, guid: 11b01d38288d1ad44b6cd051383daf7b, type: 3}
-  prefab3: {fileID: 7819924271294555339, guid: 118c6ec2f70c30048943ae98927d3836, type: 3}
-  prefab4: {fileID: 8497296553107868462, guid: 976e809bef8e63b49867a05ba1e13155, type: 3}
+  chiliPrefab: {fileID: 0}
+  pidegeonPrefab: {fileID: 0}
+  rocketPrefab: {fileID: 0}
+  mitosisPrefab: {fileID: 0}
   father: {fileID: 524557124}
+  rangoChili: {x: 0, y: 0}
+  rangoPidgeon: {x: 0, y: 0}
+  rangoRocket: {x: 0, y: 0}
+  rangoMitosis: {x: 0, y: 0}
+  cadaCuantoRestaChili: 50
+  cadaCuantoRestaPidgeon: 30
+  cadaCuantoRestaRocket: 30
+  cadaCuantoRestaMitosis: 50
+  cuantoRestaChili: 1
+  cuantoRestaPidgeon: 2
+  cuantoRestaRocket: 3
+  cuantoRestaMitosis: 1
+  rangoChili2: {x: 0, y: 0}
+  rangoPidgeon2: {x: 0, y: 0}
+  rangoRocket2: {x: 0, y: 0}
+  rangoMitosis2: {x: 0, y: 0}
+  cadaCuantoRestaChili2: 50
+  cadaCuantoRestaPidgeon2: 30
+  cadaCuantoRestaRocket2: 30
+  cadaCuantoRestaMitosis2: 50
+  cuantoRestaChili2: 1
+  cuantoRestaPidgeon2: 2
+  cuantoRestaRocket2: 3
+  cuantoRestaMitosis2: 1
+  rangoChili3: {x: 0, y: 0}
+  rangoPidgeon3: {x: 0, y: 0}
+  rangoRocket3: {x: 0, y: 0}
+  rangoMitosis3: {x: 0, y: 0}
+  cadaCuantoRestaChili3: 50
+  cadaCuantoRestaPidgeon3: 30
+  cadaCuantoRestaRocket3: 30
+  cadaCuantoRestaMitosis3: 50
+  cuantoRestaChili3: 1
+  cuantoRestaPidgeon3: 2
+  cuantoRestaRocket3: 3
+  cuantoRestaMitosis3: 1
+  xOffset: 0
 --- !u!1 &79221870
 GameObject:
   m_ObjectHideFlags: 0
@@ -1608,6 +1645,7 @@ MonoBehaviour:
   phantomLayer:
     serializedVersion: 2
     m_Bits: 1
+  playerRenderer: {fileID: 0}
 --- !u!1 &294536538
 GameObject:
   m_ObjectHideFlags: 0
@@ -3194,6 +3232,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c863bccb0903854d9e57ec618f2a794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  homeButton: {fileID: 0}
+  restartButton: {fileID: 0}
   travelledDistance: {fileID: 121997150}
   localRecord: {fileID: 1676428147}
   money: {fileID: 817340753}
@@ -3322,7 +3362,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.577939, y: 2.25, z: -2}
+  m_LocalPosition: {x: 8.582031, y: 2.25, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7899,7 +7939,6 @@ MonoBehaviour:
   rocket: {fileID: 182028344}
   chili: {fileID: 79221870}
   mitosis: {fileID: 1795980653}
-  bgMusic: {fileID: 2129805764}
 --- !u!114 &1424772948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10400,6 +10439,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31cf2be697189ad4ba779aadbb6180e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  launchZonePanel: {fileID: 0}
+  distance: {fileID: 0}
+  altitude: {fileID: 0}
+  velocity: {fileID: 0}
+  Pause: {fileID: 0}
+  firstTimeRocket: 0
+  firstTimePidgeon: 0
+  fadePanel: {fileID: 0}
+  screenButton: {fileID: 0}
+  selector: {fileID: 0}
+  selectorBig: {fileID: 0}
+  touchIcon: {fileID: 0}
+  rText1: {fileID: 0}
+  rText2: {fileID: 0}
+  pText1: {fileID: 0}
+  pText2: {fileID: 0}
 --- !u!1 &1945389755
 GameObject:
   m_ObjectHideFlags: 0

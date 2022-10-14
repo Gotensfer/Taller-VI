@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b9a9aa5bf9db4d34e840cf58073cc23c
+guid: 47a0235e4bcc02247a11d32c702c487c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 230
+  spritePixelsToUnits: 270
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -128,7 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cacaleta_Skin_Kkwaii_Crashed_0
+      name: Cacaleta_Skins_Cacalien_Mitosis_B_0
       rect:
         serializedVersion: 2
         x: 0
@@ -136,20 +136,20 @@ TextureImporter:
         width: 512
         height: 512
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d0721a6355ef5f4b952f10ca675b073
-      internalID: 551010701
+      spriteID: 6d5d76039462d6346a2705b1fb72f2a4
+      internalID: -274262250
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_Skin_Kkwaii_Crashed_1
+      name: Cacaleta_Skins_Cacalien_Mitosis_B_1
       rect:
         serializedVersion: 2
         x: 512
@@ -157,20 +157,20 @@ TextureImporter:
         width: 512
         height: 512
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6dae633c5ac89bc429d22c4fb9bfb041
-      internalID: -1148704686
+      spriteID: 3ffb5e5b497c00249b0c3d699c171645
+      internalID: 482978063
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_Skin_Kkwaii_Crashed_2
+      name: Cacaleta_Skins_Cacalien_Mitosis_B_2
       rect:
         serializedVersion: 2
         x: 1024
@@ -178,20 +178,20 @@ TextureImporter:
         width: 512
         height: 512
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb4d32e39c80e9c42bb12c4a625c4213
-      internalID: -843816015
+      spriteID: 67ec71a2f0b4dd4438813084ed2d1bf4
+      internalID: 861649656
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_Skin_Kkwaii_Crashed_3
+      name: Cacaleta_Skins_Cacalien_Mitosis_B_3
       rect:
         serializedVersion: 2
         x: 1536
@@ -199,14 +199,98 @@ TextureImporter:
         width: 512
         height: 512
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e63b40241b0afdc48b6b4f8c804f13e8
-      internalID: 452474223
+      spriteID: 431767de958a7604d8208c0c7bc6fe61
+      internalID: 729734003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacaleta_Skins_Cacalien_Mitosis_B_4
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc973a681b6d5ab4197303bab5433ec9
+      internalID: 408812131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacaleta_Skins_Cacalien_Mitosis_B_5
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96c5e278727f7dc4ea851f6e4e81f23e
+      internalID: -1006006928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacaleta_Skins_Cacalien_Mitosis_B_6
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d6037ebf194d67479b47d24ac6d4718
+      internalID: -338228569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacaleta_Skins_Cacalien_Mitosis_B_7
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b703a4f2485b6f478b614ed39baeaa8
+      internalID: -566206921
       vertices: []
       indices: 
       edges: []
@@ -222,10 +306,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Cacaleta_Skin_Kkwaii_Crashed_0: 551010701
-      Cacaleta_Skin_Kkwaii_Crashed_1: -1148704686
-      Cacaleta_Skin_Kkwaii_Crashed_3: 452474223
-      Cacaleta_Skin_Kkwaii_Crashed_2: -843816015
+      Cacaleta_Skins_Cacalien_Mitosis_B_5: -1006006928
+      Cacaleta_Skins_Cacalien_Mitosis_B_1: 482978063
+      Cacaleta_Skins_Cacalien_Mitosis_B_2: 861649656
+      Cacaleta_Skins_Cacalien_Mitosis_B_4: 408812131
+      Cacaleta_Skins_Cacalien_Mitosis_B_7: -566206921
+      Cacaleta_Skins_Cacalien_Mitosis_B_6: -338228569
+      Cacaleta_Skins_Cacalien_Mitosis_B_3: 729734003
+      Cacaleta_Skins_Cacalien_Mitosis_B_0: -274262250
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

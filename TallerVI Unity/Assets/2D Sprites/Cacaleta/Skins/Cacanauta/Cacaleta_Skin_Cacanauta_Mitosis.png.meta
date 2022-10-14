@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bcd62e4ae41812042a92f8be57558b1c
+guid: 5e6065c931d19ed45867fde5240d5275
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 144
+  spritePixelsToUnits: 270
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -128,13 +128,265 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cacaleta_Skin_Base_Mitosis_Up_0
+      name: Cacaleta_Skin_Cacanauta_Mitosis_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af34034f764d77b48acdc3230869778a
+      internalID: -1931138907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacaleta_Skin_Cacanauta_Mitosis_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 934c3b97dadba924b8f4ad5bd64e3cb6
+      internalID: 911633578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacaleta_Skin_Cacanauta_Mitosis_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2315270d6cb753540a1ae3d0fde67db9
+      internalID: 727579027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacaleta_Skin_Cacanauta_Mitosis_3
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e8253c08ef011c4a9dc8b490432a729
+      internalID: 1201175143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacaleta_Skin_Cacanauta_Mitosis_4
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9adc215042804494f8d11a278bb9f960
+      internalID: 323458162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacaleta_Skin_Cacanauta_Mitosis_5
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 000d0e19851889042bb4c481083de2ba
+      internalID: 878828738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacaleta_Skin_Cacanauta_Mitosis_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee7501556e2849645916c99451b49bef
+      internalID: -833563148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacaleta_Skin_Cacanauta_Mitosis_7
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20c8fe51ba828f14c947a6c2975522ab
+      internalID: -1258117996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacaleta_Skin_Cacanauta_Mitosis_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c077577334cd03c4d9f57656d03cfcaa
+      internalID: -849879301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacaleta_Skin_Cacanauta_Mitosis_9
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9f5e9102107eed4d806bd5b7988b749
+      internalID: -294144403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacaleta_Skin_Cacanauta_Mitosis_10
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5b98033a6c81804399b6d5a9ddfe567
+      internalID: -1018387033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacaleta_Skin_Cacanauta_Mitosis_11
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f907c220d90e4a4ab8753aabfc7243d
+      internalID: -110528816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacaleta_Skin_Cacanauta_Mitosis_12
       rect:
         serializedVersion: 2
         x: 0
         y: 1024
-        width: 256
-        height: 256
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,41 +394,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69799534aed4e7a4c803a7cbb0661497
-      internalID: 909815875
+      spriteID: 02634027b8a06d64c80b489d2e6525ec
+      internalID: 262749093
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_Skin_Base_Mitosis_Up_1
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 1024
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8888fb34de1ad9a4b98281ccda99f896
-      internalID: -1088448449
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cacaleta_Skin_Base_Mitosis_Up_2
+      name: Cacaleta_Skin_Cacanauta_Mitosis_13
       rect:
         serializedVersion: 2
         x: 512
         y: 1024
-        width: 256
-        height: 256
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,41 +415,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7f1a5684f68a3b44a0f4b54113add65
-      internalID: 920808574
+      spriteID: 89703be0183deeb49967f111ac78ad82
+      internalID: -601514490
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_Skin_Base_Mitosis_Up_3
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 1024
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7b573f66838e41b40a3dabc78a3a27e6
-      internalID: -255743965
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cacaleta_Skin_Base_Mitosis_Up_4
+      name: Cacaleta_Skin_Cacanauta_Mitosis_14
       rect:
         serializedVersion: 2
         x: 1024
         y: 1024
-        width: 256
-        height: 256
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,20 +436,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be44aaaf8aea07744a42b00f7957d26d
-      internalID: 1154638372
+      spriteID: 9dbd7e53d57e1a74aa51f6b687be61ee
+      internalID: -1097880238
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_Skin_Base_Mitosis_Up_5
+      name: Cacaleta_Skin_Cacanauta_Mitosis_15
       rect:
         serializedVersion: 2
-        x: 1280
+        x: 1536
         y: 1024
-        width: 256
-        height: 256
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,20 +457,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c831446664a13b4dad7994a743544db
-      internalID: 372052061
+      spriteID: 8ea70eb7a5d72e346bb2322972ddb0a2
+      internalID: 1420907275
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_Skin_Base_Mitosis_Up_6
+      name: Cacaleta_Skin_Cacanauta_Mitosis_16
       rect:
         serializedVersion: 2
-        x: 0
-        y: 768
-        width: 256
-        height: 256
+        x: 2048
+        y: 1024
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -268,20 +478,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d996f05480312c14ab9893806ce899ae
-      internalID: 856416925
+      spriteID: 834c0dbc5426aa04a95592962d92efd9
+      internalID: 1299849173
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_Skin_Base_Mitosis_Up_7
+      name: Cacaleta_Skin_Cacanauta_Mitosis_17
       rect:
         serializedVersion: 2
-        x: 256
-        y: 768
-        width: 256
-        height: 256
+        x: 2560
+        y: 1024
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -289,104 +499,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2cfa79a79e5f26f43b0e97a03479c306
-      internalID: -1465189353
+      spriteID: e40445d19943f8e44b532e51010b338d
+      internalID: -536612037
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_Skin_Base_Mitosis_Up_8
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 768
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6581edb28626b87448184a78475199cc
-      internalID: -1039122042
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cacaleta_Skin_Base_Mitosis_Up_9
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 768
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6660e8c865c10b6479d97fcbc6953e1e
-      internalID: 1855599023
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cacaleta_Skin_Base_Mitosis_Up_10
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 768
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0d69f6aaa6377464696f73ffca29a7a9
-      internalID: -1929723528
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cacaleta_Skin_Base_Mitosis_Up_11
-      rect:
-        serializedVersion: 2
-        x: 1280
-        y: 768
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 17ed00f4949c95d4792390aeece98ea8
-      internalID: -2046114407
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cacaleta_Skin_Base_Mitosis_Up_12
+      name: Cacaleta_Skin_Cacanauta_Mitosis_18
       rect:
         serializedVersion: 2
         x: 0
         y: 512
-        width: 256
-        height: 256
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -394,41 +520,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a886546236d7e674d98fe038554bec59
-      internalID: 1656955237
+      spriteID: c5d6a4f94db57964988e6042b93ebcfe
+      internalID: -83483322
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_Skin_Base_Mitosis_Up_13
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 512
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 08def577f9fd67247a3137d0633e2eb0
-      internalID: -1206981358
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cacaleta_Skin_Base_Mitosis_Up_14
+      name: Cacaleta_Skin_Cacanauta_Mitosis_19
       rect:
         serializedVersion: 2
         x: 512
         y: 512
-        width: 256
-        height: 256
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -436,41 +541,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0f9db0dead83fd458f0a282d9a655a1
-      internalID: 1273176469
+      spriteID: 5e54cbeee5d84a64fbd08d518227cf71
+      internalID: -899085324
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_Skin_Base_Mitosis_Up_15
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 512
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 74945c2ee8428e64493892e01644b837
-      internalID: -757178592
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cacaleta_Skin_Base_Mitosis_Up_16
+      name: Cacaleta_Skin_Cacanauta_Mitosis_20
       rect:
         serializedVersion: 2
         x: 1024
         y: 512
-        width: 256
-        height: 256
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -478,20 +562,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 377ff91a5c11813429eb3552c4e9a875
-      internalID: -520896812
+      spriteID: bb6fb72dd7838014daeb2e1beda85628
+      internalID: 1644039573
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_Skin_Base_Mitosis_Up_17
+      name: Cacaleta_Skin_Cacanauta_Mitosis_21
       rect:
         serializedVersion: 2
-        x: 1280
+        x: 1536
         y: 512
-        width: 256
-        height: 256
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -499,20 +583,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0251d59a7a001f34586f84964ed76996
-      internalID: -243399134
+      spriteID: 37d1c94154535a3458330e8565a8b2e4
+      internalID: 1906449525
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_Skin_Base_Mitosis_Up_18
+      name: Cacaleta_Skin_Cacanauta_Mitosis_22
       rect:
         serializedVersion: 2
-        x: 0
-        y: 256
-        width: 256
-        height: 256
+        x: 2048
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -520,20 +604,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c39354c5455a0944bb340c765552fe7
-      internalID: -2019347229
+      spriteID: ab7663e774acc0f42bb1f0363ce40b9f
+      internalID: 366387684
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_Skin_Base_Mitosis_Up_19
+      name: Cacaleta_Skin_Cacanauta_Mitosis_23
       rect:
         serializedVersion: 2
-        x: 256
-        y: 256
-        width: 256
-        height: 256
+        x: 2560
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -541,104 +625,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c9941e314463d54393d4d458d982217
-      internalID: -393410091
+      spriteID: b3e6482f382b22745b9aed1a6fac1821
+      internalID: -157391533
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_Skin_Base_Mitosis_Up_20
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 256
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c9afefe1d381e1e46b5d90d464c79c76
-      internalID: 1884740457
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cacaleta_Skin_Base_Mitosis_Up_21
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 256
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0d9361242a098c640af7e16c7a7115de
-      internalID: -78287995
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cacaleta_Skin_Base_Mitosis_Up_22
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 256
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 61adc2e74a9612549ac0c32c196ccc0f
-      internalID: -2124291570
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cacaleta_Skin_Base_Mitosis_Up_23
-      rect:
-        serializedVersion: 2
-        x: 1280
-        y: 256
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e41b7f85c24cb884ea3261f24a1d5f81
-      internalID: -1930146264
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cacaleta_Skin_Base_Mitosis_Up_24
+      name: Cacaleta_Skin_Cacanauta_Mitosis_24
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 256
-        height: 256
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -646,41 +646,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f33f112472a724f4987d5d19aa6e9804
-      internalID: -1358677373
+      spriteID: e2ad82d1f7244a649ba59506d6b3b054
+      internalID: -2070576303
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_Skin_Base_Mitosis_Up_25
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 82f0375f5d6dc154bbb105d5c77cf0ea
-      internalID: -1280683418
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cacaleta_Skin_Base_Mitosis_Up_26
+      name: Cacaleta_Skin_Cacanauta_Mitosis_25
       rect:
         serializedVersion: 2
         x: 512
         y: 0
-        width: 256
-        height: 256
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -688,41 +667,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd4288f51b10610419a769ba405c84ea
-      internalID: -2122088469
+      spriteID: 26b9fb9b23cec40468a4eaa367f04c03
+      internalID: 660859040
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_Skin_Base_Mitosis_Up_27
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 0
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 62df999b533d96e438828d0f6c252469
-      internalID: 1732278442
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cacaleta_Skin_Base_Mitosis_Up_28
+      name: Cacaleta_Skin_Cacanauta_Mitosis_26
       rect:
         serializedVersion: 2
         x: 1024
         y: 0
-        width: 256
-        height: 256
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -730,20 +688,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 149c1f972bdf37b49bf679865279dcde
-      internalID: -1784861977
+      spriteID: 120fd4d4128d88c4696dbc6ac2e2eb8d
+      internalID: -1615690578
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_Skin_Base_Mitosis_Up_29
+      name: Cacaleta_Skin_Cacanauta_Mitosis_27
       rect:
         serializedVersion: 2
-        x: 1280
+        x: 1536
         y: 0
-        width: 256
-        height: 256
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -751,8 +709,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71af25fd259de85418fa84f7cd6140e6
-      internalID: -1550946936
+      spriteID: 89f35100b0bafec4b9f8295ddfe6c252
+      internalID: 875342177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacaleta_Skin_Cacanauta_Mitosis_28
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d2dcd09c5b64a348a2ba9b190e37b7e
+      internalID: 1670417625
       vertices: []
       indices: 
       edges: []
@@ -768,36 +747,35 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Cacaleta_Skin_Base_Mitosis_Up_2: 920808574
-      Cacaleta_Skin_Base_Mitosis_Up_1: -1088448449
-      Cacaleta_Skin_Base_Mitosis_Up_10: -1929723528
-      Cacaleta_Skin_Base_Mitosis_Up_8: -1039122042
-      Cacaleta_Skin_Base_Mitosis_Up_11: -2046114407
-      Cacaleta_Skin_Base_Mitosis_Up_15: -757178592
-      Cacaleta_Skin_Base_Mitosis_Up_9: 1855599023
-      Cacaleta_Skin_Base_Mitosis_Up_26: -2122088469
-      Cacaleta_Skin_Base_Mitosis_Up_13: -1206981358
-      Cacaleta_Skin_Base_Mitosis_Up_6: 856416925
-      Cacaleta_Skin_Base_Mitosis_Up_16: -520896812
-      Cacaleta_Skin_Base_Mitosis_Up_0: 909815875
-      Cacaleta_Skin_Base_Mitosis_Up_22: -2124291570
-      Cacaleta_Skin_Base_Mitosis_Up_19: -393410091
-      Cacaleta_Skin_Base_Mitosis_Up_25: -1280683418
-      Cacaleta_Skin_Base_Mitosis_Up_20: 1884740457
-      Cacaleta_Skin_Base_Mitosis_Up_17: -243399134
-      Cacaleta_Skin_Base_Mitosis_Up_21: -78287995
-      Cacaleta_Skin_Base_Mitosis_Up_18: -2019347229
-      Cacaleta_Skin_Base_Mitosis_Up_29: -1550946936
-      Cacaleta_Skin_Base_Mitosis_Up_23: -1930146264
-      Cacaleta_Skin_Base_Mitosis_Up_28: -1784861977
-      Cacaleta_Skin_Base_Mitosis_Up_14: 1273176469
-      Cacaleta_Skin_Base_Mitosis_Up_12: 1656955237
-      Cacaleta_Skin_Base_Mitosis_Up_27: 1732278442
-      Cacaleta_Skin_Base_Mitosis_Up_7: -1465189353
-      Cacaleta_Skin_Base_Mitosis_Up_3: -255743965
-      Cacaleta_Skin_Base_Mitosis_Up_5: 372052061
-      Cacaleta_Skin_Base_Mitosis_Up_4: 1154638372
-      Cacaleta_Skin_Base_Mitosis_Up_24: -1358677373
+      Cacaleta_Skin_Cacanauta_Mitosis_18: -83483322
+      Cacaleta_Skin_Cacanauta_Mitosis_6: -833563148
+      Cacaleta_Skin_Cacanauta_Mitosis_22: 366387684
+      Cacaleta_Skin_Cacanauta_Mitosis_9: -294144403
+      Cacaleta_Skin_Cacanauta_Mitosis_15: 1420907275
+      Cacaleta_Skin_Cacanauta_Mitosis_0: -1931138907
+      Cacaleta_Skin_Cacanauta_Mitosis_4: 323458162
+      Cacaleta_Skin_Cacanauta_Mitosis_17: -536612037
+      Cacaleta_Skin_Cacanauta_Mitosis_24: -2070576303
+      Cacaleta_Skin_Cacanauta_Mitosis_19: -899085324
+      Cacaleta_Skin_Cacanauta_Mitosis_14: -1097880238
+      Cacaleta_Skin_Cacanauta_Mitosis_23: -157391533
+      Cacaleta_Skin_Cacanauta_Mitosis_11: -110528816
+      Cacaleta_Skin_Cacanauta_Mitosis_3: 1201175143
+      Cacaleta_Skin_Cacanauta_Mitosis_16: 1299849173
+      Cacaleta_Skin_Cacanauta_Mitosis_28: 1670417625
+      Cacaleta_Skin_Cacanauta_Mitosis_20: 1644039573
+      Cacaleta_Skin_Cacanauta_Mitosis_12: 262749093
+      Cacaleta_Skin_Cacanauta_Mitosis_8: -849879301
+      Cacaleta_Skin_Cacanauta_Mitosis_5: 878828738
+      Cacaleta_Skin_Cacanauta_Mitosis_25: 660859040
+      Cacaleta_Skin_Cacanauta_Mitosis_26: -1615690578
+      Cacaleta_Skin_Cacanauta_Mitosis_2: 727579027
+      Cacaleta_Skin_Cacanauta_Mitosis_13: -601514490
+      Cacaleta_Skin_Cacanauta_Mitosis_7: -1258117996
+      Cacaleta_Skin_Cacanauta_Mitosis_21: 1906449525
+      Cacaleta_Skin_Cacanauta_Mitosis_1: 911633578
+      Cacaleta_Skin_Cacanauta_Mitosis_27: 875342177
+      Cacaleta_Skin_Cacanauta_Mitosis_10: -1018387033
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
