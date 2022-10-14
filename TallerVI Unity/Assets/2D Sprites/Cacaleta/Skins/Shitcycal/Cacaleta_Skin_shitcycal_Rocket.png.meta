@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 983390ad313687841b8e12ba0e211caa
+guid: 7e15d02180918ba4aa573476b3d37f4b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 270
+  spritePixelsToUnits: 265
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -128,133 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cacaleta_Skin_shitcycal_Up_2_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 512
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7ae406fa0c76b054a8fbe7bb88da66c1
-      internalID: 1344517497
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cacaleta_Skin_shitcycal_Up_2_1
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 512
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 71db28a887875574f9e5f3de83920ebb
-      internalID: -447017808
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cacaleta_Skin_shitcycal_Up_2_2
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 512
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b27fc47e087242341bb79046a2df2f2e
-      internalID: 1186488576
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cacaleta_Skin_shitcycal_Up_2_3
-      rect:
-        serializedVersion: 2
-        x: 1536
-        y: 512
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2a1163eb612115e41a44edab94d5c13c
-      internalID: 1639190576
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cacaleta_Skin_shitcycal_Up_2_4
-      rect:
-        serializedVersion: 2
-        x: 2048
-        y: 512
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2e446ed73e26f4c40bb8953ac34435ff
-      internalID: -1254842931
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cacaleta_Skin_shitcycal_Up_2_5
-      rect:
-        serializedVersion: 2
-        x: 2560
-        y: 512
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 35b742a7835e8204499c906a14482046
-      internalID: -340660054
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cacaleta_Skin_shitcycal_Up_2_6
+      name: Cacaleta_Skin_shitcycal_Rocket_0
       rect:
         serializedVersion: 2
         x: 0
@@ -268,14 +142,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ee2b1b22eed2cf46ad3dbdc13af435d
-      internalID: -928967300
+      spriteID: 31433f6badb42f14d93b59c5e3b7a311
+      internalID: 637868794
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_Skin_shitcycal_Up_2_7
+      name: Cacaleta_Skin_shitcycal_Rocket_1
       rect:
         serializedVersion: 2
         x: 512
@@ -289,14 +163,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 045eda4201bdc0e489367f15a0a088ae
-      internalID: 116884706
+      spriteID: b3d43dc57dfc3b44fae2c474c595db9e
+      internalID: 1220840487
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_Skin_shitcycal_Up_2_8
+      name: Cacaleta_Skin_shitcycal_Rocket_2
       rect:
         serializedVersion: 2
         x: 1024
@@ -310,14 +184,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 255fa65ee7e3b4e4ba22f64685a2eeba
-      internalID: 960507643
+      spriteID: 1abefec195327914e8e92cf1609bd213
+      internalID: -1201672988
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_Skin_shitcycal_Up_2_9
+      name: Cacaleta_Skin_shitcycal_Rocket_3
       rect:
         serializedVersion: 2
         x: 1536
@@ -331,14 +205,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e2c835a5c3d8e54c8b37da2f17b4b29
-      internalID: -1828020840
+      spriteID: a8e32eb2c1ad6194d8bf669464e504bf
+      internalID: 1734545993
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_Skin_shitcycal_Up_2_10
+      name: Cacaleta_Skin_shitcycal_Rocket_4
       rect:
         serializedVersion: 2
         x: 2048
@@ -352,14 +226,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51f8604061252cd4a9d8889a06ff2e4f
-      internalID: 1349348653
+      spriteID: 73ad5d23960ec7344b867c1304e31742
+      internalID: 1805414134
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_Skin_shitcycal_Up_2_11
+      name: Cacaleta_Skin_shitcycal_Rocket_5
       rect:
         serializedVersion: 2
         x: 2560
@@ -373,8 +247,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 315583cdc4641b94b93df5497e990de2
-      internalID: -1428141965
+      spriteID: f682a2d31c18d0f4281ba81479dd66ef
+      internalID: 1968798479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacaleta_Skin_shitcycal_Rocket_6
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76a01813f4a4e3440a8756c1822d49d1
+      internalID: 926834396
       vertices: []
       indices: 
       edges: []
@@ -390,18 +285,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Cacaleta_Skin_shitcycal_Up_2_3: 1639190576
-      Cacaleta_Skin_shitcycal_Up_2_2: 1186488576
-      Cacaleta_Skin_shitcycal_Up_2_6: -928967300
-      Cacaleta_Skin_shitcycal_Up_2_7: 116884706
-      Cacaleta_Skin_shitcycal_Up_2_0: 1344517497
-      Cacaleta_Skin_shitcycal_Up_2_1: -447017808
-      Cacaleta_Skin_shitcycal_Up_2_11: -1428141965
-      Cacaleta_Skin_shitcycal_Up_2_4: -1254842931
-      Cacaleta_Skin_shitcycal_Up_2_10: 1349348653
-      Cacaleta_Skin_shitcycal_Up_2_9: -1828020840
-      Cacaleta_Skin_shitcycal_Up_2_8: 960507643
-      Cacaleta_Skin_shitcycal_Up_2_5: -340660054
+      Cacaleta_Skin_shitcycal_Rocket_4: 1805414134
+      Cacaleta_Skin_shitcycal_Rocket_2: -1201672988
+      Cacaleta_Skin_shitcycal_Rocket_6: 926834396
+      Cacaleta_Skin_shitcycal_Rocket_1: 1220840487
+      Cacaleta_Skin_shitcycal_Rocket_3: 1734545993
+      Cacaleta_Skin_shitcycal_Rocket_5: 1968798479
+      Cacaleta_Skin_shitcycal_Rocket_0: 637868794
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

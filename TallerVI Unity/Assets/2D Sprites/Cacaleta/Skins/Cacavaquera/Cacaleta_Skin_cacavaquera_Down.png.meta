@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b9a9aa5bf9db4d34e840cf58073cc23c
+guid: 006499ae32b134b4b94c46a2a779e59f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 230
+  spritePixelsToUnits: 270
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -128,7 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cacaleta_Skin_Kkwaii_Crashed_0
+      name: cacavaquera_down_0
       rect:
         serializedVersion: 2
         x: 0
@@ -136,20 +136,20 @@ TextureImporter:
         width: 512
         height: 512
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d0721a6355ef5f4b952f10ca675b073
-      internalID: 551010701
+      spriteID: b2f4442ab6314ae49922b428218217ce
+      internalID: -1328765925
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_Skin_Kkwaii_Crashed_1
+      name: cacavaquera_down_1
       rect:
         serializedVersion: 2
         x: 512
@@ -157,20 +157,20 @@ TextureImporter:
         width: 512
         height: 512
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6dae633c5ac89bc429d22c4fb9bfb041
-      internalID: -1148704686
+      spriteID: e867ae9727467384189d33c90299ffa4
+      internalID: -667107119
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_Skin_Kkwaii_Crashed_2
+      name: cacavaquera_down_2
       rect:
         serializedVersion: 2
         x: 1024
@@ -178,20 +178,20 @@ TextureImporter:
         width: 512
         height: 512
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb4d32e39c80e9c42bb12c4a625c4213
-      internalID: -843816015
+      spriteID: 26562197b252b194a8c5610bfb6b0f06
+      internalID: 365158804
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_Skin_Kkwaii_Crashed_3
+      name: cacavaquera_down_3
       rect:
         serializedVersion: 2
         x: 1536
@@ -199,14 +199,98 @@ TextureImporter:
         width: 512
         height: 512
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e63b40241b0afdc48b6b4f8c804f13e8
-      internalID: 452474223
+      spriteID: 2db8e8e2e5b41dd44a791923b7a2d9d1
+      internalID: -887303749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cacavaquera_down_4
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78951ee281b5f2d4f985fe9e8867c6fe
+      internalID: 512758928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cacavaquera_down_5
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e46a6c97db6b3c428320fac646c0135
+      internalID: -1056841812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cacavaquera_down_6
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc73f50d533e95b4bb5d9194438f7856
+      internalID: 1493096897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cacavaquera_down_7
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce7f38a45f065a44d9e59a116ecb4265
+      internalID: 2062302382
       vertices: []
       indices: 
       edges: []
@@ -222,10 +306,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Cacaleta_Skin_Kkwaii_Crashed_0: 551010701
-      Cacaleta_Skin_Kkwaii_Crashed_1: -1148704686
-      Cacaleta_Skin_Kkwaii_Crashed_3: 452474223
-      Cacaleta_Skin_Kkwaii_Crashed_2: -843816015
+      cacavaquera_down_0: -1328765925
+      cacavaquera_down_3: -887303749
+      cacavaquera_down_1: -667107119
+      cacavaquera_down_7: 2062302382
+      cacavaquera_down_6: 1493096897
+      cacavaquera_down_5: -1056841812
+      cacavaquera_down_4: 512758928
+      cacavaquera_down_2: 365158804
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

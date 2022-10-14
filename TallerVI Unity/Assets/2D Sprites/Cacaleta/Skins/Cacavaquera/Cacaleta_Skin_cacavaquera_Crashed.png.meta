@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6a7da6acb4df8a54a8327796a939ff6f
+guid: 4b4b1876862e7f542863cd199b9e560e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -128,7 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cacaleta_Skin_shitcycal_Crashed_0
+      name: cacavaquera_crashed_0
       rect:
         serializedVersion: 2
         x: 0
@@ -142,14 +142,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 981b89dff84ba0245898b2b0b6ae5140
-      internalID: -1894910944
+      spriteID: f99970728ef1df6429d25a41a0e02d4a
+      internalID: 1411348163
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_Skin_shitcycal_Crashed_1
+      name: cacavaquera_crashed_1
       rect:
         serializedVersion: 2
         x: 512
@@ -163,14 +163,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d83b8aa0e1003ad4db8b6d912fc35e5e
-      internalID: -1442174452
+      spriteID: 37dabbc0691e23146b8b9be3bf154236
+      internalID: 895113156
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_Skin_shitcycal_Crashed_2
+      name: cacavaquera_crashed_2
       rect:
         serializedVersion: 2
         x: 1024
@@ -184,14 +184,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c328b8fba2cf3c648a5b8c6fdbe12d97
-      internalID: -133355981
+      spriteID: f854de2bef713c24c876c9401ae040c1
+      internalID: 1371736624
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_Skin_shitcycal_Crashed_3
+      name: cacavaquera_crashed_3
       rect:
         serializedVersion: 2
         x: 1536
@@ -205,8 +205,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff9fd163711a7c04d85bcf203f188493
-      internalID: -1227761738
+      spriteID: b4ff44935d14b5c4bab7dadff19c6d94
+      internalID: 1839923130
       vertices: []
       indices: 
       edges: []
@@ -222,10 +222,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Cacaleta_Skin_shitcycal_Crashed_3: -1227761738
-      Cacaleta_Skin_shitcycal_Crashed_1: -1442174452
-      Cacaleta_Skin_shitcycal_Crashed_2: -133355981
-      Cacaleta_Skin_shitcycal_Crashed_0: -1894910944
+      cacavaquera_crashed_2: 1371736624
+      cacavaquera_crashed_3: 1839923130
+      cacavaquera_crashed_0: 1411348163
+      cacavaquera_crashed_1: 895113156
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

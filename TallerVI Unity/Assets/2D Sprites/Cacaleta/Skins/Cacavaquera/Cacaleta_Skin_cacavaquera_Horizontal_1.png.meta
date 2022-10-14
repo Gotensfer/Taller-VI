@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 983390ad313687841b8e12ba0e211caa
+guid: e75d0724a3f835d4c9dfd2d71d81adf2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -128,133 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cacaleta_Skin_shitcycal_Up_2_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 512
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7ae406fa0c76b054a8fbe7bb88da66c1
-      internalID: 1344517497
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cacaleta_Skin_shitcycal_Up_2_1
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 512
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 71db28a887875574f9e5f3de83920ebb
-      internalID: -447017808
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cacaleta_Skin_shitcycal_Up_2_2
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 512
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b27fc47e087242341bb79046a2df2f2e
-      internalID: 1186488576
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cacaleta_Skin_shitcycal_Up_2_3
-      rect:
-        serializedVersion: 2
-        x: 1536
-        y: 512
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2a1163eb612115e41a44edab94d5c13c
-      internalID: 1639190576
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cacaleta_Skin_shitcycal_Up_2_4
-      rect:
-        serializedVersion: 2
-        x: 2048
-        y: 512
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2e446ed73e26f4c40bb8953ac34435ff
-      internalID: -1254842931
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cacaleta_Skin_shitcycal_Up_2_5
-      rect:
-        serializedVersion: 2
-        x: 2560
-        y: 512
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 35b742a7835e8204499c906a14482046
-      internalID: -340660054
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cacaleta_Skin_shitcycal_Up_2_6
+      name: cacavaquera_horizontal_1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -268,14 +142,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ee2b1b22eed2cf46ad3dbdc13af435d
-      internalID: -928967300
+      spriteID: 358aa7942d1fb5c498f078aa05617a19
+      internalID: 1749262936
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_Skin_shitcycal_Up_2_7
+      name: cacavaquera_horizontal_1_1
       rect:
         serializedVersion: 2
         x: 512
@@ -289,14 +163,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 045eda4201bdc0e489367f15a0a088ae
-      internalID: 116884706
+      spriteID: dbb3d9bc081b12c45a121d85f405770d
+      internalID: -1699742161
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_Skin_shitcycal_Up_2_8
+      name: cacavaquera_horizontal_1_2
       rect:
         serializedVersion: 2
         x: 1024
@@ -310,14 +184,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 255fa65ee7e3b4e4ba22f64685a2eeba
-      internalID: 960507643
+      spriteID: a60967013af6738479b1f0a28099d204
+      internalID: -1977371110
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_Skin_shitcycal_Up_2_9
+      name: cacavaquera_horizontal_1_3
       rect:
         serializedVersion: 2
         x: 1536
@@ -331,14 +205,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e2c835a5c3d8e54c8b37da2f17b4b29
-      internalID: -1828020840
+      spriteID: f182fdcbe4738c34196be97fc861a478
+      internalID: -1761758460
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_Skin_shitcycal_Up_2_10
+      name: cacavaquera_horizontal_1_4
       rect:
         serializedVersion: 2
         x: 2048
@@ -352,14 +226,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51f8604061252cd4a9d8889a06ff2e4f
-      internalID: 1349348653
+      spriteID: 29406c31700393848a7373b65cf59e2a
+      internalID: 399525480
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_Skin_shitcycal_Up_2_11
+      name: cacavaquera_horizontal_1_5
       rect:
         serializedVersion: 2
         x: 2560
@@ -373,8 +247,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 315583cdc4641b94b93df5497e990de2
-      internalID: -1428141965
+      spriteID: a4b267a56616ddb469156cb6abf54bb7
+      internalID: -536932256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cacavaquera_horizontal_1_6
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8e9e573c2700424d875e70eb60fa0ee
+      internalID: 2106361769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cacavaquera_horizontal_1_7
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 174fae3f7dda8e745adcf90582895526
+      internalID: 78692147
       vertices: []
       indices: 
       edges: []
@@ -390,18 +306,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Cacaleta_Skin_shitcycal_Up_2_3: 1639190576
-      Cacaleta_Skin_shitcycal_Up_2_2: 1186488576
-      Cacaleta_Skin_shitcycal_Up_2_6: -928967300
-      Cacaleta_Skin_shitcycal_Up_2_7: 116884706
-      Cacaleta_Skin_shitcycal_Up_2_0: 1344517497
-      Cacaleta_Skin_shitcycal_Up_2_1: -447017808
-      Cacaleta_Skin_shitcycal_Up_2_11: -1428141965
-      Cacaleta_Skin_shitcycal_Up_2_4: -1254842931
-      Cacaleta_Skin_shitcycal_Up_2_10: 1349348653
-      Cacaleta_Skin_shitcycal_Up_2_9: -1828020840
-      Cacaleta_Skin_shitcycal_Up_2_8: 960507643
-      Cacaleta_Skin_shitcycal_Up_2_5: -340660054
+      cacavaquera_horizontal_1_6: 2106361769
+      cacavaquera_horizontal_1_7: 78692147
+      cacavaquera_horizontal_1_1: -1699742161
+      cacavaquera_horizontal_1_0: 1749262936
+      cacavaquera_horizontal_1_5: -536932256
+      cacavaquera_horizontal_1_4: 399525480
+      cacavaquera_horizontal_1_2: -1977371110
+      cacavaquera_horizontal_1_3: -1761758460
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
