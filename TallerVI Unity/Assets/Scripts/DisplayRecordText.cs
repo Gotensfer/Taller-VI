@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 using TMPro;
 
 public class DisplayRecordText : MonoBehaviour
@@ -10,7 +11,7 @@ public class DisplayRecordText : MonoBehaviour
     private void Start()
     {
         recordText = GetComponent<TextMeshProUGUI>();
-        recordText.text = $"{Mathf.Round(PlayerPrefs.GetFloat("Distance", 0))}m";
+        recordText.text = $"{Math.Round(PlayerPrefs.GetFloat("Distance", 0), 1)}m";
     }
 
 }
