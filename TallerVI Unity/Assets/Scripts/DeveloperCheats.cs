@@ -9,7 +9,7 @@ public class DeveloperCheats : MonoBehaviour
         // Cheats para monedas
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            EconomyData.AddCoins(50);
+            EconomyData.AddCoins(500);
         }
 
         if (Input.GetKeyDown(KeyCode.W))
