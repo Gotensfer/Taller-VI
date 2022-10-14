@@ -11,12 +11,20 @@ public class PowerUpRestraint_TempModule : MonoBehaviour
     public void DisablePowerUpButtons()
     {
         mitosisButton.SetActive(false);
-        fecalitoButton.SetActive(false);
+
+        if (PlayerPrefs.GetInt($"Fecalito Level") != 0)
+        {
+            fecalitoButton.SetActive(false);
+        }
     }
 
     public void EnablePowerUpButtons()
     {
         mitosisButton.SetActive(true);
-        fecalitoButton.SetActive(true);
+        
+        if (PlayerPrefs.GetInt($"Fecalito Level") != 0)
+        {
+            fecalitoButton.SetActive(true);
+        }
     }
 }

@@ -20,6 +20,25 @@ public class GameLoad_DataInitializer : MonoBehaviour
         #endregion
 
         #region"Configuración inicial de datos de comidas"
+
+        if (PlayerPrefs.GetInt($"FoodResetSINGLETIME", -1) == -1)
+        {
+            if (PlayerPrefs.GetInt($"{Enum.GetName(typeof(FoodID), FoodID.Guaro)}", -1) == 1)
+            {
+                PlayerPrefs.SetInt($"{Enum.GetName(typeof(FoodID), FoodID.Guaro)}", 0);
+            }
+            if (PlayerPrefs.GetInt($"{Enum.GetName(typeof(FoodID), FoodID.BandejaPaisa)}", -1) == 1)
+            {
+                PlayerPrefs.SetInt($"{Enum.GetName(typeof(FoodID), FoodID.BandejaPaisa)}", 0);
+            }
+            if (PlayerPrefs.GetInt($"{Enum.GetName(typeof(FoodID), FoodID.Brevas)}", -1) == 1)
+            {
+                PlayerPrefs.SetInt($"{Enum.GetName(typeof(FoodID), FoodID.Brevas)}", 0);
+            }
+
+            PlayerPrefs.SetInt($"FoodResetSINGLETIME", 1);
+        }
+
         for (int i = 0; i < Enum.GetValues(typeof(FoodID)).Length; i++)
         {
             if (PlayerPrefs.GetInt($"{Enum.GetName(typeof(FoodID), i)}", -1) == -1)
@@ -27,11 +46,11 @@ public class GameLoad_DataInitializer : MonoBehaviour
                 PlayerPrefs.SetInt($"{Enum.GetName(typeof(FoodID), i)}", 0);
 
                 // HARDCODEADO, MALO MALO MALOOOO
-                if (i == (int)FoodID.Guaro)
+                if (i == (int)FoodID.Soda)
                 {
                     PlayerPrefs.SetInt($"{Enum.GetName(typeof(FoodID), i)}", 1);
                 }
-                if (i == (int)FoodID.BandejaPaisa)
+                if (i == (int)FoodID.Bocachico)
                 {
                     PlayerPrefs.SetInt($"{Enum.GetName(typeof(FoodID), i)}", 1);
                 }

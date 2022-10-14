@@ -838,41 +838,41 @@ MonoBehaviour:
   rocketPrefab: {fileID: 7819924271294555339, guid: 118c6ec2f70c30048943ae98927d3836, type: 3}
   mitosisPrefab: {fileID: 8497296553107868462, guid: 976e809bef8e63b49867a05ba1e13155, type: 3}
   father: {fileID: 524557124}
-  rangoChili: {x: 100, y: 10000}
-  rangoPidgeon: {x: 200, y: 10000}
-  rangoRocket: {x: 150, y: 10000}
-  rangoMitosis: {x: 5, y: 10000}
-  cadaCuantoRestaChili: 24
-  cadaCuantoRestaPidgeon: 30
-  cadaCuantoRestaRocket: 30
-  cadaCuantoRestaMitosis: 50
-  cuantoRestaChili: 1
-  cuantoRestaPidgeon: 2
-  cuantoRestaRocket: 3
-  cuantoRestaMitosis: 1
-  rangoChili2: {x: 80, y: 10000}
-  rangoPidgeon2: {x: 150, y: 10000}
-  rangoRocket2: {x: 100, y: 10000}
-  rangoMitosis2: {x: 5, y: 10000}
-  cadaCuantoRestaChili2: 50
-  cadaCuantoRestaPidgeon2: 30
-  cadaCuantoRestaRocket2: 30
-  cadaCuantoRestaMitosis2: 50
-  cuantoRestaChili2: 1
+  rangoChili: {x: 50, y: 150}
+  rangoPidgeon: {x: 60, y: 250}
+  rangoRocket: {x: 10, y: 150}
+  rangoMitosis: {x: 10, y: 150}
+  cadaCuantoRestaChili: 20
+  cadaCuantoRestaPidgeon: 20
+  cadaCuantoRestaRocket: 20
+  cadaCuantoRestaMitosis: 20
+  cuantoRestaChili: 6
+  cuantoRestaPidgeon: 4
+  cuantoRestaRocket: 4
+  cuantoRestaMitosis: 6
+  rangoChili2: {x: 50, y: 200}
+  rangoPidgeon2: {x: 60, y: 350}
+  rangoRocket2: {x: 10, y: 150}
+  rangoMitosis2: {x: 10, y: 250}
+  cadaCuantoRestaChili2: 20
+  cadaCuantoRestaPidgeon2: 20
+  cadaCuantoRestaRocket2: 20
+  cadaCuantoRestaMitosis2: 20
+  cuantoRestaChili2: 4
   cuantoRestaPidgeon2: 2
-  cuantoRestaRocket2: 3
-  cuantoRestaMitosis2: 1
-  rangoChili3: {x: 50, y: 10000}
-  rangoPidgeon3: {x: 100, y: 10000}
-  rangoRocket3: {x: 50, y: 100000}
-  rangoMitosis3: {x: 5, y: 10000}
-  cadaCuantoRestaChili3: 50
-  cadaCuantoRestaPidgeon3: 30
-  cadaCuantoRestaRocket3: 30
-  cadaCuantoRestaMitosis3: 50
-  cuantoRestaChili3: 1
-  cuantoRestaPidgeon3: 2
-  cuantoRestaRocket3: 3
+  cuantoRestaRocket2: 2
+  cuantoRestaMitosis2: 3
+  rangoChili3: {x: 50, y: 400}
+  rangoPidgeon3: {x: 30, y: 350}
+  rangoRocket3: {x: 10, y: 350}
+  rangoMitosis3: {x: 10, y: 300}
+  cadaCuantoRestaChili3: 20
+  cadaCuantoRestaPidgeon3: 20
+  cadaCuantoRestaRocket3: 20
+  cadaCuantoRestaMitosis3: 20
+  cuantoRestaChili3: 2
+  cuantoRestaPidgeon3: 1
+  cuantoRestaRocket3: 1
   cuantoRestaMitosis3: 1
   xOffset: -100
 --- !u!1 &79221870
@@ -4150,7 +4150,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.582031, y: 2.25, z: -2}
+  m_LocalPosition: {x: 8.580082, y: 2.25, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12460,6 +12460,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   kkawaiSkinOverride: {fileID: 22100000, guid: a71f4200a83aeac4b963d769c5380fae, type: 2}
+  cacsycalSkinOverride: {fileID: 22100000, guid: 1c12724392f81cd41aa0ded8e095f91a, type: 2}
+  cacowboySkinOverride: {fileID: 22100000, guid: ede84acbf3aef8a42b6da6717fb6089d, type: 2}
+  cacalienSkinOverride: {fileID: 22100000, guid: 4464a97ed96759748950b71cf9893c42, type: 2}
+  cacanautSkinOverride: {fileID: 22100000, guid: cabe2405e7dd45c408fe14b4525f21f1, type: 2}
 --- !u!114 &1728376861
 MonoBehaviour:
   m_ObjectHideFlags: 0
