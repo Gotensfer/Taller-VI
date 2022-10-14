@@ -149,6 +149,18 @@ public class UIInterfaceMainMenu : MonoBehaviour
         DOTween.KillAll(gameObject);
     }
 
+
+    //Add-on FADER
+    public void Fader()
+    {
+        isFaded = !isFaded;
+        if (isFaded)
+            fadePanel.DOFade(1, 3.5f);
+        else
+            fadePanel.DOFade(0, 2);
+    }
+
+
     #region"Animaciones de botones en UI"
 
     //Play Button
@@ -299,16 +311,6 @@ public class UIInterfaceMainMenu : MonoBehaviour
     }
     #endregion
 
-
-    //Add-on FADER
-    public void Fader()
-    {
-        isFaded = !isFaded;
-        if (isFaded)
-            fadePanel.DOFade(1, 3.5f);
-        else
-            fadePanel.DOFade(0, 2);
-    }
 
     #region"Secciones del tutorial MainMenu"
     
