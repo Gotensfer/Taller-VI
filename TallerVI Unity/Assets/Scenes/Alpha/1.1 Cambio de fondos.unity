@@ -1935,6 +1935,7 @@ GameObject:
   m_Component:
   - component: {fileID: 294536539}
   - component: {fileID: 294536540}
+  - component: {fileID: 294536542}
   - component: {fileID: 294536541}
   m_Layer: 0
   m_Name: Front
@@ -1951,7 +1952,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 294536538}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 627.59, y: 6, z: 0}
+  m_LocalPosition: {x: 627.59, y: 3.5, z: 0}
   m_LocalScale: {x: 1.3333334, y: 1.3333334, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1978,7 +1979,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: a7507ae2d50397f4d967c55696d5ca2c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1999,12 +2000,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -10
-  m_Sprite: {fileID: 21300000, guid: febc4d7979b6b02418fcb3aacdcc370f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 05f69c6c49e0dba4c90a5c4f10ceef9a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 20000, y: 15.843372}
+  m_Size: {x: 2000, y: 11.79}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2024,6 +2025,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rateOfParallax: 0
   target: {fileID: 1728376845}
+--- !u!114 &294536542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294536538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e3370444e304dc439d086de92812230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textureBG: {fileID: 294536540}
+  condicion1: 0
+  condicion2: 0
 --- !u!1 &296068876
 GameObject:
   m_ObjectHideFlags: 0
@@ -3889,7 +3905,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 479739462}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 627.59, y: 1.26, z: 0}
+  m_LocalPosition: {x: 627.59, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10405,6 +10421,7 @@ GameObject:
   - component: {fileID: 1404977973}
   - component: {fileID: 1404977974}
   - component: {fileID: 1404977975}
+  - component: {fileID: 1404977976}
   m_Layer: 0
   m_Name: Mid_
   m_TagString: Untagged
@@ -10420,7 +10437,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1404977972}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 627.59, y: 9.42, z: 0}
+  m_LocalPosition: {x: 627.6227, y: 3.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10447,7 +10464,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 16272fd9e8dd8c1409ef5b94f99eb1f7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10468,12 +10485,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -11
-  m_Sprite: {fileID: 21300000, guid: 8b061e9f62e00984195214c39be197cb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 265375ea670370847a31c386b62f4ff8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 20000, y: 26.672354}
+  m_Size: {x: 20000, y: 20.691956}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -10493,6 +10510,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rateOfParallax: 0.3
   target: {fileID: 1728376845}
+--- !u!114 &1404977976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404977972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e3370444e304dc439d086de92812230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textureBG: {fileID: 1404977974}
+  condicion1: 0
+  condicion2: 0
 --- !u!1 &1424772945
 GameObject:
   m_ObjectHideFlags: 0
@@ -10931,6 +10963,7 @@ GameObject:
   - component: {fileID: 1539854741}
   - component: {fileID: 1539854742}
   - component: {fileID: 1539854743}
+  - component: {fileID: 1539854744}
   m_Layer: 0
   m_Name: Back
   m_TagString: Untagged
@@ -10946,7 +10979,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1539854740}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 627.59, y: 9.26, z: 0}
+  m_LocalPosition: {x: 630, y: 3.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10973,7 +11006,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 879c95f9d7c2ebc4fbac54a59aefbc45, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10994,17 +11027,17 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -13
-  m_Sprite: {fileID: 21300000, guid: 93a1ec99c01f23d49b7e2d388219d8ea, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 31ae8c9f7240b5d48806ed3a351dbeaa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 20000, y: 26.6}
+  m_Size: {x: 20000, y: 22.08797}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!114 &1539854743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11019,6 +11052,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rateOfParallax: 0.5
   target: {fileID: 1728376845}
+--- !u!114 &1539854744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539854740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e3370444e304dc439d086de92812230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textureBG: {fileID: 1539854742}
+  condicion1: 0
+  condicion2: 0
 --- !u!1 &1546529603
 GameObject:
   m_ObjectHideFlags: 0

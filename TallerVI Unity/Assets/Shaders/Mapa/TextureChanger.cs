@@ -6,7 +6,8 @@ public class TextureChanger : MonoBehaviour
 {
     // Start is called before the first frame update
     float secondBGp, thirdBG = 0; //Valor de interpolación entre mapas
-    [SerializeField] MeshRenderer textureBG = null;
+    [SerializeField] SpriteRenderer textureBG = null;
+    [SerializeField] float transitionStrenght=1f;
     float time;
 
     [SerializeField] bool condicion1, condicion2;
@@ -42,17 +43,28 @@ public class TextureChanger : MonoBehaviour
 
     }
 
-    void ChangeToSecondMap()
+     void ChangeToSecondMap()
     {
-        time += Time.deltaTime;
+        time += Time.deltaTime* transitionStrenght;
         secondBGp = Mathf.Lerp(0, 1, time);
         textureBG.material.SetFloat("_Condicion1", secondBGp);
     }
 
-    void ChangeToThirdMap()
+     void ChangeToThirdMap()
     {
-        time += Time.deltaTime;
+        time += Time.deltaTime* transitionStrenght;
         thirdBG = Mathf.Lerp(0, 1, time);
         textureBG.material.SetFloat("_Condicion2", thirdBG);
     }
+
+    public void ChangeCondition1()
+    {
+        condicion1 = true;
+    }
+
+    public void ChangeCondition2()
+    {
+        condicion2 = true;
+    }
+
 }
