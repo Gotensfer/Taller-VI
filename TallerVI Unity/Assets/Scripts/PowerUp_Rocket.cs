@@ -5,20 +5,25 @@ public class PowerUp_Rocket : MonoBehaviour
     private TrackerBase_Module track;
     private Rigidbody2D rb;
     private bool active = false, calleable = true;
-    [SerializeField] private float time = 3.0f, force = 10f, angle = 45f;
-    private float conversion;
+    [SerializeField] private float time = 3.0f, force = 10f, angle = 45f,forceIncrement = 2f;
+    private float conversion, initialForce;
+    
+    Vector3 touchPosWorld;
+    TouchPhase touchPhase = TouchPhase.Ended;
 
     void Start()
     {
         track = FindObjectOfType<TrackerBase_Module>();
         rb = track.GetPlayer().GetComponent<Rigidbody2D>();
         conversion = Mathf.Deg2Rad * angle;
+        initialForce = force;
     }
 
     // Update is called once per frame
     void Update()
     {
         Use();
+        Touch();
     }
 
     float count = 0;
@@ -59,6 +64,15 @@ public class PowerUp_Rocket : MonoBehaviour
         }
     }
 
+    void Touch()
+    {
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == touchPhase && active)
+        {
+            force += forceIncrement;
+            Debug.Log("Touched");
+        }
+    }
+    
     void CallEvent()
     {
         if (calleable)
@@ -68,6 +82,8 @@ public class PowerUp_Rocket : MonoBehaviour
             gameObject.SetActive(false);
             
             transform.parent.GetComponent<EventReferenceHandler>().playerEvents.rocketDownEvent.Invoke();
+
+            force = initialForce;
         }
     }
 }
