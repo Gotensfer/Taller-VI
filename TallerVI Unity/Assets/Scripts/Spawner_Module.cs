@@ -294,7 +294,7 @@ public class Spawner_Module : MonoBehaviour
     {
         GameObject obj = GetRandomObject();
 
-        if (gameObject != null)
+        if (obj != null)
         {
             if (gliding)
             {
