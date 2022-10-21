@@ -11,6 +11,8 @@ public class SkinStoreElement : MonoBehaviour
     [SerializeField] GameObject lockObject;
     Button button;
     Button lockButton;
+    
+    FMOD.Studio.EventInstance sfx;
 
     private void Start()
     {
@@ -53,9 +55,23 @@ public class SkinStoreElement : MonoBehaviour
             lockObject.SetActive(false);
             
             button.onClick.AddListener(SelectSkin);
-
+            //sfx candado
+            sfx = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/UI/Unlock");
+            sfx.start();
+            print("a");
             PlayerPrefs.SetInt($"{Enum.GetName(typeof(SkinID), (int)skin.skinID)}", 1);
             PlayerPrefs.Save();
         }
+        else
+        {
+            //sfx no money
+            sfx = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/UI/No money");
+            sfx.start();
+        }
+    }
+
+    private void OnDisable()
+    {
+        sfx.release();
     }
 }
