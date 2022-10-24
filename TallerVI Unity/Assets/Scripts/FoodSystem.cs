@@ -23,6 +23,8 @@ public class FoodSystem : MonoBehaviour
     public List<Food> foods;
     public List<Food> addedFoods;
     public List<GameObject> foodsUnlockables;
+    
+    FMOD.Studio.EventInstance sfx;
 
     private void Start()
     {
@@ -36,6 +38,7 @@ public class FoodSystem : MonoBehaviour
             {
                 foodsUnlockables[i].SetActive(false);
             }
+            
         }
     }
 
@@ -46,9 +49,17 @@ public class FoodSystem : MonoBehaviour
             EconomyData.SpendCoins(foods[foodID].coinPrice);
 
             foodsUnlockables[foodID].SetActive(false);
-
+            //sfx candado
+            sfx = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/UI/Unlock");
+            sfx.start();
             PlayerPrefs.SetInt($"{Enum.GetName(typeof(FoodID), foodID)}", 1);
             PlayerPrefs.Save();
+        }
+        else
+        {
+            //sfx no money
+            sfx = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/UI/No money");
+            sfx.start();
         }
     }
 
@@ -84,6 +95,7 @@ public class FoodSystem : MonoBehaviour
 #endif
     }
 
+    
     // ESTO NO DEBERIA IR AQUI JUEPUTA JULIAN ARREGLA ESA UI
     public void ChangeToLaunchScene()
     {
@@ -95,5 +107,10 @@ public class FoodSystem : MonoBehaviour
     private void OnEnable()
     {
         LaunchData.ResetLaunchData();
+    }
+
+    private void OnDisable()
+    {
+        sfx.release();
     }
 }
