@@ -14,27 +14,35 @@ public class SkinLoad_Module : MonoBehaviour
     [SerializeField] AnimatorOverrideController cacalienSkinOverride;
     [SerializeField] AnimatorOverrideController cacanautSkinOverride;
 
+    [SerializeField] VFXController_Module vfxController;
+
 
     private void Start()
     {
         switch (SkinData.ID)
         {
             case SkinID.Base:
+                vfxController.SetVFXForBaseCacaleta();
                 break;
             case SkinID.Kkawai:
                 GetComponent<Animator>().runtimeAnimatorController = kkawaiSkinOverride;
+                vfxController.SetVFXForKkawai();
                 break;
             case SkinID.Cacsycal:
                 GetComponent<Animator>().runtimeAnimatorController = cacsycalSkinOverride;
+                vfxController.SetVFXForShitsycal();
                 break;
             case SkinID.Cacowboy:
                 GetComponent<Animator>().runtimeAnimatorController = cacowboySkinOverride;
+                vfxController.SetVFXForCacowboy();
                 break;
             case SkinID.Cacalien:
                 GetComponent<Animator>().runtimeAnimatorController = cacalienSkinOverride;
+                vfxController.SetVFXForCacalien();
                 break;
             case SkinID.Cacanaut:
                 GetComponent<Animator>().runtimeAnimatorController = cacanautSkinOverride;
+                vfxController.SetVFXForCacanaut();
                 break;
             default:
                 Debug.LogError("No se inicializo la skin o no se encontro?");
