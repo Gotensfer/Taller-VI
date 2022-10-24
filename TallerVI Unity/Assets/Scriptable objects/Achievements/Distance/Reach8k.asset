@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ccc822e2ab056a4aab3a2e663a6091b, type: 3}
-  m_Name: Test C achievement
+  m_Script: {fileID: 11500000, guid: 566a8bdfac340d449a093458dd0a5a73, type: 3}
+  m_Name: Reach8k
   m_EditorClassIdentifier: 
-  _name: A collect achievement
-  gameCollectType: 0
-  collectsNeededForAchievement: 2
+  _name: 8000m
+  polaroidPrefab: {fileID: 1583331996983374535, guid: a6fb028da01046a4b9c46877d550dd04, type: 3}
+  distanceNeededForAchievement: 8000
