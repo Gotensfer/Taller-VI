@@ -365,7 +365,7 @@
 	<object class="MixerBusFader" id="{c4e25a98-d968-4966-9b99-1521e1b9c2ca}" />
 	<object class="SFXReverbEffect" id="{40e79da5-cd33-4db1-b20b-4217e87e2977}">
 		<property name="decayTime">
-			<value>1100</value>
+			<value>1300</value>
 		</property>
 		<property name="HFReference">
 			<value>3400</value>
@@ -416,7 +416,7 @@
 	<object class="MixerBusFader" id="{ec881738-8571-4263-82c3-2ff982f00deb}" />
 	<object class="SFXReverbEffect" id="{9495a8a2-3e13-4e4a-be42-547969eba327}">
 		<property name="decayTime">
-			<value>900</value>
+			<value>1000</value>
 		</property>
 		<property name="diffusion">
 			<value>55.5</value>
@@ -437,7 +437,7 @@
 	<object class="MixerBusFader" id="{3ae3386b-8beb-4685-b737-3b8654fb1f88}" />
 	<object class="SFXReverbEffect" id="{5dfa791c-bfa3-44a4-8ac7-f0f7db3e52da}">
 		<property name="decayTime">
-			<value>700</value>
+			<value>850</value>
 		</property>
 		<property name="diffusion">
 			<value>43.5</value>
@@ -458,7 +458,7 @@
 	<object class="MixerBusFader" id="{4e1b88d3-19b0-4097-96cc-e35aa66d19e6}" />
 	<object class="SFXReverbEffect" id="{424b74e1-9a7b-42f3-81bf-7f8b9f76d26b}">
 		<property name="decayTime">
-			<value>700</value>
+			<value>1000</value>
 		</property>
 		<property name="diffusion">
 			<value>43.5</value>

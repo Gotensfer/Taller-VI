@@ -67,5 +67,3 @@ public class FmodAutomatizationManager : MonoBehaviour
         altura = 0;
     }
 }
-
-//300-

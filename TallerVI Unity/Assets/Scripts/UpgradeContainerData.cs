@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public enum UpgradeType
 {
@@ -20,6 +22,9 @@ public class UpgradeContainerData : MonoBehaviour
 
     [SerializeField] UpgradeElement upgradeElement;
 
+    [SerializeField] TextMeshProUGUI costDisplay;
+
+    FMOD.Studio.EventInstance sfx;
     private void Start()
     {        
         switch (upgradeType)
@@ -82,7 +87,7 @@ public class UpgradeContainerData : MonoBehaviour
         {
             EconomyData.SpendCoins(cost);
             upgradeLevel++;
-
+            
             switch (upgradeType)
             {
                 case UpgradeType.Mitosis:
@@ -101,8 +106,16 @@ public class UpgradeContainerData : MonoBehaviour
                     PlayerPrefs.SetInt("Rocket Level", upgradeLevel);
                     break;
             }
-
+            //sfx money
+            sfx = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/UI/Buy");
+            sfx.start();
             PlayerPrefs.Save();
+        }
+        else
+        {
+            //sfx no money
+            sfx = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/UI/No money"); //sfx no money
+            sfx.start();
         }
 
         switch (upgradeLevel)
@@ -134,6 +147,9 @@ public class UpgradeContainerData : MonoBehaviour
         FirstStar.sprite = BlackStar;
         SecondStar.sprite = BlackStar;
         ThirdStar.sprite = BlackStar;
+
+        if (upgradeElement.L1_CoinCost == 0) costDisplay.text = "";
+        costDisplay.text = $"${upgradeElement.L1_CoinCost}";
     }
 
     public void SetOneStar()
@@ -141,6 +157,8 @@ public class UpgradeContainerData : MonoBehaviour
         FirstStar.sprite = GoldenStar;
         SecondStar.sprite = BlackStar; 
         ThirdStar.sprite = BlackStar;
+
+        costDisplay.text = $"${upgradeElement.L2_CoinCost}";
     }
 
     public void SetTwoStar()
@@ -148,6 +166,8 @@ public class UpgradeContainerData : MonoBehaviour
         FirstStar.sprite = GoldenStar;
         SecondStar.sprite = GoldenStar;
         ThirdStar.sprite = BlackStar;
+
+        costDisplay.text = $"${upgradeElement.L3_CoinCost}";
     }
 
     public void SetThreeStar()
@@ -155,5 +175,12 @@ public class UpgradeContainerData : MonoBehaviour
         FirstStar.sprite = GoldenStar;
         SecondStar.sprite = GoldenStar;
         ThirdStar.sprite = GoldenStar;
+
+        costDisplay.text = "";
+    }
+
+    private void OnDisable()
+    {
+        sfx.release();
     }
 }

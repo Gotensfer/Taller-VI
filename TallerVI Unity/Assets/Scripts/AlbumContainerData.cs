@@ -3,24 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum AlbumPhoto
-{
-    yamcha,
-    moonlanding,
-    kokun,
-    antrunoStark,
-    cacalverin
-}
-
 public class AlbumContainerData : MonoBehaviour
 {
-    [SerializeField] AlbumPhoto albumPhoto;
     [SerializeField] Sprite darkPolaroid;
-    [SerializeField] Sprite photo;
+    [SerializeField] Achievement achievement;
 
     public void EnablePhoto()
     {
-        GetComponent<Image>().sprite = photo;
+        GetComponent<Image>().sprite = achievement.albumPolaroidImage;
         GetComponent<Button>().interactable = true;
     }
 
@@ -32,60 +22,17 @@ public class AlbumContainerData : MonoBehaviour
 
     private void Start()
     {
-        // En efecto, que asco de codigo
+        // En efecto, que asco de codigo -Juanfer del pasado con el código original
 
-        switch (albumPhoto)
+        // En efecto, que código tan hermoso -Juanfer que refactorizó con el nuevo sistema de logros
+
+        if (PlayerPrefs.GetInt(achievement._name, -1) == 1)
         {
-            case AlbumPhoto.yamcha:
-                if (PlayerPrefs.GetInt($"Achievement1", -1) == 1) // 2k
-                {
-                    EnablePhoto();
-                }
-                else
-                {
-                    DisablePhoto();
-                }
-                break;
-            case AlbumPhoto.moonlanding:
-                if (PlayerPrefs.GetInt($"Achievement5", -1) == 1) // 500m alt
-                {
-                    EnablePhoto();
-                }
-                else
-                {
-                    DisablePhoto();
-                }
-                break;
-            case AlbumPhoto.kokun:
-                if (PlayerPrefs.GetInt($"Achievement2", -1) == 1) // 4k
-                {
-                    EnablePhoto();
-                }
-                else
-                {
-                    DisablePhoto();
-                }
-                break;
-            case AlbumPhoto.antrunoStark:
-                if (PlayerPrefs.GetInt($"Achievement3", -1) == 1) // 6k
-                {
-                    EnablePhoto();
-                }
-                else
-                {
-                    DisablePhoto();
-                }
-                break;
-            case AlbumPhoto.cacalverin:
-                if (PlayerPrefs.GetInt($"Achievement4", -1) == 1) // 8k
-                {
-                    EnablePhoto();
-                }
-                else
-                {
-                    DisablePhoto();
-                }
-                break;
+            EnablePhoto();
+        }
+        else
+        {
+            DisablePhoto();
         }
     }
 }

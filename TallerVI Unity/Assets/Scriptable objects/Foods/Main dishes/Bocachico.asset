@@ -17,4 +17,4 @@ MonoBehaviour:
   impulse: 15
   bounces: 0
   type: 1
-  coinPrice: 10
+  coinPrice: 0
