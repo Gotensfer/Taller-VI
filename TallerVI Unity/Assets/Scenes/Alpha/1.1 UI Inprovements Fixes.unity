@@ -5205,6 +5205,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1945389762}
+        m_TargetAssemblyTypeName: EventCountTracker_Module, Assembly-CSharp
+        m_MethodName: AddLaunchCountToTracker
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   BounceEvent:
     m_PersistentCalls:
       m_Calls:
@@ -5235,6 +5247,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1424772947}
         m_TargetAssemblyTypeName: FmodEventManager, Assembly-CSharp
         m_MethodName: BounceSfx
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1945389762}
+        m_TargetAssemblyTypeName: EventCountTracker_Module, Assembly-CSharp
+        m_MethodName: AddBounceCountToTracker
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5343,7 +5367,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1945389760}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: AchievementTracker, Assembly-CSharp
         m_MethodName: CheckAchievements
         m_Mode: 1
@@ -5382,6 +5406,54 @@ MonoBehaviour:
       - m_Target: {fileID: 1728376861}
         m_TargetAssemblyTypeName: PowerUpRestraint_TempModule, Assembly-CSharp
         m_MethodName: DisablePowerUpButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1945389762}
+        m_TargetAssemblyTypeName: EventCountTracker_Module, Assembly-CSharp
+        m_MethodName: AddCrashCountToTracker
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1945389762}
+        m_TargetAssemblyTypeName: EventCountTracker_Module, Assembly-CSharp
+        m_MethodName: AddCollectedCountsToShenanigans
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1945389761}
+        m_TargetAssemblyTypeName: CollectedCountTracker_Module, Assembly-CSharp
+        m_MethodName: AddCollectedCountsToShenanigans
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1765487572}
+        m_TargetAssemblyTypeName: AchievementManager, Assembly-CSharp
+        m_MethodName: CheckAchievements
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5613,6 +5685,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1945389761}
+        m_TargetAssemblyTypeName: CollectedCountTracker_Module, Assembly-CSharp
+        m_MethodName: AddChilliCountToTracker
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   PidgeonEvent:
     m_PersistentCalls:
       m_Calls:
@@ -5643,6 +5727,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1930915045}
         m_TargetAssemblyTypeName: UIInterfaceInGame, Assembly-CSharp
         m_MethodName: PidgeonTutorial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1945389761}
+        m_TargetAssemblyTypeName: CollectedCountTracker_Module, Assembly-CSharp
+        m_MethodName: AddPidgeonCountToTracker
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5694,6 +5790,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1930915045}
         m_TargetAssemblyTypeName: UIInterfaceInGame, Assembly-CSharp
         m_MethodName: RocketTutorial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1945389761}
+        m_TargetAssemblyTypeName: CollectedCountTracker_Module, Assembly-CSharp
+        m_MethodName: AddRocketCountToTracker
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11357,6 +11465,7 @@ Transform:
   - {fileID: 645198001}
   - {fileID: 1424772946}
   - {fileID: 56071237}
+  - {fileID: 1765487571}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12057,6 +12166,42 @@ RectTransform:
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -4.2825, y: 3}
   m_SizeDelta: {x: 907.36, y: 44}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1617937024
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1617937025}
+  m_Layer: 5
+  m_Name: Spawnpoint polaroids
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1617937025
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617937024}
+  m_LocalRotation: {x: 0, y: 0, z: 0.11320323, w: 0.9935719}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2098056190}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 13}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 900, y: -200}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1629207724
 GameObject:
@@ -13243,6 +13388,68 @@ Transform:
   m_Father: {fileID: 1191508377}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1765487570
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1765487571}
+  - component: {fileID: 1765487572}
+  m_Layer: 0
+  m_Name: Achievement manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1765487571
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765487570}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1456706266}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1765487572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765487570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bd7bcdc4aa93d84991e60a60f169a22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trackedAchievements:
+  - {fileID: 11400000, guid: 41e031e4359fbcd42a4f37043c73aade, type: 2}
+  - {fileID: 11400000, guid: c3bd8c42bdeb31c45a0a504ff5109249, type: 2}
+  - {fileID: 11400000, guid: f2a246b637b100e48a66a20d25f2927e, type: 2}
+  - {fileID: 11400000, guid: bef14d6180065d6418a00f2c8f8f04db, type: 2}
+  - {fileID: 11400000, guid: 483d58f0b2902aa4da97f51bcf078994, type: 2}
+  - {fileID: 11400000, guid: b4d7f5b52b51ade40a781afdc63faaf0, type: 2}
+  - {fileID: 11400000, guid: 3ad76820de77c2246bafd30057430ed6, type: 2}
+  - {fileID: 11400000, guid: 70adc5d1b6b5a58458c692a908b08dfd, type: 2}
+  - {fileID: 11400000, guid: 30972a6e12130aa47a571303f518fc5b, type: 2}
+  - {fileID: 11400000, guid: 5c1b2e28bc6211f4bbfae20bd841be0f, type: 2}
+  distanceTracker_Module: {fileID: 1945389757}
+  altitudeTracker_Module: {fileID: 1945389758}
+  collectedCountTracker_Module: {fileID: 1945389761}
+  eventCountTracker_Module: {fileID: 1945389762}
+  displayTimeForAwardedAchievement: 3
+  polaroidSpawnPosition: {fileID: 1617937025}
+  goToAlbumPolaroid: {fileID: 1583331996983374535, guid: c06525482e7095f44988b8627c7a734c, type: 3}
 --- !u!1 &1781760780
 GameObject:
   m_ObjectHideFlags: 0
@@ -13545,6 +13752,7 @@ RectTransform:
   m_Children:
   - {fileID: 1809170951}
   - {fileID: 1450302517}
+  - {fileID: 2098056190}
   m_Father: {fileID: 337407897}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14577,7 +14785,8 @@ GameObject:
   - component: {fileID: 1945389757}
   - component: {fileID: 1945389758}
   - component: {fileID: 1945389759}
-  - component: {fileID: 1945389760}
+  - component: {fileID: 1945389762}
+  - component: {fileID: 1945389761}
   m_Layer: 0
   m_Name: StatTracker
   m_TagString: Untagged
@@ -14641,7 +14850,7 @@ MonoBehaviour:
   coinPerDistanceData: {fileID: 11400000, guid: 54a3f29da3b538d4d97f54d411dfb0a1, type: 2}
   distanceTracker_Module: {fileID: 1945389757}
   earnedMoneysDisplay: {fileID: 817340753}
---- !u!114 &1945389760
+--- !u!114 &1945389761
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14650,11 +14859,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1945389755}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a53884f0c43d66498bdaff1cadb9835, type: 3}
+  m_Script: {fileID: 11500000, guid: 9c88158d7f37f3c48a28d136f59908e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceTracker_Module: {fileID: 1945389757}
-  altitudeTracker_Module: {fileID: 1945389758}
+--- !u!114 &1945389762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945389755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbd580b0643b35b4c81ec628ee75625a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1950327588
 GameObject:
   m_ObjectHideFlags: 0
@@ -15542,6 +15761,43 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2093513029}
   m_CullTransparentMesh: 1
+--- !u!1 &2098056189
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2098056190}
+  m_Layer: 5
+  m_Name: AchievementUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2098056190
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098056189}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1617937025}
+  m_Father: {fileID: 1824287672}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 8.580082, y: 2.25}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2124052599
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,12 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Alpha/1.1 Initializing Scene.unity
     guid: 494cfad876dd3e5449446c6ec2a415c7
   - enabled: 1
-    path: Assets/Scenes/Alpha/1.1 Main menu SFX.unity
-    guid: 80a75ad3acca811439508bf72d334ba8
+    path: Assets/Scenes/Alpha/1.1 Main menu.unity
+    guid: baa10989913809447a6c0c29030e5db4
   - enabled: 1
     path: Assets/Scenes/Alpha/1.1 UI Inprovements Fixes.unity
     guid: 096b111a37497eb4986e4f3ac9dd0c82
-  - enabled: 1
-    path: Assets/Scenes/Alpha/1.1 UI Inprovements.unity
-    guid: 917efe39c4660234bbc291597fe0e1f6
   m_configObjects: {}

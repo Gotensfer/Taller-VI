@@ -254,6 +254,7 @@ GameObject:
   - component: {fileID: 1773197983}
   - component: {fileID: 1773197985}
   - component: {fileID: 1773197984}
+  - component: {fileID: 1773197987}
   - component: {fileID: 1773197986}
   m_Layer: 0
   m_Name: Initializer
@@ -337,3 +338,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b326b90f83ef4943bb7bc5674f750d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1773197987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773197980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85e267244dd7c4848bf3a703fac7dc04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trackedAchievements:
+  - {fileID: 11400000, guid: 41e031e4359fbcd42a4f37043c73aade, type: 2}
+  - {fileID: 11400000, guid: c3bd8c42bdeb31c45a0a504ff5109249, type: 2}
+  - {fileID: 11400000, guid: f2a246b637b100e48a66a20d25f2927e, type: 2}
+  - {fileID: 11400000, guid: bef14d6180065d6418a00f2c8f8f04db, type: 2}
+  - {fileID: 11400000, guid: 483d58f0b2902aa4da97f51bcf078994, type: 2}
+  - {fileID: 11400000, guid: b4d7f5b52b51ade40a781afdc63faaf0, type: 2}
+  - {fileID: 11400000, guid: 3ad76820de77c2246bafd30057430ed6, type: 2}
+  - {fileID: 11400000, guid: 70adc5d1b6b5a58458c692a908b08dfd, type: 2}
+  - {fileID: 11400000, guid: 30972a6e12130aa47a571303f518fc5b, type: 2}
+  - {fileID: 11400000, guid: 5c1b2e28bc6211f4bbfae20bd841be0f, type: 2}

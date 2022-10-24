@@ -7672,9 +7672,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a55f5c6cb6b40b8448c542225f80ce49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  albumPhoto: 3
   darkPolaroid: {fileID: 21300000, guid: d2dea6d98f533e84a9dcc8b528e68aeb, type: 3}
-  photo: {fileID: 21300000, guid: 3d1a027f08abad74aaae7a7e9d99707e, type: 3}
+  achievement: {fileID: 11400000, guid: 70adc5d1b6b5a58458c692a908b08dfd, type: 2}
 --- !u!1 &398559767
 GameObject:
   m_ObjectHideFlags: 0
@@ -9312,9 +9311,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a55f5c6cb6b40b8448c542225f80ce49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  albumPhoto: 0
-  darkPolaroid: {fileID: 0}
-  photo: {fileID: 0}
+  darkPolaroid: {fileID: 21300000, guid: d2dea6d98f533e84a9dcc8b528e68aeb, type: 3}
+  achievement: {fileID: 11400000, guid: c3bd8c42bdeb31c45a0a504ff5109249, type: 2}
 --- !u!1 &499025086
 GameObject:
   m_ObjectHideFlags: 0
@@ -9814,9 +9812,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a55f5c6cb6b40b8448c542225f80ce49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  albumPhoto: 0
-  darkPolaroid: {fileID: 0}
-  photo: {fileID: 0}
+  darkPolaroid: {fileID: 21300000, guid: d2dea6d98f533e84a9dcc8b528e68aeb, type: 3}
+  achievement: {fileID: 11400000, guid: bef14d6180065d6418a00f2c8f8f04db, type: 2}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -14928,9 +14925,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a55f5c6cb6b40b8448c542225f80ce49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  albumPhoto: 0
-  darkPolaroid: {fileID: 0}
-  photo: {fileID: 0}
+  darkPolaroid: {fileID: 21300000, guid: d2dea6d98f533e84a9dcc8b528e68aeb, type: 3}
+  achievement: {fileID: 11400000, guid: 41e031e4359fbcd42a4f37043c73aade, type: 2}
 --- !u!1 &857844599
 GameObject:
   m_ObjectHideFlags: 0
@@ -19955,9 +19951,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a55f5c6cb6b40b8448c542225f80ce49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  albumPhoto: 0
   darkPolaroid: {fileID: 21300000, guid: d2dea6d98f533e84a9dcc8b528e68aeb, type: 3}
-  photo: {fileID: 21300000, guid: 66f7d83657fcc5143baaa083b37a6e38, type: 3}
+  achievement: {fileID: 11400000, guid: 483d58f0b2902aa4da97f51bcf078994, type: 2}
 --- !u!1 &1217088042
 GameObject:
   m_ObjectHideFlags: 0
@@ -20467,9 +20462,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a55f5c6cb6b40b8448c542225f80ce49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  albumPhoto: 1
   darkPolaroid: {fileID: 21300000, guid: d2dea6d98f533e84a9dcc8b528e68aeb, type: 3}
-  photo: {fileID: 21300000, guid: dce4481fd0e1cf045871fd7d960b8fd7, type: 3}
+  achievement: {fileID: 11400000, guid: b4d7f5b52b51ade40a781afdc63faaf0, type: 2}
 --- !u!1 &1234698954
 GameObject:
   m_ObjectHideFlags: 0
@@ -21950,9 +21944,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a55f5c6cb6b40b8448c542225f80ce49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  albumPhoto: 4
   darkPolaroid: {fileID: 21300000, guid: d2dea6d98f533e84a9dcc8b528e68aeb, type: 3}
-  photo: {fileID: 21300000, guid: fcfa14e520adee0479343cc1df70f17d, type: 3}
+  achievement: {fileID: 11400000, guid: 30972a6e12130aa47a571303f518fc5b, type: 2}
 --- !u!1 &1314795113
 GameObject:
   m_ObjectHideFlags: 0
@@ -29441,9 +29434,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a55f5c6cb6b40b8448c542225f80ce49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  albumPhoto: 2
   darkPolaroid: {fileID: 21300000, guid: d2dea6d98f533e84a9dcc8b528e68aeb, type: 3}
-  photo: {fileID: 21300000, guid: b05bc3fbe3c22654cadf7f25db9cebab, type: 3}
+  achievement: {fileID: 11400000, guid: 3ad76820de77c2246bafd30057430ed6, type: 2}
 --- !u!1 &1736325333
 GameObject:
   m_ObjectHideFlags: 0
@@ -29881,9 +29873,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a55f5c6cb6b40b8448c542225f80ce49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  albumPhoto: 0
-  darkPolaroid: {fileID: 0}
-  photo: {fileID: 0}
+  darkPolaroid: {fileID: 21300000, guid: d2dea6d98f533e84a9dcc8b528e68aeb, type: 3}
+  achievement: {fileID: 11400000, guid: f2a246b637b100e48a66a20d25f2927e, type: 2}
 --- !u!1 &1755311414
 GameObject:
   m_ObjectHideFlags: 0
@@ -31422,7 +31413,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1883162893
 RectTransform:
   m_ObjectHideFlags: 0
@@ -33309,9 +33300,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a55f5c6cb6b40b8448c542225f80ce49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  albumPhoto: 0
-  darkPolaroid: {fileID: 0}
-  photo: {fileID: 0}
+  darkPolaroid: {fileID: 21300000, guid: d2dea6d98f533e84a9dcc8b528e68aeb, type: 3}
+  achievement: {fileID: 11400000, guid: 5c1b2e28bc6211f4bbfae20bd841be0f, type: 2}
 --- !u!1 &2001753887
 GameObject:
   m_ObjectHideFlags: 0
