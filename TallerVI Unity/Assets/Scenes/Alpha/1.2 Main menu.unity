@@ -11544,6 +11544,9 @@ MonoBehaviour:
   - {fileID: 1606451286}
   - {fileID: 834907580}
   - {fileID: 1736325333}
+  launchTextButton: {fileID: 448133696}
+  launchImage: {fileID: 902698669}
+  launchButton: {fileID: 1622905271}
 --- !u!1 &660628536
 GameObject:
   m_ObjectHideFlags: 0

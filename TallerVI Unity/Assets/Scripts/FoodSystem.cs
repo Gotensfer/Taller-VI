@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement; // JULIAN HDTPM
 using System;
+using TMPro;
+using UnityEngine.UI;
 
 // Deprecado, no hace nada por ahora, pero la idea es meterlo en un custom editor más adelante (?
 public enum FoodID
@@ -112,5 +114,29 @@ public class FoodSystem : MonoBehaviour
     private void OnDisable()
     {
         sfx.release();
+    }
+
+    // Esto es una muy mala practica - JF
+    [SerializeField] TextMeshProUGUI launchTextButton;
+    [SerializeField] Image launchImage;
+    [SerializeField] Button launchButton;
+
+    Color unavailable = new Color(1, 1, 1, 0.5f);
+    Color available = new Color(1, 1, 1, 1);
+    private void Update()
+    {
+        if (addedFoods.Count != 3)
+        {
+            launchTextButton.alpha = 0.5f;
+            launchImage.color = unavailable;
+            launchButton.interactable = false;
+        }
+        else
+        {
+            launchTextButton.alpha = 1f;
+            launchImage.color = available;
+            launchButton.interactable = true;
+        }
+        
     }
 }
