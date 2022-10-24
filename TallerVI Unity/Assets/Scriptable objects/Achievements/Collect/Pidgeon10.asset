@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Pidgeon10
   m_EditorClassIdentifier: 
   _name: Pidgeon10
-  polaroidPrefab: {fileID: 1583331996983374535, guid: 5ede8e62376cd1a469d98aa86a5a0826, type: 3}
+  polaroidPrefabForAchievement: {fileID: 1583331996983374535, guid: 5ede8e62376cd1a469d98aa86a5a0826, type: 3}
+  albumPolaroidImage: {fileID: 0}
   gameCollectType: 1
   collectsNeededForAchievement: 10

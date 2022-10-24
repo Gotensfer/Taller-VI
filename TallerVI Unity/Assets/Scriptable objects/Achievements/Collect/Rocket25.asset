@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Rocket25
   m_EditorClassIdentifier: 
   _name: Rocket25
-  polaroidPrefab: {fileID: 1583331996983374535, guid: ac455b6d2b59ae14ca68c1b6b93a291e, type: 3}
+  polaroidPrefabForAchievement: {fileID: 1583331996983374535, guid: ac455b6d2b59ae14ca68c1b6b93a291e, type: 3}
+  albumPolaroidImage: {fileID: 0}
   gameCollectType: 2
   collectsNeededForAchievement: 25

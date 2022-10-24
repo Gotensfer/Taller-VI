@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 566a8bdfac340d449a093458dd0a5a73, type: 3}
-  m_Name: Reach10k
+  m_Script: {fileID: 11500000, guid: 3c435005de309ef408bb02a1bccc0f8c, type: 3}
+  m_Name: Boungshit
   m_EditorClassIdentifier: 
-  _name: 10000m
-  polaroidPrefabForAchievement: {fileID: 1583331996983374535, guid: e8a963d47347b41438927470a7535f08, type: 3}
+  _name: Boungshit
+  polaroidPrefabForAchievement: {fileID: 1583331996983374535, guid: 11a1ad7073bda8d469967e12978ec9dc, type: 3}
   albumPolaroidImage: {fileID: 21300000, guid: dce4481fd0e1cf045871fd7d960b8fd7, type: 3}
-  distanceNeededForAchievement: 10000
+  gameEventType: 1
+  timesNeededForAchievement: 4

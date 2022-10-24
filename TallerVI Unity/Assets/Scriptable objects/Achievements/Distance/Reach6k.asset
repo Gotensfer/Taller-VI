@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Reach6k
   m_EditorClassIdentifier: 
   _name: 6000m
-  polaroidPrefab: {fileID: 1583331996983374535, guid: 63f3d66fde17344408833233c7c427f3, type: 3}
+  polaroidPrefabForAchievement: {fileID: 1583331996983374535, guid: 63f3d66fde17344408833233c7c427f3, type: 3}
+  albumPolaroidImage: {fileID: 21300000, guid: 3d1a027f08abad74aaae7a7e9d99707e, type: 3}
   distanceNeededForAchievement: 6000

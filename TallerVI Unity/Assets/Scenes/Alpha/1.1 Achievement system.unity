@@ -5179,6 +5179,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1945389760}
+        m_TargetAssemblyTypeName: EventCountTracker_Module, Assembly-CSharp
+        m_MethodName: AddBounceCountToTracker
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   CrashEvent:
     m_PersistentCalls:
       m_Calls:
@@ -5278,7 +5290,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1945389760}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: AchievementTracker, Assembly-CSharp
         m_MethodName: CheckAchievements
         m_Mode: 1
@@ -7894,11 +7906,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trackedAchievements:
-  - {fileID: 11400000, guid: 96dbade4e72cead4393901457898b4ec, type: 2}
-  - {fileID: 11400000, guid: 27db090077e67cd45a679311d1c60ed0, type: 2}
-  - {fileID: 11400000, guid: fa04f39be9083db4b80efe7fac404ccc, type: 2}
+  - {fileID: 11400000, guid: 5c1b2e28bc6211f4bbfae20bd841be0f, type: 2}
   distanceTracker_Module: {fileID: 1945389757}
   altitudeTracker_Module: {fileID: 1945389758}
+  collectedCountTracker_Module: {fileID: 1945389761}
+  eventCountTracker_Module: {fileID: 1945389760}
   displayTimeForAwardedAchievement: 3
   polaroidSpawnPosition: {fileID: 894087267}
   goToAlbumPolaroid: {fileID: 1583331996983374535, guid: c06525482e7095f44988b8627c7a734c, type: 3}
@@ -13913,6 +13925,7 @@ GameObject:
   - component: {fileID: 1945389757}
   - component: {fileID: 1945389758}
   - component: {fileID: 1945389759}
+  - component: {fileID: 1945389761}
   - component: {fileID: 1945389760}
   m_Layer: 0
   m_Name: StatTracker
@@ -13986,11 +13999,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1945389755}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a53884f0c43d66498bdaff1cadb9835, type: 3}
+  m_Script: {fileID: 11500000, guid: bbd580b0643b35b4c81ec628ee75625a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceTracker_Module: {fileID: 1945389757}
-  altitudeTracker_Module: {fileID: 1945389758}
+--- !u!114 &1945389761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945389755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c88158d7f37f3c48a28d136f59908e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1950327588
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,5 +5,6 @@ using UnityEngine;
 public class Achievement : ScriptableObject
 {
     public string _name;
-    public GameObject polaroidPrefab;
+    public GameObject polaroidPrefabForAchievement;
+    public Sprite albumPolaroidImage;
 }

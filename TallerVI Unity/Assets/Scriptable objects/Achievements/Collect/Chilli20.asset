@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Chilli20
   m_EditorClassIdentifier: 
   _name: Chilli20
-  polaroidPrefab: {fileID: 1583331996983374535, guid: 1e7c8856d8c122d40a523ad93215b08c, type: 3}
+  polaroidPrefabForAchievement: {fileID: 1583331996983374535, guid: 1e7c8856d8c122d40a523ad93215b08c, type: 3}
+  albumPolaroidImage: {fileID: 0}
   gameCollectType: 0
   collectsNeededForAchievement: 20

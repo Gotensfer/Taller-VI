@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Reach4k
   m_EditorClassIdentifier: 
   _name: 4000m
-  polaroidPrefab: {fileID: 1583331996983374535, guid: 543c2d785e73a1d45bee65f8c49d7d38, type: 3}
+  polaroidPrefabForAchievement: {fileID: 1583331996983374535, guid: 543c2d785e73a1d45bee65f8c49d7d38, type: 3}
+  albumPolaroidImage: {fileID: 21300000, guid: b05bc3fbe3c22654cadf7f25db9cebab, type: 3}
   distanceNeededForAchievement: 4000

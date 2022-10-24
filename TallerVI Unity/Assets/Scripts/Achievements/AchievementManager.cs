@@ -10,7 +10,8 @@ public class AchievementManager : MonoBehaviour
 
     [SerializeField] DistanceTracker_Module distanceTracker_Module;
     [SerializeField] AltitudeTracker_Module altitudeTracker_Module;
-    // Tracker de coger
+    [SerializeField] CollectedCountTracker_Module collectedCountTracker_Module;
+    [SerializeField] EventCountTracker_Module eventCountTracker_Module;
     // Tracker de eventos
 
     [SerializeField] float displayTimeForAwardedAchievement;
@@ -26,13 +27,23 @@ public class AchievementManager : MonoBehaviour
 
     public void CheckAchievements()
     {
-        int len = trackedAchievements.Length;
+        float startTime = Time.realtimeSinceStartup; // Para motivos de debug
+
+       
         int trackedDistance = (int)distanceTracker_Module.travelledDistance;
         int trackedMaxAltitude = (int)altitudeTracker_Module.MaxAltitude;
 
+        int collectedPidgeonsThisRun = collectedCountTracker_Module.pidgeonsThisRun;
+        int collectedChillisThisRun = collectedCountTracker_Module.chillisThisRun;
+        int collectedRocketsThisRun = collectedCountTracker_Module.rocketsThisRun;
 
-        float startTime = Time.realtimeSinceStartup;
+        int bouncesThisRun = eventCountTracker_Module.bouncesCountThisRun;
 
+        int totalLaunchCount = ShenaniganData.launchesCount;
+        int totalCrashCount = ShenaniganData.crashesCount;
+
+
+        int len = trackedAchievements.Length;
         for (int i = 0; i < len; i++)
         {
             // Si ya se ganó el logro, omitir el check e ir al siguiente logro.
@@ -69,11 +80,57 @@ public class AchievementManager : MonoBehaviour
                     break;
 
                 case CollectAchievement:
-                    print("This is a collect achivement");
+                    CollectAchievement collectAchievement = trackedAchievements[i] as CollectAchievement;
+
+                    bool gotCollectAchievement = false;
+                    switch (collectAchievement.gameCollectType) // Comparar valores dependiendo de que requiere el logro.
+                    {
+                        case GameCollectType.Chilli:
+                            if (collectedChillisThisRun >= collectAchievement.collectsNeededForAchievement) gotCollectAchievement = true;
+                            break;
+                        case GameCollectType.Pidgeon:
+                            if (collectedPidgeonsThisRun >= collectAchievement.collectsNeededForAchievement) gotCollectAchievement = true;
+                            break;
+                        case GameCollectType.Rocket:
+                            if (collectedRocketsThisRun >= collectAchievement.collectsNeededForAchievement) gotCollectAchievement = true;
+                            break;
+                    }
+                     
+                    if (gotCollectAchievement) // En caso de obtenerse el logro
+                    {
+                        print($"Got achievement {collectAchievement._name}");
+
+                        AwardAchievement(collectAchievement);
+                        EnqueueAchievementWon(collectAchievement);
+                    }
+
                     break;
 
                 case EventAchievement:
-                    print("this is an event achievement");
+                    EventAchievement eventAchievement = trackedAchievements[i] as EventAchievement;
+
+                    bool gotEventAchievement = false;
+                    switch (eventAchievement.gameEventType)
+                    {
+                        case GameEventType.Launch:
+                            if (totalLaunchCount >= eventAchievement.timesNeededForAchievement) gotEventAchievement = true;
+                            break;
+                        case GameEventType.Bounce:
+                            if (bouncesThisRun >= eventAchievement.timesNeededForAchievement) gotEventAchievement = true;
+                            break;
+                        case GameEventType.Crash:
+                            if (totalCrashCount >= eventAchievement.timesNeededForAchievement) gotEventAchievement = true;
+                            break;
+                    }
+
+                    if (gotEventAchievement) // En caso de obtenerse el logro
+                    {
+                        print($"Got achievement {eventAchievement._name}");
+
+                        AwardAchievement(eventAchievement);
+                        EnqueueAchievementWon(eventAchievement);
+                    }
+
                     break;
             }
         }
@@ -104,11 +161,10 @@ public class AchievementManager : MonoBehaviour
         for (int i = 0; i < len; i++)
         {
             achievement = wonAchievementQueue.Dequeue();
-            // Tween to show and unshow
 
             Sequence tween = DOTween.Sequence();
 
-            polaroidPrefab = Instantiate(achievement.polaroidPrefab, polaroidSpawnPosition.position, polaroidSpawnPosition.rotation, polaroidSpawnPosition).GetComponent<RectTransform>();
+            polaroidPrefab = Instantiate(achievement.polaroidPrefabForAchievement, polaroidSpawnPosition.position, polaroidSpawnPosition.rotation, polaroidSpawnPosition).GetComponent<RectTransform>();
 
             polaroidPrefab.localScale = Vector3.zero;
 

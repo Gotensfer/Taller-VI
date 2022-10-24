@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Test40m
   m_EditorClassIdentifier: 
   _name: efcaxczxv
-  polaroidPrefab: {fileID: 1583331996983374535, guid: 543c2d785e73a1d45bee65f8c49d7d38, type: 3}
+  polaroidPrefabForAchievement: {fileID: 1583331996983374535, guid: a229ce17cf426454b8b3861ff1b28a3b, type: 3}
+  albumPolaroidImage: {fileID: 21300000, guid: dce4481fd0e1cf045871fd7d960b8fd7, type: 3}
   distanceNeededForAchievement: 40
