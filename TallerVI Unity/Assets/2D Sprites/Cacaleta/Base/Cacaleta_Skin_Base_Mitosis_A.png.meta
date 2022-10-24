@@ -66,7 +66,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -769,10 +769,10 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Cacaleta_Skin_Base_Mitosis_Up_2: 920808574
-      Cacaleta_Skin_Base_Mitosis_Up_1: -1088448449
-      Cacaleta_Skin_Base_Mitosis_Up_10: -1929723528
-      Cacaleta_Skin_Base_Mitosis_Up_8: -1039122042
       Cacaleta_Skin_Base_Mitosis_Up_11: -2046114407
+      Cacaleta_Skin_Base_Mitosis_Up_10: -1929723528
+      Cacaleta_Skin_Base_Mitosis_Up_24: -1358677373
+      Cacaleta_Skin_Base_Mitosis_Up_1: -1088448449
       Cacaleta_Skin_Base_Mitosis_Up_15: -757178592
       Cacaleta_Skin_Base_Mitosis_Up_9: 1855599023
       Cacaleta_Skin_Base_Mitosis_Up_26: -2122088469
@@ -797,7 +797,7 @@ TextureImporter:
       Cacaleta_Skin_Base_Mitosis_Up_3: -255743965
       Cacaleta_Skin_Base_Mitosis_Up_5: 372052061
       Cacaleta_Skin_Base_Mitosis_Up_4: 1154638372
-      Cacaleta_Skin_Base_Mitosis_Up_24: -1358677373
+      Cacaleta_Skin_Base_Mitosis_Up_8: -1039122042
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
