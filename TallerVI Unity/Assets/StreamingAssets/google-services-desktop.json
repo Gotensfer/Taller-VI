@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "860145259076",
+    "firebase_url": "https://flying-crap-default-rtdb.firebaseio.com",
+    "project_id": "flying-crap",
+    "storage_bucket": "flying-crap.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:860145259076:android:1e1b4b9cbdd8f0b71ca211",
+        "android_client_info": {
+          "package_name": "com.Avokado.FlyingCrap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "860145259076-kfvekqj5sldm304qtopbat7g3au9df83.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWmjlQ0liPzlQ_obV3LI1g6v-QfFDybDQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "860145259076-kfvekqj5sldm304qtopbat7g3au9df83.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
