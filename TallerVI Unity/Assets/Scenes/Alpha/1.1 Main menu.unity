@@ -552,6 +552,7 @@ MonoBehaviour:
   upgradeType: 0
   upgradeLevel: -1
   upgradeElement: {fileID: 11400000, guid: 924dd799db0e90348aacaa489c44e1e9, type: 2}
+  costDisplay: {fileID: 1792343402}
   FirstStar: {fileID: 524503859}
   SecondStar: {fileID: 122000552}
   ThirdStar: {fileID: 958134642}
@@ -2948,6 +2949,7 @@ MonoBehaviour:
   upgradeType: 4
   upgradeLevel: -1
   upgradeElement: {fileID: 11400000, guid: c4aae1fc8ee369746887eb098bc94706, type: 2}
+  costDisplay: {fileID: 1173700889}
   FirstStar: {fileID: 724718899}
   SecondStar: {fileID: 499025089}
   ThirdStar: {fileID: 2145941597}
@@ -16902,6 +16904,7 @@ MonoBehaviour:
   upgradeType: 3
   upgradeLevel: -1
   upgradeElement: {fileID: 11400000, guid: dcd4436ad0dd07143ab514bb5a73e630, type: 2}
+  costDisplay: {fileID: 295733399}
   FirstStar: {fileID: 571563531}
   SecondStar: {fileID: 630694207}
   ThirdStar: {fileID: 653460086}
@@ -18181,6 +18184,7 @@ MonoBehaviour:
   upgradeType: 5
   upgradeLevel: -1
   upgradeElement: {fileID: 11400000, guid: 6bfe5f8bbf7a97f4bb3b32061fac0609, type: 2}
+  costDisplay: {fileID: 109185480}
   FirstStar: {fileID: 2054661874}
   SecondStar: {fileID: 1371336900}
   ThirdStar: {fileID: 923445201}
@@ -22790,6 +22794,7 @@ MonoBehaviour:
   upgradeType: 2
   upgradeLevel: -1
   upgradeElement: {fileID: 11400000, guid: 327eea602bc14c9438b185e99f538e3e, type: 2}
+  costDisplay: {fileID: 2065106031}
   FirstStar: {fileID: 398559770}
   SecondStar: {fileID: 861313791}
   ThirdStar: {fileID: 690309204}
@@ -33124,7 +33129,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1980559423
 RectTransform:
   m_ObjectHideFlags: 0

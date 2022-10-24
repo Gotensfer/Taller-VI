@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public enum UpgradeType
 {
@@ -20,6 +21,8 @@ public class UpgradeContainerData : MonoBehaviour
     [SerializeField] int upgradeLevel = -1;
 
     [SerializeField] UpgradeElement upgradeElement;
+
+    [SerializeField] TextMeshProUGUI costDisplay;
 
     FMOD.Studio.EventInstance sfx;
     private void Start()
@@ -144,6 +147,9 @@ public class UpgradeContainerData : MonoBehaviour
         FirstStar.sprite = BlackStar;
         SecondStar.sprite = BlackStar;
         ThirdStar.sprite = BlackStar;
+
+        if (upgradeElement.L1_CoinCost == 0) costDisplay.text = "";
+        costDisplay.text = $"${upgradeElement.L1_CoinCost}";
     }
 
     public void SetOneStar()
@@ -151,6 +157,8 @@ public class UpgradeContainerData : MonoBehaviour
         FirstStar.sprite = GoldenStar;
         SecondStar.sprite = BlackStar; 
         ThirdStar.sprite = BlackStar;
+
+        costDisplay.text = $"${upgradeElement.L2_CoinCost}";
     }
 
     public void SetTwoStar()
@@ -158,6 +166,8 @@ public class UpgradeContainerData : MonoBehaviour
         FirstStar.sprite = GoldenStar;
         SecondStar.sprite = GoldenStar;
         ThirdStar.sprite = BlackStar;
+
+        costDisplay.text = $"${upgradeElement.L3_CoinCost}";
     }
 
     public void SetThreeStar()
@@ -165,6 +175,8 @@ public class UpgradeContainerData : MonoBehaviour
         FirstStar.sprite = GoldenStar;
         SecondStar.sprite = GoldenStar;
         ThirdStar.sprite = GoldenStar;
+
+        costDisplay.text = "";
     }
 
     private void OnDisable()
