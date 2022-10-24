@@ -25,8 +25,9 @@ public class LaunchModule : MonoBehaviour
     // A petici�n del producer: el jugador no debe poder chocar con powerups por x tiempo
     [SerializeField] float timeToReEnableCollisions;
     [SerializeField] GameObject player;
-    [SerializeField] LayerMask originalLayer;
-    [SerializeField] LayerMask phantomLayer;
+    [SerializeField] int originalLayer;
+    [SerializeField] int phantomLayer;
+
 
     [SerializeField] SpriteRenderer playerRenderer;
 

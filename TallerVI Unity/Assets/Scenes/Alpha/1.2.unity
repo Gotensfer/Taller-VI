@@ -2247,12 +2247,8 @@ MonoBehaviour:
   length: 2
   timeToReEnableCollisions: 5
   player: {fileID: 1728376841}
-  originalLayer:
-    serializedVersion: 2
-    m_Bits: 128
-  phantomLayer:
-    serializedVersion: 2
-    m_Bits: 1
+  originalLayer: 7
+  phantomLayer: 0
   playerRenderer: {fileID: 1728376844}
 --- !u!1 &279654094
 GameObject:
