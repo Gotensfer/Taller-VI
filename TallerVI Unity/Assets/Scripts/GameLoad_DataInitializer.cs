@@ -13,9 +13,10 @@ public class GameLoad_DataInitializer : MonoBehaviour
         {
             PlayerPrefs.SetInt($"Coins", 0);
         }
-
-        EconomyData.LoadCoins();
-
+        else
+        {
+            EconomyData.LoadCoins();
+        }
         #endregion
 
         #region"Configuración inicial de datos de comidas"
