@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class FmodEventManager : MonoBehaviour
 {
-    [SerializeField] GameObject bounce, crash, launch, rocket, chili, mitosis;
+    [SerializeField] GameObject bounce, crash, launch, rocket, chili, mitosis, fecalito;
     
-    FMODUnity.StudioEventEmitter bounceEmitter, crashEmitter, launchEmitter, rocketEmitter, chiliEmitter, mitosisEmitter;
+    FMODUnity.StudioEventEmitter bounceEmitter, crashEmitter, launchEmitter, rocketEmitter, chiliEmitter, mitosisEmitter, fecalitoEmitter;
 
     int skinID;
 
@@ -19,7 +19,8 @@ public class FmodEventManager : MonoBehaviour
         launchEmitter = launch.GetComponent<FMODUnity.StudioEventEmitter>();
         rocketEmitter = rocket.GetComponent<FMODUnity.StudioEventEmitter>();
         chiliEmitter = chili.GetComponent<FMODUnity.StudioEventEmitter>();
-        mitosisEmitter = mitosis.GetComponent<FMODUnity.StudioEventEmitter>();       
+        mitosisEmitter = mitosis.GetComponent<FMODUnity.StudioEventEmitter>();
+        fecalitoEmitter = fecalito.GetComponent<FMODUnity.StudioEventEmitter>();
     }
 
     #region Eventos
@@ -51,6 +52,11 @@ public class FmodEventManager : MonoBehaviour
     public void MitosisSfx()
     {
         mitosisEmitter.Play();
+    }
+
+    public void FecalitoSfx()
+    {
+        fecalitoEmitter.Play();
     }
     public void PlayMusic()
     {
