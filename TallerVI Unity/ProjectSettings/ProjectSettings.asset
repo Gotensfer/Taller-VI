@@ -245,12 +245,12 @@ PlayerSettings:
   useCustomBaseGradleTemplate: 0
   useCustomGradlePropertiesTemplate: 0
   useCustomProguardFile: 0
-  AndroidTargetArchitectures: 1
+  AndroidTargetArchitectures: 3
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: 
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: C:/Users/JUAN FERNANDOH/Documents/KeyStores Unity Dev/flyingcrap.keystore
+  AndroidKeyaliasName: flying crap
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
   AndroidIsGame: 1
@@ -739,7 +739,8 @@ PlayerSettings:
   scriptingDefineSymbols: {}
   additionalCompilerArguments: {}
   platformArchitecture: {}
-  scriptingBackend: {}
+  scriptingBackend:
+    Android: 1
   il2cppCompilerConfiguration: {}
   managedStrippingLevel: {}
   incrementalIl2cppBuild: {}
@@ -811,12 +812,13 @@ PlayerSettings:
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
   cloudServicesEnabled:
-    Build: 1
+    Build: 0
     Collab: 0
     Game Performance: 0
-    Purchasing: 0
+    Legacy Analytics: 1
+    Purchasing: 1
     UDP: 0
-    Unity Ads: 0
+    Unity Ads: 1
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -830,11 +832,11 @@ PlayerSettings:
     m_VersionName: 
   apiCompatibilityLevel: 6
   activeInputHandler: 0
-  cloudProjectId: f4574db7-084d-469a-ac55-06ec8a9ddba4
+  cloudProjectId: 33212c45-857e-47c0-9408-d6c0d4478eac
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: PA DivingPoop
-  organizationId: gotensfer
+  projectName: Flying Crap
+  organizationId: avokado-dev
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   playerDataPath: 
