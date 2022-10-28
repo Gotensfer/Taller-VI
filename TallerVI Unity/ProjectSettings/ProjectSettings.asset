@@ -830,11 +830,11 @@ PlayerSettings:
     m_VersionName: 
   apiCompatibilityLevel: 6
   activeInputHandler: 0
-  cloudProjectId: f4574db7-084d-469a-ac55-06ec8a9ddba4
+  cloudProjectId: 33212c45-857e-47c0-9408-d6c0d4478eac
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: PA DivingPoop
-  organizationId: gotensfer
+  projectName: Flying Crap
+  organizationId: avokado-dev
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   playerDataPath: 
