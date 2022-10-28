@@ -210,6 +210,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{53f55f15-c305-4d91-941f-118a31727b51}">
+		<property name="volume">
+			<value>-2</value>
+		</property>
 		<property name="name">
 			<value>Electrica</value>
 		</property>
@@ -235,6 +238,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{65553b11-ea20-4f53-a221-207cfc04eea9}">
+		<property name="volume">
+			<value>-2</value>
+		</property>
 		<property name="name">
 			<value>Trompeta</value>
 		</property>
@@ -376,25 +382,28 @@
 	<object class="MixerBusFader" id="{414e5e64-ebb2-4de5-9d78-7a1ef8b29f2c}" />
 	<object class="SFXReverbEffect" id="{b2dcee4e-459c-401d-8e56-902738552671}">
 		<property name="decayTime">
-			<value>900</value>
+			<value>1000</value>
 		</property>
 		<property name="HFDecayRatio">
-			<value>41.5</value>
+			<value>44.5</value>
 		</property>
 		<property name="diffusion">
-			<value>41.5</value>
+			<value>36</value>
 		</property>
 		<property name="density">
 			<value>58.5</value>
 		</property>
 		<property name="lowShelfFrequency">
-			<value>180</value>
+			<value>230</value>
 		</property>
 		<property name="lowShelfGain">
-			<value>-7.5</value>
+			<value>-5</value>
+		</property>
+		<property name="earlyLateMix">
+			<value>55</value>
 		</property>
 		<property name="wetLevel">
-			<value>-8.5</value>
+			<value>-9.5</value>
 		</property>
 		<property name="dryLevel">
 			<value>-5</value>

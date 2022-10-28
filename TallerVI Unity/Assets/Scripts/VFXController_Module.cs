@@ -42,6 +42,7 @@ public class VFXController_Module : MonoBehaviour
     [SerializeField] ParticleSystem chilliPS;
     [SerializeField] TrailRenderer fireTrail;
     [SerializeField] ParticleSystem smokePS;
+    [SerializeField] ParticleSystem smokePS2;
 
     [Header("Rocket explotion system")]
     [SerializeField] ParticleSystem rocketExplotion;
@@ -90,6 +91,7 @@ public class VFXController_Module : MonoBehaviour
         chilliPS.Play();
         fireTrail.emitting = true;
         smokePS.Play();
+        smokePS2.Play();
     }
 
     void DeactivateChilliTrail()
@@ -97,6 +99,7 @@ public class VFXController_Module : MonoBehaviour
         chilliPS.Stop();
         fireTrail.emitting = false;
         smokePS.Stop();
+        smokePS2.Stop();
     }
 
     void ActivateBaseTrail()
