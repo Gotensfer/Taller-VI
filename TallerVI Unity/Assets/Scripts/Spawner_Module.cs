@@ -14,16 +14,19 @@ public class Spawner_Module : MonoBehaviour
     [SerializeField] private Vector2 rangoChili, rangoPidgeon, rangoRocket, rangoMitosis;
     [SerializeField] [Range(1, 1000)] private uint cadaCuantoRestaChili = 50, cadaCuantoRestaPidgeon = 30, cadaCuantoRestaRocket = 30, cadaCuantoRestaMitosis = 50;
     [SerializeField] [Range(0, 10)] private uint cuantoRestaChili = 1, cuantoRestaPidgeon = 2, cuantoRestaRocket = 3, cuantoRestaMitosis = 1;
+    [SerializeField] private float prevPosChili = 10, prevPosPidgeon = 10, prevPosRocket = 10, prevPosMitosis = 10;
     
     [Header("level2")]
     [SerializeField] private Vector2 rangoChili2, rangoPidgeon2, rangoRocket2, rangoMitosis2;
     [SerializeField] [Range(1, 1000)] private uint cadaCuantoRestaChili2 = 50, cadaCuantoRestaPidgeon2 = 30, cadaCuantoRestaRocket2 = 30, cadaCuantoRestaMitosis2 = 50;
     [SerializeField] [Range(0, 10)] private uint cuantoRestaChili2 = 1, cuantoRestaPidgeon2 = 2, cuantoRestaRocket2 = 3, cuantoRestaMitosis2 = 1;
+    [SerializeField] private float prevPosChili2 = 10, prevPosPidgeon2 = 10, prevPosRocket2 = 10, prevPosMitosis2 = 10;
     
     [Header("level3")]
     [SerializeField] private Vector2 rangoChili3, rangoPidgeon3, rangoRocket3, rangoMitosis3;
     [SerializeField] [Range(1, 1000)] private uint cadaCuantoRestaChili3 = 50, cadaCuantoRestaPidgeon3 = 30, cadaCuantoRestaRocket3 = 30, cadaCuantoRestaMitosis3 = 50;
     [SerializeField] [Range(0, 10)] private uint cuantoRestaChili3 = 1, cuantoRestaPidgeon3 = 2, cuantoRestaRocket3 = 3, cuantoRestaMitosis3 = 1;
+    [SerializeField] private float prevPosChili3 = 10, prevPosPidgeon3 = 10, prevPosRocket3 = 10, prevPosMitosis3 = 10;
 
     [SerializeField] private float xOffset = 0;
 
@@ -38,7 +41,7 @@ public class Spawner_Module : MonoBehaviour
     private void Awake()
     {
         LoadChance();
-    }
+    }   
 
     // Start is called before the first frame update
     void Start()
@@ -244,10 +247,10 @@ public class Spawner_Module : MonoBehaviour
         return GetRandomObject();
     }
 
-    float GetPrevPos()
+    float GetPrevPos(float add)
     {
-        prevPos += 10;
-        return prevPos - 10;
+        prevPos += add;
+        return prevPos - add;
     }
     
     float NegGetPrevPos()
@@ -298,7 +301,7 @@ public class Spawner_Module : MonoBehaviour
         {
             if (gliding)
             {
-                obj.transform.position = new Vector3(GetPrevPos() + Random.Range(-1.0f, 1.0f), rb.transform.position.y + Random.Range(-5.0f, 1.0f), 0);
+                obj.transform.position = new Vector3(GetPrevPos(LoadPrevPos(obj)) + Random.Range(-1.0f, 1.0f), rb.transform.position.y + Random.Range(-5.0f, 1.0f), 0);
             }
 
             if (falling)
@@ -325,7 +328,7 @@ public class Spawner_Module : MonoBehaviour
         {
             if (gliding)
             {
-                GetPrevPos();
+                GetPrevPos(10);
             }
 
             if (falling)
@@ -458,7 +461,6 @@ public class Spawner_Module : MonoBehaviour
         level2 = (sbyte)PlayerPrefs.GetInt("Pidgeon Level", -1);
         level3 = (sbyte)PlayerPrefs.GetInt("Rocket Level", -1);
         level4 = (sbyte)PlayerPrefs.GetInt("Mitosis Level", -1);
-        
 
         switch (level1)
         {
@@ -554,6 +556,104 @@ public class Spawner_Module : MonoBehaviour
             default:
                 Debug.LogError("NO SE CARGARON LOS DATOS DE NIVEL DE Mitosis Power Up");
                 break;
+        }
+    }
+
+    float LoadPrevPos(GameObject obj)
+    {
+        float pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+
+        switch (level1)
+        {
+            case 0:
+                pos1 = 1;
+                break;
+            case 1:
+                pos1 = prevPosChili;
+                break;
+            case 2:
+                pos1 = prevPosChili2;
+                break;
+            case 3:
+                pos1 = prevPosChili3;
+                break;
+            default:
+                Debug.LogError("NO SE CARGARON LOS DATOS DE NIVEL DE Chili Power Up");
+                break;
+        }
+        
+        switch (level2)
+        {
+            case 0:
+                pos2 = 1;
+                break;
+            case 1:
+                pos2 = prevPosPidgeon;
+                break;
+            case 2:
+                pos2 = prevPosPidgeon2;
+                break;
+            case 3:
+                pos2 = prevPosPidgeon3;
+                break;
+            default:
+                Debug.LogError("NO SE CARGARON LOS DATOS DE NIVEL DE Pidgeon Power Up");
+                break;
+        }
+        
+        switch (level3)
+        {
+            case 0:
+                pos3 = 1;
+                break;
+            case 1:
+                pos3 = prevPosRocket;
+                break;
+            case 2:
+                pos3 = prevPosRocket2;
+                break;
+            case 3:
+                pos3 = prevPosRocket3;
+                break;
+            default:
+                Debug.LogError("NO SE CARGARON LOS DATOS DE NIVEL DE Rocket Power Up");
+                break;
+        }
+        
+        switch (level4)
+        {
+            case 0:
+                pos4 = 1;
+                break;
+            case 1:
+                pos4 = prevPosMitosis; 
+                break;
+            case 2:
+                pos4 = prevPosMitosis2; 
+                break;
+            case 3:
+                pos4 = prevPosMitosis3; 
+                break;
+            default:
+                Debug.LogError("NO SE CARGARON LOS DATOS DE NIVEL DE Mitosis Power Up");
+                break;
+        }
+
+        if (obj.GetComponent<PowerUp_Chili>() != null)
+        {
+            return pos1;
+        }
+        else if(obj.GetComponent<PowerUp_Rocket>() != null)
+        {
+            return pos3;
+        }
+        else if (obj.GetComponent<PidgeonPickUp>() != null)
+        {
+            return pos2;
+        }
+        else
+        {
+            return pos4;
         }
     }
 }
