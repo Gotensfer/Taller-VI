@@ -880,14 +880,14 @@ MonoBehaviour:
   rangoPidgeon: {x: 150, y: 340}
   rangoRocket: {x: 320, y: 600}
   rangoMitosis: {x: 10, y: 600}
-  cadaCuantoRestaChili: 5
-  cadaCuantoRestaPidgeon: 5
-  cadaCuantoRestaRocket: 5
-  cadaCuantoRestaMitosis: 5
-  cuantoRestaChili: 90
-  cuantoRestaPidgeon: 90
-  cuantoRestaRocket: 90
-  cuantoRestaMitosis: 90
+  cadaCuantoRestaChili: 50
+  cadaCuantoRestaPidgeon: 50
+  cadaCuantoRestaRocket: 50
+  cadaCuantoRestaMitosis: 50
+  cuantoRestaChili: 20
+  cuantoRestaPidgeon: 20
+  cuantoRestaRocket: 20
+  cuantoRestaMitosis: 20
   prevPosChili: 150
   prevPosPidgeon: 130
   prevPosRocket: 160
@@ -896,14 +896,14 @@ MonoBehaviour:
   rangoPidgeon2: {x: 130, y: 370}
   rangoRocket2: {x: 300, y: 600}
   rangoMitosis2: {x: 10, y: 600}
-  cadaCuantoRestaChili2: 10
-  cadaCuantoRestaPidgeon2: 10
-  cadaCuantoRestaRocket2: 10
-  cadaCuantoRestaMitosis2: 10
-  cuantoRestaChili2: 60
-  cuantoRestaPidgeon2: 60
-  cuantoRestaRocket2: 60
-  cuantoRestaMitosis2: 60
+  cadaCuantoRestaChili2: 40
+  cadaCuantoRestaPidgeon2: 40
+  cadaCuantoRestaRocket2: 40
+  cadaCuantoRestaMitosis2: 40
+  cuantoRestaChili2: 15
+  cuantoRestaPidgeon2: 15
+  cuantoRestaRocket2: 15
+  cuantoRestaMitosis2: 15
   prevPosChili2: 130
   prevPosPidgeon2: 110
   prevPosRocket2: 140
@@ -916,10 +916,10 @@ MonoBehaviour:
   cadaCuantoRestaPidgeon3: 20
   cadaCuantoRestaRocket3: 20
   cadaCuantoRestaMitosis3: 20
-  cuantoRestaChili3: 20
-  cuantoRestaPidgeon3: 20
-  cuantoRestaRocket3: 20
-  cuantoRestaMitosis3: 20
+  cuantoRestaChili3: 10
+  cuantoRestaPidgeon3: 10
+  cuantoRestaRocket3: 10
+  cuantoRestaMitosis3: 10
   prevPosChili3: 110
   prevPosPidgeon3: 95
   prevPosRocket3: 120
