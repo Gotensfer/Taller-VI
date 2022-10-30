@@ -4882,7 +4882,7 @@ GameObject:
   - component: {fileID: 6826309510426539099}
   - component: {fileID: 2650788389988381050}
   m_Layer: 0
-  m_Name: Cavaquera_Mitosis_Legs 1
+  m_Name: Cacalien_Mitosis_Legs 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9690,7 +9690,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6c383c14260581246b77ae1f30e81bcd, type: 2}
+  - {fileID: 2100000, guid: 36196f49467d10f46a59527a373ffdf8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

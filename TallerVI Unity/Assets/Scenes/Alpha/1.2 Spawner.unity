@@ -1729,17 +1729,22 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 --- !u!198 &132629656 stripped
 ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 2927048590452664231, guid: dfe41a7bc4681f44fb3f84a15b872c56, type: 3}
+  m_CorrespondingSourceObject: {fileID: 3994456632771729929, guid: dfe41a7bc4681f44fb3f84a15b872c56, type: 3}
   m_PrefabInstance: {fileID: 132629654}
   m_PrefabAsset: {fileID: 0}
---- !u!96 &132629657 stripped
-TrailRenderer:
-  m_CorrespondingSourceObject: {fileID: 3267511471546733312, guid: dfe41a7bc4681f44fb3f84a15b872c56, type: 3}
+--- !u!198 &132629657 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8395626956322235926, guid: dfe41a7bc4681f44fb3f84a15b872c56, type: 3}
   m_PrefabInstance: {fileID: 132629654}
   m_PrefabAsset: {fileID: 0}
 --- !u!198 &132629658 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1884001699908062983, guid: dfe41a7bc4681f44fb3f84a15b872c56, type: 3}
+  m_PrefabInstance: {fileID: 132629654}
+  m_PrefabAsset: {fileID: 0}
+--- !u!96 &132629659 stripped
+TrailRenderer:
+  m_CorrespondingSourceObject: {fileID: 4186432673838587480, guid: dfe41a7bc4681f44fb3f84a15b872c56, type: 3}
   m_PrefabInstance: {fileID: 132629654}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &144134738
@@ -4212,6 +4217,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 475566235}
   m_CullTransparentMesh: 1
+--- !u!1 &494259917
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 494259918}
+  - component: {fileID: 494259920}
+  - component: {fileID: 494259919}
+  m_Layer: 5
+  m_Name: FecalitoON
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &494259918
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494259917}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.99990267, y: 0.99990267, z: 0.99990267}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1640255986}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.00023007393, y: 0.00007247925}
+  m_SizeDelta: {x: 200, y: 200}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &494259919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494259917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 3af35d9b39454fd4f96e4b2d8e0ebd20, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 2
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &494259920
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494259917}
+  m_CullTransparentMesh: 1
 --- !u!1 &508670775
 GameObject:
   m_ObjectHideFlags: 0
@@ -4403,7 +4484,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.582091, y: 2.25, z: -2}
+  m_LocalPosition: {x: 8.580082, y: 2.25, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5464,6 +5545,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 627690932}
   m_CullTransparentMesh: 1
+--- !u!1 &641150536
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 641150539}
+  - component: {fileID: 641150538}
+  - component: {fileID: 641150537}
+  m_Layer: 5
+  m_Name: MitosisON
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &641150537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641150536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: e6276794a3564744ebfdf4d80f0d9543, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 2
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &641150538
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641150536}
+  m_CullTransparentMesh: 1
+--- !u!224 &641150539
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641150536}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.99990267, y: 0.99990267, z: 0.99990267}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2093513030}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.00009572506, y: 0}
+  m_SizeDelta: {x: 200, y: 200}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &645198000
 GameObject:
   m_ObjectHideFlags: 0
@@ -13198,6 +13355,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 115356249}
+  - {fileID: 494259918}
   m_Father: {fileID: 1982932701}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13253,6 +13411,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1854665820}
         m_TargetAssemblyTypeName: Fecalito, Assembly-CSharp
         m_MethodName: Activate_Fecalito
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1982932702}
+        m_TargetAssemblyTypeName: PowerUpCD, Assembly-CSharp
+        m_MethodName: PressedF
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15484,8 +15654,6 @@ MonoBehaviour:
   player: {fileID: 1728376842}
   button: {fileID: 2093513029}
   chargeIndicator: {fileID: 1135669469}
-  availableSprite: {fileID: 21300000, guid: e6276794a3564744ebfdf4d80f0d9543, type: 3}
-  onCDSprite: {fileID: 21300000, guid: 2ecff1eca105fc74babd706f8341c7d1, type: 3}
   playerEvents: {fileID: 645198002}
 --- !u!114 &1854665820
 MonoBehaviour:
@@ -15508,8 +15676,6 @@ MonoBehaviour:
   player: {fileID: 1728376842}
   button: {fileID: 1640255985}
   chargeIndicator: {fileID: 115356250}
-  availableSprite: {fileID: 21300000, guid: 3af35d9b39454fd4f96e4b2d8e0ebd20, type: 3}
-  onCDSprite: {fileID: 21300000, guid: 5a0ea84656cdb574f9379512b4d8a5d9, type: 3}
   playerEvents: {fileID: 645198002}
 --- !u!1 &1858686421
 GameObject:
@@ -16625,6 +16791,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1982932701}
+  - component: {fileID: 1982932702}
   m_Layer: 5
   m_Name: Buttons
   m_TagString: Untagged
@@ -16651,6 +16818,22 @@ Transform:
   m_Father: {fileID: 1809170951}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1982932702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982932700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec847c0ce5dddf4899f8a9a045f0d73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mitosisButton: {fileID: 641150537}
+  fecalitoButton: {fileID: 494259919}
+  mitosis: {fileID: 1854665819}
+  fecalito: {fileID: 1854665820}
 --- !u!1 &1996307972
 GameObject:
   m_ObjectHideFlags: 0
@@ -17006,8 +17189,9 @@ MonoBehaviour:
   Cacalien_basePS: {fileID: 1754952453}
   Cacalien_baseTrail: {fileID: 1754952452}
   chilliPS: {fileID: 132629658}
-  fireTrail: {fileID: 132629657}
-  smokePS: {fileID: 132629656}
+  fireTrail: {fileID: 132629659}
+  smokePS: {fileID: 132629657}
+  smokePS2: {fileID: 132629656}
   rocketExplotion: {fileID: 1654790079}
   pidgeonEnd: {fileID: 849864265}
   mitosisEnd: {fileID: 2905254}
@@ -17304,6 +17488,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1135669471}
+  - {fileID: 641150539}
   m_Father: {fileID: 1982932701}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -17359,6 +17544,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1854665819}
         m_TargetAssemblyTypeName: Mitosis, Assembly-CSharp
         m_MethodName: Activate_Mitosis
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1982932702}
+        m_TargetAssemblyTypeName: PowerUpCD, Assembly-CSharp
+        m_MethodName: PressedM
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
