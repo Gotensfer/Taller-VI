@@ -199,7 +199,6 @@ public class UIInterfaceMainMenu : MonoBehaviour
     {
         mainMenu.DOAnchorPos(new Vector2(-2920, 0), 1f);
         preGame.DOAnchorPos(new Vector2(0, 0), 1);
-
         //Primera Seccion tutorial comidas
         if (firstTimePreGame == true)
         {
@@ -220,10 +219,6 @@ public class UIInterfaceMainMenu : MonoBehaviour
     public void BackFromPlayUIButton()
     {
         mainMenu.DOAnchorPos(new Vector2(0, 0), 1);
-
-        mainTitle.DOScale(new Vector3(0.8f, 0.8f, 0.8f), 1.5f)
-            .SetEase(Ease.InOutSine)
-            .SetLoops(-1, LoopType.Yoyo);
 
         preGame.DOAnchorPos(new Vector2(2920, 0), 1);
     }
@@ -270,8 +265,8 @@ public class UIInterfaceMainMenu : MonoBehaviour
     }
     public void BackFromStoreUIButton()
     {
-        store.DOAnchorPos(new Vector2(1132, 144), 1).SetEase(Ease.InExpo);
-        store.DOScale(Vector3.zero, 1).SetEase(Ease.InBack).OnComplete(()=> {
+        store.DOAnchorPos(new Vector2(1028, 162), 1).SetEase(Ease.InExpo);
+        store.DOScale(Vector3.zero, 0.5f).SetEase(Ease.InBack).OnComplete(()=> {
             store.gameObject.SetActive(false);
             storeContent.gameObject.SetActive(false);
         });
@@ -378,8 +373,8 @@ public class UIInterfaceMainMenu : MonoBehaviour
     }
     public void BackFromUpgradesUIButton()
     {
-        upgrades.DOAnchorPos(new Vector2(1090, 0), 1).SetEase(Ease.InExpo);
-        upgrades.DOScale(Vector3.zero, 1).SetEase(Ease.InBack).OnComplete(() => upgrades.gameObject.SetActive(false));
+        upgrades.DOAnchorPos(new Vector2(1029, 0), 0.5f).SetEase(Ease.InExpo);
+        upgrades.DOScale(Vector3.zero, 0.5f).SetEase(Ease.InBack).OnComplete(() => upgrades.gameObject.SetActive(false));
     }
     public void UpgradeFromPlayUIButton()
     {
@@ -419,7 +414,7 @@ public class UIInterfaceMainMenu : MonoBehaviour
     public void BackFromAlbumUIButton()
     {
         album.DOAnchorPos(new Vector2(1132, -167), 1).SetEase(Ease.InExpo);
-        album.DOScale(Vector3.zero, 1).SetEase(Ease.InBack).OnComplete(() => {
+        album.DOScale(Vector3.zero, 0.5f).SetEase(Ease.InBack).OnComplete(() => {
             album.gameObject.SetActive(false);
             albumContent.gameObject.SetActive(false);
         });
@@ -435,8 +430,8 @@ public class UIInterfaceMainMenu : MonoBehaviour
     }
     public void BackFromConfigUIButton()
     {
-        configuration.DOAnchorPos(new Vector2(927, -315), 1).SetEase(Ease.InExpo);
-        configuration.DOScale(Vector3.zero, 1).SetEase(Ease.InBack).OnComplete(() => configuration.gameObject.SetActive(false));
+        configuration.DOAnchorPos(new Vector2(-1304, -578), 0.5f).SetEase(Ease.InExpo);
+        configuration.DOScale(Vector3.zero, 0.5f).SetEase(Ease.InBack).OnComplete(() => configuration.gameObject.SetActive(false));
     }
     #endregion
 
@@ -461,6 +456,26 @@ public class UIInterfaceMainMenu : MonoBehaviour
     public void Polaroid5On()
     {
         polaroids.ElementAt(4).DOScale(Vector3.one, 1).SetEase(Ease.OutSine);
+    }
+    public void Polaroid6On()
+    {
+        polaroids.ElementAt(5).DOScale(Vector3.one, 1).SetEase(Ease.OutSine);
+    }
+    public void Polaroid7On()
+    {
+        polaroids.ElementAt(6).DOScale(Vector3.one, 1).SetEase(Ease.OutSine);
+    }
+    public void Polaroid8On()
+    {
+        polaroids.ElementAt(7).DOScale(Vector3.one, 1).SetEase(Ease.OutSine);
+    }
+    public void Polaroid9On()
+    {
+        polaroids.ElementAt(8).DOScale(Vector3.one, 1).SetEase(Ease.OutSine);
+    }
+    public void Polaroid10On()
+    {
+        polaroids.ElementAt(9).DOScale(Vector3.one, 1).SetEase(Ease.OutSine);
     }
 
     //Polaroids deactivate
