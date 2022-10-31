@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 270
+  spritePixelsToUnits: 260
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -66,7 +66,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -128,7 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cacavaquera_crashed_0
+      name: Cacaleta_Skin_GoldenPoop_Crashed_0
       rect:
         serializedVersion: 2
         x: 0
@@ -142,14 +142,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f99970728ef1df6429d25a41a0e02d4a
-      internalID: 1411348163
+      spriteID: 31767cd5472b948459dbb9bca63c2fac
+      internalID: 1338060768
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cacavaquera_crashed_1
+      name: Cacaleta_Skin_GoldenPoop_Crashed_1
       rect:
         serializedVersion: 2
         x: 512
@@ -163,14 +163,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37dabbc0691e23146b8b9be3bf154236
-      internalID: 895113156
+      spriteID: 2a9ff79b838b3604ca975a7bb5206766
+      internalID: -1429932443
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cacavaquera_crashed_2
+      name: Cacaleta_Skin_GoldenPoop_Crashed_2
       rect:
         serializedVersion: 2
         x: 1024
@@ -184,14 +184,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f854de2bef713c24c876c9401ae040c1
-      internalID: 1371736624
+      spriteID: b237d17151167174e9d80a81a01558b0
+      internalID: 656003062
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cacavaquera_crashed_3
+      name: Cacaleta_Skin_GoldenPoop_Crashed_3
       rect:
         serializedVersion: 2
         x: 1536
@@ -205,8 +205,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4ff44935d14b5c4bab7dadff19c6d94
-      internalID: 1839923130
+      spriteID: f360455f83cae334ca4266ad4972359c
+      internalID: 992931795
       vertices: []
       indices: 
       edges: []
@@ -222,10 +222,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      cacavaquera_crashed_2: 1371736624
-      cacavaquera_crashed_3: 1839923130
-      cacavaquera_crashed_0: 1411348163
-      cacavaquera_crashed_1: 895113156
+      Cacaleta_Skin_GoldenPoop_Crashed_0: 1338060768
+      Cacaleta_Skin_GoldenPoop_Crashed_1: -1429932443
+      Cacaleta_Skin_GoldenPoop_Crashed_3: 992931795
+      Cacaleta_Skin_GoldenPoop_Crashed_2: 656003062
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bd99f57ad3832da43b245ff63b69eb20
+guid: 3491807e73fd8ec4a90b0bff0906946e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -66,7 +66,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -128,7 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cacavaquera_horizontal_1_0
+      name: Cacaleta_Skin_Cacaruto_Horizontal_0
       rect:
         serializedVersion: 2
         x: 0
@@ -142,14 +142,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 358aa7942d1fb5c498f078aa05617a19
-      internalID: 1749262936
+      spriteID: 0d29ca7f52b688c41bf613e3d8421bde
+      internalID: -1060960115
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cacavaquera_horizontal_1_1
+      name: Cacaleta_Skin_Cacaruto_Horizontal_1
       rect:
         serializedVersion: 2
         x: 512
@@ -163,14 +163,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbb3d9bc081b12c45a121d85f405770d
-      internalID: -1699742161
+      spriteID: 3d64599fa9ef3e64191b01125cd64cfe
+      internalID: 1627962685
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cacavaquera_horizontal_1_2
+      name: Cacaleta_Skin_Cacaruto_Horizontal_2
       rect:
         serializedVersion: 2
         x: 1024
@@ -184,14 +184,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a60967013af6738479b1f0a28099d204
-      internalID: -1977371110
+      spriteID: 7f8f9f5d70f6282438c29122d1273276
+      internalID: -771748850
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cacavaquera_horizontal_1_3
+      name: Cacaleta_Skin_Cacaruto_Horizontal_3
       rect:
         serializedVersion: 2
         x: 1536
@@ -205,14 +205,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f182fdcbe4738c34196be97fc861a478
-      internalID: -1761758460
+      spriteID: 534a6720a6bc4b44f96c6a66ba086d52
+      internalID: -1622059477
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cacavaquera_horizontal_1_4
+      name: Cacaleta_Skin_Cacaruto_Horizontal_4
       rect:
         serializedVersion: 2
         x: 2048
@@ -226,14 +226,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29406c31700393848a7373b65cf59e2a
-      internalID: 399525480
+      spriteID: a9556f28b176bb248aa3b72caf4baa4e
+      internalID: -843314941
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cacavaquera_horizontal_1_5
+      name: Cacaleta_Skin_Cacaruto_Horizontal_5
       rect:
         serializedVersion: 2
         x: 2560
@@ -247,14 +247,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4b267a56616ddb469156cb6abf54bb7
-      internalID: -536932256
+      spriteID: 98f883d339323e441aed0b31f98fbe80
+      internalID: -2124313124
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cacavaquera_horizontal_1_6
+      name: Cacaleta_Skin_Cacaruto_Horizontal_6
       rect:
         serializedVersion: 2
         x: 3072
@@ -268,14 +268,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8e9e573c2700424d875e70eb60fa0ee
-      internalID: 2106361769
+      spriteID: 8dca5769381a7304383584371a7103f2
+      internalID: 796791981
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cacavaquera_horizontal_1_7
+      name: Cacaleta_Skin_Cacaruto_Horizontal_7
       rect:
         serializedVersion: 2
         x: 3584
@@ -289,8 +289,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 174fae3f7dda8e745adcf90582895526
-      internalID: 78692147
+      spriteID: bb3e12d14f7c902458e788737a7209df
+      internalID: -1146404955
       vertices: []
       indices: 
       edges: []
@@ -306,14 +306,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      cacavaquera_horizontal_1_6: 2106361769
-      cacavaquera_horizontal_1_7: 78692147
-      cacavaquera_horizontal_1_1: -1699742161
-      cacavaquera_horizontal_1_0: 1749262936
-      cacavaquera_horizontal_1_5: -536932256
-      cacavaquera_horizontal_1_4: 399525480
-      cacavaquera_horizontal_1_2: -1977371110
-      cacavaquera_horizontal_1_3: -1761758460
+      Cacaleta_Skin_Cacaruto_Horizontal_6: 796791981
+      Cacaleta_Skin_Cacaruto_Horizontal_5: -2124313124
+      Cacaleta_Skin_Cacaruto_Horizontal_4: -843314941
+      Cacaleta_Skin_Cacaruto_Horizontal_0: -1060960115
+      Cacaleta_Skin_Cacaruto_Horizontal_3: -1622059477
+      Cacaleta_Skin_Cacaruto_Horizontal_1: 1627962685
+      Cacaleta_Skin_Cacaruto_Horizontal_2: -771748850
+      Cacaleta_Skin_Cacaruto_Horizontal_7: -1146404955
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
