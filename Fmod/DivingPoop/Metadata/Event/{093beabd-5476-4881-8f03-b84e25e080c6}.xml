@@ -41,9 +41,6 @@
 		</relationship>
 	</object>
 	<object class="MasterTrack" id="{00ea9265-31e8-4bab-8c6f-6f8a25f8ad70}">
-		<relationship name="automationTracks">
-			<destination>{55add675-cf63-4253-8f7c-4982629daa48}</destination>
-		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{812c753f-da5b-4e0a-a6ba-83dfb18be95a}</destination>
 		</relationship>
@@ -81,12 +78,6 @@
 		<property name="volume">
 			<value>-6</value>
 		</property>
-		<relationship name="automators">
-			<destination>{1299bc1c-737f-4582-a27c-bdf53147a845}</destination>
-		</relationship>
-		<relationship name="modulators">
-			<destination>{3242c2d0-d783-4e8c-91aa-5a2911b3d933}</destination>
-		</relationship>
 		<relationship name="effectChain">
 			<destination>{b517a5d9-2afe-4dad-bf8a-0a25ba1e0b52}</destination>
 		</relationship>
@@ -95,11 +86,6 @@
 		</relationship>
 		<relationship name="mixer">
 			<destination>{e128fcdc-6ca4-42d9-8ae4-5fcdcc08adbb}</destination>
-		</relationship>
-	</object>
-	<object class="AutomationTrack" id="{55add675-cf63-4253-8f7c-4982629daa48}">
-		<relationship name="automator">
-			<destination>{1299bc1c-737f-4582-a27c-bdf53147a845}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{3a8a3a81-e919-4fb2-ae91-0c9572ec1654}">
@@ -145,22 +131,6 @@
 		</relationship>
 		<relationship name="markerTrack">
 			<destination>{742afb7a-c615-4c12-8037-2d8d4f68ac29}</destination>
-		</relationship>
-	</object>
-	<object class="Automator" id="{1299bc1c-737f-4582-a27c-bdf53147a845}">
-		<property name="nameOfPropertyBeingAutomated">
-			<value>volume</value>
-		</property>
-	</object>
-	<object class="SidechainModulator" id="{3242c2d0-d783-4e8c-91aa-5a2911b3d933}">
-		<property name="nameOfPropertyBeingModulated">
-			<value>volume</value>
-		</property>
-		<property name="amount">
-			<value>40</value>
-		</property>
-		<relationship name="sidechains">
-			<destination>{38b833b5-5796-4845-a8bc-95c3fa2b3bcb}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{b517a5d9-2afe-4dad-bf8a-0a25ba1e0b52}">
