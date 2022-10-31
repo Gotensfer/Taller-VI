@@ -54,6 +54,7 @@ public class VFXController_Module : MonoBehaviour
 
     [Header("Rocket explotion system")]
     [SerializeField] ParticleSystem rocketExplotion;
+    [SerializeField] TrailRenderer rocketTrail;
 
     [Header("Pidgeon end system")]
     [SerializeField] ParticleSystem pidgeonEnd;
@@ -105,6 +106,7 @@ public class VFXController_Module : MonoBehaviour
     private void Start()
     {
         DeactivateChilliTrail();
+        DeactivateRocketTrail();
     }
 
     #region"Métodos internos para manipular los PS y Trails
@@ -158,6 +160,16 @@ public class VFXController_Module : MonoBehaviour
     public void SetRocketExplotion_VFX()
     {
         rocketExplotion.Play(true);
+    }
+
+    public void SetRocketTrail()
+    {
+        rocketTrail.emitting = true;
+    }
+
+    public void DeactivateRocketTrail()
+    {
+        rocketTrail.emitting = false;
     }
 
     public void SetPidgeonEnd_VFX()
