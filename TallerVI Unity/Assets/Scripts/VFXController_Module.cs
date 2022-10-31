@@ -36,6 +36,14 @@ public class VFXController_Module : MonoBehaviour
     // - Cacalien
     [SerializeField] ParticleSystem Cacalien_basePS;
     [SerializeField] TrailRenderer Cacalien_baseTrail;
+
+    // - Cacaruto
+    [SerializeField] ParticleSystem Cacaruto_basePS;
+    [SerializeField] TrailRenderer Cacaruto_baseTrail;
+
+    // - Golden
+    [SerializeField] ParticleSystem Golden_basePS;
+    [SerializeField] TrailRenderer Golden_baseTrail;
     #endregion
 
     [Header("Chilli trail system")]
@@ -46,21 +54,30 @@ public class VFXController_Module : MonoBehaviour
 
     [Header("Rocket explotion system")]
     [SerializeField] ParticleSystem rocketExplotion;
+    [SerializeField] TrailRenderer rocketTrail;
 
     [Header("Pidgeon end system")]
     [SerializeField] ParticleSystem pidgeonEnd;
 
     [Header("Mitosis end system")]
-    [SerializeField] ParticleSystem mitosisEnd;
+    [SerializeField] ParticleSystem mitosisEnd_Reference;
+    #region"Campos para asignar los PS de Mitosis legs en el inspector"
+    [SerializeField] ParticleSystem mitosisEnd_Base; // Base
+    [SerializeField] ParticleSystem mitosisEnd_Kkawai; // Cakawaii
+    [SerializeField] ParticleSystem mitosisEnd_Shitsycal; // Cacsycal
+    [SerializeField] ParticleSystem mitosisEnd_Cacowboy; // Cacavaquera
+    [SerializeField] ParticleSystem mitosisEnd_Cacalien; // Cacalien
+    [SerializeField] ParticleSystem mitosisEnd_Cacanaut; // Cacanauta
+    [SerializeField] ParticleSystem mitosisEnd_Cacaruto; // Cacaruto
+    [SerializeField] ParticleSystem mitosisEnd_Golden; // Golden
+    #endregion
 
     [Header("Fecalito start system")]
     [SerializeField] ParticleSystem fecalitoStart;
 
     [Header("Bounce particle systems")]
-    #region"Campos para asignar los PS de Bounce en el inspector"
-
     [SerializeField] ParticleSystem bouncePSReference;
-
+    #region"Campos para asignar los PS de Bounce en el inspector"
     // - Base
     [SerializeField] ParticleSystem base_bouncePS;
 
@@ -78,11 +95,18 @@ public class VFXController_Module : MonoBehaviour
 
     // - Cacalien
     [SerializeField] ParticleSystem Cacalien_bouncePS;
+
+    // - Cacaruto
+    [SerializeField] ParticleSystem Cacaruto_bouncePS;
+
+    // - Golden
+    [SerializeField] ParticleSystem Golden_bouncePS;
     #endregion
 
     private void Start()
     {
         DeactivateChilliTrail();
+        DeactivateRocketTrail();
     }
 
     #region"Métodos internos para manipular los PS y Trails
@@ -138,6 +162,16 @@ public class VFXController_Module : MonoBehaviour
         rocketExplotion.Play(true);
     }
 
+    public void SetRocketTrail()
+    {
+        rocketTrail.emitting = true;
+    }
+
+    public void DeactivateRocketTrail()
+    {
+        rocketTrail.emitting = false;
+    }
+
     public void SetPidgeonEnd_VFX()
     {
         pidgeonEnd.Play(true);
@@ -145,7 +179,7 @@ public class VFXController_Module : MonoBehaviour
 
     public void SetMitosis_VFX()
     {
-        mitosisEnd.Play(true);
+        mitosisEnd_Reference.Play(true);
     }
 
     public void SetFecalito_VFX()
@@ -161,8 +195,9 @@ public class VFXController_Module : MonoBehaviour
         BaseTrailReference = baseTrail;
 
         bouncePSReference = base_bouncePS;
+        mitosisEnd_Reference = mitosisEnd_Base;
 
-        DeActivateAllTrailVFX();
+        DeActivateAllVFX();
         ActivateSelectedTrailVFX();
         ActivateBaseTrail();
     }
@@ -173,8 +208,9 @@ public class VFXController_Module : MonoBehaviour
         BaseTrailReference = Kkawai_baseTrail;
 
         bouncePSReference = Kkawai_bouncePS;
+        mitosisEnd_Reference = mitosisEnd_Kkawai;
 
-        DeActivateAllTrailVFX();
+        DeActivateAllVFX();
         ActivateSelectedTrailVFX();
         ActivateBaseTrail();
     }
@@ -185,8 +221,9 @@ public class VFXController_Module : MonoBehaviour
         BaseTrailReference = Cacowboy_baseTrail;
 
         bouncePSReference = base_bouncePS;
+        mitosisEnd_Reference = mitosisEnd_Cacowboy;
 
-        DeActivateAllTrailVFX();
+        DeActivateAllVFX();
         ActivateSelectedTrailVFX();
         ActivateBaseTrail();
     }
@@ -197,8 +234,9 @@ public class VFXController_Module : MonoBehaviour
         BaseTrailReference = Cacalien_baseTrail;
 
         bouncePSReference = Cacalien_bouncePS;
+        mitosisEnd_Reference = mitosisEnd_Cacalien;
 
-        DeActivateAllTrailVFX();
+        DeActivateAllVFX();
         ActivateSelectedTrailVFX();
         ActivateBaseTrail();
     }
@@ -209,8 +247,9 @@ public class VFXController_Module : MonoBehaviour
         BaseTrailReference = Cacanaut_baseTrail;
 
         bouncePSReference = base_bouncePS;
+        mitosisEnd_Reference = mitosisEnd_Cacanaut;
 
-        DeActivateAllTrailVFX();
+        DeActivateAllVFX();
         ActivateSelectedTrailVFX();
         ActivateBaseTrail();
     }
@@ -221,15 +260,43 @@ public class VFXController_Module : MonoBehaviour
         BaseTrailReference = Shitsycal_baseTrail;
 
         bouncePSReference = Shitsycal_bouncePS;
+        mitosisEnd_Reference = mitosisEnd_Shitsycal;
 
-        DeActivateAllTrailVFX();
+        DeActivateAllVFX();
+        ActivateSelectedTrailVFX();
+        ActivateBaseTrail();
+    }
+
+    public void SetVFXForCacaruto()
+    {
+        BasePSReference = Cacaruto_basePS;
+        BaseTrailReference = Cacaruto_baseTrail;
+
+        bouncePSReference = Cacaruto_bouncePS;
+        mitosisEnd_Reference = mitosisEnd_Cacaruto;
+
+        DeActivateAllVFX();
+        ActivateSelectedTrailVFX();
+        ActivateBaseTrail();
+    }
+
+    public void SetVFXForGolden()
+    {
+        BasePSReference = Golden_basePS;
+        BaseTrailReference = Golden_baseTrail;
+
+        bouncePSReference = Golden_bouncePS;
+        mitosisEnd_Reference = mitosisEnd_Golden;
+
+        DeActivateAllVFX();
         ActivateSelectedTrailVFX();
         ActivateBaseTrail();
     }
 
     [SerializeField] Transform trailContainerObject;
     [SerializeField] Transform bounceContainerObject;
-    void DeActivateAllTrailVFX()
+    [SerializeField] Transform mitosisEndContainerObject;
+    void DeActivateAllVFX()
     {
         int len = trailContainerObject.childCount;
         for (int i = 0; i < len; i++)
@@ -242,6 +309,12 @@ public class VFXController_Module : MonoBehaviour
         {
             bounceContainerObject.GetChild(i).gameObject.SetActive(false);
         }
+
+        len = mitosisEndContainerObject.childCount;
+        for (int i = 0; i < len; i++)
+        {
+            mitosisEndContainerObject.GetChild(i).gameObject.SetActive(false);
+        }
     }
 
     void ActivateSelectedTrailVFX()
@@ -249,6 +322,7 @@ public class VFXController_Module : MonoBehaviour
         BasePSReference.gameObject.SetActive(true);
         BaseTrailReference.gameObject.SetActive(true);
         bouncePSReference.gameObject.SetActive(true);
+        mitosisEnd_Reference.gameObject.SetActive(true);
     }
     #endregion
 }
