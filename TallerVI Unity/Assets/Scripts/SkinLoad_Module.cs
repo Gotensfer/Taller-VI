@@ -13,12 +13,16 @@ public class SkinLoad_Module : MonoBehaviour
     [SerializeField] AnimatorOverrideController cacowboySkinOverride;
     [SerializeField] AnimatorOverrideController cacalienSkinOverride;
     [SerializeField] AnimatorOverrideController cacanautSkinOverride;
+    [SerializeField] AnimatorOverrideController cacarutoSkinOverride;
+    [SerializeField] AnimatorOverrideController goldenSkinOverride;
 
     [SerializeField] VFXController_Module vfxController;
 
 
     private void Start()
     {
+        SkinData.ID = (SkinID)PlayerPrefs.GetInt($"LastSelectedSkin");
+
         switch (SkinData.ID)
         {
             case SkinID.Base:
@@ -43,6 +47,14 @@ public class SkinLoad_Module : MonoBehaviour
             case SkinID.Cacanaut:
                 GetComponent<Animator>().runtimeAnimatorController = cacanautSkinOverride;
                 vfxController.SetVFXForCacanaut();
+                break;
+            case SkinID.Cacaruto:
+                GetComponent<Animator>().runtimeAnimatorController = cacarutoSkinOverride;
+                vfxController.SetVFXForCacaruto();
+                break;
+            case SkinID.Golden:
+                GetComponent<Animator>().runtimeAnimatorController = goldenSkinOverride;
+                vfxController.SetVFXForGolden();
                 break;
             default:
                 Debug.LogError("No se inicializo la skin o no se encontro?");
