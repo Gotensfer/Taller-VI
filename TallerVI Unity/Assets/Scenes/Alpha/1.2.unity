@@ -876,42 +876,54 @@ MonoBehaviour:
   rocketPrefab: {fileID: 7819924271294555339, guid: 118c6ec2f70c30048943ae98927d3836, type: 3}
   mitosisPrefab: {fileID: 8497296553107868462, guid: 976e809bef8e63b49867a05ba1e13155, type: 3}
   father: {fileID: 524557124}
-  rangoChili: {x: 50, y: 150}
-  rangoPidgeon: {x: 60, y: 250}
-  rangoRocket: {x: 10, y: 150}
-  rangoMitosis: {x: 10, y: 150}
-  cadaCuantoRestaChili: 20
-  cadaCuantoRestaPidgeon: 20
-  cadaCuantoRestaRocket: 20
-  cadaCuantoRestaMitosis: 20
-  cuantoRestaChili: 6
-  cuantoRestaPidgeon: 4
-  cuantoRestaRocket: 4
-  cuantoRestaMitosis: 6
-  rangoChili2: {x: 50, y: 200}
-  rangoPidgeon2: {x: 60, y: 350}
-  rangoRocket2: {x: 10, y: 150}
-  rangoMitosis2: {x: 10, y: 250}
-  cadaCuantoRestaChili2: 20
-  cadaCuantoRestaPidgeon2: 20
-  cadaCuantoRestaRocket2: 20
-  cadaCuantoRestaMitosis2: 20
-  cuantoRestaChili2: 4
-  cuantoRestaPidgeon2: 2
-  cuantoRestaRocket2: 2
-  cuantoRestaMitosis2: 3
-  rangoChili3: {x: 50, y: 400}
-  rangoPidgeon3: {x: 30, y: 350}
-  rangoRocket3: {x: 10, y: 350}
-  rangoMitosis3: {x: 10, y: 300}
+  rangoChili: {x: 30, y: 170}
+  rangoPidgeon: {x: 150, y: 340}
+  rangoRocket: {x: 320, y: 600}
+  rangoMitosis: {x: 10, y: 600}
+  cadaCuantoRestaChili: 50
+  cadaCuantoRestaPidgeon: 50
+  cadaCuantoRestaRocket: 50
+  cadaCuantoRestaMitosis: 50
+  cuantoRestaChili: 20
+  cuantoRestaPidgeon: 20
+  cuantoRestaRocket: 20
+  cuantoRestaMitosis: 20
+  prevPosChili: 150
+  prevPosPidgeon: 130
+  prevPosRocket: 160
+  prevPosMitosis: 130
+  rangoChili2: {x: 30, y: 200}
+  rangoPidgeon2: {x: 130, y: 370}
+  rangoRocket2: {x: 300, y: 600}
+  rangoMitosis2: {x: 10, y: 600}
+  cadaCuantoRestaChili2: 40
+  cadaCuantoRestaPidgeon2: 40
+  cadaCuantoRestaRocket2: 40
+  cadaCuantoRestaMitosis2: 40
+  cuantoRestaChili2: 15
+  cuantoRestaPidgeon2: 15
+  cuantoRestaRocket2: 15
+  cuantoRestaMitosis2: 15
+  prevPosChili2: 130
+  prevPosPidgeon2: 110
+  prevPosRocket2: 140
+  prevPosMitosis2: 115
+  rangoChili3: {x: 30, y: 250}
+  rangoPidgeon3: {x: 110, y: 400}
+  rangoRocket3: {x: 280, y: 600}
+  rangoMitosis3: {x: 10, y: 600}
   cadaCuantoRestaChili3: 20
   cadaCuantoRestaPidgeon3: 20
   cadaCuantoRestaRocket3: 20
   cadaCuantoRestaMitosis3: 20
-  cuantoRestaChili3: 2
-  cuantoRestaPidgeon3: 1
-  cuantoRestaRocket3: 1
-  cuantoRestaMitosis3: 1
+  cuantoRestaChili3: 10
+  cuantoRestaPidgeon3: 10
+  cuantoRestaRocket3: 10
+  cuantoRestaMitosis3: 10
+  prevPosChili3: 110
+  prevPosPidgeon3: 95
+  prevPosRocket3: 120
+  prevPosMitosis3: 100
   xOffset: -100
 --- !u!1 &70029997
 GameObject:
@@ -1018,7 +1030,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -11
-  m_Sprite: {fileID: 21300000, guid: 265375ea670370847a31c386b62f4ff8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3201fbf9c2c5efa4aa96413dc8470303, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -15647,7 +15659,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strenght: 20
   direction: {x: 0, y: 1}
-  cdTime: 2
+  cdTime: 0.5
   level: 1
   maxCharges: 0
   charges: 0

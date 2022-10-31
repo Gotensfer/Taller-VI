@@ -10,8 +10,8 @@ EditorBuildSettings:
     guid: 494cfad876dd3e5449446c6ec2a415c7
   - enabled: 1
     path: Assets/Scenes/Alpha/1.2 Main menu.unity
-    guid: baa10989913809447a6c0c29030e5db4
+    guid: c30acc1ffc19cd8469c53334dd5e3131
   - enabled: 1
     path: Assets/Scenes/Alpha/1.2.unity
-    guid: 379fc66dc224e8240ac9e1c89da20e70
+    guid: 5b51543ae69819d409b8e67f9dcff255
   m_configObjects: {}
