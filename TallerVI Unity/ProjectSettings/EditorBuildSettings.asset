@@ -12,9 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Alpha/1.2 Main menu.unity
     guid: baa10989913809447a6c0c29030e5db4
   - enabled: 1
-    path: Assets/Scenes/Alpha/1.2 Spawner.unity
-    guid: 5b51543ae69819d409b8e67f9dcff255
-  - enabled: 1
     path: Assets/Scenes/Alpha/1.2.unity
     guid: 379fc66dc224e8240ac9e1c89da20e70
   m_configObjects: {}
