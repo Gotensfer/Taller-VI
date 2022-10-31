@@ -4604,7 +4604,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Los platos fuertes le dar\xE1n m\xE1s impulso a tu mierda\n"
+  m_text: "Los platos fuertes le dar\xE1n m\xE1s impulso a tu moj\xF3n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4d397f401b1c39545ab3225f7ce2a9bb, type: 2}
   m_sharedMaterial: {fileID: -2519196839059595423, guid: 4d397f401b1c39545ab3225f7ce2a9bb, type: 2}
@@ -7114,7 +7114,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Aqu\xED tendr\xE1s un resumen de la mierda que vas a lanzar\n"
+  m_text: "Aqu\xED tendr\xE1s un resumen del moj\xF3n que vas a lanzar\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4d397f401b1c39545ab3225f7ce2a9bb, type: 2}
   m_sharedMaterial: {fileID: -2519196839059595423, guid: 4d397f401b1c39545ab3225f7ce2a9bb, type: 2}
@@ -9024,7 +9024,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Aqu\xED encontrar\xE1s cosm\xE9ticos\ny podr\xE1s personalizar tu\nmierda"
+  m_text: "Aqu\xED encontrar\xE1s cosm\xE9ticos\ny podr\xE1s personalizar tu\nmoj\xF3n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4d397f401b1c39545ab3225f7ce2a9bb, type: 2}
   m_sharedMaterial: {fileID: -2519196839059595423, guid: 4d397f401b1c39545ab3225f7ce2a9bb, type: 2}
@@ -25841,7 +25841,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Escoge tus comidas\n\xA1Y lanza tu mierda por los aires!"
+  m_text: "Escoge tus comidas\n\xA1Y lanza tu moj\xF3n por los aires!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4d397f401b1c39545ab3225f7ce2a9bb, type: 2}
   m_sharedMaterial: {fileID: -2519196839059595423, guid: 4d397f401b1c39545ab3225f7ce2a9bb, type: 2}
@@ -29577,8 +29577,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Esto afectar\xE1 las capacidades\nde tu mierda.\n\nDebes escoger una comida
-    de cada tipo."
+  m_text: "Esto afectar\xE1 las capacidades\nde tu moj\xF3n.\n\nDebes escoger una
+    comida de cada tipo."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4d397f401b1c39545ab3225f7ce2a9bb, type: 2}
   m_sharedMaterial: {fileID: -2519196839059595423, guid: 4d397f401b1c39545ab3225f7ce2a9bb, type: 2}
