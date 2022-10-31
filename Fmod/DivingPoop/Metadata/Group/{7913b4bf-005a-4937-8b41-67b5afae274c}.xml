@@ -18,6 +18,7 @@
 		<relationship name="effects">
 			<destination>{3d313aff-b9c6-463c-a0f3-9cd4975b4d8c}</destination>
 			<destination>{8d3da44b-ab70-4ba6-95dc-4b711859263a}</destination>
+			<destination>{38b833b5-5796-4845-a8bc-95c3fa2b3bcb}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{a58357a8-ca51-4b08-9e17-dfdbf1b7d2ce}" />
@@ -30,6 +31,11 @@
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{8d3da44b-ab70-4ba6-95dc-4b711859263a}" />
+	<object class="Sidechain" id="{38b833b5-5796-4845-a8bc-95c3fa2b3bcb}">
+		<property name="level">
+			<value>-6</value>
+		</property>
+	</object>
 	<object class="Automator" id="{a6a24ab1-e434-478a-b49b-c679cd219de9}">
 		<property name="nameOfPropertyBeingAutomated">
 			<value>cutoff</value>

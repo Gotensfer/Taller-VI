@@ -172,6 +172,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{af063948-5b89-4b51-b60d-f4487a6f0dc8}">
+		<property name="volume">
+			<value>-3</value>
+		</property>
 		<property name="name">
 			<value>Timpani</value>
 		</property>
@@ -197,6 +200,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{b8664da9-9599-46d3-9078-c32b0c3c4556}">
+		<property name="volume">
+			<value>-3</value>
+		</property>
 		<property name="name">
 			<value>Drums</value>
 		</property>
@@ -302,7 +308,14 @@
 	<object class="MixerBusPanner" id="{5490d29e-e02c-40d6-a847-fe35c3c6430b}" />
 	<object class="MixerBusFader" id="{f2e0ffed-b695-4fec-b159-92cf4823f291}" />
 	<object class="MixerBusFader" id="{a49fcc9c-7ea2-408f-bf41-034fa5aafc8a}" />
-	<object class="SFXReverbEffect" id="{77628c20-cfd5-4b2d-bc41-65f45f91053c}" />
+	<object class="SFXReverbEffect" id="{77628c20-cfd5-4b2d-bc41-65f45f91053c}">
+		<property name="lowShelfGain">
+			<value>-2</value>
+		</property>
+		<property name="wetLevel">
+			<value>-5</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{b8de62c3-c199-4426-b0f5-4df3a4eb058f}" />
 	<object class="SFXReverbEffect" id="{d0380030-fef4-40e1-a6f9-bbae282b42cb}">
 		<property name="HFDecayRatio">
