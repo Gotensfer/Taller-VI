@@ -13,19 +13,19 @@ public class Spawner_Module : MonoBehaviour
     [Header("level1")]
     [SerializeField] private Vector2 rangoChili, rangoPidgeon, rangoRocket, rangoMitosis;
     [SerializeField] [Range(1, 1000)] private uint cadaCuantoRestaChili = 50, cadaCuantoRestaPidgeon = 30, cadaCuantoRestaRocket = 30, cadaCuantoRestaMitosis = 50;
-    [SerializeField] [Range(0, 10)] private uint cuantoRestaChili = 1, cuantoRestaPidgeon = 2, cuantoRestaRocket = 3, cuantoRestaMitosis = 1;
+    [SerializeField] [Range(0, 100)] private uint cuantoRestaChili = 1, cuantoRestaPidgeon = 2, cuantoRestaRocket = 3, cuantoRestaMitosis = 1;
     [SerializeField] private float prevPosChili = 10, prevPosPidgeon = 10, prevPosRocket = 10, prevPosMitosis = 10;
     
     [Header("level2")]
     [SerializeField] private Vector2 rangoChili2, rangoPidgeon2, rangoRocket2, rangoMitosis2;
     [SerializeField] [Range(1, 1000)] private uint cadaCuantoRestaChili2 = 50, cadaCuantoRestaPidgeon2 = 30, cadaCuantoRestaRocket2 = 30, cadaCuantoRestaMitosis2 = 50;
-    [SerializeField] [Range(0, 10)] private uint cuantoRestaChili2 = 1, cuantoRestaPidgeon2 = 2, cuantoRestaRocket2 = 3, cuantoRestaMitosis2 = 1;
+    [SerializeField] [Range(0, 100)] private uint cuantoRestaChili2 = 1, cuantoRestaPidgeon2 = 2, cuantoRestaRocket2 = 3, cuantoRestaMitosis2 = 1;
     [SerializeField] private float prevPosChili2 = 10, prevPosPidgeon2 = 10, prevPosRocket2 = 10, prevPosMitosis2 = 10;
     
     [Header("level3")]
     [SerializeField] private Vector2 rangoChili3, rangoPidgeon3, rangoRocket3, rangoMitosis3;
     [SerializeField] [Range(1, 1000)] private uint cadaCuantoRestaChili3 = 50, cadaCuantoRestaPidgeon3 = 30, cadaCuantoRestaRocket3 = 30, cadaCuantoRestaMitosis3 = 50;
-    [SerializeField] [Range(0, 10)] private uint cuantoRestaChili3 = 1, cuantoRestaPidgeon3 = 2, cuantoRestaRocket3 = 3, cuantoRestaMitosis3 = 1;
+    [SerializeField] [Range(0, 100)] private uint cuantoRestaChili3 = 1, cuantoRestaPidgeon3 = 2, cuantoRestaRocket3 = 3, cuantoRestaMitosis3 = 1;
     [SerializeField] private float prevPosChili3 = 10, prevPosPidgeon3 = 10, prevPosRocket3 = 10, prevPosMitosis3 = 10;
 
     [SerializeField] private float xOffset = 0;
