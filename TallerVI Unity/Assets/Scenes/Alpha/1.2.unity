@@ -879,7 +879,7 @@ MonoBehaviour:
   rangoChili: {x: 30, y: 170}
   rangoPidgeon: {x: 150, y: 340}
   rangoRocket: {x: 320, y: 600}
-  rangoMitosis: {x: 30, y: 600}
+  rangoMitosis: {x: 25, y: 600}
   cadaCuantoRestaChili: 50
   cadaCuantoRestaPidgeon: 50
   cadaCuantoRestaRocket: 50
