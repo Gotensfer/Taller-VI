@@ -15,4 +15,4 @@ MonoBehaviour:
   _name: Lunatico
   polaroidPrefabForAchievement: {fileID: 1583331996983374535, guid: a6fb028da01046a4b9c46877d550dd04, type: 3}
   albumPolaroidImage: {fileID: 21300000, guid: dce4481fd0e1cf045871fd7d960b8fd7, type: 3}
-  distanceNeededForAchievement: 8000
+  distanceNeededForAchievement: 7000
