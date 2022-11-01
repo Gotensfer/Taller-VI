@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 566a8bdfac340d449a093458dd0a5a73, type: 3}
-  m_Name: Reach2k
+  m_Name: Reach6k Mojos
   m_EditorClassIdentifier: 
-  _name: 2000m
-  polaroidPrefabForAchievement: {fileID: 1583331996983374535, guid: a229ce17cf426454b8b3861ff1b28a3b, type: 3}
-  albumPolaroidImage: {fileID: 21300000, guid: 66f7d83657fcc5143baaa083b37a6e38, type: 3}
-  distanceNeededForAchievement: 2000
+  _name: Mojos
+  polaroidPrefabForAchievement: {fileID: 1583331996983374535, guid: 63f3d66fde17344408833233c7c427f3, type: 3}
+  albumPolaroidImage: {fileID: 21300000, guid: d60c2c2ee97dc004e88092242e6f61bb, type: 3}
+  distanceNeededForAchievement: 6000

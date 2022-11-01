@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class DistanceTracker_Module : MonoBehaviour
 {
+    public float storedDistance = 0;
     public float travelledDistance { private set; get; }
     private Vector2 origin;
     private Transform player; //despues se cambia por la funcion get player
@@ -24,6 +25,7 @@ public class DistanceTracker_Module : MonoBehaviour
     private void Update()
     {
         CalculateTravelledDistance(player.position);
+        travelledDistance += storedDistance;
 
 #if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.R))

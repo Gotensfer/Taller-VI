@@ -27,8 +27,8 @@ public class Summary : MonoBehaviour
 
     private void Update()
     {
-        travelledDistance.text = dT.travelledDistance.ToString("0.##") + "m";
-        localRecord.text = dT.localRecord.ToString("0.##") + "m";
+        travelledDistance.text = dT.travelledDistance.ToString("0") + "m";
+        localRecord.text = dT.localRecord.ToString("0") + "m";
         //money.text = (lo que sea que lo envie);
     }
 

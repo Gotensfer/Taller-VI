@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ccc822e2ab056a4aab3a2e663a6091b, type: 3}
-  m_Name: Pidgeon10
+  m_Name: Chilli20 Arde el trasero
   m_EditorClassIdentifier: 
-  _name: Pidgeon10
-  polaroidPrefabForAchievement: {fileID: 1583331996983374535, guid: 5ede8e62376cd1a469d98aa86a5a0826, type: 3}
-  albumPolaroidImage: {fileID: 21300000, guid: 6ba342e7c33312d43bd5d31bb31740c1, type: 3}
-  gameCollectType: 1
-  collectsNeededForAchievement: 10
+  _name: Arde el trasero
+  polaroidPrefabForAchievement: {fileID: 1583331996983374535, guid: 1e7c8856d8c122d40a523ad93215b08c, type: 3}
+  albumPolaroidImage: {fileID: 21300000, guid: ee95edba2f3985847a1431c640cad31d, type: 3}
+  gameCollectType: 0
+  collectsNeededForAchievement: 20
