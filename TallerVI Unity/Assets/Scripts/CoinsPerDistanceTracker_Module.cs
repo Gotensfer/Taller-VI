@@ -7,9 +7,9 @@ public class CoinsPerDistanceTracker_Module : MonoBehaviour
 {
     [SerializeField] CoinPerDistanceData coinPerDistanceData;
     [SerializeField] DistanceTracker_Module distanceTracker_Module;
-    [SerializeField] TextMeshProUGUI earnedMoneysDisplay;
+    public TextMeshProUGUI earnedMoneysDisplay;
 
-    int coinsEarnedThisRun;
+    public int coinsEarnedThisRun;
 
     float previousDistance;
     float currentDistance;
