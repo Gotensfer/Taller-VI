@@ -146,6 +146,8 @@ public class PowerUp_PidgeonTest : MonoBehaviour, IPowerUp
 
     void GoUp()
     {
+		if (rawDirection.y > 0.8) return;
+
 		rawDirection.x -= sensibility;
 		rawDirection.y += sensibility;
 		direction = rawDirection.normalized;
@@ -155,6 +157,8 @@ public class PowerUp_PidgeonTest : MonoBehaviour, IPowerUp
 
 	void GoDown()
     {
+		if (rawDirection.y < -0.8) return;
+
 		rawDirection.x += sensibility;
 		rawDirection.y -= sensibility;
 		direction = rawDirection.normalized;
@@ -165,6 +169,7 @@ public class PowerUp_PidgeonTest : MonoBehaviour, IPowerUp
 	// Llame a este método para parar el PowerUp
 	public void StopPowerUp()
     {
+		transform.parent.GetComponent<EventReferenceHandler>().playerEvents.pidgeonDownEvent.Invoke();
 		transform.parent.GetComponent<EventReferenceHandler>().playerEvents.PoweredDownEvent.Invoke();
 		Destroy(this);
     }

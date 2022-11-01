@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Pre Alpha/0.6 Main menu.unity
-    guid: 3652ce0bb786c034885d17fd36de8e87
+    path: Assets/Scenes/Alpha/1.2 Initializing Scene.unity
+    guid: 494cfad876dd3e5449446c6ec2a415c7
   - enabled: 1
-    path: Assets/Scenes/Pre Alpha/0.6.unity
-    guid: 64a8b7402e61b9c40983d0e01a865dfa
+    path: Assets/Scenes/Alpha/1.2 Main menu.unity
+    guid: c30acc1ffc19cd8469c53334dd5e3131
+  - enabled: 1
+    path: Assets/Scenes/Alpha/1.2.unity
+    guid: 5b51543ae69819d409b8e67f9dcff255
   m_configObjects: {}

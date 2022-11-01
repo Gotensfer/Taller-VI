@@ -5,6 +5,7 @@ using UnityEngine;
 public class FmodUIManager : MonoBehaviour
 {
     [SerializeField] GameObject sfx;
+    
     FMODUnity.StudioEventEmitter sfxEmitter;
 
     private void Start()

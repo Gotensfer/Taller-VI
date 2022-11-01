@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class FmodEventManager : MonoBehaviour
 {
-    [SerializeField] GameObject bounce, crash, launch, rocket, chili, mitosis, bgMusic;
+    [SerializeField] GameObject bounce, crash, launch, rocket, chili, mitosis, fecalito;
     
-    FMODUnity.StudioEventEmitter bounceEmitter, crashEmitter, launchEmitter, rocketEmitter, chiliEmitter, mitosisEmitter,bgMusicEmitter;
+    FMODUnity.StudioEventEmitter bounceEmitter, crashEmitter, launchEmitter, rocketEmitter, chiliEmitter, mitosisEmitter, fecalitoEmitter;
+
+    int skinID;
+
+    FMOD.Studio.EventInstance music;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,13 +20,13 @@ public class FmodEventManager : MonoBehaviour
         rocketEmitter = rocket.GetComponent<FMODUnity.StudioEventEmitter>();
         chiliEmitter = chili.GetComponent<FMODUnity.StudioEventEmitter>();
         mitosisEmitter = mitosis.GetComponent<FMODUnity.StudioEventEmitter>();
-        bgMusicEmitter = bgMusic.GetComponent<FMODUnity.StudioEventEmitter>();        
+        fecalitoEmitter = fecalito.GetComponent<FMODUnity.StudioEventEmitter>();
     }
 
     #region Eventos
     public void BounceSfx()
     {
-        bounceEmitter.Play();
+        bounceEmitter.Play();     
     }
 
     public void CrashSfx()
@@ -49,13 +53,47 @@ public class FmodEventManager : MonoBehaviour
     {
         mitosisEmitter.Play();
     }
+
+    public void FecalitoSfx()
+    {
+        fecalitoEmitter.Play();
+    }
     public void PlayMusic()
     {
-        bgMusicEmitter.Play();
+        skinID = (int)SkinData.ID;
+        switch (skinID)
+        {
+            case 0:     //Base
+                music = FMODUnity.RuntimeManager.CreateInstance("event:/Music-Ambience/BG_Music_Base");
+                break;
+            case 1:     //Kkwaii
+                music = FMODUnity.RuntimeManager.CreateInstance("event:/Music-Ambience/BG_Music_Kkwaii");
+                break;
+            case 2:     //Shitsycal
+                music = FMODUnity.RuntimeManager.CreateInstance("event:/Music-Ambience/BG_Music_Shitycal");
+                break;
+            case 3:     //Cavaquera
+                music = FMODUnity.RuntimeManager.CreateInstance("event:/Music-Ambience/BG_Music_Cowboy");
+                break;
+            case 4:     //Cacalien
+                music = FMODUnity.RuntimeManager.CreateInstance("event:/Music-Ambience/BG_Music_Cumbialeta");
+                break;
+            case 5:     //Cacanauta
+                music = FMODUnity.RuntimeManager.CreateInstance("event:/Music-Ambience/BG_Music_Cacanauta"); 
+                break;
+            case 6:     //Cacaruto
+                music = FMODUnity.RuntimeManager.CreateInstance("event:/Music-Ambience/BG_Music_Cacaruto"); 
+                break;
+            case 7:     //Golden
+                music = FMODUnity.RuntimeManager.CreateInstance("event:/Music-Ambience/BG_Music_GoldenPoop"); 
+                break;
+        }
+        music.start();
     }
     public void StopMusic()
     {
-        bgMusicEmitter.Stop();
+        music.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        music.release();
     }
     #endregion
 }

@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ab26b13798f18f449ad6c2e3da632ad, type: 3}
   m_Name: Soda
   m_EditorClassIdentifier: 
+  maxVelocity: 5
   anglePerSecond: 15
-  maxVelocity: 25
   impulse: 0
   bounces: 0
+  type: 0
+  coinPrice: 0

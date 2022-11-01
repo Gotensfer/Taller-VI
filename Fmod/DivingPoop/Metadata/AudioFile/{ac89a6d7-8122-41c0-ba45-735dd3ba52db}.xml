@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{ac89a6d7-8122-41c0-ba45-735dd3ba52db}">
+		<property name="assetPath">
+			<value>Music/80's/Loop/80's_Theme_Loop-Pads.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>29.596734693877551</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{5e16193e-f6c0-49a8-be24-3be3c4e11116}</destination>
+		</relationship>
+	</object>
+</objects>

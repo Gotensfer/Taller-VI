@@ -22,11 +22,14 @@ public class LaunchModule : MonoBehaviour
     public float length = 2;
     private bool flag = false; //Angle animator switch
 
-    // A petición del producer: el jugador no debe poder chocar con powerups por x tiempo
+    // A peticiï¿½n del producer: el jugador no debe poder chocar con powerups por x tiempo
     [SerializeField] float timeToReEnableCollisions;
     [SerializeField] GameObject player;
-    [SerializeField] LayerMask originalLayer;
-    [SerializeField] LayerMask phantomLayer;
+    [SerializeField] int originalLayer;
+    [SerializeField] int phantomLayer;
+
+
+    [SerializeField] SpriteRenderer playerRenderer;
 
     void Start()
     {
@@ -36,6 +39,9 @@ public class LaunchModule : MonoBehaviour
 
         force = LaunchData.impulse;
         angleMovementVelocity = LaunchData.anglePerSecond;
+
+        // Sprite invisible antes de lanzar
+        playerRenderer.color = new Color(1, 1, 1, 0);
     }
     
     void Update()
@@ -55,14 +61,16 @@ public class LaunchModule : MonoBehaviour
 
     public void Launch()
     {
-        if (LaunchData.impulse < 5) force = 5;
-        LaunchData.ResetLaunchData();
+        if (LaunchData.impulse < 15) force = 10;
         _rb.AddForce(dir * force, ForceMode2D.Impulse);
         playerEvents.LaunchEvent.Invoke();
         launchZoneButton.SetActive(false);
 
         DisableCollisionsWithPowerUps();
         Invoke(nameof(ReEnableCollisionsWithPowerUps), timeToReEnableCollisions);
+
+        // Sprite visible al lanzar
+        playerRenderer.color = new Color(1, 1, 1, 1);
     }
 
     void DisableCollisionsWithPowerUps()

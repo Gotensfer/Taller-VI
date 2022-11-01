@@ -12,7 +12,13 @@ public class Fecalito : MonoBehaviour
     public int level;
 
     [SerializeField] float cdTime;
-    float remainingCD;
+    
+    public float CdTime
+    {
+        get => cdTime;
+    }
+    
+    public float remainingCD { get; private set; }
 
     [SerializeField] int maxCharges;
     [SerializeField] int charges;
@@ -22,13 +28,12 @@ public class Fecalito : MonoBehaviour
     [SerializeField] GameObject button;
     [SerializeField] TextMeshProUGUI chargeIndicator;
 
-    [SerializeField] Sprite availableSprite;
-    [SerializeField] Sprite onCDSprite;
-
     [SerializeField] PlayerEvents_Interface playerEvents;
 
     private void Start()
     {
+        level = PlayerPrefs.GetInt("Fecalito Level", -1);
+
         button.SetActive(false);
         playerEvents.LaunchEvent.AddListener(EnableFecalitoButton); // Para evitar ruido en el EventManager
 
@@ -48,6 +53,9 @@ public class Fecalito : MonoBehaviour
             case 3:
                 maxCharges = 3;
                 break;
+            default:
+                Debug.LogError("NO SE CARGARON LOS DATOS DE NIVEL DE MITOSIS");
+                break;
         }
 
         charges = maxCharges;
@@ -62,7 +70,6 @@ public class Fecalito : MonoBehaviour
             if (remainingCD <= 0)
             {
                 button.GetComponent<Button>().interactable = true;
-                button.GetComponent<Image>().sprite = availableSprite;
             }
         }
     }
@@ -70,13 +77,12 @@ public class Fecalito : MonoBehaviour
     public void Activate_Fecalito()
     {
         direction.Normalize();
-        player.velocity = new Vector2(player.velocity.x, 0); // Más que todo para lograr un mejor efecto visual
+        player.velocity = new Vector2(player.velocity.x, 0); // Mï¿½s que todo para lograr un mejor efecto visual
         player.AddForce(direction * strenght, ForceMode2D.Impulse);
 
         charges--;
         remainingCD = cdTime;
         button.GetComponent<Button>().interactable = false;
-        button.GetComponent<Image>().sprite = onCDSprite;
         UpdateUIChargeIndicator();
 
         playerEvents.FecalitoEvent.Invoke();
