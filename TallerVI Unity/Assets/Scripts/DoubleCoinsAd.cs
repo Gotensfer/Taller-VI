@@ -4,6 +4,8 @@ using UnityEngine;
 using Unity.Services.Core;
 using Unity.Services.Mediation;
 using System;
+using UnityEngine.UI;
+using TMPro;
 
 public class DoubleCoinsAd : MonoBehaviour
 {
@@ -11,6 +13,12 @@ public class DoubleCoinsAd : MonoBehaviour
     public string androidAdUnitId;
     [Tooltip("Ad Unit Ids for each platform that represent Mediation waterfalls.")]
     public string iosAdUnitId;
+
+    [SerializeField] CoinsPerDistanceTracker_Module coinsPerDistance;
+    [SerializeField] TextMeshProUGUI adStateDisplay;
+
+    [SerializeField] Button button;
+    [SerializeField] GameObject checkOutObj;
 
     IRewardedAd m_RewardedAd;
 
@@ -26,6 +34,8 @@ public class DoubleCoinsAd : MonoBehaviour
         catch (Exception e)
         {
             InitializationFailed(e);
+
+            adStateDisplay.color = Color.red; // Error de inicialización
         }
     }
 
@@ -48,8 +58,12 @@ public class DoubleCoinsAd : MonoBehaviour
             catch (ShowFailedException e)
             {
                 Debug.LogWarning($"Rewarded failed to show: {e.Message}");
+
+                adStateDisplay.color = Color.blue; // Error de mostrar
             }
         }
+
+        adStateDisplay.color = Color.yellow; // Ad no cargado
     }
 
     public async void ShowRewardedWithOptions()
@@ -138,6 +152,12 @@ public class DoubleCoinsAd : MonoBehaviour
     void UserRewarded(object sender, RewardEventArgs e)
     {
         print("Doubled coins");
+
+        coinsPerDistance.earnedMoneysDisplay.text = $"{coinsPerDistance.coinsEarnedThisRun * 2}";
+        EconomyData.AddCoins(coinsPerDistance.coinsEarnedThisRun);
+
+        button.interactable = false;
+        checkOutObj.SetActive(true);
     }
 
     void AdClosed(object sender, EventArgs args)
@@ -148,12 +168,16 @@ public class DoubleCoinsAd : MonoBehaviour
     void AdLoaded(object sender, EventArgs e)
     {
         Debug.Log("Ad loaded");
+
+        adStateDisplay.color = Color.green; // Se pudo cargar el Ad
     }
 
     void AdFailedLoad(object sender, LoadErrorEventArgs e)
     {
         Debug.Log("Failed to load ad");
         Debug.Log(e.Message);
+
+        adStateDisplay.color = Color.magenta; // No se pudo cargar el Ad
     }
 
     void ImpressionEvent(object sender, ImpressionEventArgs args)

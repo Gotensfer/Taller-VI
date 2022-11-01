@@ -7,6 +7,7 @@ public class Summary : MonoBehaviour
     private CanvasGroup cnv;
     [SerializeField] RectTransform homeButton;
     [SerializeField] RectTransform restartButton;
+    [SerializeField] RectTransform adButton;
 
 
     [SerializeField] private TMP_Text travelledDistance, localRecord, money;
@@ -19,6 +20,8 @@ public class Summary : MonoBehaviour
 
         homeButton.transform.localScale = Vector2.zero;
         restartButton.transform.localScale = Vector2.zero;
+        adButton.transform.localScale = Vector2.zero;
+        print("?");
 
         cnv = GetComponent<CanvasGroup>();
         dT = FindObjectOfType<DistanceTracker_Module>();
@@ -38,7 +41,7 @@ public class Summary : MonoBehaviour
         cnv.DOFade(1,1).SetDelay(1);
         homeButton.DOScale(new Vector3(1.621723f, 1.621723f, 1.621723f), 1).SetEase(Ease.OutSine).SetDelay(1);
         restartButton.DOScale(new Vector3(1.621723f, 1.621723f, 1.621723f), 1).SetEase(Ease.OutSine).SetDelay(1);
-
+        adButton.DOScale(new Vector3(1.621723f, 1.621723f, 1.621723f), 1).SetEase(Ease.OutSine).SetDelay(1);
 
         if (dT.localRecord < dT.travelledDistance)
         {

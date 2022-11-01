@@ -22,7 +22,7 @@ PlayerSettings:
   m_SplashScreenOverlayOpacity: 0.5
   m_SplashScreenAnimation: 1
   m_SplashScreenLogoStyle: 1
-  m_SplashScreenDrawMode: 0
+  m_SplashScreenDrawMode: 1
   m_SplashScreenBackgroundAnimationZoom: 1
   m_SplashScreenLogoAnimationZoom: 1
   m_SplashScreenBackgroundLandscapeAspect: 1
@@ -39,7 +39,11 @@ PlayerSettings:
     y: 0
     width: 1
     height: 1
-  m_SplashScreenLogos: []
+  m_SplashScreenLogos:
+  - logo: {fileID: 10404, guid: 0000000000000000e000000000000000, type: 0}
+    duration: 2
+  - logo: {fileID: 21300000, guid: df7b6b7a985bd8d449bbcf60b89a3892, type: 3}
+    duration: 2
   m_VirtualRealitySplashScreen: {fileID: 0}
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1920
@@ -134,7 +138,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 1.0
+  bundleVersion: 1.0.0
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -161,8 +165,8 @@ PlayerSettings:
     iPhone: 0
     tvOS: 0
   overrideDefaultApplicationIdentifier: 0
-  AndroidBundleVersionCode: 9
-  AndroidMinSdkVersion: 22
+  AndroidBundleVersionCode: 11
+  AndroidMinSdkVersion: 24
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
   aotOptions: 
@@ -245,7 +249,7 @@ PlayerSettings:
   useCustomBaseGradleTemplate: 0
   useCustomGradlePropertiesTemplate: 1
   useCustomProguardFile: 0
-  AndroidTargetArchitectures: 1
+  AndroidTargetArchitectures: 3
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 1
   androidSplashScreen: {fileID: 2800000, guid: 126b6ca0d9ed6464a96f175ff036b0d9, type: 3}
@@ -431,42 +435,42 @@ PlayerSettings:
       m_Kind: 0
       m_SubKind: 
     - m_Textures:
-      - {fileID: 2800000, guid: 144d3bb90d80ac04eb0dcbc8594e8a48, type: 3}
+      - {fileID: 2800000, guid: 23c8317e59dab834987e94bb8c0eb839, type: 3}
       - {fileID: 2800000, guid: 4b8fa8a47145e424d8464df28debddb1, type: 3}
       m_Width: 432
       m_Height: 432
       m_Kind: 2
       m_SubKind: 
     - m_Textures:
-      - {fileID: 2800000, guid: 144d3bb90d80ac04eb0dcbc8594e8a48, type: 3}
+      - {fileID: 2800000, guid: a9fe6208ebc942c43a91a7725251e25b, type: 3}
       - {fileID: 2800000, guid: 4b8fa8a47145e424d8464df28debddb1, type: 3}
       m_Width: 324
       m_Height: 324
       m_Kind: 2
       m_SubKind: 
     - m_Textures:
-      - {fileID: 2800000, guid: 144d3bb90d80ac04eb0dcbc8594e8a48, type: 3}
+      - {fileID: 2800000, guid: 8209a1648a7463c44af382d8f193aa1b, type: 3}
       - {fileID: 2800000, guid: 4b8fa8a47145e424d8464df28debddb1, type: 3}
       m_Width: 216
       m_Height: 216
       m_Kind: 2
       m_SubKind: 
     - m_Textures:
-      - {fileID: 2800000, guid: 144d3bb90d80ac04eb0dcbc8594e8a48, type: 3}
+      - {fileID: 2800000, guid: 8209a1648a7463c44af382d8f193aa1b, type: 3}
       - {fileID: 2800000, guid: 4b8fa8a47145e424d8464df28debddb1, type: 3}
       m_Width: 162
       m_Height: 162
       m_Kind: 2
       m_SubKind: 
     - m_Textures:
-      - {fileID: 2800000, guid: 144d3bb90d80ac04eb0dcbc8594e8a48, type: 3}
+      - {fileID: 2800000, guid: f04d1bb1c32c26248b8c96f3a9f1e975, type: 3}
       - {fileID: 2800000, guid: 4b8fa8a47145e424d8464df28debddb1, type: 3}
       m_Width: 108
       m_Height: 108
       m_Kind: 2
       m_SubKind: 
     - m_Textures:
-      - {fileID: 2800000, guid: 144d3bb90d80ac04eb0dcbc8594e8a48, type: 3}
+      - {fileID: 2800000, guid: 3cd672f15867d87439ac4b540aaa0a19, type: 3}
       - {fileID: 2800000, guid: 4b8fa8a47145e424d8464df28debddb1, type: 3}
       m_Width: 81
       m_Height: 81
@@ -720,9 +724,9 @@ PlayerSettings:
   ps4IncludedModules: []
   ps4attribVROutputEnabled: 0
   monoEnv: 
-  splashScreenBackgroundSourceLandscape: {fileID: 0}
+  splashScreenBackgroundSourceLandscape: {fileID: 21300000, guid: 126b6ca0d9ed6464a96f175ff036b0d9, type: 3}
   splashScreenBackgroundSourcePortrait: {fileID: 0}
-  blurSplashScreenBackground: 1
+  blurSplashScreenBackground: 0
   spritePackerPolicy: 
   webGLMemorySize: 32
   webGLExceptionSupport: 1
@@ -742,7 +746,8 @@ PlayerSettings:
   scriptingDefineSymbols: {}
   additionalCompilerArguments: {}
   platformArchitecture: {}
-  scriptingBackend: {}
+  scriptingBackend:
+    Android: 1
   il2cppCompilerConfiguration: {}
   managedStrippingLevel: {}
   incrementalIl2cppBuild: {}
