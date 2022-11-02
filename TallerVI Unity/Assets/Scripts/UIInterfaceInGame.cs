@@ -20,6 +20,7 @@ public class UIInterfaceInGame : MonoBehaviour
     [SerializeField] private bool firstTimeInGame;
     [SerializeField] private bool firstTimeRocket;
     [SerializeField] private bool firstTimePidgeon;
+    [SerializeField] int coinsNeededForTutorialToStore;
 
     [Header("Tutorial Elements")]
     [SerializeField] CanvasGroup fadePanel;
@@ -36,7 +37,9 @@ public class UIInterfaceInGame : MonoBehaviour
     [SerializeField] RectTransform rText1;
     [SerializeField] RectTransform rText2;    
     [SerializeField] RectTransform pText1;
-    [SerializeField] RectTransform pText2;
+    [SerializeField] RectTransform pText2;    
+    [SerializeField] RectTransform sText1;
+    [SerializeField] RectTransform sText2;
 
     public static bool alreadyInitialized = false;
 
@@ -55,7 +58,9 @@ public class UIInterfaceInGame : MonoBehaviour
         rText1.transform.localScale = Vector2.zero;
         rText2.transform.localScale = Vector2.zero;
         pText1.transform.localScale = Vector2.zero;
-        pText2.transform.localScale = Vector2.zero;
+        pText2.transform.localScale = Vector2.zero;      
+        sText1.transform.localScale = Vector2.zero;
+        sText2.transform.localScale = Vector2.zero;
 
         //distance.DOAnchorPosX(-37, 1);
         altitude.DOAnchorPosX(-1180, 1);
@@ -310,6 +315,47 @@ public class UIInterfaceInGame : MonoBehaviour
             screenButton.gameObject.SetActive(false);
         }
         );
+
+    }
+    #endregion
+
+    #region"Tutorial ToStore"
+    public void CheckCoins()
+    {
+        if (EconomyData.coins >= coinsNeededForTutorialToStore && PlayerPrefs.GetInt("firstTimeUpgrades") == 1)
+        {
+            sText1.gameObject.SetActive(true);
+            sText2.gameObject.SetActive(true);      //Se activan los elementos necesarios.
+            touchIcon.alpha = 0;
+            touchIcon.gameObject.SetActive(true);
+            screenButton.gameObject.SetActive(true);
+
+            fadePanel.DOFade(0.8f, 0.3f).SetUpdate(true).OnComplete(() => {
+                sText1.DOScale(Vector2.one, 0.5f).SetUpdate(true);
+                sText2.DOScale(Vector2.one, 0.5f).SetUpdate(true);
+
+                touchIcon.DOFade(1, 0.3f).SetEase(Ease.InSine).SetUpdate(true);
+                touchIcon.gameObject.GetComponent<RectTransform>().DOAnchorPosY(150, 1)
+                    .SetEase(Ease.InOutCubic)
+                    .SetLoops(-1, LoopType.Yoyo)
+                    .SetUpdate(true);
+
+
+                screenButton.onClick.AddListener(ToStoreTutorial2);
+            }
+            );
+        }
+    }
+
+    private void ToStoreTutorial2()
+    {
+        sText1.DOScale(Vector2.zero, 0.5f).SetUpdate(true).OnComplete(() => sText1.gameObject.SetActive(false));
+        sText2.DOScale(Vector2.zero, 0.5f).SetUpdate(true).OnComplete(() => sText2.gameObject.SetActive(false));
+        touchIcon.DOKill();
+        touchIcon.gameObject.SetActive(false);
+
+        screenButton.onClick.RemoveListener(ToStoreTutorial2);
+        fadePanel.DOFade(0, 0.3f).SetEase(Ease.InOutBack).SetUpdate(true).OnComplete(() => screenButton.gameObject.SetActive(false));
 
     }
     #endregion
