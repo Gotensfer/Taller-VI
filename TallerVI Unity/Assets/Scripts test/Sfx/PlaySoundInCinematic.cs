@@ -23,7 +23,6 @@ public class PlaySoundInCinematic : MonoBehaviour
     void PlaySound()
     {
         FMODUnity.RuntimeManager.PlayOneShot("event:/Cinematica/AudioCinematica");
-        //soundCinematic.Play();
     }
 
     void PlayVideo()
