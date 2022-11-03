@@ -444,6 +444,7 @@ MonoBehaviour:
   - Master
   Banks:
   - Ambience
+  - Cinematic
   - Music
   - SFX
   - Shop
