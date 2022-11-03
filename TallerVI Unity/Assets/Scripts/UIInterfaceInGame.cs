@@ -334,12 +334,11 @@ public class UIInterfaceInGame : MonoBehaviour
                 sText1.DOScale(Vector2.one, 0.5f).SetUpdate(true);
                 sText2.DOScale(Vector2.one, 0.5f).SetUpdate(true);
 
-                touchIcon.DOFade(1, 0.3f).SetEase(Ease.InSine).SetUpdate(true);
-                touchIcon.gameObject.GetComponent<RectTransform>().DOAnchorPosY(150, 1)
-                    .SetEase(Ease.InOutCubic)
+                // touchIcon.DOFade(1, 0.3f).SetEase(Ease.InSine).SetUpdate(true);
+                touchIcon.DOFade(1, 1)
+                    .SetEase(Ease.InQuart)
                     .SetLoops(-1, LoopType.Yoyo)
                     .SetUpdate(true);
-
 
                 screenButton.onClick.AddListener(ToStoreTutorial2);
             }

@@ -781,6 +781,7 @@ public class UIInterfaceMainMenu : MonoBehaviour
             CreditsPanel.gameObject.SetActive(false);
             screenButton.gameObject.SetActive(false);
             screenButton.onClick.RemoveAllListeners();
+            CreditsInfo.DOAnchorPosY(-1000, 0);
         });
     }
 
