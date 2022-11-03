@@ -415,7 +415,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Mierda al zarzo
+  m_text: "Moj\xF3n al zarzo"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4d397f401b1c39545ab3225f7ce2a9bb, type: 2}
   m_sharedMaterial: {fileID: -2519196839059595423, guid: 4d397f401b1c39545ab3225f7ce2a9bb, type: 2}

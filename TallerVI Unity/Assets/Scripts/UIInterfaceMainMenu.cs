@@ -71,6 +71,9 @@ public class UIInterfaceMainMenu : MonoBehaviour
     [SerializeField] RectTransform desText4;
     [SerializeField] RectTransform desText5;
 
+    [SerializeField] RectTransform CreditsInfo;
+    [SerializeField] CanvasGroup CreditsPanel;
+    FMOD.Studio.EventInstance EndCreditsSound;
 
     public static bool alreadyInitialized = false;
 
@@ -734,5 +737,53 @@ public class UIInterfaceMainMenu : MonoBehaviour
         });
 
     }
+    #endregion
+
+
+    #region "Creditos"
+
+    public void OpenCredits() 
+    {
+        CreditsInfo.gameObject.GetComponent<CanvasGroup>().DOFade(1, 0);
+        screenButton.gameObject.SetActive(true);
+        CreditsInfo.gameObject.SetActive(true);
+
+        CreditsPanel.gameObject.SetActive(true);
+        CreditsPanel.DOFade(1, 1).OnComplete(() => {
+            screenButton.onClick.AddListener(CloseCredits);
+            CreditsInfo.DOAnchorPosY(7750, 35).OnComplete(EndCredits);
+        });
+    }
+
+    public void CloseCredits()
+    {
+        CreditsInfo.DOKill();
+        CreditsPanel.DOFade(0, 1).SetEase(Ease.InOutBack).OnComplete(()=> CreditsPanel.gameObject.SetActive(false));
+        CreditsInfo.gameObject.GetComponent<CanvasGroup>().DOFade(0, 1).SetEase(Ease.InOutBack).OnComplete(()=> {
+            CreditsInfo.gameObject.SetActive(false);
+            CreditsInfo.DOAnchorPosY(-1000, 0);
+        } );
+        
+        screenButton.gameObject.SetActive(false);
+        screenButton.onClick.RemoveAllListeners();
+    } 
+
+    public void EndCredits()
+    {
+        CreditsInfo.gameObject.GetComponent<CanvasGroup>().DOFade(0, 1).SetDelay(3).SetEase(Ease.InOutBack).OnComplete(() => {
+            CreditsInfo.gameObject.SetActive(false);
+        });
+        CreditsPanel.DOFade(0, 1).SetDelay(3).SetEase(Ease.InOutBack).OnComplete(() =>
+        {
+            EndCreditsSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Mitosis");
+            EndCreditsSound.start();
+
+            CreditsPanel.gameObject.SetActive(false);
+            screenButton.gameObject.SetActive(false);
+            screenButton.onClick.RemoveAllListeners();
+            CreditsInfo.DOAnchorPosY(-1000, 0);
+        });
+    }
+
     #endregion
 }
