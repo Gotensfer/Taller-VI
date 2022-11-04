@@ -6,6 +6,8 @@ public class ChangeLanguage : MonoBehaviour
 {
     public UnityEvent ChangeSpanish, ChangeEnglish;
 
+    #if UNITY_EDITOR
+    
     private void Update()
     {
         if (Input.GetKey(KeyCode.V))
@@ -18,4 +20,6 @@ public class ChangeLanguage : MonoBehaviour
             ChangeEnglish.Invoke();
         }
     }
+    
+    #endif
 }
