@@ -2738,7 +2738,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &121405176
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4311,7 +4311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textSpanish: Recoge 25 cohetes en una partida
-  textEnglish: Collecto 25 rockets in one launch.
+  textEnglish: Collect 25 rockets in one launch.
 --- !u!1 &189780381
 GameObject:
   m_ObjectHideFlags: 0
@@ -9119,7 +9119,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &365014385
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10747,7 +10747,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &415790476
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13831,7 +13831,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &552774141
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16016,7 +16016,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &679770605
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22430,7 +22430,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &963637910
 RectTransform:
   m_ObjectHideFlags: 0
@@ -27704,7 +27704,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1258087708
 RectTransform:
   m_ObjectHideFlags: 0
@@ -33023,7 +33023,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1455901931
 RectTransform:
   m_ObjectHideFlags: 0
@@ -34576,7 +34576,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1538890163
 RectTransform:
   m_ObjectHideFlags: 0
@@ -40470,7 +40470,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1848729794
 RectTransform:
   m_ObjectHideFlags: 0
@@ -45317,7 +45317,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2061025871
 RectTransform:
   m_ObjectHideFlags: 0
