@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndGame_Module : MonoBehaviour
 {
     [SerializeField] PlayerEvents_Interface playerEvents;
     [SerializeField] DistanceTracker_Module distanceTracker;
     [SerializeField] Rigidbody2D rb;
+
 
     bool reachedEndGameFlag = false;
     bool onEndGame = false;
@@ -34,7 +36,11 @@ public class EndGame_Module : MonoBehaviour
         if (onEndGame)
         {
             rb.velocity = Vector2.zero;
-        }
-        
+        }      
+    }
+
+    void ToEndGameCinematic()
+    {
+        SceneManager.LoadScene(3);
     }
 }
