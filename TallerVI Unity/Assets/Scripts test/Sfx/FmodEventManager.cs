@@ -87,6 +87,9 @@ public class FmodEventManager : MonoBehaviour
             case 7:     //Golden
                 music = FMODUnity.RuntimeManager.CreateInstance("event:/Music-Ambience/BG_Music_GoldenPoop"); 
                 break;
+            case 8:     //20's
+                music = FMODUnity.RuntimeManager.CreateInstance("event:/Music-Ambience/BG_Music_20's");
+                break;
         }
         music.start();
     }
