@@ -216,6 +216,7 @@ public class UIInterfaceInGame : MonoBehaviour
         else
         {
             touchIcon.alpha = 0;
+            touchIcon.DOKill();
             touchIcon.gameObject.SetActive(true);
 
             touchIcon.gameObject.GetComponent<RectTransform>().localPosition = new Vector2(1000, -338);
@@ -283,6 +284,7 @@ public class UIInterfaceInGame : MonoBehaviour
         else
         {
             touchIcon.alpha = 0;
+            touchIcon.DOKill();
             touchIcon.gameObject.SetActive(true);
 
             touchIcon.gameObject.GetComponent<RectTransform>().localPosition = new Vector2(1000, -338);
