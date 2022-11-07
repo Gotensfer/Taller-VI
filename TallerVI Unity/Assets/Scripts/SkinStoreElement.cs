@@ -34,7 +34,7 @@ public class SkinStoreElement : MonoBehaviour
 
         if (PlayerPrefs.GetInt($"LastSelectedSkin") == (int)skin.skinID)
         {
-            SelectSkin();
+            button.onClick.Invoke();
         }
     }
 
