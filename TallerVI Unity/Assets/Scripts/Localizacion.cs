@@ -21,6 +21,18 @@ public class Localizacion : MonoBehaviour
         cl.ChangeSpanish.AddListener(ChangeToSpanish);
     }
 
+    private void OnEnable()
+    {
+        if (ChangeLanguage.Language == 1)
+        {
+            ChangeToSpanish();
+        }        
+        if (ChangeLanguage.Language == 0)
+        {
+            ChangeToEnglish();
+        }
+    }
+
     void ChangeToSpanish()
     {
         text.text = textSpanish;

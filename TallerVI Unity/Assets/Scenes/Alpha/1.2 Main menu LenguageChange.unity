@@ -2738,7 +2738,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &121405176
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5610,7 +5610,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 269573585}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1200255491}
+        m_TargetAssemblyTypeName: ChangeLanguage, Assembly-CSharp
+        m_MethodName: ChangeToEnglish
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &269573585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8686,7 +8698,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 342067739}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1200255491}
+        m_TargetAssemblyTypeName: ChangeLanguage, Assembly-CSharp
+        m_MethodName: ChangeToSpanish
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &342067739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9119,7 +9143,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &365014385
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10747,7 +10771,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &415790476
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13831,7 +13855,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &552774141
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16016,7 +16040,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &679770605
 RectTransform:
   m_ObjectHideFlags: 0
@@ -26007,19 +26031,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ChangeSpanish:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   ChangeEnglish:
     m_PersistentCalls:
       m_Calls: []
@@ -27704,7 +27716,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1258087708
 RectTransform:
   m_ObjectHideFlags: 0
@@ -33022,7 +33034,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1455901931
 RectTransform:
   m_ObjectHideFlags: 0
@@ -34575,7 +34587,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1538890163
 RectTransform:
   m_ObjectHideFlags: 0
@@ -40393,7 +40405,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1848729794
 RectTransform:
   m_ObjectHideFlags: 0
@@ -45240,7 +45252,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2061025871
 RectTransform:
   m_ObjectHideFlags: 0
