@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9e451871c5e2f8a41ad2f6e015516c59
+guid: c8f2568b1f0315c4096ee7df514d78c9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,133 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cacaleta_skin_20s_up_2_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 512
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fcc37dc3e8508c64abd06be9856bddf6
-      internalID: 418469423
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cacaleta_skin_20s_up_2_1
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 512
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aa8f8b0ebcf56114084a61aa5cd3674c
-      internalID: 1808051220
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cacaleta_skin_20s_up_2_2
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 512
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 53765beffe6b7a04ea8b4d9113dffd91
-      internalID: 658175993
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cacaleta_skin_20s_up_2_3
-      rect:
-        serializedVersion: 2
-        x: 1536
-        y: 512
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b6c171d6d18cb184fab5ef6fb88e3369
-      internalID: -360139094
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cacaleta_skin_20s_up_2_4
-      rect:
-        serializedVersion: 2
-        x: 2048
-        y: 512
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 93f8824a37bf0e1469449729ecc43ac6
-      internalID: 375434278
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cacaleta_skin_20s_up_2_5
-      rect:
-        serializedVersion: 2
-        x: 2560
-        y: 512
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f0d1b94281a1a82469eb64b19f83e998
-      internalID: 198535564
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cacaleta_skin_20s_up_2_6
+      name: Cacaleta_skin_20s_horizontal_0
       rect:
         serializedVersion: 2
         x: 0
@@ -257,14 +131,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b08f5d9edc3752f48a4854eb19ed8d76
-      internalID: -4981669
+      spriteID: 3818987a508a9a844bbf9aa45dd056ba
+      internalID: 76359011
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_skin_20s_up_2_7
+      name: Cacaleta_skin_20s_horizontal_1
       rect:
         serializedVersion: 2
         x: 512
@@ -278,14 +152,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 626038afe6753c142a976eb94ed99038
-      internalID: -993064610
+      spriteID: 12bda4b155c332246a4151a691ddea50
+      internalID: 1452132287
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_skin_20s_up_2_8
+      name: Cacaleta_skin_20s_horizontal_2
       rect:
         serializedVersion: 2
         x: 1024
@@ -299,14 +173,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f0075619212d2743b0f8b261c5ef835
-      internalID: -38639052
+      spriteID: 7f3f8ad57f1d77d448f0d1cfd1feee45
+      internalID: -1948685643
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_skin_20s_up_2_9
+      name: Cacaleta_skin_20s_horizontal_3
       rect:
         serializedVersion: 2
         x: 1536
@@ -320,14 +194,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c60a34e58eead6d4e838e8eb64824a4e
-      internalID: 1933270212
+      spriteID: 587b3bf5fb2119f48ae67787bd46c9e3
+      internalID: -1076424147
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_skin_20s_up_2_10
+      name: Cacaleta_skin_20s_horizontal_4
       rect:
         serializedVersion: 2
         x: 2048
@@ -341,14 +215,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee39de29d4661b643a6010e5a08c7d58
-      internalID: -1025250170
+      spriteID: 0dd10902fb0b8624ca2a5983493c901f
+      internalID: 1302079511
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cacaleta_skin_20s_up_2_11
+      name: Cacaleta_skin_20s_horizontal_5
       rect:
         serializedVersion: 2
         x: 2560
@@ -362,8 +236,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f590c6535b6ef90449ec95b919f4c899
-      internalID: 1870508643
+      spriteID: 9ef8b627077274c4ea3020a6184e3455
+      internalID: -1704299390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacaleta_skin_20s_horizontal_6
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 751a8a0db47215b46a0d77de7571aaf8
+      internalID: -1663558503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cacaleta_skin_20s_horizontal_7
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0256fb508046abf4084d2bbae4d033fc
+      internalID: -348281050
       vertices: []
       indices: 
       edges: []
@@ -379,18 +295,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Cacaleta_skin_20s_up_2_11: 1870508643
-      Cacaleta_skin_20s_up_2_5: 198535564
-      Cacaleta_skin_20s_up_2_8: -38639052
-      Cacaleta_skin_20s_up_2_2: 658175993
-      Cacaleta_skin_20s_up_2_4: 375434278
-      Cacaleta_skin_20s_up_2_7: -993064610
-      Cacaleta_skin_20s_up_2_10: -1025250170
-      Cacaleta_skin_20s_up_2_0: 418469423
-      Cacaleta_skin_20s_up_2_1: 1808051220
-      Cacaleta_skin_20s_up_2_6: -4981669
-      Cacaleta_skin_20s_up_2_3: -360139094
-      Cacaleta_skin_20s_up_2_9: 1933270212
+      Cacaleta_skin_20s_horizontal_2: -1948685643
+      Cacaleta_skin_20s_horizontal_6: -1663558503
+      Cacaleta_skin_20s_horizontal_1: 1452132287
+      Cacaleta_skin_20s_horizontal_5: -1704299390
+      Cacaleta_skin_20s_horizontal_4: 1302079511
+      Cacaleta_skin_20s_horizontal_7: -348281050
+      Cacaleta_skin_20s_horizontal_3: -1076424147
+      Cacaleta_skin_20s_horizontal_0: 76359011
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
