@@ -11,7 +11,8 @@ public enum SkinID
     Cacalien = 4,
     Cacanaut = 5,
     Cacaruto = 6,
-    Golden = 7
+    Golden = 7,
+    Ca20s = 8
 }
 
 public static class SkinData
