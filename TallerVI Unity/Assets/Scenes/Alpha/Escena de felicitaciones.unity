@@ -123,6 +123,61 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &117594206
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 117594207}
+  - component: {fileID: 117594208}
+  m_Layer: 5
+  m_Name: ChangeLanguage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &117594207
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117594206}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 894725531}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &117594208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117594206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e202f4741e2235449fe6406d19693b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChangeSpanish:
+    m_PersistentCalls:
+      m_Calls: []
+  ChangeEnglish:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &148736260
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,7 +211,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 894725531}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -273,6 +328,7 @@ GameObject:
   - component: {fileID: 420469702}
   - component: {fileID: 420469704}
   - component: {fileID: 420469703}
+  - component: {fileID: 420469705}
   m_Layer: 5
   m_Name: Fourth message
   m_TagString: Untagged
@@ -293,7 +349,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 894725531}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -397,6 +453,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 420469701}
   m_CullTransparentMesh: 1
+--- !u!114 &420469705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 420469701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1c3fad4779458409fde1637c47995c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textSpanish: "Oh, aqu\xED tienes unas mil monedas por tu dedicaci\xF3n a Cacaleta"
+  textEnglish: Oh, and here's a thousand coins for your dedication to Cacaleta
 --- !u!1 &817137168
 GameObject:
   m_ObjectHideFlags: 0
@@ -675,6 +745,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 117594207}
   - {fileID: 1849137594}
   - {fileID: 1758307647}
   - {fileID: 1058083053}
@@ -700,6 +771,7 @@ GameObject:
   - component: {fileID: 898003011}
   - component: {fileID: 898003013}
   - component: {fileID: 898003012}
+  - component: {fileID: 898003014}
   m_Layer: 5
   m_Name: Tap text
   m_TagString: Untagged
@@ -720,7 +792,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 894725531}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -824,6 +896,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 898003010}
   m_CullTransparentMesh: 1
+--- !u!114 &898003014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898003010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1c3fad4779458409fde1637c47995c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textSpanish: Presiona para continuar
+  textEnglish: Tap to continue
 --- !u!1 &1058083052
 GameObject:
   m_ObjectHideFlags: 0
@@ -835,6 +921,7 @@ GameObject:
   - component: {fileID: 1058083053}
   - component: {fileID: 1058083055}
   - component: {fileID: 1058083054}
+  - component: {fileID: 1058083056}
   m_Layer: 5
   m_Name: Third message
   m_TagString: Untagged
@@ -855,7 +942,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 894725531}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -959,6 +1046,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1058083052}
   m_CullTransparentMesh: 1
+--- !u!114 &1058083056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058083052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1c3fad4779458409fde1637c47995c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textSpanish: "\xA1Ahora Cacaleta puede llegar a lugares m\xE1s lejanos!"
+  textEnglish: Now Cacaleta can reach farther places!
 --- !u!1 &1758307646
 GameObject:
   m_ObjectHideFlags: 0
@@ -970,6 +1071,7 @@ GameObject:
   - component: {fileID: 1758307647}
   - component: {fileID: 1758307649}
   - component: {fileID: 1758307648}
+  - component: {fileID: 1758307650}
   m_Layer: 5
   m_Name: Second message
   m_TagString: Untagged
@@ -990,7 +1092,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 894725531}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1094,6 +1196,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1758307646}
   m_CullTransparentMesh: 1
+--- !u!114 &1758307650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758307646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1c3fad4779458409fde1637c47995c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textSpanish: Has desbloqueado el modo infinito
+  textEnglish: You've now unlocked endless mode
 --- !u!1 &1849137593
 GameObject:
   m_ObjectHideFlags: 0
@@ -1105,6 +1221,7 @@ GameObject:
   - component: {fileID: 1849137594}
   - component: {fileID: 1849137596}
   - component: {fileID: 1849137595}
+  - component: {fileID: 1849137597}
   m_Layer: 5
   m_Name: First message
   m_TagString: Untagged
@@ -1125,7 +1242,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 894725531}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1229,3 +1346,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1849137593}
   m_CullTransparentMesh: 1
+--- !u!114 &1849137597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849137593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1c3fad4779458409fde1637c47995c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textSpanish: "\xA1Gracias por jugar a Flying Crap!"
+  textEnglish: Thanks for playing Flying Crap!

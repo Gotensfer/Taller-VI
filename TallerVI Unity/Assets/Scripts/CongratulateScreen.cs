@@ -58,6 +58,8 @@ public class CongratulateScreen : MonoBehaviour
 
         TextFadeOut(thirdMsg);
         TextFadeIn(fourthMsg).OnComplete(() => continueButton.onClick.AddListener(ToMainMenu));
+
+        EconomyData.AddCoins(1000);
     }
 
     Tween TextFadeIn(RectTransform text)

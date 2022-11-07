@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerStop_Module : MonoBehaviour
 {
-    [SerializeField] private int bounces = 2, bouncesUsed = 0;
+    [SerializeField] public int bounces = 2, bouncesUsed = 0;
     private Rigidbody2D rb;
     private bool playerStopped = false;
 
