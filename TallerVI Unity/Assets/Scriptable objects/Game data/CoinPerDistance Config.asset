@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c9d76b10857f814496cb906f7880970, type: 3}
   m_Name: CoinPerDistance Config
   m_EditorClassIdentifier: 
-  awardedCoinsPer_N_Distance: 10
-  distanceNeededForCoinAward: 100
+  awardedCoinsPer_N_Distance: 1
+  distanceNeededForCoinAward: 10
