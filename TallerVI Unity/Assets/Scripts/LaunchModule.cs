@@ -92,14 +92,14 @@ public class LaunchModule : MonoBehaviour
         {
             case false:
                 angle += angleMovementVelocity*Time.deltaTime;
-                if (angle >= 90)
+                if (angle >= 85)
                 {
                     flag = true;
                 } 
                 break;
             case true:
                 angle -= angleMovementVelocity*Time.deltaTime;
-                if (angle<=0)
+                if (angle<=5)
                 {
                     flag = false;
                 }
