@@ -28,6 +28,8 @@ public class LaunchModule : MonoBehaviour
     [SerializeField] int originalLayer;
     [SerializeField] int phantomLayer;
 
+    [SerializeField] FlyingStates_Module flyingStates_Module;
+    [SerializeField] float timeForFreeFlight;
 
     [SerializeField] SpriteRenderer playerRenderer;
 
@@ -68,6 +70,7 @@ public class LaunchModule : MonoBehaviour
 
         DisableCollisionsWithPowerUps();
         Invoke(nameof(ReEnableCollisionsWithPowerUps), timeToReEnableCollisions);
+        Invoke(nameof(DisableFreeFlight), timeForFreeFlight);
 
         // Sprite visible al lanzar
         playerRenderer.color = new Color(1, 1, 1, 1);
@@ -83,6 +86,11 @@ public class LaunchModule : MonoBehaviour
     {
         player.layer = originalLayer; // Generando error?
         player.tag = "Player";
+    }
+
+    void DisableFreeFlight()
+    {
+        flyingStates_Module.PlayerState = PlayerStates.standardFlying;
     }
 
     void CalculateDirection()
