@@ -15,6 +15,7 @@ public class SkinLoad_Module : MonoBehaviour
     [SerializeField] AnimatorOverrideController cacanautSkinOverride;
     [SerializeField] AnimatorOverrideController cacarutoSkinOverride;
     [SerializeField] AnimatorOverrideController goldenSkinOverride;
+    [SerializeField] AnimatorOverrideController c20sOverride;
 
     [SerializeField] VFXController_Module vfxController;
 
@@ -54,6 +55,10 @@ public class SkinLoad_Module : MonoBehaviour
                 break;
             case SkinID.Golden:
                 GetComponent<Animator>().runtimeAnimatorController = goldenSkinOverride;
+                vfxController.SetVFXForGolden();
+                break;
+            case SkinID.Ca20s:
+                GetComponent<Animator>().runtimeAnimatorController = c20sOverride;
                 vfxController.SetVFXForGolden();
                 break;
             default:
