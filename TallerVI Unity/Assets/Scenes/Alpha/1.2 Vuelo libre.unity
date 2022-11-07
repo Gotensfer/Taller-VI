@@ -2402,7 +2402,7 @@ MonoBehaviour:
   originalLayer: 7
   phantomLayer: 0
   flyingStates_Module: {fileID: 1728376856}
-  timeForFreeFlight: 3
+  timeForFreeFlight: 10
   playerRenderer: {fileID: 1728376844}
 --- !u!1 &279654094
 GameObject:
