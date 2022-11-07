@@ -4762,7 +4762,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.58039, y: 2.25, z: -2}
+  m_LocalPosition: {x: 8.577939, y: 2.25, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17151,9 +17151,9 @@ MonoBehaviour:
   strenght: 25
   direction: {x: 1, y: 0}
   level: 1
-  cdTimeLvl1: 0
-  cdTimeLvl2: 0
-  cdTimeLvl3: 0
+  cdTimeLvl1: 10
+  cdTimeLvl2: 6
+  cdTimeLvl3: 2
   player: {fileID: 1728376842}
   button: {fileID: 1640255985}
   playerEvents: {fileID: 645198002}
