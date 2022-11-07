@@ -26,7 +26,9 @@ public class UpgradeContainerData : MonoBehaviour
 
     FMOD.Studio.EventInstance sfx;
     private void Start()
-    {        
+    {
+        originalImage = GetComponent<Image>().sprite;
+
         switch (upgradeType)
         {
             case UpgradeType.Mitosis:
@@ -60,9 +62,7 @@ public class UpgradeContainerData : MonoBehaviour
             case 3:
                 SetThreeStar();
                 break;
-        }
-
-        originalImage = GetComponent<Image>().sprite;
+        }      
     }
 
     public void LevelUpUpgrade()

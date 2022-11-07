@@ -30,6 +30,9 @@ public class SkinLoad_Module : MonoBehaviour
     [SerializeField] Sprite goldenToilet;
     [SerializeField] Sprite c20sToilet;
 
+    [SerializeField] GameObject c20sVolume;
+    [SerializeField] Transform parentForInstantiatedObjects;
+
     private void Start()
     {
         SkinData.ID = (SkinID)PlayerPrefs.GetInt($"LastSelectedSkin");
@@ -77,6 +80,9 @@ public class SkinLoad_Module : MonoBehaviour
             case SkinID.Ca20s:
                 GetComponent<Animator>().runtimeAnimatorController = c20sOverride;
                 vfxController.SetVFXForGolden();
+
+                Instantiate(c20sVolume, parentForInstantiatedObjects);
+
                 break;
             default:
                 Debug.LogError("No se inicializo la skin o no se encontro?");
