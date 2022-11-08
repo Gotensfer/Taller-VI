@@ -65,14 +65,20 @@ public class UIInterfaceMainMenu : MonoBehaviour
     [SerializeField] RectTransform aText1;
     [SerializeField] RectTransform aText2;
 
-    [Header("Store Descriptions")]
+    [Header("Upgrades Descriptions")]
     [SerializeField] RectTransform desText1;
     [SerializeField] RectTransform desText2;
     [SerializeField] RectTransform desText3;
     [SerializeField] RectTransform desText4;
     [SerializeField] RectTransform desText5;
 
+    [Header("Store Descriptions")]
+    [SerializeField] RectTransform desText6;
+    [SerializeField] RectTransform desText7;
+    [SerializeField] RectTransform desText8;
+
     [SerializeField] RectTransform CreditsInfo;
+    [SerializeField] RectTransform PanelDescriptions;
     [SerializeField] CanvasGroup CreditsPanel;
     FMOD.Studio.EventInstance EndCreditsSound;
 
@@ -117,6 +123,11 @@ public class UIInterfaceMainMenu : MonoBehaviour
         desText3.transform.localScale = Vector2.zero;
         desText4.transform.localScale = Vector2.zero;
         desText5.transform.localScale = Vector2.zero;
+        desText6.transform.localScale = Vector2.zero;
+        desText7.transform.localScale = Vector2.zero;
+        desText8.transform.localScale = Vector2.zero;
+
+        PanelDescriptions.transform.localScale = Vector2.zero;
 
         albumContent.gameObject.SetActive(false);
         skinsContent.gameObject.SetActive(false);
@@ -404,6 +415,56 @@ public class UIInterfaceMainMenu : MonoBehaviour
         upgrades.DOScale(Vector3.one, 0.8f).SetEase(Ease.OutExpo);
     }
 
+    #region "Descripción Anuncios"
+    public void AnunciosDescription()
+    {
+        PanelDescriptions.gameObject.SetActive(true);
+        desText6.gameObject.SetActive(true);
+
+        PanelDescriptions.DOScale(Vector3.one, 0.5f);
+        desText6.DOScale(Vector3.one, 0.5f);
+    }
+
+    public void CloseAnunciosDescription()
+    {
+        desText6.DOScale(Vector3.zero, 0.5f).OnComplete(() => desText6.gameObject.SetActive(false));
+        PanelDescriptions.DOScale(Vector3.zero, 0.5f).OnComplete(() => PanelDescriptions.gameObject.SetActive(false));
+    }
+    #endregion
+
+    #region "Descripción SkinPack"
+    public void SkinPackDescription()
+    {
+        PanelDescriptions.gameObject.SetActive(true);
+        desText7.gameObject.SetActive(true);
+
+        PanelDescriptions.DOScale(Vector3.one, 0.5f);
+        desText7.DOScale(Vector3.one, 0.5f);
+    }
+
+    public void CloseSkinPackDescription()
+    {
+        desText7.DOScale(Vector3.zero, 0.5f).OnComplete(() => desText7.gameObject.SetActive(false));
+        PanelDescriptions.DOScale(Vector3.zero, 0.5f).OnComplete(() => PanelDescriptions.gameObject.SetActive(false));
+    }
+    #endregion
+
+    #region "Descripción GoldenPoop"
+    public void GoldenPoopDescription()
+    {
+        PanelDescriptions.gameObject.SetActive(true);
+        desText8.gameObject.SetActive(true);
+
+        PanelDescriptions.DOScale(Vector3.one, 0.5f);
+        desText8.DOScale(Vector3.one, 0.5f);
+    }
+
+    public void CloseGoldenPoopDescription()
+    {
+        desText8.DOScale(Vector3.zero, 0.5f).OnComplete(() => desText8.gameObject.SetActive(false));
+        PanelDescriptions.DOScale(Vector3.zero, 0.5f).OnComplete(() => PanelDescriptions.gameObject.SetActive(false));
+    }
+    #endregion
     //Album Button
     public void AlbumUIButton()
     {

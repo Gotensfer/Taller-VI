@@ -16,11 +16,13 @@ public class ChangeLanguage : MonoBehaviour
         if (Input.GetKey(KeyCode.V))
         {
             ChangeSpanish.Invoke();
+            Language = 1;
         }
 
         if (Input.GetKey(KeyCode.N))
         {
             ChangeEnglish.Invoke();
+            Language = 0;
         }
     }
     
