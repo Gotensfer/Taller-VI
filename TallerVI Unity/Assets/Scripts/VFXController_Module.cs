@@ -44,6 +44,10 @@ public class VFXController_Module : MonoBehaviour
     // - Golden
     [SerializeField] ParticleSystem Golden_basePS;
     [SerializeField] TrailRenderer Golden_baseTrail;
+
+    // - 20s
+    [SerializeField] ParticleSystem c20s_basePS;
+    [SerializeField] TrailRenderer c20s_baseTrail;
     #endregion
 
     [Header("Chilli trail system")]
@@ -70,6 +74,7 @@ public class VFXController_Module : MonoBehaviour
     [SerializeField] ParticleSystem mitosisEnd_Cacanaut; // Cacanauta
     [SerializeField] ParticleSystem mitosisEnd_Cacaruto; // Cacaruto
     [SerializeField] ParticleSystem mitosisEnd_Golden; // Golden
+    [SerializeField] ParticleSystem mitosisEnd_c20s; // c20s
     #endregion
 
     [Header("Fecalito start system")]
@@ -101,6 +106,9 @@ public class VFXController_Module : MonoBehaviour
 
     // - Golden
     [SerializeField] ParticleSystem Golden_bouncePS;
+
+    // - c20s
+    [SerializeField] ParticleSystem c20s_bouncePS;
     #endregion
 
     private void Start()
@@ -287,6 +295,19 @@ public class VFXController_Module : MonoBehaviour
 
         bouncePSReference = Golden_bouncePS;
         mitosisEnd_Reference = mitosisEnd_Golden;
+
+        DeActivateAllVFX();
+        ActivateSelectedTrailVFX();
+        ActivateBaseTrail();
+    }
+
+    public void SetVFXForC20s()
+    {
+        BasePSReference = c20s_basePS;
+        BaseTrailReference = c20s_baseTrail;
+
+        bouncePSReference = c20s_bouncePS;
+        mitosisEnd_Reference = mitosisEnd_c20s;
 
         DeActivateAllVFX();
         ActivateSelectedTrailVFX();

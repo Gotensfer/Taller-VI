@@ -26,7 +26,9 @@ public class UpgradeContainerData : MonoBehaviour
 
     FMOD.Studio.EventInstance sfx;
     private void Start()
-    {        
+    {
+        originalImage = GetComponent<Image>().sprite;
+
         switch (upgradeType)
         {
             case UpgradeType.Mitosis:
@@ -60,7 +62,7 @@ public class UpgradeContainerData : MonoBehaviour
             case 3:
                 SetThreeStar();
                 break;
-        }
+        }      
     }
 
     public void LevelUpUpgrade()
@@ -142,6 +144,8 @@ public class UpgradeContainerData : MonoBehaviour
     [SerializeField] Sprite BlackStar;
     [SerializeField] Sprite GoldenStar;
 
+    [SerializeField] Sprite lockedUpgradeImage;
+    Sprite originalImage;
     public void SetZeroStar()
     {
         FirstStar.sprite = BlackStar;
@@ -150,6 +154,8 @@ public class UpgradeContainerData : MonoBehaviour
 
         if (upgradeElement.L1_CoinCost == 0) costDisplay.text = "";
         costDisplay.text = $"${upgradeElement.L1_CoinCost}";
+
+        GetComponent<Image>().sprite = lockedUpgradeImage;
     }
 
     public void SetOneStar()
@@ -159,6 +165,8 @@ public class UpgradeContainerData : MonoBehaviour
         ThirdStar.sprite = BlackStar;
 
         costDisplay.text = $"${upgradeElement.L2_CoinCost}";
+
+        GetComponent<Image>().sprite = originalImage;
     }
 
     public void SetTwoStar()
@@ -168,6 +176,8 @@ public class UpgradeContainerData : MonoBehaviour
         ThirdStar.sprite = BlackStar;
 
         costDisplay.text = $"${upgradeElement.L3_CoinCost}";
+
+        GetComponent<Image>().sprite = originalImage;
     }
 
     public void SetThreeStar()
@@ -177,6 +187,8 @@ public class UpgradeContainerData : MonoBehaviour
         ThirdStar.sprite = GoldenStar;
 
         costDisplay.text = "";
+
+        GetComponent<Image>().sprite = originalImage;
     }
 
     private void OnDisable()
