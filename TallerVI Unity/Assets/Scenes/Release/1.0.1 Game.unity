@@ -18724,7 +18724,7 @@ MonoBehaviour:
   firstTimeInGame: 1
   firstTimeRocket: 1
   firstTimePidgeon: 1
-  coinsNeededForTutorialToStore: 10
+  coinsNeededForTutorialToStore: 100
   fadePanel: {fileID: 996182862}
   screenButton: {fileID: 81679795}
   selector: {fileID: 1531762996}
