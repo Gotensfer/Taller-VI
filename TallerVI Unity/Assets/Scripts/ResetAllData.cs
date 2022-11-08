@@ -6,10 +6,10 @@ public class ResetAllData : MonoBehaviour
 {
     private void Start()
     {
-        if (PlayerPrefs.GetInt($"ResetForRelease101", -1) == -1)
+        if (PlayerPrefs.GetInt($"ResetForRelease101k", -1) == -1)
         {
             PlayerPrefs.DeleteAll();
-            PlayerPrefs.SetInt($"ResetForRelease101", 0);
+            PlayerPrefs.SetInt($"ResetForRelease101k", 0);
         }
     }
 }
