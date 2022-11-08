@@ -17,7 +17,6 @@ public class Summary : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         homeButton.transform.localScale = Vector2.zero;
         restartButton.transform.localScale = Vector2.zero;
         adButton.transform.localScale = Vector2.zero;

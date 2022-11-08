@@ -16,7 +16,7 @@ public class SkinStoreElement : MonoBehaviour
 
     [SerializeField] bool premiumSkin = false;
 
-    private void Start()
+    private void OnEnable()
     {
         button = GetComponent<Button>();
         lockButton = lockObject.GetComponent<Button>();

@@ -1311,12 +1311,12 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 81679794}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -18.80249}
+  m_LocalPosition: {x: 0, y: 0, z: -18.80279}
   m_LocalScale: {x: 1.0473527, y: 1.0473529, z: 1.0473527}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1450302517}
-  m_RootOrder: 4
+  m_Father: {fileID: 1824287672}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4997,7 +4997,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.579664, y: 2.25, z: -2}
+  m_LocalPosition: {x: 8.580082, y: 2.25, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6787,6 +6787,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1930915045}
         m_TargetAssemblyTypeName: UIInterfaceInGame, Assembly-CSharp
         m_MethodName: CheckCoins
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 265546993}
+        m_TargetAssemblyTypeName: UnityEngine.MonoBehaviour, UnityEngine
+        m_MethodName: CancelInvoke
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11315,7 +11327,7 @@ RectTransform:
   m_Children:
   - {fileID: 1371084883}
   m_Father: {fileID: 1824287672}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -14192,9 +14204,8 @@ RectTransform:
   - {fileID: 1531762996}
   - {fileID: 996182865}
   - {fileID: 2004987231}
-  - {fileID: 81679798}
   m_Father: {fileID: 1824287672}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -17633,6 +17644,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1809170951}
+  - {fileID: 81679798}
   - {fileID: 1450302517}
   - {fileID: 2098056190}
   - {fileID: 1155517937}
@@ -18724,7 +18736,7 @@ MonoBehaviour:
   firstTimeInGame: 1
   firstTimeRocket: 1
   firstTimePidgeon: 1
-  coinsNeededForTutorialToStore: 10
+  coinsNeededForTutorialToStore: 100
   fadePanel: {fileID: 996182862}
   screenButton: {fileID: 81679795}
   selector: {fileID: 1531762996}
@@ -20275,7 +20287,7 @@ RectTransform:
   m_Children:
   - {fileID: 1617937025}
   m_Father: {fileID: 1824287672}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
