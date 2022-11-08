@@ -2,58 +2,48 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class IAPSkinPack : MonoBehaviour
 {
-    [SerializeField] SkinStoreElement kkawaiSkin;
-    [SerializeField] SkinStoreElement shitsycalSkin;
-    [SerializeField] SkinStoreElement cacowboySkin;
-    [SerializeField] SkinStoreElement cacalienSkin;
-    [SerializeField] SkinStoreElement cacanautSkin;
-    [SerializeField] SkinStoreElement cacarutoSkin;
-    [SerializeField] SkinStoreElement c20sSkin;
-
-    [SerializeField] GameObject storeGameObject; // Esto no es una buena implementación...
-    [SerializeField] GameObject scrollviewGameObject; // Esta es una implementación aún peor...
-
-    private void Start()
-    {
-        GetComponent<Button>().onClick.AddListener(() => print("Touched?"));
-    }
+    [SerializeField] Skin kkawaiSkin;
+    [SerializeField] Skin shitsycalSkin;
+    [SerializeField] Skin cacowboySkin;
+    [SerializeField] Skin cacalienSkin;
+    [SerializeField] Skin cacanautSkin;
+    [SerializeField] Skin cacarutoSkin;
+    [SerializeField] Skin c20sSkin;
+    FMOD.Studio.EventInstance sfx;
 
     public void UnlockSkinPack()
     {
-        storeGameObject.SetActive(true);
-        scrollviewGameObject.SetActive(true);
-
-        StartCoroutine(UnlockSkins());
-
-        print("Sanity check skin pack");
-    }
-
-    public void FailPurchase()
-    {
-        kkawaiSkin.FailPurchaseSound();
-    }
-
-    IEnumerator UnlockSkins()
-    {
-        yield return new WaitForSeconds(0.5f);
-
-        kkawaiSkin.UnlockByPayingCash();
-        shitsycalSkin.UnlockByPayingCash();
-        cacowboySkin.UnlockByPayingCash();
-        cacalienSkin.UnlockByPayingCash();
-        cacanautSkin.UnlockByPayingCash();
-        cacarutoSkin.UnlockByPayingCash();
-        c20sSkin.UnlockByPayingCash();
+        PlayerPrefs.SetInt($"{Enum.GetName(typeof(SkinID), (int)kkawaiSkin.skinID)}", 1);
+        PlayerPrefs.SetInt($"{Enum.GetName(typeof(SkinID), (int)shitsycalSkin.skinID)}", 1);
+        PlayerPrefs.SetInt($"{Enum.GetName(typeof(SkinID), (int)cacowboySkin.skinID)}", 1);
+        PlayerPrefs.SetInt($"{Enum.GetName(typeof(SkinID), (int)cacalienSkin.skinID)}", 1);
+        PlayerPrefs.SetInt($"{Enum.GetName(typeof(SkinID), (int)cacanautSkin.skinID)}", 1);
+        PlayerPrefs.SetInt($"{Enum.GetName(typeof(SkinID), (int)cacarutoSkin.skinID)}", 1);
+        PlayerPrefs.SetInt($"{Enum.GetName(typeof(SkinID), (int)c20sSkin.skinID)}", 1);
 
         PremiumData.hasSkinPack = true;
         PlayerPrefs.SetInt("HasSkinPackUnlocked", 1);
 
         PlayerPrefs.Save();
 
-        storeGameObject.SetActive(false);
-        scrollviewGameObject.SetActive(false);
+        // Sonido
+        sfx = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/UI/Unlock");
+        sfx.start();
+    }
+
+    public void FailPurchase()
+    {
+        // Sonido
+        sfx = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/UI/No money");
+        sfx.start();
+    }
+
+    private void OnDisable()
+    {
+        sfx.release();
     }
 }

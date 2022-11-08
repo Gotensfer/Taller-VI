@@ -5,12 +5,7 @@ using UnityEngine.UI;
 
 public class IAPNoAds : MonoBehaviour
 {
-    [SerializeField] SkinStoreElement goldenSkin;
-
-    private void Start()
-    {
-        GetComponent<Button>().onClick.AddListener(() => print("Touched?"));
-    }
+    FMOD.Studio.EventInstance sfx;
 
     public void UnlockNoAds()
     {
@@ -19,11 +14,20 @@ public class IAPNoAds : MonoBehaviour
 
         PlayerPrefs.Save();
 
-        print("Sanity check no ads");
+        // Sonido
+        sfx = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/UI/Unlock");
+        sfx.start();
     }
 
     public void FailPurchase()
     {
-        goldenSkin.FailPurchaseSound();
+        // Sonido
+        sfx = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/UI/No money");
+        sfx.start();
+    }
+
+    private void OnDisable()
+    {
+        sfx.release();
     }
 }

@@ -6,42 +6,32 @@ using System;
 
 public class IAPGolden : MonoBehaviour
 {
-    [SerializeField] SkinStoreElement goldenSkin;
-
-    [SerializeField] GameObject storeGameObject; // Esto no es una buena implementación...
-    [SerializeField] GameObject scrollviewGameObject; // Esta es una implementación aún peor...
-
-    private void Start()
-    {
-        GetComponent<Button>().onClick.AddListener(() => print("Touched?"));
-    }
+    [SerializeField] Skin goldenSkin;
+    FMOD.Studio.EventInstance sfx;
 
     public void UnlockGolden()
     {
-        storeGameObject.SetActive(true);
-        scrollviewGameObject.SetActive(true);
-
-        StartCoroutine(UnlockGoldenSkin());
-
-        print("Sanity check golden");
-    }
-
-    public void FailPurchase()
-    {
-        goldenSkin.FailPurchaseSound();
-    }
-
-    IEnumerator UnlockGoldenSkin()
-    {
-        yield return new WaitForSeconds(0.5f);
-        goldenSkin.UnlockByPayingCash();
+        PlayerPrefs.SetInt($"{Enum.GetName(typeof(SkinID), (int)goldenSkin.skinID)}", 1);
 
         PremiumData.hasMidas = true;
         PlayerPrefs.SetInt("HasMidasUnlocked", 1);
 
         PlayerPrefs.Save();
 
-        storeGameObject.SetActive(false);
-        scrollviewGameObject.SetActive(false);
+        // Sonido
+        sfx = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/UI/Unlock");
+        sfx.start();
+    }
+
+    public void FailPurchase()
+    {
+        // Sonido
+        sfx = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/UI/No money");
+        sfx.start();
+    }
+
+    private void OnDisable()
+    {
+        sfx.release();
     }
 }
