@@ -4997,7 +4997,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.577939, y: 2.25, z: -2}
+  m_LocalPosition: {x: 8.580082, y: 2.25, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10072,6 +10072,16 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1841445059846579106, guid: a92b965a44b55ec42b131d9a2de5f503, type: 3}
   m_PrefabInstance: {fileID: 948534925}
   m_PrefabAsset: {fileID: 0}
+--- !u!96 &948534927 stripped
+TrailRenderer:
+  m_CorrespondingSourceObject: {fileID: 1841445060847769282, guid: a92b965a44b55ec42b131d9a2de5f503, type: 3}
+  m_PrefabInstance: {fileID: 948534925}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &948534928 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1841445059846579107, guid: a92b965a44b55ec42b131d9a2de5f503, type: 3}
+  m_PrefabInstance: {fileID: 948534925}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &955401676
 GameObject:
   m_ObjectHideFlags: 0
@@ -11932,6 +11942,11 @@ PrefabInstance:
 --- !u!4 &1193322004 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7920663196239711938, guid: 0cb4aef3fdbb2a04e8f528c8c4312d08, type: 3}
+  m_PrefabInstance: {fileID: 1193322003}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1193322005 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 6826309510426539099, guid: 0cb4aef3fdbb2a04e8f528c8c4312d08, type: 3}
   m_PrefabInstance: {fileID: 1193322003}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1196341734
@@ -16597,6 +16612,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1504612867655897888, guid: a8ccdad2dee73244c92ffbca1b89f3e1, type: 3}
   m_PrefabInstance: {fileID: 1715453130}
   m_PrefabAsset: {fileID: 0}
+--- !u!198 &1715453132 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1504612867655897895, guid: a8ccdad2dee73244c92ffbca1b89f3e1, type: 3}
+  m_PrefabInstance: {fileID: 1715453130}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1728376841
 GameObject:
   m_ObjectHideFlags: 0
@@ -16898,19 +16918,19 @@ MonoBehaviour:
   cacanautSkinOverride: {fileID: 22100000, guid: cabe2405e7dd45c408fe14b4525f21f1, type: 2}
   cacarutoSkinOverride: {fileID: 22100000, guid: 8ab2767ae4554eb4ba8f91a0595ad24b, type: 2}
   goldenSkinOverride: {fileID: 22100000, guid: 8c43c83938806054085fec9dfe384e8e, type: 2}
-  c20sOverride: {fileID: 0}
+  c20sOverride: {fileID: 22100000, guid: 85ddd8d347f2b06428a943c98dad37a2, type: 2}
   vfxController: {fileID: 2027556161}
-  toilet: {fileID: 0}
-  ckawaiToilet: {fileID: 0}
-  crapsycalToilet: {fileID: 0}
-  cacowboyToilet: {fileID: 0}
-  cacalienToilet: {fileID: 0}
-  cacanautToilet: {fileID: 0}
-  cacarutoToilet: {fileID: 0}
-  goldenToilet: {fileID: 0}
-  c20sToilet: {fileID: 0}
-  c20sVolume: {fileID: 0}
-  parentForInstantiatedObjects: {fileID: 0}
+  toilet: {fileID: 279654096}
+  ckawaiToilet: {fileID: 21300000, guid: ce9d3eab525ebb747b2a9514127d6e0e, type: 3}
+  crapsycalToilet: {fileID: 21300000, guid: 8ac4847d77dc1aa4690c05f5ffc720e6, type: 3}
+  cacowboyToilet: {fileID: 21300000, guid: 417835e1cacb8444994f71c08cb18195, type: 3}
+  cacalienToilet: {fileID: 21300000, guid: fafe5297b2f4a47438d09483025b4fb7, type: 3}
+  cacanautToilet: {fileID: 21300000, guid: 1ea0b824e4f32e94590bfd555c663ca1, type: 3}
+  cacarutoToilet: {fileID: 21300000, guid: d1aad2a7a22e4184cb48ad7532aeacf2, type: 3}
+  goldenToilet: {fileID: 21300000, guid: 54dc65b4a7741674aad0c16ad6dc4593, type: 3}
+  c20sToilet: {fileID: 21300000, guid: d7d40c216d24e864baeb1d43382c0c0c, type: 3}
+  c20sVolume: {fileID: 1201417628357092609, guid: fd896fcc03a4309419d9282945389280, type: 3}
+  parentForInstantiatedObjects: {fileID: 524557125}
 --- !u!114 &1728376861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19714,8 +19734,8 @@ MonoBehaviour:
   Cacaruto_baseTrail: {fileID: 1299991884}
   Golden_basePS: {fileID: 557427755}
   Golden_baseTrail: {fileID: 557427754}
-  c20s_basePS: {fileID: 0}
-  c20s_baseTrail: {fileID: 0}
+  c20s_basePS: {fileID: 948534928}
+  c20s_baseTrail: {fileID: 948534927}
   chilliPS: {fileID: 132629658}
   fireTrail: {fileID: 132629659}
   smokePS: {fileID: 132629657}
@@ -19732,7 +19752,7 @@ MonoBehaviour:
   mitosisEnd_Cacanaut: {fileID: 2072790393}
   mitosisEnd_Cacaruto: {fileID: 1554307150}
   mitosisEnd_Golden: {fileID: 1541623834}
-  mitosisEnd_c20s: {fileID: 0}
+  mitosisEnd_c20s: {fileID: 1193322005}
   fecalitoStart: {fileID: 1034912044}
   bouncePSReference: {fileID: 0}
   base_bouncePS: {fileID: 722158880}
@@ -19743,7 +19763,7 @@ MonoBehaviour:
   Cacalien_bouncePS: {fileID: 1999037600}
   Cacaruto_bouncePS: {fileID: 722158880}
   Golden_bouncePS: {fileID: 310231226}
-  c20s_bouncePS: {fileID: 0}
+  c20s_bouncePS: {fileID: 1715453132}
   trailContainerObject: {fileID: 171437116}
   bounceContainerObject: {fileID: 2065996521}
   mitosisEndContainerObject: {fileID: 1357441867}
