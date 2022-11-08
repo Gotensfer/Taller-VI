@@ -879,7 +879,7 @@ MonoBehaviour:
   rangoChili: {x: 30, y: 170}
   rangoPidgeon: {x: 150, y: 340}
   rangoRocket: {x: 320, y: 600}
-  rangoMitosis: {x: 25, y: 600}
+  rangoMitosis: {x: 15, y: 600}
   cadaCuantoRestaChili: 50
   cadaCuantoRestaPidgeon: 50
   cadaCuantoRestaRocket: 50
@@ -895,7 +895,7 @@ MonoBehaviour:
   rangoChili2: {x: 30, y: 200}
   rangoPidgeon2: {x: 130, y: 370}
   rangoRocket2: {x: 300, y: 600}
-  rangoMitosis2: {x: 10, y: 600}
+  rangoMitosis2: {x: 15, y: 600}
   cadaCuantoRestaChili2: 40
   cadaCuantoRestaPidgeon2: 40
   cadaCuantoRestaRocket2: 40
@@ -911,7 +911,7 @@ MonoBehaviour:
   rangoChili3: {x: 30, y: 250}
   rangoPidgeon3: {x: 110, y: 400}
   rangoRocket3: {x: 280, y: 600}
-  rangoMitosis3: {x: 10, y: 600}
+  rangoMitosis3: {x: 15, y: 600}
   cadaCuantoRestaChili3: 20
   cadaCuantoRestaPidgeon3: 20
   cadaCuantoRestaRocket3: 20
@@ -2556,7 +2556,7 @@ MonoBehaviour:
   originalLayer: 7
   phantomLayer: 0
   flyingStates_Module: {fileID: 1728376856}
-  timeForFreeFlight: 8
+  timeForFreeFlight: 15
   playerRenderer: {fileID: 1728376844}
 --- !u!1 &279654094
 GameObject:
