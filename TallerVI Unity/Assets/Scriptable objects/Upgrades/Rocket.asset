@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Rocket
   m_EditorClassIdentifier: 
   upgradeType: 5
-  L1_CoinCost: 250
-  L2_CoinCost: 700
-  L3_CoinCost: 1250
+  L1_CoinCost: 300
+  L2_CoinCost: 600
+  L3_CoinCost: 1000
