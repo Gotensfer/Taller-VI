@@ -400,7 +400,7 @@ public class UIInterfaceMainMenu : MonoBehaviour
     public void UpgradeFromPlayUIButton()
     {
         upgrades.gameObject.SetActive(true);
-        upgrades.DOAnchorPos(new Vector2(0, 0), 0.8f).SetEase(Ease.OutExpo);
+        upgrades.DOAnchorPos(new Vector2(0, 0), 0.5f).SetEase(Ease.OutExpo);
         upgrades.DOScale(Vector3.one, 0.8f).SetEase(Ease.OutExpo);
     }
 
