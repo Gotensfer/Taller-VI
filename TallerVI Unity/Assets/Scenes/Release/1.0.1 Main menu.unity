@@ -27578,6 +27578,7 @@ GameObject:
   - component: {fileID: 1255283843}
   - component: {fileID: 1255283845}
   - component: {fileID: 1255283844}
+  - component: {fileID: 1255283846}
   m_Layer: 0
   m_Name: Text1
   m_TagString: Untagged
@@ -27703,6 +27704,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1255283842}
   m_CullTransparentMesh: 1
+--- !u!114 &1255283846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255283842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1c3fad4779458409fde1637c47995c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textSpanish: "Este es un poderoso cohete que te impulsar\xE1 horizontalmente. Lo
+    encontrar\xE1s a grandes alturas."
+  textEnglish: This is a powerful rocket that will propel you horizontally. You will
+    find it at great heights.
 --- !u!1 &1258087707
 GameObject:
   m_ObjectHideFlags: 0
@@ -31967,6 +31984,7 @@ GameObject:
   - component: {fileID: 1430540288}
   - component: {fileID: 1430540290}
   - component: {fileID: 1430540289}
+  - component: {fileID: 1430540291}
   m_Layer: 0
   m_Name: Text1
   m_TagString: Untagged
@@ -32091,6 +32109,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1430540287}
   m_CullTransparentMesh: 1
+--- !u!114 &1430540291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430540287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1c3fad4779458409fde1637c47995c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textSpanish: "Te divides y ganas un poco de altura. Podr\xE1s usarlo cu\xE1ndo
+    quieras"
+  textEnglish: You split and gain a little height. You can use it whenever you want
 --- !u!1 &1431318024
 GameObject:
   m_ObjectHideFlags: 0
@@ -32328,6 +32361,7 @@ GameObject:
   - component: {fileID: 1439400593}
   - component: {fileID: 1439400595}
   - component: {fileID: 1439400594}
+  - component: {fileID: 1439400596}
   m_Layer: 0
   m_Name: Text1
   m_TagString: Untagged
@@ -32375,7 +32409,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Tus gases se activan para dispararte horizontalmente\nPodr\xE1s usarlo
+  m_text: "Tus gases se activan para dispararte horizontalmente.\nPodr\xE1s usarlo
     cu\xE1ndo quieras."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4d397f401b1c39545ab3225f7ce2a9bb, type: 2}
@@ -32453,6 +32487,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1439400592}
   m_CullTransparentMesh: 1
+--- !u!114 &1439400596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439400592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1c3fad4779458409fde1637c47995c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textSpanish: "Tus gases se activan para dispararte horizontalmente. Podr\xE1s usarlo
+    cu\xE1ndo quieras."
+  textEnglish: Your gases activate to shoot you horizontally You can use it whenever
+    you want.
 --- !u!1 &1443397799
 GameObject:
   m_ObjectHideFlags: 0
@@ -42831,6 +42881,7 @@ GameObject:
   - component: {fileID: 1963701575}
   - component: {fileID: 1963701577}
   - component: {fileID: 1963701576}
+  - component: {fileID: 1963701578}
   m_Layer: 0
   m_Name: Text1
   m_TagString: Untagged
@@ -42955,6 +43006,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1963701574}
   m_CullTransparentMesh: 1
+--- !u!114 &1963701578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963701574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1c3fad4779458409fde1637c47995c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textSpanish: "Este chile te har\xE1 arder a una gran velocidad horizontal"
+  textEnglish: This chili will make you burn at high horizontal speed
 --- !u!1 &1964388432
 GameObject:
   m_ObjectHideFlags: 0
@@ -43658,7 +43723,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1980559423
 RectTransform:
   m_ObjectHideFlags: 0
@@ -45540,6 +45605,7 @@ GameObject:
   - component: {fileID: 2076559691}
   - component: {fileID: 2076559693}
   - component: {fileID: 2076559692}
+  - component: {fileID: 2076559694}
   m_Layer: 0
   m_Name: Text1
   m_TagString: Untagged
@@ -45665,6 +45731,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2076559690}
   m_CullTransparentMesh: 1
+--- !u!114 &2076559694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076559690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1c3fad4779458409fde1637c47995c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textSpanish: "Esta es una amigable paloma que te llevar\xE1 a donde le indiques.
+    Lo encontrar\xE1s a medias alturas."
+  textEnglish: This is a friendly pigeon that will take you where you tell it to.
+    You will find it halfway up.
 --- !u!1 &2089869692
 GameObject:
   m_ObjectHideFlags: 0
