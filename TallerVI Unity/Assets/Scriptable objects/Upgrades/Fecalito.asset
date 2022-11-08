@@ -15,4 +15,4 @@ MonoBehaviour:
   upgradeType: 2
   L1_CoinCost: 70
   L2_CoinCost: 250
-  L3_CoinCost: 300
+  L3_CoinCost: 500

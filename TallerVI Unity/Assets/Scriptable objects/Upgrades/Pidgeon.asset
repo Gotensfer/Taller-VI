@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeType: 3
   L1_CoinCost: 200
-  L2_CoinCost: 600
+  L2_CoinCost: 500
   L3_CoinCost: 1000
