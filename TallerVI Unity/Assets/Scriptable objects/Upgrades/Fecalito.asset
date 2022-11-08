@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Fecalito
   m_EditorClassIdentifier: 
   upgradeType: 2
-  L1_CoinCost: 70
+  L1_CoinCost: 100
   L2_CoinCost: 250
   L3_CoinCost: 500
