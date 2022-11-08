@@ -79,7 +79,7 @@ public class SkinLoad_Module : MonoBehaviour
                 break;
             case SkinID.Ca20s:
                 GetComponent<Animator>().runtimeAnimatorController = c20sOverride;
-                vfxController.SetVFXForGolden();
+                vfxController.SetVFXForC20s();
 
                 Instantiate(c20sVolume, parentForInstantiatedObjects);
 
