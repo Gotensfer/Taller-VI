@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Alpha/1.2.unity
     guid: a0f445b6e97d2e549a50cc4d781e3fd6
+  - enabled: 1
+    path: "Assets/Scenes/Alpha/Animaci\xF3n final.unity"
+    guid: 0f71bbf231cfd244b9ca2937b7c01553
+  - enabled: 1
+    path: Assets/Scenes/Alpha/Escena de felicitaciones.unity
+    guid: a1e42fab8453c4d45b1b1f04ed49d131
   m_configObjects: {}

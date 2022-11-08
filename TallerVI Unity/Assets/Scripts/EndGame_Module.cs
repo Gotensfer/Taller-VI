@@ -23,7 +23,7 @@ public class EndGame_Module : MonoBehaviour
 
         if (!reachedEndGameFlag)
         {
-            if (distanceTracker.travelledDistance >= 200)
+            if (distanceTracker.travelledDistance >= 10000)
             {
                 reachedEndGameFlag = true;
 
@@ -43,7 +43,7 @@ public class EndGame_Module : MonoBehaviour
 
                     // --
 
-                    // PlayerPrefs.SetInt("FirstTimeEndGame", 1);
+                    PlayerPrefs.SetInt("FirstTimeEndGame", 1);
                 }                       
             }
         }    
