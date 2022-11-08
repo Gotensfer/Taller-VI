@@ -7,7 +7,7 @@ public class ChangeLanguage : MonoBehaviour
 {
     public UnityEvent ChangeSpanish, ChangeEnglish;
 
-    public static int Language; //1 = Español , 0 = Ingles
+    public static int Language; //1 = Español , 0 = Ingles // Dios mio - Jf
 
     #if UNITY_EDITOR
     
