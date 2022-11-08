@@ -13,8 +13,9 @@ public class UIInterfaceMainMenu : MonoBehaviour
     [Header("UI references")] //Referencias de UIs
     [SerializeField] RectTransform mainMenu;
     [SerializeField] RectTransform preGame;
-    [SerializeField] RectTransform store, storeContent; //Skins
     [SerializeField] RectTransform upgrades; //Powerups
+    [SerializeField] RectTransform skins, skinsContent; //Skins
+    [SerializeField] RectTransform store; //IAPs
     [SerializeField] RectTransform album, albumContent;
     [SerializeField] RectTransform configuration;
     [SerializeField] RectTransform mainTitle;
@@ -87,8 +88,9 @@ public class UIInterfaceMainMenu : MonoBehaviour
 
         album.transform.localScale = Vector2.zero;
         configuration.transform.localScale = Vector2.zero;
-        store.transform.localScale = Vector2.zero;
+        skins.transform.localScale = Vector2.zero;
         upgrades.transform.localScale = Vector2.zero;
+        store.transform.localScale = Vector2.zero;
 
         //Escala 0
         selector.transform.localScale = Vector2.zero;
@@ -117,7 +119,7 @@ public class UIInterfaceMainMenu : MonoBehaviour
         desText5.transform.localScale = Vector2.zero;
 
         albumContent.gameObject.SetActive(false);
-        storeContent.gameObject.SetActive(false);
+        skinsContent.gameObject.SetActive(false);
 
         #endregion
 
@@ -241,10 +243,26 @@ public class UIInterfaceMainMenu : MonoBehaviour
     public void StoreUIButton()
     {
         store.gameObject.SetActive(true);
-        storeContent.gameObject.SetActive(true);
-        
+
         store.DOAnchorPos(new Vector2(0, 0), 0.8f).SetEase(Ease.OutExpo);
         store.DOScale(Vector3.one, 0.8f).SetEase(Ease.OutExpo);
+    }
+    public void BackFromStoreUIButton()
+    {
+        store.DOAnchorPos(new Vector2(1099, -165), 0.5f).SetEase(Ease.InExpo);
+        store.DOScale(Vector3.zero, 0.5f).SetEase(Ease.InBack).OnComplete(()=> {
+            store.gameObject.SetActive(false);
+        });
+    }
+
+    //Skins Button
+    public void SkinsUIButton()
+    {
+        skins.gameObject.SetActive(true);
+        skinsContent.gameObject.SetActive(true);
+
+        skins.DOAnchorPos(new Vector2(0, 0), 0.8f).SetEase(Ease.OutExpo);
+        skins.DOScale(Vector3.one, 0.8f).SetEase(Ease.OutExpo);
 
         //Primera Seccion tutorial store
         if (firstTimeStore == true)
@@ -253,7 +271,7 @@ public class UIInterfaceMainMenu : MonoBehaviour
             sText1.gameObject.SetActive(true);
             touchIcon.alpha = 0;
             touchIcon.gameObject.SetActive(true);
-            
+
 
             fadePanel.DOFade(0.8f, 1).OnComplete(() =>
             {
@@ -261,17 +279,17 @@ public class UIInterfaceMainMenu : MonoBehaviour
                     .SetEase(Ease.InQuart)
                     .SetLoops(-1, LoopType.Yoyo)
                     .SetUpdate(true);
-                sText1.DOScale(Vector3.one, 1).SetEase(Ease.OutSine).OnComplete(() => screenButton.onClick.AddListener(StoreSection2));                
+                sText1.DOScale(Vector3.one, 1).SetEase(Ease.OutSine).OnComplete(() => screenButton.onClick.AddListener(StoreSection2));
             }
             );
         }
     }
-    public void BackFromStoreUIButton()
+    public void BackFromSkinsUIButton()
     {
-        store.DOAnchorPos(new Vector2(1028, 162), 1).SetEase(Ease.InExpo);
-        store.DOScale(Vector3.zero, 0.5f).SetEase(Ease.InBack).OnComplete(()=> {
-            store.gameObject.SetActive(false);
-            storeContent.gameObject.SetActive(false);
+        skins.DOAnchorPos(new Vector2(1063, -31), 0.5f).SetEase(Ease.InExpo);
+        skins.DOScale(Vector3.zero, 0.5f).SetEase(Ease.InBack).OnComplete(() => {
+            skins.gameObject.SetActive(false);
+            skinsContent.gameObject.SetActive(false);
         });
     }
 
@@ -376,7 +394,7 @@ public class UIInterfaceMainMenu : MonoBehaviour
     }
     public void BackFromUpgradesUIButton()
     {
-        upgrades.DOAnchorPos(new Vector2(1029, 0), 0.5f).SetEase(Ease.InExpo);
+        upgrades.DOAnchorPos(new Vector2(1090, 148), 0.5f).SetEase(Ease.InExpo);
         upgrades.DOScale(Vector3.zero, 0.5f).SetEase(Ease.InBack).OnComplete(() => upgrades.gameObject.SetActive(false));
     }
     public void UpgradeFromPlayUIButton()
@@ -416,7 +434,7 @@ public class UIInterfaceMainMenu : MonoBehaviour
     }
     public void BackFromAlbumUIButton()
     {
-        album.DOAnchorPos(new Vector2(1132, -167), 1).SetEase(Ease.InExpo);
+        album.DOAnchorPos(new Vector2(1132, -167), 0.5f).SetEase(Ease.InExpo);
         album.DOScale(Vector3.zero, 0.5f).SetEase(Ease.InBack).OnComplete(() => {
             album.gameObject.SetActive(false);
             albumContent.gameObject.SetActive(false);
@@ -433,7 +451,7 @@ public class UIInterfaceMainMenu : MonoBehaviour
     }
     public void BackFromConfigUIButton()
     {
-        configuration.DOAnchorPos(new Vector2(-1304, -578), 0.5f).SetEase(Ease.InExpo);
+        configuration.DOAnchorPos(new Vector2(-1304, -725), 0.5f).SetEase(Ease.InExpo);
         configuration.DOScale(Vector3.zero, 0.5f).SetEase(Ease.InBack).OnComplete(() => configuration.gameObject.SetActive(false));
     }
     #endregion
