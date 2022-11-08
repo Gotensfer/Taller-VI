@@ -24,6 +24,17 @@ public class DoubleCoinsAd : MonoBehaviour
 
     async void Start()
     {
+        if (PremiumData.hasNoAds)
+        {
+            adStateDisplay.color = new Color(1, 1, 1, 0);
+
+            button.onClick.AddListener(RewardDouble);
+        }
+        else
+        {
+            button.onClick.AddListener(ShowRewarded);
+        }
+
         try
         {
             Debug.Log("Initializing...");
@@ -151,13 +162,7 @@ public class DoubleCoinsAd : MonoBehaviour
 
     void UserRewarded(object sender, RewardEventArgs e)
     {
-        print("Doubled coins");
-
-        coinsPerDistance.earnedMoneysDisplay.text = $"{coinsPerDistance.coinsEarnedThisRun * 2}";
-        EconomyData.AddCoins(coinsPerDistance.coinsEarnedThisRun);
-
-        button.interactable = false;
-        checkOutObj.SetActive(true);
+        RewardDouble();
     }
 
     void AdClosed(object sender, EventArgs args)
@@ -184,5 +189,24 @@ public class DoubleCoinsAd : MonoBehaviour
     {
         var impressionData = args.ImpressionData != null ? JsonUtility.ToJson(args.ImpressionData, true) : "null";
         Debug.Log($"Impression event from ad unit id {args.AdUnitId} : {impressionData}");
+    }
+
+    private void FixedUpdate()
+    {
+        if (PremiumData.hasNoAds)
+        {
+            adStateDisplay.color = new Color(1, 1, 1, 0);
+        }
+    }
+
+    void RewardDouble()
+    {
+        print("Doubled coins");
+
+        coinsPerDistance.earnedMoneysDisplay.text = $"{coinsPerDistance.coinsEarnedThisRun * 2}";
+        EconomyData.AddCoins(coinsPerDistance.coinsEarnedThisRun);
+
+        button.interactable = false;
+        checkOutObj.SetActive(true);
     }
 }
