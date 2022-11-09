@@ -4873,6 +4873,7 @@ MonoBehaviour:
   localRecord: {fileID: 1676428147}
   money: {fileID: 817340753}
   alert: {fileID: 1714381850}
+  rb: {fileID: 1728376842}
 --- !u!225 &508670778
 CanvasGroup:
   m_ObjectHideFlags: 0

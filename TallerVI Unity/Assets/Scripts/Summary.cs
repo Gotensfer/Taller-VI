@@ -34,6 +34,9 @@ public class Summary : MonoBehaviour
         //money.text = (lo que sea que lo envie);
     }
 
+    [SerializeField] Rigidbody2D rb;
+    bool hasCrashed = false;
+
     public void DisplaySummary()
     {
 
@@ -42,9 +45,19 @@ public class Summary : MonoBehaviour
         restartButton.DOScale(new Vector3(1.621723f, 1.621723f, 1.621723f), 1).SetEase(Ease.OutSine).SetDelay(1);
         adButton.DOScale(new Vector3(1.621723f, 1.621723f, 1.621723f), 1).SetEase(Ease.OutSine).SetDelay(1);
 
+        hasCrashed = true;
+
         if (dT.localRecord < dT.travelledDistance)
         {
             alert.SetActive(true);
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (hasCrashed)
+        {
+            rb.velocity = Vector2.zero;
         }
     }
 
