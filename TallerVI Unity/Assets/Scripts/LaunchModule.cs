@@ -28,6 +28,8 @@ public class LaunchModule : MonoBehaviour
     [SerializeField] int originalLayer;
     [SerializeField] int phantomLayer;
 
+    [SerializeField] FlyingStates_Module flyingStates_Module;
+    [SerializeField] float timeForFreeFlight;
 
     [SerializeField] SpriteRenderer playerRenderer;
 
@@ -68,6 +70,7 @@ public class LaunchModule : MonoBehaviour
 
         DisableCollisionsWithPowerUps();
         Invoke(nameof(ReEnableCollisionsWithPowerUps), timeToReEnableCollisions);
+        Invoke(nameof(DisableFreeFlight), timeForFreeFlight);
 
         // Sprite visible al lanzar
         playerRenderer.color = new Color(1, 1, 1, 1);
@@ -85,6 +88,11 @@ public class LaunchModule : MonoBehaviour
         player.tag = "Player";
     }
 
+    void DisableFreeFlight()
+    {
+        flyingStates_Module.PlayerState = PlayerStates.standardFlying;
+    }
+
     void CalculateDirection()
     {
         //Angle Animator
@@ -92,14 +100,14 @@ public class LaunchModule : MonoBehaviour
         {
             case false:
                 angle += angleMovementVelocity*Time.deltaTime;
-                if (angle >= 90)
+                if (angle >= 85)
                 {
                     flag = true;
                 } 
                 break;
             case true:
                 angle -= angleMovementVelocity*Time.deltaTime;
-                if (angle<=0)
+                if (angle<=5)
                 {
                     flag = false;
                 }

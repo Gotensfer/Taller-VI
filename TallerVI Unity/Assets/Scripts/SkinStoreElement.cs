@@ -14,7 +14,9 @@ public class SkinStoreElement : MonoBehaviour
     
     FMOD.Studio.EventInstance sfx;
 
-    private void Start()
+    [SerializeField] bool premiumSkin = false;
+
+    private void OnEnable()
     {
         button = GetComponent<Button>();
         lockButton = lockObject.GetComponent<Button>();
@@ -30,11 +32,14 @@ public class SkinStoreElement : MonoBehaviour
         {           
             lockObject.SetActive(true);
             lockButton.onClick.AddListener(BuySkin);
+
+            // Si es una skin premium, el comportamiento lo controlará el IAP Button
+            if (premiumSkin) lockButton.onClick.RemoveListener(BuySkin);
         }
 
         if (PlayerPrefs.GetInt($"LastSelectedSkin") == (int)skin.skinID)
         {
-            SelectSkin();
+            button.onClick.Invoke();
         }
     }
 
@@ -45,7 +50,7 @@ public class SkinStoreElement : MonoBehaviour
         PlayerPrefs.Save();
     }
 
-    void BuySkin()
+    public void BuySkin()
     {
         if (EconomyData.coins >= skin.price)
         {
@@ -68,6 +73,26 @@ public class SkinStoreElement : MonoBehaviour
             sfx = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/UI/No money");
             sfx.start();
         }
+    }
+
+    public void UnlockByPayingCash()
+    {
+        lockButton.onClick.RemoveListener(BuySkin);
+        lockObject.SetActive(false);
+
+        button.onClick.AddListener(SelectSkin);
+        //sfx candado
+        sfx = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/UI/Unlock");
+        sfx.start();
+        print("a");
+        PlayerPrefs.SetInt($"{Enum.GetName(typeof(SkinID), (int)skin.skinID)}", 1);
+        PlayerPrefs.Save();
+    }
+
+    public void FailPurchaseSound()
+    {
+        sfx = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/UI/No money");
+        sfx.start();
     }
 
     private void OnDisable()

@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 3592818920283747130}
   - component: {fileID: 3913984364580139303}
   - component: {fileID: 629045912480246434}
+  - component: {fileID: 8162174747400362102}
   m_Layer: 5
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
@@ -212,3 +213,17 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &8162174747400362102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4925225368847461459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1c3fad4779458409fde1637c47995c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textSpanish: "\xA1Visita el \xE1lbum en el men\xFA para ver los logros!"
+  textEnglish: Visit the album in the menu to see the achievements!

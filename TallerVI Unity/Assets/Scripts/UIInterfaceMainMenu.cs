@@ -13,8 +13,9 @@ public class UIInterfaceMainMenu : MonoBehaviour
     [Header("UI references")] //Referencias de UIs
     [SerializeField] RectTransform mainMenu;
     [SerializeField] RectTransform preGame;
-    [SerializeField] RectTransform store, storeContent; //Skins
     [SerializeField] RectTransform upgrades; //Powerups
+    [SerializeField] RectTransform skins, skinsContent; //Skins
+    [SerializeField] RectTransform store; //IAPs
     [SerializeField] RectTransform album, albumContent;
     [SerializeField] RectTransform configuration;
     [SerializeField] RectTransform mainTitle;
@@ -64,13 +65,22 @@ public class UIInterfaceMainMenu : MonoBehaviour
     [SerializeField] RectTransform aText1;
     [SerializeField] RectTransform aText2;
 
-    [Header("Store Descriptions")]
+    [Header("Upgrades Descriptions")]
     [SerializeField] RectTransform desText1;
     [SerializeField] RectTransform desText2;
     [SerializeField] RectTransform desText3;
     [SerializeField] RectTransform desText4;
     [SerializeField] RectTransform desText5;
 
+    [Header("Store Descriptions")]
+    [SerializeField] RectTransform desText6;
+    [SerializeField] RectTransform desText7;
+    [SerializeField] RectTransform desText8;
+
+    [SerializeField] RectTransform CreditsInfo;
+    [SerializeField] RectTransform PanelDescriptions;
+    [SerializeField] CanvasGroup CreditsPanel;
+    FMOD.Studio.EventInstance EndCreditsSound;
 
     public static bool alreadyInitialized = false;
 
@@ -84,8 +94,9 @@ public class UIInterfaceMainMenu : MonoBehaviour
 
         album.transform.localScale = Vector2.zero;
         configuration.transform.localScale = Vector2.zero;
-        store.transform.localScale = Vector2.zero;
+        skins.transform.localScale = Vector2.zero;
         upgrades.transform.localScale = Vector2.zero;
+        store.transform.localScale = Vector2.zero;
 
         //Escala 0
         selector.transform.localScale = Vector2.zero;
@@ -112,9 +123,14 @@ public class UIInterfaceMainMenu : MonoBehaviour
         desText3.transform.localScale = Vector2.zero;
         desText4.transform.localScale = Vector2.zero;
         desText5.transform.localScale = Vector2.zero;
+        desText6.transform.localScale = Vector2.zero;
+        desText7.transform.localScale = Vector2.zero;
+        desText8.transform.localScale = Vector2.zero;
+
+        PanelDescriptions.transform.localScale = Vector2.zero;
 
         albumContent.gameObject.SetActive(false);
-        storeContent.gameObject.SetActive(false);
+        skinsContent.gameObject.SetActive(false);
 
         #endregion
 
@@ -238,10 +254,26 @@ public class UIInterfaceMainMenu : MonoBehaviour
     public void StoreUIButton()
     {
         store.gameObject.SetActive(true);
-        storeContent.gameObject.SetActive(true);
-        
+
         store.DOAnchorPos(new Vector2(0, 0), 0.8f).SetEase(Ease.OutExpo);
         store.DOScale(Vector3.one, 0.8f).SetEase(Ease.OutExpo);
+    }
+    public void BackFromStoreUIButton()
+    {
+        store.DOAnchorPos(new Vector2(1099, -165), 0.5f).SetEase(Ease.InExpo);
+        store.DOScale(Vector3.zero, 0.5f).SetEase(Ease.InBack).OnComplete(()=> {
+            store.gameObject.SetActive(false);
+        });
+    }
+
+    //Skins Button
+    public void SkinsUIButton()
+    {
+        skins.gameObject.SetActive(true);
+        skinsContent.gameObject.SetActive(true);
+
+        skins.DOAnchorPos(new Vector2(0, 0), 0.8f).SetEase(Ease.OutExpo);
+        skins.DOScale(Vector3.one, 0.8f).SetEase(Ease.OutExpo);
 
         //Primera Seccion tutorial store
         if (firstTimeStore == true)
@@ -250,7 +282,7 @@ public class UIInterfaceMainMenu : MonoBehaviour
             sText1.gameObject.SetActive(true);
             touchIcon.alpha = 0;
             touchIcon.gameObject.SetActive(true);
-            
+
 
             fadePanel.DOFade(0.8f, 1).OnComplete(() =>
             {
@@ -258,17 +290,17 @@ public class UIInterfaceMainMenu : MonoBehaviour
                     .SetEase(Ease.InQuart)
                     .SetLoops(-1, LoopType.Yoyo)
                     .SetUpdate(true);
-                sText1.DOScale(Vector3.one, 1).SetEase(Ease.OutSine).OnComplete(() => screenButton.onClick.AddListener(StoreSection2));                
+                sText1.DOScale(Vector3.one, 1).SetEase(Ease.OutSine).OnComplete(() => screenButton.onClick.AddListener(StoreSection2));
             }
             );
         }
     }
-    public void BackFromStoreUIButton()
+    public void BackFromSkinsUIButton()
     {
-        store.DOAnchorPos(new Vector2(1028, 162), 1).SetEase(Ease.InExpo);
-        store.DOScale(Vector3.zero, 0.5f).SetEase(Ease.InBack).OnComplete(()=> {
-            store.gameObject.SetActive(false);
-            storeContent.gameObject.SetActive(false);
+        skins.DOAnchorPos(new Vector2(1063, -31), 0.5f).SetEase(Ease.InExpo);
+        skins.DOScale(Vector3.zero, 0.5f).SetEase(Ease.InBack).OnComplete(() => {
+            skins.gameObject.SetActive(false);
+            skinsContent.gameObject.SetActive(false);
         });
     }
 
@@ -373,16 +405,66 @@ public class UIInterfaceMainMenu : MonoBehaviour
     }
     public void BackFromUpgradesUIButton()
     {
-        upgrades.DOAnchorPos(new Vector2(1029, 0), 0.5f).SetEase(Ease.InExpo);
+        upgrades.DOAnchorPos(new Vector2(1090, 148), 0.5f).SetEase(Ease.InExpo);
         upgrades.DOScale(Vector3.zero, 0.5f).SetEase(Ease.InBack).OnComplete(() => upgrades.gameObject.SetActive(false));
     }
     public void UpgradeFromPlayUIButton()
     {
         upgrades.gameObject.SetActive(true);
-        upgrades.DOAnchorPos(new Vector2(0, 0), 0.8f).SetEase(Ease.OutExpo);
+        upgrades.DOAnchorPos(new Vector2(0, 0), 0.5f).SetEase(Ease.OutExpo);
         upgrades.DOScale(Vector3.one, 0.8f).SetEase(Ease.OutExpo);
     }
 
+    #region "Descripción Anuncios"
+    public void AnunciosDescription()
+    {
+        PanelDescriptions.gameObject.SetActive(true);
+        desText6.gameObject.SetActive(true);
+
+        PanelDescriptions.DOScale(Vector3.one, 0.5f);
+        desText6.DOScale(Vector3.one, 0.5f);
+    }
+
+    public void CloseAnunciosDescription()
+    {
+        desText6.DOScale(Vector3.zero, 0.5f).OnComplete(() => desText6.gameObject.SetActive(false));
+        PanelDescriptions.DOScale(Vector3.zero, 0.5f).OnComplete(() => PanelDescriptions.gameObject.SetActive(false));
+    }
+    #endregion
+
+    #region "Descripción SkinPack"
+    public void SkinPackDescription()
+    {
+        PanelDescriptions.gameObject.SetActive(true);
+        desText7.gameObject.SetActive(true);
+
+        PanelDescriptions.DOScale(Vector3.one, 0.5f);
+        desText7.DOScale(Vector3.one, 0.5f);
+    }
+
+    public void CloseSkinPackDescription()
+    {
+        desText7.DOScale(Vector3.zero, 0.5f).OnComplete(() => desText7.gameObject.SetActive(false));
+        PanelDescriptions.DOScale(Vector3.zero, 0.5f).OnComplete(() => PanelDescriptions.gameObject.SetActive(false));
+    }
+    #endregion
+
+    #region "Descripción GoldenPoop"
+    public void GoldenPoopDescription()
+    {
+        PanelDescriptions.gameObject.SetActive(true);
+        desText8.gameObject.SetActive(true);
+
+        PanelDescriptions.DOScale(Vector3.one, 0.5f);
+        desText8.DOScale(Vector3.one, 0.5f);
+    }
+
+    public void CloseGoldenPoopDescription()
+    {
+        desText8.DOScale(Vector3.zero, 0.5f).OnComplete(() => desText8.gameObject.SetActive(false));
+        PanelDescriptions.DOScale(Vector3.zero, 0.5f).OnComplete(() => PanelDescriptions.gameObject.SetActive(false));
+    }
+    #endregion
     //Album Button
     public void AlbumUIButton()
     {
@@ -413,7 +495,7 @@ public class UIInterfaceMainMenu : MonoBehaviour
     }
     public void BackFromAlbumUIButton()
     {
-        album.DOAnchorPos(new Vector2(1132, -167), 1).SetEase(Ease.InExpo);
+        album.DOAnchorPos(new Vector2(1132, -167), 0.5f).SetEase(Ease.InExpo);
         album.DOScale(Vector3.zero, 0.5f).SetEase(Ease.InBack).OnComplete(() => {
             album.gameObject.SetActive(false);
             albumContent.gameObject.SetActive(false);
@@ -430,7 +512,7 @@ public class UIInterfaceMainMenu : MonoBehaviour
     }
     public void BackFromConfigUIButton()
     {
-        configuration.DOAnchorPos(new Vector2(-1304, -578), 0.5f).SetEase(Ease.InExpo);
+        configuration.DOAnchorPos(new Vector2(-1304, -725), 0.5f).SetEase(Ease.InExpo);
         configuration.DOScale(Vector3.zero, 0.5f).SetEase(Ease.InBack).OnComplete(() => configuration.gameObject.SetActive(false));
     }
     #endregion
@@ -734,5 +816,53 @@ public class UIInterfaceMainMenu : MonoBehaviour
         });
 
     }
+    #endregion
+
+
+    #region "Creditos"
+
+    public void OpenCredits() 
+    {
+        CreditsInfo.gameObject.GetComponent<CanvasGroup>().DOFade(1, 0);
+        screenButton.gameObject.SetActive(true);
+        CreditsInfo.gameObject.SetActive(true);
+
+        CreditsPanel.gameObject.SetActive(true);
+        CreditsPanel.DOFade(1, 1).OnComplete(() => {
+            screenButton.onClick.AddListener(CloseCredits);
+            CreditsInfo.DOAnchorPosY(7750, 35).OnComplete(EndCredits);
+        });
+    }
+
+    public void CloseCredits()
+    {
+        CreditsInfo.DOKill();
+        CreditsPanel.DOFade(0, 1).SetEase(Ease.InOutBack).OnComplete(()=> CreditsPanel.gameObject.SetActive(false));
+        CreditsInfo.gameObject.GetComponent<CanvasGroup>().DOFade(0, 1).SetEase(Ease.InOutBack).OnComplete(()=> {
+            CreditsInfo.gameObject.SetActive(false);
+            CreditsInfo.DOAnchorPosY(-1000, 0);
+        } );
+        
+        screenButton.gameObject.SetActive(false);
+        screenButton.onClick.RemoveAllListeners();
+    } 
+
+    public void EndCredits()
+    {
+        CreditsInfo.gameObject.GetComponent<CanvasGroup>().DOFade(0, 1).SetDelay(3).SetEase(Ease.InOutBack).OnComplete(() => {
+            CreditsInfo.gameObject.SetActive(false);
+        });
+        CreditsPanel.DOFade(0, 1).SetDelay(3).SetEase(Ease.InOutBack).OnComplete(() =>
+        {
+            EndCreditsSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Mitosis");
+            EndCreditsSound.start();
+
+            CreditsPanel.gameObject.SetActive(false);
+            screenButton.gameObject.SetActive(false);
+            screenButton.onClick.RemoveAllListeners();
+            CreditsInfo.DOAnchorPosY(-1000, 0);
+        });
+    }
+
     #endregion
 }

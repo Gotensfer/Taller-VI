@@ -146,6 +146,41 @@ public class GameLoad_DataInitializer : MonoBehaviour
 
         #endregion
 
+        #region"Configuración inicial de datos de compras"
+        // Tiene comprado el no ads
+        if (PlayerPrefs.GetInt("HasNoAdsUnlocked", -1) == -1)
+        {
+            PlayerPrefs.SetInt("HasNoAdsUnlocked", 0);
+        }
+        else
+        {
+            if (PlayerPrefs.GetInt("HasNoAdsUnlocked") == 0) PremiumData.hasNoAds = false;
+            if (PlayerPrefs.GetInt("HasNoAdsUnlocked") == 1) PremiumData.hasNoAds = true;
+        }
+
+        // Tiene comprado el Midas
+        if (PlayerPrefs.GetInt("HasMidasUnlocked", -1) == -1)
+        {
+            PlayerPrefs.SetInt("HasMidasUnlocked", 0);
+        }
+        else
+        {
+            if (PlayerPrefs.GetInt("HasMidasUnlocked") == 0) PremiumData.hasMidas = false;
+            if (PlayerPrefs.GetInt("HasMidasUnlocked") == 1) PremiumData.hasMidas = true;
+        }
+
+        // Tiene comprado el skin pack
+        if (PlayerPrefs.GetInt("HasSkinPackUnlocked", -1) == -1)
+        {
+            PlayerPrefs.SetInt("HasSkinPackUnlocked", 0);
+        }
+        else
+        {
+            if (PlayerPrefs.GetInt("HasSkinPackUnlocked") == 0) PremiumData.hasSkinPack = false;
+            if (PlayerPrefs.GetInt("HasSkinPackUnlocked") == 1) PremiumData.hasSkinPack = true;
+        }
+        #endregion
+
         PlayerPrefs.Save();
 
         StartCoroutine(LoadMainMenuOnNextFrame()); 

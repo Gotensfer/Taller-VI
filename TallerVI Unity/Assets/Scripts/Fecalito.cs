@@ -11,8 +11,10 @@ public class Fecalito : MonoBehaviour
 
     public int level;
 
-    [SerializeField] float cdTime;
-    
+    [SerializeField] float cdTimeLvl1, cdTimeLvl2, cdTimeLvl3;
+
+    private float cdTime;
+
     public float CdTime
     {
         get => cdTime;
@@ -20,13 +22,9 @@ public class Fecalito : MonoBehaviour
     
     public float remainingCD { get; private set; }
 
-    [SerializeField] int maxCharges;
-    [SerializeField] int charges;
-
     [SerializeField] Rigidbody2D player;
 
     [SerializeField] GameObject button;
-    [SerializeField] TextMeshProUGUI chargeIndicator;
 
     [SerializeField] PlayerEvents_Interface playerEvents;
 
@@ -42,29 +40,25 @@ public class Fecalito : MonoBehaviour
             // Cambiar esto de hardcoded a un GameData manager o similares
             case 0:
                 playerEvents.LaunchEvent.RemoveListener(EnableFecalitoButton); // No activar fecalito si no se posee
-                maxCharges = 0;
                 break;
             case 1:
-                maxCharges = 1;
+                cdTime = cdTimeLvl1;
                 break;
             case 2:
-                maxCharges = 2;
+                cdTime = cdTimeLvl2;
                 break;
             case 3:
-                maxCharges = 3;
+                cdTime = cdTimeLvl3;
                 break;
             default:
                 Debug.LogError("NO SE CARGARON LOS DATOS DE NIVEL DE MITOSIS");
                 break;
         }
-
-        charges = maxCharges;
-        UpdateUIChargeIndicator();
     }
 
     private void Update()
     {
-        if (remainingCD > 0 && charges > 0)
+        if (remainingCD > 0)
         {
             remainingCD -= Time.deltaTime;
             if (remainingCD <= 0)
@@ -79,11 +73,9 @@ public class Fecalito : MonoBehaviour
         direction.Normalize();
         player.velocity = new Vector2(player.velocity.x, 0); // M�s que todo para lograr un mejor efecto visual
         player.AddForce(direction * strenght, ForceMode2D.Impulse);
-
-        charges--;
+        
         remainingCD = cdTime;
         button.GetComponent<Button>().interactable = false;
-        UpdateUIChargeIndicator();
 
         playerEvents.FecalitoEvent.Invoke();
     }
@@ -91,16 +83,5 @@ public class Fecalito : MonoBehaviour
     void EnableFecalitoButton()
     {
         button.SetActive(true);
-    }
-
-    public void AddCharge()
-    {
-        charges = Mathf.Clamp(charges + 1, 0, maxCharges);
-        UpdateUIChargeIndicator();
-    }
-
-    void UpdateUIChargeIndicator()
-    {
-        chargeIndicator.text = $"x{charges}";
     }
 }
