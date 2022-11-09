@@ -10,6 +10,9 @@ public class AltitudeTracker_Module : MonoBehaviour
     float altitude;
     public float Altitude { get => altitude; }
 
+    float maxAltitude;
+    public float MaxAltitude { get => maxAltitude; }
+
     private void Start()
     {
         altitudeOffset = player.position.y;
@@ -18,10 +21,13 @@ public class AltitudeTracker_Module : MonoBehaviour
 #if UNITY_EDITOR
     [SerializeField] bool debugMode;
 #endif
-    private void Update()
+    private void FixedUpdate()
     {
         altitude = player.position.y - altitudeOffset;
+
         if (altitude < 1) altitude = 0;
+
+        if (altitude > maxAltitude) maxAltitude = altitude;
 
 #if UNITY_EDITOR
         if (debugMode)

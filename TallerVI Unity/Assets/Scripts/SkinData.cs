@@ -9,7 +9,10 @@ public enum SkinID
     Cacsycal = 2,
     Cacowboy = 3,
     Cacalien = 4,
-    Cacanaut = 5
+    Cacanaut = 5,
+    Cacaruto = 6,
+    Golden = 7,
+    Ca20s = 8
 }
 
 public static class SkinData

@@ -11,19 +11,20 @@ public class Fecalito : MonoBehaviour
 
     public int level;
 
-    [SerializeField] float cdTime;
-    float remainingCD;
+    [SerializeField] float cdTimeLvl1, cdTimeLvl2, cdTimeLvl3;
 
-    [SerializeField] int maxCharges;
-    [SerializeField] int charges;
+    private float cdTime;
+
+    public float CdTime
+    {
+        get => cdTime;
+    }
+    
+    public float remainingCD { get; private set; }
 
     [SerializeField] Rigidbody2D player;
 
     [SerializeField] GameObject button;
-    [SerializeField] TextMeshProUGUI chargeIndicator;
-
-    [SerializeField] Sprite availableSprite;
-    [SerializeField] Sprite onCDSprite;
 
     [SerializeField] PlayerEvents_Interface playerEvents;
 
@@ -39,35 +40,30 @@ public class Fecalito : MonoBehaviour
             // Cambiar esto de hardcoded a un GameData manager o similares
             case 0:
                 playerEvents.LaunchEvent.RemoveListener(EnableFecalitoButton); // No activar fecalito si no se posee
-                maxCharges = 0;
                 break;
             case 1:
-                maxCharges = 1;
+                cdTime = cdTimeLvl1;
                 break;
             case 2:
-                maxCharges = 2;
+                cdTime = cdTimeLvl2;
                 break;
             case 3:
-                maxCharges = 3;
+                cdTime = cdTimeLvl3;
                 break;
             default:
                 Debug.LogError("NO SE CARGARON LOS DATOS DE NIVEL DE MITOSIS");
                 break;
         }
-
-        charges = maxCharges;
-        UpdateUIChargeIndicator();
     }
 
     private void Update()
     {
-        if (remainingCD > 0 && charges > 0)
+        if (remainingCD > 0)
         {
             remainingCD -= Time.deltaTime;
             if (remainingCD <= 0)
             {
                 button.GetComponent<Button>().interactable = true;
-                button.GetComponent<Image>().sprite = availableSprite;
             }
         }
     }
@@ -75,14 +71,11 @@ public class Fecalito : MonoBehaviour
     public void Activate_Fecalito()
     {
         direction.Normalize();
-        player.velocity = new Vector2(player.velocity.x, 0); // Más que todo para lograr un mejor efecto visual
+        player.velocity = new Vector2(player.velocity.x, 0); // Mï¿½s que todo para lograr un mejor efecto visual
         player.AddForce(direction * strenght, ForceMode2D.Impulse);
-
-        charges--;
+        
         remainingCD = cdTime;
         button.GetComponent<Button>().interactable = false;
-        button.GetComponent<Image>().sprite = onCDSprite;
-        UpdateUIChargeIndicator();
 
         playerEvents.FecalitoEvent.Invoke();
     }
@@ -90,16 +83,5 @@ public class Fecalito : MonoBehaviour
     void EnableFecalitoButton()
     {
         button.SetActive(true);
-    }
-
-    public void AddCharge()
-    {
-        charges = Mathf.Clamp(charges + 1, 0, maxCharges);
-        UpdateUIChargeIndicator();
-    }
-
-    void UpdateUIChargeIndicator()
-    {
-        chargeIndicator.text = $"x{charges}";
     }
 }

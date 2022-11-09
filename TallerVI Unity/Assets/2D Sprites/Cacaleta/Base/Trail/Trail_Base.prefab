@@ -51,7 +51,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -4896,9 +4896,18 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
+        value: 0
+        inSlope: 13.9838705
+        outSlope: 13.9838705
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.20680147
+      - serializedVersion: 3
+        time: 0.16732025
         value: 1
-        inSlope: 0
-        outSlope: 0
+        inSlope: 0.57707465
+        outSlope: 0.57707465
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
@@ -4917,16 +4926,16 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.6353407, g: 0.67058825, b: 0.054901954, a: 1}
-      key1: {r: 0.9254902, g: 0.7690367, b: 0.14509803, a: 0}
-      key2: {r: 0.9254902, g: 0.65036154, b: 0.14509803, a: 0}
+      key0: {r: 0.6353407, g: 0.67058825, b: 0.054901954, a: 0}
+      key1: {r: 0.6396076, g: 0.67203605, b: 0.056228366, a: 1}
+      key2: {r: 0.9254902, g: 0.7690367, b: 0.14509803, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
       key5: {r: 0, g: 0, b: 0, a: 0}
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
       ctime0: 0
-      ctime1: 65535
+      ctime1: 27949
       ctime2: 65535
       ctime3: 0
       ctime4: 0
@@ -4934,16 +4943,16 @@ TrailRenderer:
       ctime6: 0
       ctime7: 0
       atime0: 0
-      atime1: 65535
-      atime2: 0
+      atime1: 26985
+      atime2: 65535
       atime3: 0
       atime4: 0
       atime5: 0
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_NumColorKeys: 2
-      m_NumAlphaKeys: 2
+      m_NumColorKeys: 3
+      m_NumAlphaKeys: 3
     numCornerVertices: 0
     numCapVertices: 0
     alignment: 0

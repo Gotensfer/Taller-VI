@@ -4,12 +4,6 @@
 		<property name="name">
 			<value>Music</value>
 		</property>
-		<relationship name="automators">
-			<destination>{90155613-f90b-4aaf-a0f4-618c3cdc63b1}</destination>
-		</relationship>
-		<relationship name="modulators">
-			<destination>{3193a2d3-c081-4a6c-95e3-45a26046a428}</destination>
-		</relationship>
 		<relationship name="effectChain">
 			<destination>{09ab7e10-c354-42ed-8737-a4b4a3b8a848}</destination>
 		</relationship>
@@ -18,25 +12,6 @@
 		</relationship>
 		<relationship name="output">
 			<destination>{7913b4bf-005a-4937-8b41-67b5afae274c}</destination>
-		</relationship>
-	</object>
-	<object class="Automator" id="{90155613-f90b-4aaf-a0f4-618c3cdc63b1}">
-		<property name="nameOfPropertyBeingAutomated">
-			<value>volume</value>
-		</property>
-	</object>
-	<object class="SidechainModulator" id="{3193a2d3-c081-4a6c-95e3-45a26046a428}">
-		<property name="nameOfPropertyBeingModulated">
-			<value>volume</value>
-		</property>
-		<property name="amount">
-			<value>40</value>
-		</property>
-		<property name="minimumThreshold">
-			<value>-23.5</value>
-		</property>
-		<relationship name="sidechains">
-			<destination>{2a4f05fd-9daa-49a6-9281-cffea09347f5}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{09ab7e10-c354-42ed-8737-a4b4a3b8a848}">

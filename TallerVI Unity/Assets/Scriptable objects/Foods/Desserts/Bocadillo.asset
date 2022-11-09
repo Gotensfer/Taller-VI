@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ab26b13798f18f449ad6c2e3da632ad, type: 3}
   m_Name: Bocadillo
   m_EditorClassIdentifier: 
-  maxVelocity: 0
+  maxVelocity: -3
   anglePerSecond: 35
-  impulse: 0
+  impulse: 10
   bounces: 3
   type: 2
-  coinPrice: 2000
+  coinPrice: 1000

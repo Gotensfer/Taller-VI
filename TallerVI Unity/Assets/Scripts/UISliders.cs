@@ -21,7 +21,7 @@ public class UISliders : MonoBehaviour
     {
         Calculate();
 
-        veloValue.text = velo + "km/h";
+        veloValue.text = velo + "m/s";
         anguloValue.text = angulo + "°";
         impulsoValue.text = impulso + "N";
         rebotesValue.text = "+" + rebotes;

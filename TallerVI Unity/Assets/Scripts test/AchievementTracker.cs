@@ -16,11 +16,6 @@ public class AchievementTracker : MonoBehaviour
         {
             maxDistance = distanceTracker_Module.travelledDistance;
         }
-
-        if (altitudeTracker_Module.Altitude > maxAltitude)
-        {
-            maxAltitude = altitudeTracker_Module.Altitude;
-        }
     }
 
     public void CheckAchievements()
